@@ -298,7 +298,7 @@ pointer-events:none;
                 <a href="<?php echo esc_url(home_url('/jobs/')); ?>" class="nav_menu-link">Jobs</a>
               </div>
               <div class="w-embed">
-                <a href="https://apros.global/book-a-call" onclick="dataLayer.push({'event': 'start_a_project_menu'});" class="button is-secondary is-nav w-inline-block">
+                <a href="<?php echo esc_url(home_url('/book-a-call/')); ?>" onclick="dataLayer.push({'event': 'start_a_project_menu'});" class="button is-secondary is-nav w-inline-block">
                   <div class="text-size-small">Book a call</div><img src="<?php echo esc_url($theme_uri . '/src/images/icon-btn.svg'); ?>" loading="lazy" alt="" class="icon-1x1-small">
                 </a>
               </div>
@@ -338,7 +338,7 @@ pointer-events:none;
                   </div>
                 </div>
                 <div class="flex-v-space-xlarge">
-                  <a href="https://apros.global/book-a-call" class="button is-secondary is-large w-inline-block">
+                  <a href="<?php echo esc_url(home_url('/book-a-call/')); ?>" class="button is-secondary is-large w-inline-block">
                     <div class="text-size-large">Start a Project</div><img src="<?php echo esc_url($theme_uri . '/src/images/icon-btn.svg'); ?>" loading="lazy" alt="" class="icon-1x1-medium">
                   </a>
                   <div class="flex-v-space-small">
