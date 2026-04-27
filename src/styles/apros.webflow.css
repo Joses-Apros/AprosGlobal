@@ -1,6 +1,6 @@
 @font-face {
   font-family: GalanoGrotesque;
-  src: url('../../src/fonts/GalanoGrotesqueBold.otf') format("opentype");
+  src: url('../fonts/GalanoGrotesqueBold.otf') format("opentype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: GalanoGrotesque;
-  src: url('../../src/fonts/GalanoGrotesqueExtraBold.otf') format("opentype");
+  src: url('../fonts/GalanoGrotesqueExtraBold.otf') format("opentype");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: GalanoGrotesque;
-  src: url('../../src/fonts/GalanoGrotesqueRegular.otf') format("opentype");
+  src: url('../fonts/GalanoGrotesqueRegular.otf') format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -24,7 +24,7 @@
 
 @font-face {
   font-family: GalanoGrotesque;
-  src: url('../../src/fonts/GalanoGrotesqueLight.otf') format("opentype");
+  src: url('../fonts/GalanoGrotesqueLight.otf') format("opentype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -32,7 +32,7 @@
 
 @font-face {
   font-family: GalanoGrotesque;
-  src: url('../../src/fonts/GalanoGrotesqueMedium.otf') format("opentype");
+  src: url('../fonts/GalanoGrotesqueMedium.otf') format("opentype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -40,7 +40,7 @@
 
 @font-face {
   font-family: GalanoGrotesque;
-  src: url('../../src/fonts/GalanoGrotesqueSemiBold.otf') format("opentype");
+  src: url('../fonts/GalanoGrotesqueSemiBold.otf') format("opentype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -1463,7 +1463,7 @@ figcaption {
 
 .nav_menu-mobile {
   background-color: var(--black);
-  background-image: url('../../src/images/img-grid-menu.webp'), linear-gradient(#070926e6, #070926e6), url('../../src/images/bg-noise-1.webp');
+  background-image: url('../images/img-grid-menu.webp'), linear-gradient(#070926e6, #070926e6), url('../images/bg-noise-1.webp');
   background-position: 100%, 0 0, 0 0;
   background-repeat: no-repeat, repeat, repeat;
   background-size: auto 43.75rem, auto, auto;
@@ -1789,7 +1789,7 @@ figcaption {
 }
 
 .about_component {
-  background-image: url('../../src/images/about-bg-right.webp'), url('../../src/images/about-bg-lef.webp');
+  background-image: url('../images/about-bg-right.webp'), url('../images/about-bg-lef.webp');
   background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat, no-repeat;
   background-size: auto 45rem, auto 43.75rem;
@@ -3124,7 +3124,7 @@ figcaption {
 }
 
 .panel5 {
-  background-image: url('../../src/images/and-machines-vqTWfa4DjEk-unsplash.jpg');
+  background-image: url('../images/and-machines-vqTWfa4DjEk-unsplash.jpg');
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -3134,7 +3134,7 @@ figcaption {
 }
 
 .panel3 {
-  background-image: url('../../src/images/and-machines-odNU0f3jmUg-unsplash.jpg');
+  background-image: url('../images/and-machines-odNU0f3jmUg-unsplash.jpg');
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -3155,7 +3155,7 @@ figcaption {
 }
 
 .panel2 {
-  background-image: url('../../src/images/and-machines-SZd_V4A8gYo-unsplash.jpg');
+  background-image: url('../images/and-machines-SZd_V4A8gYo-unsplash.jpg');
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -3184,7 +3184,7 @@ figcaption {
 }
 
 .section-wrapper {
-  background-image: url('../../src/images/bg-light-blue-vf.webp');
+  background-image: url('../images/bg-light-blue-vf.webp');
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: contain;
@@ -3208,7 +3208,7 @@ figcaption {
 }
 
 .panel4 {
-  background-image: url('../../src/images/and-machines-YLplJ9m_RKE-unsplash.jpg');
+  background-image: url('../images/and-machines-YLplJ9m_RKE-unsplash.jpg');
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -3909,7 +3909,7 @@ figcaption {
   background-color: var(--black);
   color: var(--white);
   text-align: center;
-  background-image: url('../../src/images/bg-noise-1.webp');
+  background-image: url('../images/bg-noise-1.webp');
   background-position: 0 0;
   background-size: auto;
   border-radius: .5rem;
@@ -4117,7 +4117,7 @@ figcaption {
 
 .list-error li {
   background-color: #0054fc2b;
-  background-image: url('../../src/images/icon-list-color-01.svg');
+  background-image: url('../images/icon-list-color-01.svg');
   background-position: 16px 22px;
   background-repeat: no-repeat;
   background-size: 1.2rem 1.2rem;
@@ -4136,7 +4136,7 @@ figcaption {
 
 .list-succsess li {
   background-color: #0054fc2b;
-  background-image: url('../../src/images/icon-list-color-verde.svg');
+  background-image: url('../images/icon-list-color-verde.svg');
   background-position: 16px 22px;
   background-repeat: no-repeat;
   background-size: 1.2rem 1.2rem;
@@ -4671,7 +4671,7 @@ figcaption {
 }
 
 .project_solution-list li {
-  background-image: url('../../src/images/check-arrow.svg');
+  background-image: url('../images/check-arrow.svg');
   background-position: 0 5px;
   background-repeat: no-repeat;
   background-size: .8rem .8rem;
@@ -6032,7 +6032,7 @@ figcaption {
   }
 
   .about_component {
-    background-image: url('../../src/images/about-bg-right.webp');
+    background-image: url('../images/about-bg-right.webp');
     background-position: 100% 100%;
     background-repeat: no-repeat;
     background-size: auto 45rem;
@@ -8196,42 +8196,42 @@ figcaption {
 
 @font-face {
   font-family: 'GalanoGrotesque';
-  src: url('../../src/fonts/GalanoGrotesqueBold.otf') format('opentype');
+  src: url('../fonts/GalanoGrotesqueBold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'GalanoGrotesque';
-  src: url('../../src/fonts/GalanoGrotesqueExtraBold.otf') format('opentype');
+  src: url('../fonts/GalanoGrotesqueExtraBold.otf') format('opentype');
   font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'GalanoGrotesque';
-  src: url('../../src/fonts/GalanoGrotesqueRegular.otf') format('opentype');
+  src: url('../fonts/GalanoGrotesqueRegular.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'GalanoGrotesque';
-  src: url('../../src/fonts/GalanoGrotesqueLight.otf') format('opentype');
+  src: url('../fonts/GalanoGrotesqueLight.otf') format('opentype');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'GalanoGrotesque';
-  src: url('../../src/fonts/GalanoGrotesqueMedium.otf') format('opentype');
+  src: url('../fonts/GalanoGrotesqueMedium.otf') format('opentype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'GalanoGrotesque';
-  src: url('../../src/fonts/GalanoGrotesqueSemiBold.otf') format('opentype');
+  src: url('../fonts/GalanoGrotesqueSemiBold.otf') format('opentype');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
