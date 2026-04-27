@@ -1,1 +1,1 @@
-import { Webflow } from "./webflow.js";
+import "./webflow.js";
