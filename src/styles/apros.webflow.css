@@ -1700,6 +1700,7 @@ figcaption {
 .home-header_title-style.is-absolute.outline, .home-header_title-style.outline {
   text-shadow: none;
   display: block;
+  outline-style: none;
 }
 
 .home-header_device-tablet {

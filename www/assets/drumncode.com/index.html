@@ -1,0 +1,1343 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" href="https://drumncode.com/wp-content/themes/drumncode/assets/images/favicons/favicon-32x32.png"
+          type="image/png"/>
+    <meta name="theme-color" content="#222222"/>
+    <link rel="apple-touch-icon" sizes="48x48"
+          href="https://drumncode.com/wp-content/themes/drumncode/assets/images/favicons/favicon-48x48.png"/>
+    <link rel="apple-touch-icon" sizes="72x72"
+          href="https://drumncode.com/wp-content/themes/drumncode/assets/images/favicons/favicon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="96x96"
+          href="https://drumncode.com/wp-content/themes/drumncode/assets/images/favicons/favicon-96x96.png"/>
+    <link rel="apple-touch-icon" sizes="144x144"
+          href="https://drumncode.com/wp-content/themes/drumncode/assets/images/favicons/favicon-144x144.png"/>
+    <link rel="apple-touch-icon" sizes="192x192"
+          href="https://drumncode.com/wp-content/themes/drumncode/assets/images/favicons/favicon-192x192.png"/>
+    <link rel="apple-touch-icon" sizes="256x256"
+          href="https://drumncode.com/wp-content/themes/drumncode/assets/images/favicons/favicon-256x256.png"/>
+    <link rel="apple-touch-icon" sizes="384x384"
+          href="https://drumncode.com/wp-content/themes/drumncode/assets/images/favicons/favicon-384x384.png"/>
+    <link rel="apple-touch-icon" sizes="512x512"
+          href="https://drumncode.com/wp-content/themes/drumncode/assets/images/favicons/favicon-512x512.png"/>
+    <link rel="preconnect dns-prefetch" href="https://www.google-analytics.com"/>
+    
+    <link rel="preload" as="image" href="/wp-content/themes/drumncode/assets/images/page-hero-2k.webp">
+
+    <script data-cfasync="false" data-no-defer="1" data-no-minify="1" data-no-optimize="1">var ewww_webp_supported=!1;function check_webp_feature(A,e){var w;e=void 0!==e?e:function(){},ewww_webp_supported?e(ewww_webp_supported):((w=new Image).onload=function(){ewww_webp_supported=0<w.width&&0<w.height,e&&e(ewww_webp_supported)},w.onerror=function(){e&&e(!1)},w.src="data:image/webp;base64,"+{alpha:"UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAARBxAR/Q9ERP8DAABWUDggGAAAABQBAJ0BKgEAAQAAAP4AAA3AAP7mtQAAAA=="}[A])}check_webp_feature("alpha");</script><script data-cfasync="false" data-no-defer="1" data-no-minify="1" data-no-optimize="1">var Arrive=function(c,w){"use strict";if(c.MutationObserver&&"undefined"!=typeof HTMLElement){var r,a=0,u=(r=HTMLElement.prototype.matches||HTMLElement.prototype.webkitMatchesSelector||HTMLElement.prototype.mozMatchesSelector||HTMLElement.prototype.msMatchesSelector,{matchesSelector:function(e,t){return e instanceof HTMLElement&&r.call(e,t)},addMethod:function(e,t,r){var a=e[t];e[t]=function(){return r.length==arguments.length?r.apply(this,arguments):"function"==typeof a?a.apply(this,arguments):void 0}},callCallbacks:function(e,t){t&&t.options.onceOnly&&1==t.firedElems.length&&(e=[e[0]]);for(var r,a=0;r=e[a];a++)r&&r.callback&&r.callback.call(r.elem,r.elem);t&&t.options.onceOnly&&1==t.firedElems.length&&t.me.unbindEventWithSelectorAndCallback.call(t.target,t.selector,t.callback)},checkChildNodesRecursively:function(e,t,r,a){for(var i,n=0;i=e[n];n++)r(i,t,a)&&a.push({callback:t.callback,elem:i}),0<i.childNodes.length&&u.checkChildNodesRecursively(i.childNodes,t,r,a)},mergeArrays:function(e,t){var r,a={};for(r in e)e.hasOwnProperty(r)&&(a[r]=e[r]);for(r in t)t.hasOwnProperty(r)&&(a[r]=t[r]);return a},toElementsArray:function(e){return e=void 0!==e&&("number"!=typeof e.length||e===c)?[e]:e}}),e=(l.prototype.addEvent=function(e,t,r,a){a={target:e,selector:t,options:r,callback:a,firedElems:[]};return this._beforeAdding&&this._beforeAdding(a),this._eventsBucket.push(a),a},l.prototype.removeEvent=function(e){for(var t,r=this._eventsBucket.length-1;t=this._eventsBucket[r];r--)e(t)&&(this._beforeRemoving&&this._beforeRemoving(t),(t=this._eventsBucket.splice(r,1))&&t.length&&(t[0].callback=null))},l.prototype.beforeAdding=function(e){this._beforeAdding=e},l.prototype.beforeRemoving=function(e){this._beforeRemoving=e},l),t=function(i,n){var o=new e,l=this,s={fireOnAttributesModification:!1};return o.beforeAdding(function(t){var e=t.target;e!==c.document&&e!==c||(e=document.getElementsByTagName("html")[0]);var r=new MutationObserver(function(e){n.call(this,e,t)}),a=i(t.options);r.observe(e,a),t.observer=r,t.me=l}),o.beforeRemoving(function(e){e.observer.disconnect()}),this.bindEvent=function(e,t,r){t=u.mergeArrays(s,t);for(var a=u.toElementsArray(this),i=0;i<a.length;i++)o.addEvent(a[i],e,t,r)},this.unbindEvent=function(){var r=u.toElementsArray(this);o.removeEvent(function(e){for(var t=0;t<r.length;t++)if(this===w||e.target===r[t])return!0;return!1})},this.unbindEventWithSelectorOrCallback=function(r){var a=u.toElementsArray(this),i=r,e="function"==typeof r?function(e){for(var t=0;t<a.length;t++)if((this===w||e.target===a[t])&&e.callback===i)return!0;return!1}:function(e){for(var t=0;t<a.length;t++)if((this===w||e.target===a[t])&&e.selector===r)return!0;return!1};o.removeEvent(e)},this.unbindEventWithSelectorAndCallback=function(r,a){var i=u.toElementsArray(this);o.removeEvent(function(e){for(var t=0;t<i.length;t++)if((this===w||e.target===i[t])&&e.selector===r&&e.callback===a)return!0;return!1})},this},i=new function(){var s={fireOnAttributesModification:!1,onceOnly:!1,existing:!1};function n(e,t,r){return!(!u.matchesSelector(e,t.selector)||(e._id===w&&(e._id=a++),-1!=t.firedElems.indexOf(e._id)))&&(t.firedElems.push(e._id),!0)}var c=(i=new t(function(e){var t={attributes:!1,childList:!0,subtree:!0};return e.fireOnAttributesModification&&(t.attributes=!0),t},function(e,i){e.forEach(function(e){var t=e.addedNodes,r=e.target,a=[];null!==t&&0<t.length?u.checkChildNodesRecursively(t,i,n,a):"attributes"===e.type&&n(r,i)&&a.push({callback:i.callback,elem:r}),u.callCallbacks(a,i)})})).bindEvent;return i.bindEvent=function(e,t,r){t=void 0===r?(r=t,s):u.mergeArrays(s,t);var a=u.toElementsArray(this);if(t.existing){for(var i=[],n=0;n<a.length;n++)for(var o=a[n].querySelectorAll(e),l=0;l<o.length;l++)i.push({callback:r,elem:o[l]});if(t.onceOnly&&i.length)return r.call(i[0].elem,i[0].elem);setTimeout(u.callCallbacks,1,i)}c.call(this,e,t,r)},i},o=new function(){var a={};function i(e,t){return u.matchesSelector(e,t.selector)}var n=(o=new t(function(){return{childList:!0,subtree:!0}},function(e,r){e.forEach(function(e){var t=e.removedNodes,e=[];null!==t&&0<t.length&&u.checkChildNodesRecursively(t,r,i,e),u.callCallbacks(e,r)})})).bindEvent;return o.bindEvent=function(e,t,r){t=void 0===r?(r=t,a):u.mergeArrays(a,t),n.call(this,e,t,r)},o};d(HTMLElement.prototype),d(NodeList.prototype),d(HTMLCollection.prototype),d(HTMLDocument.prototype),d(Window.prototype);var n={};return s(i,n,"unbindAllArrive"),s(o,n,"unbindAllLeave"),n}function l(){this._eventsBucket=[],this._beforeAdding=null,this._beforeRemoving=null}function s(e,t,r){u.addMethod(t,r,e.unbindEvent),u.addMethod(t,r,e.unbindEventWithSelectorOrCallback),u.addMethod(t,r,e.unbindEventWithSelectorAndCallback)}function d(e){e.arrive=i.bindEvent,s(i,e,"unbindArrive"),e.leave=o.bindEvent,s(o,e,"unbindLeave")}}(window,void 0),ewww_webp_supported=!1;function check_webp_feature(e,t){var r;ewww_webp_supported?t(ewww_webp_supported):((r=new Image).onload=function(){ewww_webp_supported=0<r.width&&0<r.height,t(ewww_webp_supported)},r.onerror=function(){t(!1)},r.src="data:image/webp;base64,"+{alpha:"UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAARBxAR/Q9ERP8DAABWUDggGAAAABQBAJ0BKgEAAQAAAP4AAA3AAP7mtQAAAA==",animation:"UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA"}[e])}function ewwwLoadImages(e){if(e){for(var t=document.querySelectorAll(".batch-image img, .image-wrapper a, .ngg-pro-masonry-item a, .ngg-galleria-offscreen-seo-wrapper a"),r=0,a=t.length;r<a;r++)ewwwAttr(t[r],"data-src",t[r].getAttribute("data-webp")),ewwwAttr(t[r],"data-thumbnail",t[r].getAttribute("data-webp-thumbnail"));for(var i=document.querySelectorAll("div.woocommerce-product-gallery__image"),r=0,a=i.length;r<a;r++)ewwwAttr(i[r],"data-thumb",i[r].getAttribute("data-webp-thumb"))}for(var n=document.querySelectorAll("video"),r=0,a=n.length;r<a;r++)ewwwAttr(n[r],"poster",e?n[r].getAttribute("data-poster-webp"):n[r].getAttribute("data-poster-image"));for(var o,l=document.querySelectorAll("img.ewww_webp_lazy_load"),r=0,a=l.length;r<a;r++)e&&(ewwwAttr(l[r],"data-lazy-srcset",l[r].getAttribute("data-lazy-srcset-webp")),ewwwAttr(l[r],"data-srcset",l[r].getAttribute("data-srcset-webp")),ewwwAttr(l[r],"data-lazy-src",l[r].getAttribute("data-lazy-src-webp")),ewwwAttr(l[r],"data-src",l[r].getAttribute("data-src-webp")),ewwwAttr(l[r],"data-orig-file",l[r].getAttribute("data-webp-orig-file")),ewwwAttr(l[r],"data-medium-file",l[r].getAttribute("data-webp-medium-file")),ewwwAttr(l[r],"data-large-file",l[r].getAttribute("data-webp-large-file")),null!=(o=l[r].getAttribute("srcset"))&&!1!==o&&o.includes("R0lGOD")&&ewwwAttr(l[r],"src",l[r].getAttribute("data-lazy-src-webp"))),l[r].className=l[r].className.replace(/\bewww_webp_lazy_load\b/,"");for(var s=document.querySelectorAll(".ewww_webp"),r=0,a=s.length;r<a;r++)e?(ewwwAttr(s[r],"srcset",s[r].getAttribute("data-srcset-webp")),ewwwAttr(s[r],"src",s[r].getAttribute("data-src-webp")),ewwwAttr(s[r],"data-orig-file",s[r].getAttribute("data-webp-orig-file")),ewwwAttr(s[r],"data-medium-file",s[r].getAttribute("data-webp-medium-file")),ewwwAttr(s[r],"data-large-file",s[r].getAttribute("data-webp-large-file")),ewwwAttr(s[r],"data-large_image",s[r].getAttribute("data-webp-large_image")),ewwwAttr(s[r],"data-src",s[r].getAttribute("data-webp-src"))):(ewwwAttr(s[r],"srcset",s[r].getAttribute("data-srcset-img")),ewwwAttr(s[r],"src",s[r].getAttribute("data-src-img"))),s[r].className=s[r].className.replace(/\bewww_webp\b/,"ewww_webp_loaded");window.jQuery&&jQuery.fn.isotope&&jQuery.fn.imagesLoaded&&(jQuery(".fusion-posts-container-infinite").imagesLoaded(function(){jQuery(".fusion-posts-container-infinite").hasClass("isotope")&&jQuery(".fusion-posts-container-infinite").isotope()}),jQuery(".fusion-portfolio:not(.fusion-recent-works) .fusion-portfolio-wrapper").imagesLoaded(function(){jQuery(".fusion-portfolio:not(.fusion-recent-works) .fusion-portfolio-wrapper").isotope()}))}function ewwwWebPInit(e){ewwwLoadImages(e),ewwwNggLoadGalleries(e),document.arrive(".ewww_webp",function(){ewwwLoadImages(e)}),document.arrive(".ewww_webp_lazy_load",function(){ewwwLoadImages(e)}),document.arrive("videos",function(){ewwwLoadImages(e)}),"loading"==document.readyState?document.addEventListener("DOMContentLoaded",ewwwJSONParserInit):("undefined"!=typeof galleries&&ewwwNggParseGalleries(e),ewwwWooParseVariations(e))}function ewwwAttr(e,t,r){null!=r&&!1!==r&&e.setAttribute(t,r)}function ewwwJSONParserInit(){"undefined"!=typeof galleries&&check_webp_feature("alpha",ewwwNggParseGalleries),check_webp_feature("alpha",ewwwWooParseVariations)}function ewwwWooParseVariations(e){if(e)for(var t=document.querySelectorAll("form.variations_form"),r=0,a=t.length;r<a;r++){var i=t[r].getAttribute("data-product_variations"),n=!1;try{for(var o in i=JSON.parse(i))void 0!==i[o]&&void 0!==i[o].image&&(void 0!==i[o].image.src_webp&&(i[o].image.src=i[o].image.src_webp,n=!0),void 0!==i[o].image.srcset_webp&&(i[o].image.srcset=i[o].image.srcset_webp,n=!0),void 0!==i[o].image.full_src_webp&&(i[o].image.full_src=i[o].image.full_src_webp,n=!0),void 0!==i[o].image.gallery_thumbnail_src_webp&&(i[o].image.gallery_thumbnail_src=i[o].image.gallery_thumbnail_src_webp,n=!0),void 0!==i[o].image.thumb_src_webp&&(i[o].image.thumb_src=i[o].image.thumb_src_webp,n=!0));n&&ewwwAttr(t[r],"data-product_variations",JSON.stringify(i))}catch(e){}}}function ewwwNggParseGalleries(e){if(e)for(var t in galleries){var r=galleries[t];galleries[t].images_list=ewwwNggParseImageList(r.images_list)}}function ewwwNggLoadGalleries(e){e&&document.addEventListener("ngg.galleria.themeadded",function(e,t){window.ngg_galleria._create_backup=window.ngg_galleria.create,window.ngg_galleria.create=function(e,t){var r=$(e).data("id");return galleries["gallery_"+r].images_list=ewwwNggParseImageList(galleries["gallery_"+r].images_list),window.ngg_galleria._create_backup(e,t)}})}function ewwwNggParseImageList(e){for(var t in e){var r=e[t];if(void 0!==r["image-webp"]&&(e[t].image=r["image-webp"],delete e[t]["image-webp"]),void 0!==r["thumb-webp"]&&(e[t].thumb=r["thumb-webp"],delete e[t]["thumb-webp"]),void 0!==r.full_image_webp&&(e[t].full_image=r.full_image_webp,delete e[t].full_image_webp),void 0!==r.srcsets)for(var a in r.srcsets)nggSrcset=r.srcsets[a],void 0!==r.srcsets[a+"-webp"]&&(e[t].srcsets[a]=r.srcsets[a+"-webp"],delete e[t].srcsets[a+"-webp"]);if(void 0!==r.full_srcsets)for(var i in r.full_srcsets)nggFSrcset=r.full_srcsets[i],void 0!==r.full_srcsets[i+"-webp"]&&(e[t].full_srcsets[i]=r.full_srcsets[i+"-webp"],delete e[t].full_srcsets[i+"-webp"])}return e}check_webp_feature("alpha",ewwwWebPInit);</script><meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+<link rel="alternate" href="https://drumncode.com/" hreflang="en" />
+<link rel="alternate" href="https://drumncode.com/uk/home/" hreflang="uk" />
+
+	<!-- This site is optimized with the Yoast SEO plugin v25.8 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Home - Drumncode</title>
+	<meta name="description" content="Drum&#039;N&#039;Code is engaged in the development of new turnkey technologies. Most of the projects we are creating from scratch, implementing not only the program code of individual modules and design, but also architecture." />
+	<link rel="canonical" href="https://drumncode.com/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:locale:alternate" content="uk_UA" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Home - Drumncode" />
+	<meta property="og:description" content="Drum&#039;N&#039;Code is engaged in the development of new turnkey technologies. Most of the projects we are creating from scratch, implementing not only the program code of individual modules and design, but also architecture." />
+	<meta property="og:url" content="https://drumncode.com/" />
+	<meta property="og:site_name" content="Drumncode" />
+	<meta property="article:publisher" content="https://www.facebook.com/drum.n.code.it" />
+	<meta property="article:modified_time" content="2025-08-27T11:03:56+00:00" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://drumncode.com/","url":"https://drumncode.com/","name":"Home - Drumncode","isPartOf":{"@id":"https://drumncode.com/#website"},"about":{"@id":"https://drumncode.com/#organization"},"datePublished":"2023-01-06T17:05:37+00:00","dateModified":"2025-08-27T11:03:56+00:00","description":"Drum'N'Code is engaged in the development of new turnkey technologies. Most of the projects we are creating from scratch, implementing not only the program code of individual modules and design, but also architecture.","breadcrumb":{"@id":"https://drumncode.com/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://drumncode.com/"]}]},{"@type":"BreadcrumbList","@id":"https://drumncode.com/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home"}]},{"@type":"WebSite","@id":"https://drumncode.com/#website","url":"https://drumncode.com/","name":"Drum'N'Code","description":"We are rockstar developers","publisher":{"@id":"https://drumncode.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://drumncode.com/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://drumncode.com/#organization","name":"Drum'N'Code","url":"https://drumncode.com/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://drumncode.com/#/schema/logo/image/","url":"https://drumncode.com/wp-content/uploads/2023/07/logo-512x512-1.png","contentUrl":"https://drumncode.com/wp-content/uploads/2023/07/logo-512x512-1.png","width":512,"height":512,"caption":"Drum'N'Code"},"image":{"@id":"https://drumncode.com/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/drum.n.code.it","https://www.linkedin.com/company/drumncode","https://www.instagram.com/drum.n.code.it/","https://www.tiktok.com/@drum.n.code.it"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//unpkg.com' />
+<link rel="alternate" type="application/rss+xml" title="Drumncode &raquo; Home Comments Feed" href="https://drumncode.com/sample-page/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://drumncode.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdrumncode.com%2F&#038;lang=en" />
+<style id='wp-img-auto-sizes-contain-inline-css' type='text/css'>
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id='wp-block-library-inline-css' type='text/css'>
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}.has-text-align-center{text-align:center}.has-text-align-left{text-align:left}.has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=wp-block-library-inline-css */
+</style>
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='contact-form-7-css' href='https://drumncode.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=6.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wpa-css-css' href='https://drumncode.com/wp-content/plugins/honeypot/includes/css/wpa.css?ver=2.2.14' type='text/css' media='all' />
+<link rel='stylesheet' id='slick-css-css' href='https://drumncode.com/wp-content/themes/drumncode/assets/css/packages/slick.min.css?ver=2554ac17b88a157635cba181cdc9f45d' type='text/css' media='all' />
+<link rel='stylesheet' id='aos-css-css' href='https://unpkg.com/aos@2.3.1/dist/aos.css?ver=2554ac17b88a157635cba181cdc9f45d' type='text/css' media='all' />
+<link rel='stylesheet' id='globals-css-css' href='https://drumncode.com/wp-content/themes/drumncode/assets/css/globals.css?ver=1777384592' type='text/css' media='all' />
+<link rel='stylesheet' id='blocks-acf-css-css' href='https://drumncode.com/wp-content/themes/drumncode/assets/css/blocks-acf.css?ver=1777384592' type='text/css' media='all' />
+<link rel='stylesheet' id='blog-css-css' href='https://drumncode.com/wp-content/themes/drumncode/assets/css/pages/blog.css?ver=1777384592' type='text/css' media='all' />
+<link rel='stylesheet' id='careers-portfolio-css-css' href='https://drumncode.com/wp-content/themes/drumncode/assets/css/pages/careers-portfolio.css?ver=1777384592' type='text/css' media='all' />
+<link rel='stylesheet' id='clutch-landing-page-css-css' href='https://drumncode.com/wp-content/themes/drumncode/assets/css/pages/clutch-landing-page.css?ver=1777384592' type='text/css' media='all' />
+<link rel='stylesheet' id='header-css-css' href='https://drumncode.com/wp-content/themes/drumncode/assets/css/partials/header.css?ver=1777384592' type='text/css' media='all' />
+<link rel='stylesheet' id='footer-css-css' href='https://drumncode.com/wp-content/themes/drumncode/assets/css/partials/footer.css?ver=1777384592' type='text/css' media='all' />
+<link rel='stylesheet' id='sidebar-css-css' href='https://drumncode.com/wp-content/themes/drumncode/assets/css/partials/sidebar.css?ver=1777384592' type='text/css' media='all' />
+<script type="text/javascript" src="https://drumncode.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://drumncode.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<link rel="https://api.w.org/" href="https://drumncode.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://drumncode.com/wp-json/wp/v2/pages/2" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://drumncode.com/xmlrpc.php?rsd" />
+
+<link rel='shortlink' href='https://drumncode.com/' />
+
+		<!-- GA Google Analytics @ https://m0n.co/ga -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-YXJL4F2PTD"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-YXJL4F2PTD');
+		</script>
+
+	<noscript><style>.lazyload[data-src]{display:none !important;}</style></noscript><style>.lazyload{background-image:none !important;}.lazyload:before{background-image:none !important;}</style><script>if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.getRegistrations().then(function(registrations) {
+    // Check if any Service Worker is registered
+    if (registrations.length > 0) {
+      // Unregister all Service Workers
+      registrations.forEach(function(registration) {
+        registration.unregister();
+      });
+
+      // Clear cache and reload the page
+      caches.keys().then(function(cacheNames) {
+        cacheNames.forEach(function(cacheName) {
+          caches.delete(cacheName);
+        });
+        // Reload the page after clearing cache
+        window.location.reload(true);
+      });
+    }
+  });
+}</script><link rel="icon" href="https://drumncode.com/wp-content/uploads/2023/07/cropped-logo-512x512-1-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://drumncode.com/wp-content/uploads/2023/07/cropped-logo-512x512-1-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://drumncode.com/wp-content/uploads/2023/07/cropped-logo-512x512-1-180x180.png" />
+<meta name="msapplication-TileImage" content="https://drumncode.com/wp-content/uploads/2023/07/cropped-logo-512x512-1-270x270.png" />
+		<style type="text/css" id="wp-custom-css">
+			.single-post-page-info p.single-post-page-info-value {
+	line-height: 32px;
+}
+
+.single-post-page-thumbnail img,
+.post-card-items-wrapper .post-card-item .post-card-item-image img, .post-card-items-wrapper .post-card-item .post-card-item-image img {
+	object-position: top left;
+}
+
+.single-post-page .single-post-page-content ul, .single-post-page .single-post-page-content ol{
+	margin-top: 0;
+}		</style>
+		</head>
+<body class="home wp-singular page-template-default page page-id-2 wp-embed-responsive wp-theme-drumncode">
+<script data-cfasync="false" data-no-defer="1" data-no-minify="1" data-no-optimize="1">if(typeof ewww_webp_supported==="undefined"){var ewww_webp_supported=!1}if(ewww_webp_supported){document.body.classList.add("webp-support")}</script>
+
+<header class="header on-top">
+    <div class="header-container">
+        <a title="Go to Home Page" class="header-logo-link" href="/">
+            <svg width="24" height="24" class="header-logo" viewbox="0 0 136 24" fill="none">
+                <path
+                        d="M8.31055 24H14.1902C17.9073 24 19.732 21.8336 19.732 18.0423V5.85614C19.732 2.06488 17.9073 0 14.1902 0H8.31055V24ZM14.1227 3.38505C15.3054 3.38505 16.015 3.99436 16.015 5.68688V18.2116C16.015 19.9041 15.3054 20.5134 14.1227 20.5134H12.0276V3.38505H14.1227Z"
+                        fill="white"
+                ></path>
+                <path
+                        d="M32.9851 24C32.6134 23.1199 32.5796 21.969 32.5796 20.8181V17.1622C32.5796 14.6911 31.9714 12.897 30.1128 12.1185C31.7686 11.3399 32.5458 9.74894 32.5458 7.31171V5.44993C32.5458 1.79408 30.8901 0 27.0378 0H21.4285V24H25.1455V14.048H26.4296C28.1192 14.048 28.8626 14.8604 28.8626 17.0606V20.7842C28.8626 22.7137 28.9977 23.3907 29.2005 24H32.9851ZM26.9365 3.38505C28.2543 3.38505 28.8288 4.12976 28.8288 5.82229V8.15797C28.8288 10.0536 27.984 10.6629 26.5985 10.6629H25.1455V3.38505H26.9365Z"
+                        fill="white"
+                ></path>
+                <path
+                        d="M34.1794 0V18.0423C34.1794 21.8336 36.0717 24 39.7212 24C43.3707 24 45.263 21.8336 45.263 18.0423V0H41.7487V18.2793C41.7487 19.9718 41.0053 20.5811 39.8226 20.5811C38.6399 20.5811 37.8965 19.9718 37.8965 18.2793V0H34.1794Z"
+                        fill="white"
+                ></path>
+                <path d="M52.2726 0H47.1025V24H50.3465V6.93935L53.1174 24H56.6317L59.1998 6.7024V24H62.7141V0H57.5441L55.0097 16.8237L52.2726 0Z"
+                      fill="white"></path>
+                <path d="M66.1604 3.69198L65.1805 7.17498H66.7011L68.3231 3.30885V0H64.7412V3.69198H66.1604Z"
+                      fill="white"></path>
+                <path d="M77.2625 24H81.0809V0H77.7694V14.5938L73.951 0H69.2877V24H72.6331V6.72219L77.2625 24Z"
+                      fill="white"></path>
+                <path d="M83.4719 3.69198L82.492 7.17498H84.0126L85.6346 3.30885V0H82.0527V3.69198H83.4719Z"
+                      fill="white"></path>
+                <path
+                        d="M94.9286 14.9832V18.3352C94.9286 20.0112 94.1852 20.6145 93.0025 20.6145C91.8198 20.6145 91.0764 20.0112 91.0764 18.3352V5.6648C91.0764 3.98882 91.8198 3.35195 93.0025 3.35195C94.1852 3.35195 94.9286 3.98882 94.9286 5.6648V8.17877H98.4429V5.89944C98.4429 2.14525 96.5506 0 92.9012 0C89.2517 0 87.3594 2.14525 87.3594 5.89944V18.1006C87.3594 21.8547 89.2517 24 92.9012 24C96.5506 24 98.4429 21.8547 98.4429 18.1006V14.9832H94.9286Z"
+                        fill="white"
+                ></path>
+                <path
+                        d="M103.435 5.6648C103.435 3.98882 104.179 3.35195 105.361 3.35195C106.544 3.35195 107.288 3.98882 107.288 5.6648V18.3352C107.288 20.0112 106.544 20.648 105.361 20.648C104.179 20.648 103.435 20.0112 103.435 18.3352V5.6648ZM99.7183 18.1006C99.7183 21.8547 101.712 24 105.361 24C109.011 24 111.005 21.8547 111.005 18.1006V5.89944C111.005 2.14525 109.011 0 105.361 0C101.712 0 99.7183 2.14525 99.7183 5.89944V18.1006Z"
+                        fill="white"
+                ></path>
+                <path
+                        d="M112.744 24H118.624C122.341 24 124.166 21.6871 124.166 17.933V5.79888C124.166 2.04469 122.341 0 118.624 0H112.744V24ZM118.556 3.35196C119.739 3.35196 120.449 3.95531 120.449 5.63129V18.1006C120.449 19.7765 119.739 20.3799 118.556 20.3799H116.461V3.35196H118.556Z"
+                        fill="white"
+                ></path>
+                <path d="M129.579 3.35196H136V0H125.862V24H136V20.7433H129.579V13.8718H134.682V9.88827H129.579V3.35196Z"
+                      fill="white"></path>
+                <rect width="2.72" height="24" fill="#FFCB08"></rect>
+            </svg>
+        </a>
+                    <button id="menu-toggle" class="menu-toggle-button" aria-label="Menu Toggle Button"></button>
+            <div class="header-menu-inner-container">
+                <nav id="header-nav" class="menu-header-menu-container"><ul id="menu-header-menu" class="menu"><li id="menu-item-116" class="menu-item menu-item-type-post_type_archive menu-item-object-portfolio menu-item-116"><a href="https://drumncode.com/portfolio/">Portfolio</a></li>
+<li id="menu-item-144" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-144"><a href="#">Services</a>
+<ul class="sub-menu">
+	<li id="menu-item-119" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-119"><a href="https://drumncode.com/services/web-development/">Web Development</a></li>
+	<li id="menu-item-1970" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-1970"><a href="https://drumncode.com/services/ux-ui-design/">UX/UI Design</a></li>
+	<li id="menu-item-118" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-118"><a href="https://drumncode.com/services/mobile-app-development/">Mobile App Development</a></li>
+	<li id="menu-item-120" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-120"><a href="https://drumncode.com/services/dedicated-developers/">Dedicated Developers</a></li>
+	<li id="menu-item-117" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-117"><a href="https://drumncode.com/services/solutions-development/">Solutions Development</a></li>
+</ul>
+</li>
+<li id="menu-item-800" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-800"><a href="https://drumncode.com/how-we-work/">How We Work</a></li>
+<li id="menu-item-135" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-135"><a href="https://drumncode.com/agency/">Agency</a></li>
+<li id="menu-item-125" class="menu-item menu-item-type-post_type_archive menu-item-object-careers menu-item-125"><a href="https://drumncode.com/careers/">Careers</a></li>
+<li id="menu-item-439" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-439"><a href="https://drumncode.com/blog/">Blog</a></li>
+</ul></nav>                <div class="header-lets-talk-container">
+                    <button class="button-lets-talk sidebar-open"
+                            data-sidebar="sidebar-form-0">Let’s Talk</button>
+                </div>
+            </div>
+            </div>
+    <div class="header-shadow"></div>
+</header><main id="main" class="front-page">
+    <section id="page-first-section" class="container page-first-section">
+        <div class="gatsby-image-wrapper page-first-section-icon">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Let's Rock" data-src="https://drumncode.com/wp-content/themes/drumncode/assets/images/rock.svg" decoding="async" class="lazyload" /><noscript><img src="https://drumncode.com/wp-content/themes/drumncode/assets/images/rock.svg" alt="Let's Rock" data-eio="l" /></noscript>
+                </div>
+        <h1 class="page-first-section-title">
+        We are  rockstar developers    </h1>
+    <div class="page-first-section-gif">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQgAAAA8AQAAAACyERldAAAAAnRSTlMAAHaTzTgAAAAWSURBVBgZYxgFo2AUjIJRMApGwYgBAAf4AAFeqbr0AAAAAElFTkSuQmCC" alt="Sound Animation" data-src="https://drumncode.com/wp-content/themes/drumncode/assets/images/audio.gif" decoding="async" class="lazyload" width="264" height="60" data-eio-rwidth="264" data-eio-rheight="60" /><noscript><img src="https://drumncode.com/wp-content/themes/drumncode/assets/images/audio.gif" alt="Sound Animation" data-eio="l" /></noscript>
+    </div>
+    <div class="page-first-section-explore">
+        <p>Explore</p>
+        <button id="scroll-to" aria-label="Scroll Down">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <g clip-path="url(#clip0_6927_24607)">
+                    <path d="M26.5067 7.83984L16 18.3465L5.49337 7.83984L2.66671 10.6665L16 23.9998L29.3334 10.6665L26.5067 7.83984Z" fill="#FFCB08"/>
+                </g>
+                <defs>
+                    <clipPath id="clip0_6927_24607">
+                        <rect width="32" height="32" fill="white" transform="translate(32) rotate(90)"/>
+                    </clipPath>
+                </defs>
+            </svg>
+        </button>
+    </div>
+</section><section class="portfolio-section ">
+    <div class="container">
+        <div class="portfolio-header-nav">
+            <h2 class="portfolio-title">Our Works</h2>
+            <div class="slick-arrows">
+                <button class="slick-arrow slick-arrow-prev" aria-label="Previous slide"></button>
+                <button class="slick-arrow slick-arrow-next" aria-label="Next slide"></button>
+            </div>
+        </div>
+    </div>
+        <div class="portfolio-slider ">
+                    <a class="portfolio-slide-item" href="https://drumncode.com/portfolio/disease-notification-system/">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABDgAAAMgAQAAAADuSe9aAAAAAnRSTlMAAHaTzTgAAACASURBVHja7cEBDQAAAMKg909tDjegAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeDSpDwABijjYhAAAAABJRU5ErkJggg=="
+                     alt="Disease Notification System" data-src="https://drumncode.com/wp-content/uploads/2023/12/disease-notification-system-01.jpg" decoding="async" class="lazyload ewww_webp_lazy_load" width="1080" height="800" data-eio-rwidth="1080" data-eio-rheight="800" data-src-webp="https://drumncode.com/wp-content/uploads/2023/12/disease-notification-system-01.jpg.webp"><noscript><img src="https://drumncode.com/wp-content/uploads/2023/12/disease-notification-system-01.jpg"
+                     alt="Disease Notification System" data-eio="l"></noscript>
+                <div class="portfolio-slide-text">
+                    <h3 class="related-article-item-title">Disease Notification System</h3>
+                    <p class="related-article-item-description">Electronic Disease Surveillance and Notification</p>
+                    <div class="tag-list"><span class="tag-item">HealthTech</span></div>                </div>
+            </a>
+                    <a class="portfolio-slide-item" href="https://drumncode.com/portfolio/edee/">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABDgAAAMgAQAAAADuSe9aAAAAAnRSTlMAAHaTzTgAAACASURBVHja7cEBDQAAAMKg909tDjegAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeDSpDwABijjYhAAAAABJRU5ErkJggg=="
+                     alt="EDEE" data-src="https://drumncode.com/wp-content/uploads/2023/12/edee-01.jpg" decoding="async" class="lazyload ewww_webp_lazy_load" width="1080" height="800" data-eio-rwidth="1080" data-eio-rheight="800" data-src-webp="https://drumncode.com/wp-content/uploads/2023/12/edee-01.jpg.webp"><noscript><img src="https://drumncode.com/wp-content/uploads/2023/12/edee-01.jpg"
+                     alt="EDEE" data-eio="l"></noscript>
+                <div class="portfolio-slide-text">
+                    <h3 class="related-article-item-title">EDEE</h3>
+                    <p class="related-article-item-description">Marketing management tool that allows user to track spends, pacing, manage budgets with automated reactions on overspend</p>
+                    <div class="tag-list"><span class="tag-item">AI / ML Tool,</span><span class="tag-item">Marketing</span></div>                </div>
+            </a>
+                    <a class="portfolio-slide-item" href="https://drumncode.com/portfolio/pinthelook/">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABDgAAAMgAQAAAADuSe9aAAAAAnRSTlMAAHaTzTgAAACASURBVHja7cEBDQAAAMKg909tDjegAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeDSpDwABijjYhAAAAABJRU5ErkJggg=="
+                     alt="PinTheLook" data-src="https://drumncode.com/wp-content/uploads/2023/12/pinthelook-01.jpg" decoding="async" class="lazyload" width="1080" height="800" data-eio-rwidth="1080" data-eio-rheight="800"><noscript><img src="https://drumncode.com/wp-content/uploads/2023/12/pinthelook-01.jpg"
+                     alt="PinTheLook" data-eio="l"></noscript>
+                <div class="portfolio-slide-text">
+                    <h3 class="related-article-item-title">PinTheLook</h3>
+                    <p class="related-article-item-description">This project relates to furnishing and apartment designs. </p>
+                    <div class="tag-list"><span class="tag-item">Design,</span><span class="tag-item">Marketplace</span></div>                </div>
+            </a>
+                    <a class="portfolio-slide-item" href="https://drumncode.com/portfolio/viddyoze/">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABC4AAAMgAQAAAADE+R71AAAAAnRSTlMAAHaTzTgAAAB/SURBVBgZ7cExAQAAAMIg+6deDQ9gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwLKXvAAHN+y4LAAAAAElFTkSuQmCC"
+                     alt="Viddyoze" data-src="https://drumncode.com/wp-content/uploads/2023/12/viddyoze-01.jpg" decoding="async" class="lazyload ewww_webp_lazy_load" width="1070" height="800" data-eio-rwidth="1070" data-eio-rheight="800" data-src-webp="https://drumncode.com/wp-content/uploads/2023/12/viddyoze-01.jpg.webp"><noscript><img src="https://drumncode.com/wp-content/uploads/2023/12/viddyoze-01.jpg"
+                     alt="Viddyoze" data-eio="l"></noscript>
+                <div class="portfolio-slide-text">
+                    <h3 class="related-article-item-title">Viddyoze</h3>
+                    <p class="related-article-item-description">This application allows to create videos on various topics to promote your business/brand, etc.</p>
+                    <div class="tag-list"><span class="tag-item">Media / Content,</span><span class="tag-item">SaaS,</span><span class="tag-item">Social Platform</span></div>                </div>
+            </a>
+                    <a class="portfolio-slide-item" href="https://drumncode.com/portfolio/uxr/">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABDgAAAMgAQAAAADuSe9aAAAAAnRSTlMAAHaTzTgAAACASURBVHja7cEBDQAAAMKg909tDjegAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeDSpDwABijjYhAAAAABJRU5ErkJggg=="
+                     alt="UXR" data-src="https://drumncode.com/wp-content/uploads/2023/12/uxr-01.jpg" decoding="async" class="lazyload ewww_webp_lazy_load" width="1080" height="800" data-eio-rwidth="1080" data-eio-rheight="800" data-src-webp="https://drumncode.com/wp-content/uploads/2023/12/uxr-01.jpg.webp"><noscript><img src="https://drumncode.com/wp-content/uploads/2023/12/uxr-01.jpg"
+                     alt="UXR" data-eio="l"></noscript>
+                <div class="portfolio-slide-text">
+                    <h3 class="related-article-item-title">UXR</h3>
+                    <p class="related-article-item-description">Creating a Netflix-like media platform that contains a huge base of high quality video/audio podcasts, Mini-series and events related.</p>
+                    <div class="tag-list"><span class="tag-item">Media / Content,</span><span class="tag-item">Science</span></div>                </div>
+            </a>
+                    <a class="portfolio-slide-item" href="https://drumncode.com/portfolio/holo/">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABDgAAAMgAQAAAADuSe9aAAAAAnRSTlMAAHaTzTgAAACASURBVHja7cEBDQAAAMKg909tDjegAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeDSpDwABijjYhAAAAABJRU5ErkJggg=="
+                     alt="HOLO" data-src="https://drumncode.com/wp-content/uploads/2025/08/holo_00_cover.jpg" decoding="async" class="lazyload" width="1080" height="800" data-eio-rwidth="1080" data-eio-rheight="800"><noscript><img src="https://drumncode.com/wp-content/uploads/2025/08/holo_00_cover.jpg"
+                     alt="HOLO" data-eio="l"></noscript>
+                <div class="portfolio-slide-text">
+                    <h3 class="related-article-item-title">HOLO</h3>
+                    <p class="related-article-item-description">Innovative interface combining ad performance analytics with finance management tools.</p>
+                    <div class="tag-list"><span class="tag-item">Discovery / R&amp;D,</span><span class="tag-item">Internal Tool,</span><span class="tag-item">Marketing</span></div>                </div>
+            </a>
+                    <a class="portfolio-slide-item" href="https://drumncode.com/portfolio/transport-management-system/">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABDgAAAMgAQAAAADuSe9aAAAAAnRSTlMAAHaTzTgAAACASURBVHja7cEBDQAAAMKg909tDjegAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeDSpDwABijjYhAAAAABJRU5ErkJggg=="
+                     alt="Transport Management System" data-src="https://drumncode.com/wp-content/uploads/2023/12/transport-management-system-01.jpg" decoding="async" class="lazyload ewww_webp_lazy_load" width="1080" height="800" data-eio-rwidth="1080" data-eio-rheight="800" data-src-webp="https://drumncode.com/wp-content/uploads/2023/12/transport-management-system-01.jpg.webp"><noscript><img src="https://drumncode.com/wp-content/uploads/2023/12/transport-management-system-01.jpg"
+                     alt="Transport Management System" data-eio="l"></noscript>
+                <div class="portfolio-slide-text">
+                    <h3 class="related-article-item-title">Transport Management System</h3>
+                    <p class="related-article-item-description">Transport Management System is a comprehensive CMS/admin panel developed for a large logistics company in the USA. </p>
+                    <div class="tag-list"><span class="tag-item">AI / ML Tool,</span><span class="tag-item">Logistics,</span><span class="tag-item">Mobile App</span></div>                </div>
+            </a>
+                    <a class="portfolio-slide-item" href="https://drumncode.com/portfolio/luminette/">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABDgAAAMgAQAAAADuSe9aAAAAAnRSTlMAAHaTzTgAAACASURBVHja7cEBDQAAAMKg909tDjegAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeDSpDwABijjYhAAAAABJRU5ErkJggg=="
+                     alt="Luminette" data-src="https://drumncode.com/wp-content/uploads/2023/12/luminette-01.png" decoding="async" class="lazyload ewww_webp_lazy_load" width="1080" height="800" data-eio-rwidth="1080" data-eio-rheight="800" data-src-webp="https://drumncode.com/wp-content/uploads/2023/12/luminette-01.png.webp"><noscript><img src="https://drumncode.com/wp-content/uploads/2023/12/luminette-01.png"
+                     alt="Luminette" data-eio="l"></noscript>
+                <div class="portfolio-slide-text">
+                    <h3 class="related-article-item-title">Luminette</h3>
+                    <p class="related-article-item-description">Build a Ecommerce website in order to sell and promote Light therapy devices.</p>
+                    <div class="tag-list"><span class="tag-item">eCommerce,</span><span class="tag-item">HealthTech</span></div>                </div>
+            </a>
+                    <a class="portfolio-slide-item" href="https://drumncode.com/portfolio/esen-design-system/">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABDgAAAMgAQAAAADuSe9aAAAAAnRSTlMAAHaTzTgAAACASURBVHja7cEBDQAAAMKg909tDjegAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeDSpDwABijjYhAAAAABJRU5ErkJggg=="
+                     alt="ESEN &#8211; Design system" data-src="https://drumncode.com/wp-content/uploads/2025/07/esen-design-system-01.jpg" decoding="async" class="lazyload ewww_webp_lazy_load" width="1080" height="800" data-eio-rwidth="1080" data-eio-rheight="800" data-src-webp="https://drumncode.com/wp-content/uploads/2025/07/esen-design-system-01.jpg.webp"><noscript><img src="https://drumncode.com/wp-content/uploads/2025/07/esen-design-system-01.jpg"
+                     alt="ESEN &#8211; Design system" data-eio="l"></noscript>
+                <div class="portfolio-slide-text">
+                    <h3 class="related-article-item-title">ESEN &#8211; Design system</h3>
+                    <p class="related-article-item-description">Scalable design framework with reusable components for cohesive, high-quality interfaces.</p>
+                    <div class="tag-list"><span class="tag-item">HealthTech</span></div>                </div>
+            </a>
+                    <a class="portfolio-slide-item" href="https://drumncode.com/portfolio/threedot/">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABDgAAAMgAQAAAADuSe9aAAAAAnRSTlMAAHaTzTgAAACASURBVHja7cEBDQAAAMKg909tDjegAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeDSpDwABijjYhAAAAABJRU5ErkJggg=="
+                     alt="Threedot" data-src="https://drumncode.com/wp-content/uploads/2025/07/threedot-cover-01.jpg" decoding="async" class="lazyload ewww_webp_lazy_load" width="1080" height="800" data-eio-rwidth="1080" data-eio-rheight="800" data-src-webp="https://drumncode.com/wp-content/uploads/2025/07/threedot-cover-01.jpg.webp"><noscript><img src="https://drumncode.com/wp-content/uploads/2025/07/threedot-cover-01.jpg"
+                     alt="Threedot" data-eio="l"></noscript>
+                <div class="portfolio-slide-text">
+                    <h3 class="related-article-item-title">Threedot</h3>
+                    <p class="related-article-item-description">Redesigned course website emphasizing clarity, professionalism, and modern UI.</p>
+                    <div class="tag-list"><span class="tag-item">EdTech,</span><span class="tag-item">Marketing</span></div>                </div>
+            </a>
+                    <a class="portfolio-slide-item" href="https://drumncode.com/portfolio/vision/">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABDgAAAMgAQAAAADuSe9aAAAAAnRSTlMAAHaTzTgAAACASURBVHja7cEBDQAAAMKg909tDjegAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeDSpDwABijjYhAAAAABJRU5ErkJggg=="
+                     alt="Vision" data-src="https://drumncode.com/wp-content/uploads/2025/07/vision-cover-01.jpg" decoding="async" class="lazyload" width="1080" height="800" data-eio-rwidth="1080" data-eio-rheight="800"><noscript><img src="https://drumncode.com/wp-content/uploads/2025/07/vision-cover-01.jpg"
+                     alt="Vision" data-eio="l"></noscript>
+                <div class="portfolio-slide-text">
+                    <h3 class="related-article-item-title">Vision</h3>
+                    <p class="related-article-item-description">Bringing photos to life with a fresh, positive, and modern web experience.</p>
+                    <div class="tag-list"><span class="tag-item">Media / Content,</span><span class="tag-item">Social Platform</span></div>                </div>
+            </a>
+                    <a class="portfolio-slide-item" href="https://drumncode.com/portfolio/general/">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABDgAAAMgAQAAAADuSe9aAAAAAnRSTlMAAHaTzTgAAACASURBVHja7cEBDQAAAMKg909tDjegAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeDSpDwABijjYhAAAAABJRU5ErkJggg=="
+                     alt="General" data-src="https://drumncode.com/wp-content/uploads/2025/07/general-cover-01.jpg" decoding="async" class="lazyload" width="1080" height="800" data-eio-rwidth="1080" data-eio-rheight="800"><noscript><img src="https://drumncode.com/wp-content/uploads/2025/07/general-cover-01.jpg"
+                     alt="General" data-eio="l"></noscript>
+                <div class="portfolio-slide-text">
+                    <h3 class="related-article-item-title">General</h3>
+                    <p class="related-article-item-description">Website redesign for an industrial equipment producer with focus on modern look and products.</p>
+                    <div class="tag-list"><span class="tag-item">eCommerce</span></div>                </div>
+            </a>
+                    <a class="portfolio-slide-item" href="https://drumncode.com/portfolio/fundify/">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABDgAAAMgAQAAAADuSe9aAAAAAnRSTlMAAHaTzTgAAACASURBVHja7cEBDQAAAMKg909tDjegAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeDSpDwABijjYhAAAAABJRU5ErkJggg=="
+                     alt="Fundify" data-src="https://drumncode.com/wp-content/uploads/2025/07/fundify_cover-01.jpg" decoding="async" class="lazyload" width="1080" height="800" data-eio-rwidth="1080" data-eio-rheight="800"><noscript><img src="https://drumncode.com/wp-content/uploads/2025/07/fundify_cover-01.jpg"
+                     alt="Fundify" data-eio="l"></noscript>
+                <div class="portfolio-slide-text">
+                    <h3 class="related-article-item-title">Fundify</h3>
+                    <p class="related-article-item-description">Comprehensive financial app featuring wallet, dashboard, trading, and beneficiary management.</p>
+                    <div class="tag-list"><span class="tag-item">Fintech</span></div>                </div>
+            </a>
+                    <a class="portfolio-slide-item" href="https://drumncode.com/portfolio/tradespot/">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABDgAAAMgAQAAAADuSe9aAAAAAnRSTlMAAHaTzTgAAACASURBVHja7cEBDQAAAMKg909tDjegAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeDSpDwABijjYhAAAAABJRU5ErkJggg=="
+                     alt="TradeSpot" data-src="https://drumncode.com/wp-content/uploads/2025/07/tradespot_cover-01.jpg" decoding="async" class="lazyload ewww_webp_lazy_load" width="1080" height="800" data-eio-rwidth="1080" data-eio-rheight="800" data-src-webp="https://drumncode.com/wp-content/uploads/2025/07/tradespot_cover-01.jpg.webp"><noscript><img src="https://drumncode.com/wp-content/uploads/2025/07/tradespot_cover-01.jpg"
+                     alt="TradeSpot" data-eio="l"></noscript>
+                <div class="portfolio-slide-text">
+                    <h3 class="related-article-item-title">TradeSpot</h3>
+                    <p class="related-article-item-description">Cross-device trading platform with intuitive UI, transparent pricing, and robust security.</p>
+                    <div class="tag-list"><span class="tag-item">Fintech</span></div>                </div>
+            </a>
+                    <a class="portfolio-slide-item" href="https://drumncode.com/portfolio/tamilculture/">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABDgAAAMgAQAAAADuSe9aAAAAAnRSTlMAAHaTzTgAAACASURBVHja7cEBDQAAAMKg909tDjegAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeDSpDwABijjYhAAAAABJRU5ErkJggg=="
+                     alt="TamilCulture" data-src="https://drumncode.com/wp-content/uploads/2023/12/tamilculture-01.jpg" decoding="async" class="lazyload" width="1080" height="800" data-eio-rwidth="1080" data-eio-rheight="800"><noscript><img src="https://drumncode.com/wp-content/uploads/2023/12/tamilculture-01.jpg"
+                     alt="TamilCulture" data-eio="l"></noscript>
+                <div class="portfolio-slide-text">
+                    <h3 class="related-article-item-title">TamilCulture</h3>
+                    <p class="related-article-item-description">Creating a publishing platform for Tamil community in order to connect it through a storytelling and create a positive picture of Tamil community for the rest of the world.</p>
+                    <div class="tag-list"><span class="tag-item">Media / Content,</span><span class="tag-item">Social Platform</span></div>                </div>
+            </a>
+                    <a class="portfolio-slide-item" href="https://drumncode.com/portfolio/ipmonitor/">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABDgAAAMgAQAAAADuSe9aAAAAAnRSTlMAAHaTzTgAAACASURBVHja7cEBDQAAAMKg909tDjegAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeDSpDwABijjYhAAAAABJRU5ErkJggg=="
+                     alt="IPmonitor" data-src="https://drumncode.com/wp-content/uploads/2023/12/ipmonitor-01.jpg" decoding="async" class="lazyload ewww_webp_lazy_load" width="1080" height="800" data-eio-rwidth="1080" data-eio-rheight="800" data-src-webp="https://drumncode.com/wp-content/uploads/2023/12/ipmonitor-01.jpg.webp"><noscript><img src="https://drumncode.com/wp-content/uploads/2023/12/ipmonitor-01.jpg"
+                     alt="IPmonitor" data-eio="l"></noscript>
+                <div class="portfolio-slide-text">
+                    <h3 class="related-article-item-title">IPmonitor</h3>
+                    <p class="related-article-item-description">IPmonitor is a cutting-edge monitoring tool designed to track the status and various characteristics of domains and IP addresses</p>
+                    <div class="tag-list"><span class="tag-item">Internal Tool,</span><span class="tag-item">Marketing,</span><span class="tag-item">SaaS</span></div>                </div>
+            </a>
+                    <a class="portfolio-slide-item" href="https://drumncode.com/portfolio/whisperclaims/">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABDgAAAMgAQAAAADuSe9aAAAAAnRSTlMAAHaTzTgAAACASURBVHja7cEBDQAAAMKg909tDjegAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeDSpDwABijjYhAAAAABJRU5ErkJggg=="
+                     alt="WhisperClaims" data-src="https://drumncode.com/wp-content/uploads/2025/07/whisperclaims-01.jpg" decoding="async" class="lazyload ewww_webp_lazy_load" width="1080" height="800" data-eio-rwidth="1080" data-eio-rheight="800" data-src-webp="https://drumncode.com/wp-content/uploads/2025/07/whisperclaims-01.jpg.webp"><noscript><img src="https://drumncode.com/wp-content/uploads/2025/07/whisperclaims-01.jpg"
+                     alt="WhisperClaims" data-eio="l"></noscript>
+                <div class="portfolio-slide-text">
+                    <h3 class="related-article-item-title">WhisperClaims</h3>
+                    <p class="related-article-item-description">Comprehensive UX audit helping WhisperClaims boost efficiency and satisfaction for accountants nationwide.</p>
+                    <div class="tag-list"><span class="tag-item">Discovery / R&amp;D</span></div>                </div>
+            </a>
+                    <a class="portfolio-slide-item" href="https://drumncode.com/portfolio/reputable/">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABDgAAAMgAQAAAADuSe9aAAAAAnRSTlMAAHaTzTgAAACASURBVHja7cEBDQAAAMKg909tDjegAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeDSpDwABijjYhAAAAABJRU5ErkJggg=="
+                     alt="Reputable" data-src="https://drumncode.com/wp-content/uploads/2025/07/reputable-01.jpg" decoding="async" class="lazyload ewww_webp_lazy_load" width="1080" height="800" data-eio-rwidth="1080" data-eio-rheight="800" data-src-webp="https://drumncode.com/wp-content/uploads/2025/07/reputable-01.jpg.webp"><noscript><img src="https://drumncode.com/wp-content/uploads/2025/07/reputable-01.jpg"
+                     alt="Reputable" data-eio="l"></noscript>
+                <div class="portfolio-slide-text">
+                    <h3 class="related-article-item-title">Reputable</h3>
+                    <p class="related-article-item-description">User behavior insights and design refinements helping Reputable deliver a seamless app experience.</p>
+                    <div class="tag-list"><span class="tag-item">HealthTech,</span><span class="tag-item">Social Platform</span></div>                </div>
+            </a>
+                    <a class="portfolio-slide-item" href="https://drumncode.com/portfolio/quick-crave/">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABDgAAAMgAQAAAADuSe9aAAAAAnRSTlMAAHaTzTgAAACASURBVHja7cEBDQAAAMKg909tDjegAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeDSpDwABijjYhAAAAABJRU5ErkJggg=="
+                     alt="Quick Crave" data-src="https://drumncode.com/wp-content/uploads/2025/07/quick-crave-01.jpg" decoding="async" class="lazyload ewww_webp_lazy_load" width="1080" height="800" data-eio-rwidth="1080" data-eio-rheight="800" data-src-webp="https://drumncode.com/wp-content/uploads/2025/07/quick-crave-01.jpg.webp"><noscript><img src="https://drumncode.com/wp-content/uploads/2025/07/quick-crave-01.jpg"
+                     alt="Quick Crave" data-eio="l"></noscript>
+                <div class="portfolio-slide-text">
+                    <h3 class="related-article-item-title">Quick Crave</h3>
+                    <p class="related-article-item-description">Cross-device mobile design and development for Quick Crave with intuitive navigation and optimized user flows.</p>
+                    <div class="tag-list"><span class="tag-item">Food &amp; Restaurants,</span><span class="tag-item">Social Platform</span></div>                </div>
+            </a>
+                    <a class="portfolio-slide-item" href="https://drumncode.com/portfolio/social-vibe/">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABDgAAAMgAQAAAADuSe9aAAAAAnRSTlMAAHaTzTgAAACASURBVHja7cEBDQAAAMKg909tDjegAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeDSpDwABijjYhAAAAABJRU5ErkJggg=="
+                     alt="Social Vibe" data-src="https://drumncode.com/wp-content/uploads/2025/07/social-vibe-01.jpg" decoding="async" class="lazyload ewww_webp_lazy_load" width="1080" height="800" data-eio-rwidth="1080" data-eio-rheight="800" data-src-webp="https://drumncode.com/wp-content/uploads/2025/07/social-vibe-01.jpg.webp"><noscript><img src="https://drumncode.com/wp-content/uploads/2025/07/social-vibe-01.jpg"
+                     alt="Social Vibe" data-eio="l"></noscript>
+                <div class="portfolio-slide-text">
+                    <h3 class="related-article-item-title">Social Vibe</h3>
+                    <p class="related-article-item-description">Mobile app for event discovery, registration, and attendee communication.</p>
+                    <div class="tag-list"><span class="tag-item">Social Platform,</span><span class="tag-item">Traveling</span></div>                </div>
+            </a>
+                    <a class="portfolio-slide-item" href="https://drumncode.com/portfolio/edulink/">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABDgAAAMgAQAAAADuSe9aAAAAAnRSTlMAAHaTzTgAAACASURBVHja7cEBDQAAAMKg909tDjegAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeDSpDwABijjYhAAAAABJRU5ErkJggg=="
+                     alt="Edulink" data-src="https://drumncode.com/wp-content/uploads/2025/07/edulink_cover-01.jpg" decoding="async" class="lazyload ewww_webp_lazy_load" width="1080" height="800" data-eio-rwidth="1080" data-eio-rheight="800" data-src-webp="https://drumncode.com/wp-content/uploads/2025/07/edulink_cover-01.jpg.webp"><noscript><img src="https://drumncode.com/wp-content/uploads/2025/07/edulink_cover-01.jpg"
+                     alt="Edulink" data-eio="l"></noscript>
+                <div class="portfolio-slide-text">
+                    <h3 class="related-article-item-title">Edulink</h3>
+                    <p class="related-article-item-description">Responsive web app for education with tailored roles for admins, teachers, students, and parents.</p>
+                    <div class="tag-list"><span class="tag-item">EdTech</span></div>                </div>
+            </a>
+                    <a class="portfolio-slide-item" href="https://drumncode.com/portfolio/healthy-community/">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABDgAAAMgAQAAAADuSe9aAAAAAnRSTlMAAHaTzTgAAACASURBVHja7cEBDQAAAMKg909tDjegAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeDSpDwABijjYhAAAAABJRU5ErkJggg=="
+                     alt="Healthy Community" data-src="https://drumncode.com/wp-content/uploads/2025/07/healthy-community_cover-01.jpg" decoding="async" class="lazyload ewww_webp_lazy_load" width="1080" height="800" data-eio-rwidth="1080" data-eio-rheight="800" data-src-webp="https://drumncode.com/wp-content/uploads/2025/07/healthy-community_cover-01.jpg.webp"><noscript><img src="https://drumncode.com/wp-content/uploads/2025/07/healthy-community_cover-01.jpg"
+                     alt="Healthy Community" data-eio="l"></noscript>
+                <div class="portfolio-slide-text">
+                    <h3 class="related-article-item-title">Healthy Community</h3>
+                    <p class="related-article-item-description">Corporate health solution with gamification, goal tracking, and intuitive user experience.</p>
+                    <div class="tag-list"><span class="tag-item">HealthTech</span></div>                </div>
+            </a>
+                    <a class="portfolio-slide-item" href="https://drumncode.com/portfolio/psycly/">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABDgAAAMgAQAAAADuSe9aAAAAAnRSTlMAAHaTzTgAAACASURBVHja7cEBDQAAAMKg909tDjegAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeDSpDwABijjYhAAAAABJRU5ErkJggg=="
+                     alt="Psycly" data-src="https://drumncode.com/wp-content/uploads/2025/07/psycly_cover-01.jpg" decoding="async" class="lazyload ewww_webp_lazy_load" width="1080" height="800" data-eio-rwidth="1080" data-eio-rheight="800" data-src-webp="https://drumncode.com/wp-content/uploads/2025/07/psycly_cover-01.jpg.webp"><noscript><img src="https://drumncode.com/wp-content/uploads/2025/07/psycly_cover-01.jpg"
+                     alt="Psycly" data-eio="l"></noscript>
+                <div class="portfolio-slide-text">
+                    <h3 class="related-article-item-title">Psycly</h3>
+                    <p class="related-article-item-description">Web and mobile platform for online life coaching and therapy sessions.</p>
+                    <div class="tag-list"><span class="tag-item">HealthTech</span></div>                </div>
+            </a>
+                    <a class="portfolio-slide-item" href="https://drumncode.com/portfolio/fortunatos/">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABDgAAAMgAQAAAADuSe9aAAAAAnRSTlMAAHaTzTgAAACASURBVHja7cEBDQAAAMKg909tDjegAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeDSpDwABijjYhAAAAABJRU5ErkJggg=="
+                     alt="Fortunatos" data-src="https://drumncode.com/wp-content/uploads/2025/07/fortunatos_cover-01.jpg" decoding="async" class="lazyload" width="1080" height="800" data-eio-rwidth="1080" data-eio-rheight="800"><noscript><img src="https://drumncode.com/wp-content/uploads/2025/07/fortunatos_cover-01.jpg"
+                     alt="Fortunatos" data-eio="l"></noscript>
+                <div class="portfolio-slide-text">
+                    <h3 class="related-article-item-title">Fortunatos</h3>
+                    <p class="related-article-item-description">Polished web design that inspires trust and engages high-net-worth clients with clear CTAs.</p>
+                    <div class="tag-list"><span class="tag-item">Corporate Site,</span><span class="tag-item">Marketing</span></div>                </div>
+            </a>
+                    <a class="portfolio-slide-item" href="https://drumncode.com/portfolio/tocode/">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABDgAAAMgAQAAAADuSe9aAAAAAnRSTlMAAHaTzTgAAACASURBVHja7cEBDQAAAMKg909tDjegAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeDSpDwABijjYhAAAAABJRU5ErkJggg=="
+                     alt="ToCode" data-src="https://drumncode.com/wp-content/uploads/2025/07/tocode_cover-01.jpg" decoding="async" class="lazyload" width="1080" height="800" data-eio-rwidth="1080" data-eio-rheight="800"><noscript><img src="https://drumncode.com/wp-content/uploads/2025/07/tocode_cover-01.jpg"
+                     alt="ToCode" data-eio="l"></noscript>
+                <div class="portfolio-slide-text">
+                    <h3 class="related-article-item-title">ToCode</h3>
+                    <p class="related-article-item-description">Revamped educational platform using modern UI/UX trends for better usability and engagement.</p>
+                    <div class="tag-list"><span class="tag-item">EdTech</span></div>                </div>
+            </a>
+                    <a class="portfolio-slide-item" href="https://drumncode.com/portfolio/apple-tech-marketplace/">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABDgAAAMgAQAAAADuSe9aAAAAAnRSTlMAAHaTzTgAAACASURBVHja7cEBDQAAAMKg909tDjegAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeDSpDwABijjYhAAAAABJRU5ErkJggg=="
+                     alt="Apple Tech Marketplace" data-src="https://drumncode.com/wp-content/uploads/2023/12/apple-tech-marketplace-01.jpg" decoding="async" class="lazyload" width="1080" height="800" data-eio-rwidth="1080" data-eio-rheight="800"><noscript><img src="https://drumncode.com/wp-content/uploads/2023/12/apple-tech-marketplace-01.jpg"
+                     alt="Apple Tech Marketplace" data-eio="l"></noscript>
+                <div class="portfolio-slide-text">
+                    <h3 class="related-article-item-title">Apple Tech Marketplace</h3>
+                    <p class="related-article-item-description">The official Apple reseller marketplace with a daily visitor count of approximately 100,000!</p>
+                    <div class="tag-list"><span class="tag-item">Marketplace</span></div>                </div>
+            </a>
+            </div>
+</section><section id="services" class="animated">
+    <div class="container">
+        <div class="two-column-block services-section">
+            <div class="left-column">
+                <h3 class="services-section-title">Services</h3>
+            </div>
+            <div class="right-column">
+                <div class="services-section-container">
+                                            <a class="services-section-item" href="https://drumncode.com/services/dedicated-developers/">
+                            <h3 class="services-section-item-number">01</h3>
+                            <div class="services-section-item-content">
+                                <h4 class="services-section-item-title">Dedicated Developers</h4>
+                                <div class="services-section-item-more">
+                                    <p class="services-section-item-more-text">More</p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="services-section-item-more-icon" viewBox="0 0 24 24" fill="none">
+                                        <g clip-path="url(#clip0_6945_515)">
+                                            <path d="M8 6.696L14.5017 13L8 19.304L9.74917 21L18 13L9.74917 5L8 6.696Z" fill="#FFCB08"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_6945_515">
+                                                <rect width="24" height="24" fill="white"/>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                                                <a class="services-section-item" href="https://drumncode.com/services/web-development/">
+                            <h3 class="services-section-item-number">02</h3>
+                            <div class="services-section-item-content">
+                                <h4 class="services-section-item-title">Web Development</h4>
+                                <div class="services-section-item-more">
+                                    <p class="services-section-item-more-text">More</p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="services-section-item-more-icon" viewBox="0 0 24 24" fill="none">
+                                        <g clip-path="url(#clip0_6945_515)">
+                                            <path d="M8 6.696L14.5017 13L8 19.304L9.74917 21L18 13L9.74917 5L8 6.696Z" fill="#FFCB08"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_6945_515">
+                                                <rect width="24" height="24" fill="white"/>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                                                <a class="services-section-item" href="https://drumncode.com/services/mobile-app-development/">
+                            <h3 class="services-section-item-number">03</h3>
+                            <div class="services-section-item-content">
+                                <h4 class="services-section-item-title">Mobile App Development</h4>
+                                <div class="services-section-item-more">
+                                    <p class="services-section-item-more-text">More</p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="services-section-item-more-icon" viewBox="0 0 24 24" fill="none">
+                                        <g clip-path="url(#clip0_6945_515)">
+                                            <path d="M8 6.696L14.5017 13L8 19.304L9.74917 21L18 13L9.74917 5L8 6.696Z" fill="#FFCB08"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_6945_515">
+                                                <rect width="24" height="24" fill="white"/>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                                                <a class="services-section-item" href="https://drumncode.com/services/solutions-development/">
+                            <h3 class="services-section-item-number">04</h3>
+                            <div class="services-section-item-content">
+                                <h4 class="services-section-item-title">Solutions Development</h4>
+                                <div class="services-section-item-more">
+                                    <p class="services-section-item-more-text">More</p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="services-section-item-more-icon" viewBox="0 0 24 24" fill="none">
+                                        <g clip-path="url(#clip0_6945_515)">
+                                            <path d="M8 6.696L14.5017 13L8 19.304L9.74917 21L18 13L9.74917 5L8 6.696Z" fill="#FFCB08"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_6945_515">
+                                                <rect width="24" height="24" fill="white"/>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                                        </div>
+            </div>
+        </div>
+    </div>
+</section><section id="why-we" class="animated">
+    <div class="container">
+        <div class="accordion-container two-column-block">
+            <div class="left-column">
+                <h3 class="accordion-title">Why We</h3>
+            </div>
+            <div class="right-column">
+                                    <ul class="accordion-list">
+                                                    <li class="accordion-list-item accordion-item">
+                                <div class="accordion-list-item-title accordion-item-title">
+                                    <h4 class="accordion-list-item-title-bold">Experience</h4>
+                                    <button aria-label="Open Section" class="accordion-list-item-controls"></button>
+                                </div>
+                                <div class="accordion-item-text">
+                                    <p class="accordion-item-text-content">
+                                        The people you’ll meet in our team have solid working experience and are experts in business, design and technology. Together you'll discuss ideas and opportunities, and we'll deliver blueprints for the best solution.                                    </p>
+                                </div>
+                            </li>
+                                                    <li class="accordion-list-item accordion-item">
+                                <div class="accordion-list-item-title accordion-item-title">
+                                    <h4 class="accordion-list-item-title-bold">Result-oriented</h4>
+                                    <button aria-label="Open Section" class="accordion-list-item-controls"></button>
+                                </div>
+                                <div class="accordion-item-text">
+                                    <p class="accordion-item-text-content">
+                                        We are not afraid of complicated tasks and are ready for new challenges. Our team is always focused on achieving the result in order to create a high quality solution for the client.                                    </p>
+                                </div>
+                            </li>
+                                                    <li class="accordion-list-item accordion-item">
+                                <div class="accordion-list-item-title accordion-item-title">
+                                    <h4 class="accordion-list-item-title-bold">Vast tech stack</h4>
+                                    <button aria-label="Open Section" class="accordion-list-item-controls"></button>
+                                </div>
+                                <div class="accordion-item-text">
+                                    <p class="accordion-item-text-content">
+                                        Building a complex project calls for using a lot of advanced technologies. Our team is ready to provide you the top-notch tech solutions in order to meet all your requirements and expectations.                                    </p>
+                                </div>
+                            </li>
+                                                    <li class="accordion-list-item accordion-item">
+                                <div class="accordion-list-item-title accordion-item-title">
+                                    <h4 class="accordion-list-item-title-bold">Continuous support</h4>
+                                    <button aria-label="Open Section" class="accordion-list-item-controls"></button>
+                                </div>
+                                <div class="accordion-item-text">
+                                    <p class="accordion-item-text-content">
+                                        You are not alone after the release stage. We are ready to maintain and scale your project. Our main goal is to build long-term trusted relationships with our customers.                                    </p>
+                                </div>
+                            </li>
+                                            </ul>
+                            </div>
+        </div>
+    </div>
+</section><section id="interesting-data" class="animated">
+    <div class="container">
+        <div class="interesting-data-container two-column-block">
+            <div class="left-column">
+                <h3 class="interesting-data-title">Interesting data</h3>
+            </div>
+            <div class="right-column">
+                <div class="interesting-data-description">
+                                                                <ul class="interesting-data-exp">
+                            <li class="interesting-data-exp-item">
+                                <p class="interesting-data-exp-item-counter">9</p>
+                                <p class="interesting-data-exp-item-subtitle">Years of Experience</p>
+                            </li>
+                            <li class="interesting-data-exp-item">
+                                <p class="interesting-data-exp-item-counter">100+</p>
+                                <p class="interesting-data-exp-item-subtitle">Full-Time Engineers</p>
+                            </li>
+                            <li class="interesting-data-exp-item">
+                                <p class="interesting-data-exp-item-counter">172</p>
+                                <p class="interesting-data-exp-item-subtitle">Successful Projects</p>
+                            </li>
+                            <li class="interesting-data-exp-item">
+                                <p class="interesting-data-exp-item-counter">115</p>
+                                <p class="interesting-data-exp-item-subtitle">Customers Worldwide</p>
+                            </li>
+                        </ul>
+                                    </div>
+            </div>
+        </div>
+    </div>
+</section><section class="section-ticker">
+    <div class="ticker-talk-slider highlighted">
+                    <div class="ticker-talk-slide">
+                <div class="ticker-talk-item sidebar-open"
+                     data-sidebar="sidebar-form-0">Let&apos;s Talk                </div>
+            </div>
+                    <div class="ticker-talk-slide">
+                <div class="ticker-talk-item sidebar-open"
+                     data-sidebar="sidebar-form-0">Let&apos;s Talk                </div>
+            </div>
+                    <div class="ticker-talk-slide">
+                <div class="ticker-talk-item sidebar-open"
+                     data-sidebar="sidebar-form-0">Let&apos;s Talk                </div>
+            </div>
+            </div>
+    <div class="ticker-talk-mobile">
+        <p class="ticker-talk-mobile-text">Like <br>What You See?</p>
+        <button class="ticker-talk-mobile-button sidebar-open"
+                data-sidebar="sidebar-form-0">Get In Touch        </button>
+    </div>
+</section>
+<section id="what-our-clients-say" class="animated">
+    <div class="container">
+        <div class="reviews-section twoColumnBlock">
+            <div class="leftColumn">
+                <h3 class="reviews-section-title">What Our Clients Say</h3>
+            </div>
+                            <div class="rightColumn">
+                    <div class="reviews-section-container">
+                                                <a href="https://clutch.co/profile/drumncode"
+                           class="reviews-section-item"
+                           target="_blank" rel="noopener noreferrer">
+                            <div class="reviews-section-item-logo-wrapper">
+                                                                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                         alt="clutch" data-src="https://drumncode.com/wp-content/uploads/2023/10/clutch.svg" decoding="async" class="lazyload"><noscript><img src="https://drumncode.com/wp-content/uploads/2023/10/clutch.svg"
+                                         alt="clutch" data-eio="l"></noscript>
+                                                            </div>
+                            <div class="reviews-section-item-bottom">
+                                <div>
+                                    <div class="reviews-section-item-stars-wrapper">
+                                                                                    <svg xmlns="http://www.w3.org/2000/svg" class="reviews-section-item-star"
+                                                 width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <g clip-path="url(#clip0_6945_183)">
+                                                    <path d="M12.5671 0.933745L15.6199 8.15925L23.4355 8.83067C23.9775 8.87748 24.198 9.55383 23.7866 9.90987L17.8584 15.046L19.6349 22.6866C19.7581 23.2176 19.1827 23.6352 18.7171 23.3531L12.0004 19.3024L5.28374 23.3531C4.81683 23.634 4.24273 23.2164 4.36593 22.6866L6.14242 15.046L0.212988 9.90864C-0.198487 9.5526 0.0208021 8.87625 0.564097 8.82944L8.37966 8.15801L11.4325 0.933745C11.6444 0.431102 12.3552 0.431102 12.5671 0.933745Z"
+                                                          fill="#FFCB08"/>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_6945_183">
+                                                        <rect width="23.9998" height="24" fill="white"
+                                                              transform="translate(-0.000244141)"/>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                                                                    <svg xmlns="http://www.w3.org/2000/svg" class="reviews-section-item-star"
+                                                 width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <g clip-path="url(#clip0_6945_183)">
+                                                    <path d="M12.5671 0.933745L15.6199 8.15925L23.4355 8.83067C23.9775 8.87748 24.198 9.55383 23.7866 9.90987L17.8584 15.046L19.6349 22.6866C19.7581 23.2176 19.1827 23.6352 18.7171 23.3531L12.0004 19.3024L5.28374 23.3531C4.81683 23.634 4.24273 23.2164 4.36593 22.6866L6.14242 15.046L0.212988 9.90864C-0.198487 9.5526 0.0208021 8.87625 0.564097 8.82944L8.37966 8.15801L11.4325 0.933745C11.6444 0.431102 12.3552 0.431102 12.5671 0.933745Z"
+                                                          fill="#FFCB08"/>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_6945_183">
+                                                        <rect width="23.9998" height="24" fill="white"
+                                                              transform="translate(-0.000244141)"/>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                                                                    <svg xmlns="http://www.w3.org/2000/svg" class="reviews-section-item-star"
+                                                 width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <g clip-path="url(#clip0_6945_183)">
+                                                    <path d="M12.5671 0.933745L15.6199 8.15925L23.4355 8.83067C23.9775 8.87748 24.198 9.55383 23.7866 9.90987L17.8584 15.046L19.6349 22.6866C19.7581 23.2176 19.1827 23.6352 18.7171 23.3531L12.0004 19.3024L5.28374 23.3531C4.81683 23.634 4.24273 23.2164 4.36593 22.6866L6.14242 15.046L0.212988 9.90864C-0.198487 9.5526 0.0208021 8.87625 0.564097 8.82944L8.37966 8.15801L11.4325 0.933745C11.6444 0.431102 12.3552 0.431102 12.5671 0.933745Z"
+                                                          fill="#FFCB08"/>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_6945_183">
+                                                        <rect width="23.9998" height="24" fill="white"
+                                                              transform="translate(-0.000244141)"/>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                                                                    <svg xmlns="http://www.w3.org/2000/svg" class="reviews-section-item-star"
+                                                 width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <g clip-path="url(#clip0_6945_183)">
+                                                    <path d="M12.5671 0.933745L15.6199 8.15925L23.4355 8.83067C23.9775 8.87748 24.198 9.55383 23.7866 9.90987L17.8584 15.046L19.6349 22.6866C19.7581 23.2176 19.1827 23.6352 18.7171 23.3531L12.0004 19.3024L5.28374 23.3531C4.81683 23.634 4.24273 23.2164 4.36593 22.6866L6.14242 15.046L0.212988 9.90864C-0.198487 9.5526 0.0208021 8.87625 0.564097 8.82944L8.37966 8.15801L11.4325 0.933745C11.6444 0.431102 12.3552 0.431102 12.5671 0.933745Z"
+                                                          fill="#FFCB08"/>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_6945_183">
+                                                        <rect width="23.9998" height="24" fill="white"
+                                                              transform="translate(-0.000244141)"/>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                                                                    <svg xmlns="http://www.w3.org/2000/svg" class="reviews-section-item-star"
+                                                 width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <g clip-path="url(#clip0_6945_183)">
+                                                    <path d="M12.5671 0.933745L15.6199 8.15925L23.4355 8.83067C23.9775 8.87748 24.198 9.55383 23.7866 9.90987L17.8584 15.046L19.6349 22.6866C19.7581 23.2176 19.1827 23.6352 18.7171 23.3531L12.0004 19.3024L5.28374 23.3531C4.81683 23.634 4.24273 23.2164 4.36593 22.6866L6.14242 15.046L0.212988 9.90864C-0.198487 9.5526 0.0208021 8.87625 0.564097 8.82944L8.37966 8.15801L11.4325 0.933745C11.6444 0.431102 12.3552 0.431102 12.5671 0.933745Z"
+                                                          fill="#FFCB08"/>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_6945_183">
+                                                        <rect width="23.9998" height="24" fill="white"
+                                                              transform="translate(-0.000244141)"/>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                                                            </div>
+                                    <p class="reviews-section-item-counter">21 reviews</p>
+                                </div>
+                                <div class="reviews-section-item-more">
+                                    <p class="reviews-section-item-more-text">More</p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="services-section-item-more-icon" viewBox="0 0 24 24" fill="none">
+                                        <g clip-path="url(#clip0_6945_515)">
+                                            <path d="M8 6.696L14.5017 13L8 19.304L9.74917 21L18 13L9.74917 5L8 6.696Z" fill="#FFCB08"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_6945_515">
+                                                <rect width="24" height="24" fill="white"/>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                                                <a href="https://www.upwork.com/ag/drumncode/"
+                           class="reviews-section-item"
+                           target="_blank" rel="noopener noreferrer">
+                            <div class="reviews-section-item-logo-wrapper">
+                                                                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                         alt="upwork" data-src="https://drumncode.com/wp-content/uploads/2023/06/upwork.svg" decoding="async" class="lazyload"><noscript><img src="https://drumncode.com/wp-content/uploads/2023/06/upwork.svg"
+                                         alt="upwork" data-eio="l"></noscript>
+                                                            </div>
+                            <div class="reviews-section-item-bottom">
+                                <div>
+                                    <div class="reviews-section-item-stars-wrapper">
+                                                                                    <svg xmlns="http://www.w3.org/2000/svg" class="reviews-section-item-star"
+                                                 width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <g clip-path="url(#clip0_6945_183)">
+                                                    <path d="M12.5671 0.933745L15.6199 8.15925L23.4355 8.83067C23.9775 8.87748 24.198 9.55383 23.7866 9.90987L17.8584 15.046L19.6349 22.6866C19.7581 23.2176 19.1827 23.6352 18.7171 23.3531L12.0004 19.3024L5.28374 23.3531C4.81683 23.634 4.24273 23.2164 4.36593 22.6866L6.14242 15.046L0.212988 9.90864C-0.198487 9.5526 0.0208021 8.87625 0.564097 8.82944L8.37966 8.15801L11.4325 0.933745C11.6444 0.431102 12.3552 0.431102 12.5671 0.933745Z"
+                                                          fill="#FFCB08"/>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_6945_183">
+                                                        <rect width="23.9998" height="24" fill="white"
+                                                              transform="translate(-0.000244141)"/>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                                                                    <svg xmlns="http://www.w3.org/2000/svg" class="reviews-section-item-star"
+                                                 width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <g clip-path="url(#clip0_6945_183)">
+                                                    <path d="M12.5671 0.933745L15.6199 8.15925L23.4355 8.83067C23.9775 8.87748 24.198 9.55383 23.7866 9.90987L17.8584 15.046L19.6349 22.6866C19.7581 23.2176 19.1827 23.6352 18.7171 23.3531L12.0004 19.3024L5.28374 23.3531C4.81683 23.634 4.24273 23.2164 4.36593 22.6866L6.14242 15.046L0.212988 9.90864C-0.198487 9.5526 0.0208021 8.87625 0.564097 8.82944L8.37966 8.15801L11.4325 0.933745C11.6444 0.431102 12.3552 0.431102 12.5671 0.933745Z"
+                                                          fill="#FFCB08"/>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_6945_183">
+                                                        <rect width="23.9998" height="24" fill="white"
+                                                              transform="translate(-0.000244141)"/>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                                                                    <svg xmlns="http://www.w3.org/2000/svg" class="reviews-section-item-star"
+                                                 width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <g clip-path="url(#clip0_6945_183)">
+                                                    <path d="M12.5671 0.933745L15.6199 8.15925L23.4355 8.83067C23.9775 8.87748 24.198 9.55383 23.7866 9.90987L17.8584 15.046L19.6349 22.6866C19.7581 23.2176 19.1827 23.6352 18.7171 23.3531L12.0004 19.3024L5.28374 23.3531C4.81683 23.634 4.24273 23.2164 4.36593 22.6866L6.14242 15.046L0.212988 9.90864C-0.198487 9.5526 0.0208021 8.87625 0.564097 8.82944L8.37966 8.15801L11.4325 0.933745C11.6444 0.431102 12.3552 0.431102 12.5671 0.933745Z"
+                                                          fill="#FFCB08"/>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_6945_183">
+                                                        <rect width="23.9998" height="24" fill="white"
+                                                              transform="translate(-0.000244141)"/>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                                                                    <svg xmlns="http://www.w3.org/2000/svg" class="reviews-section-item-star"
+                                                 width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <g clip-path="url(#clip0_6945_183)">
+                                                    <path d="M12.5671 0.933745L15.6199 8.15925L23.4355 8.83067C23.9775 8.87748 24.198 9.55383 23.7866 9.90987L17.8584 15.046L19.6349 22.6866C19.7581 23.2176 19.1827 23.6352 18.7171 23.3531L12.0004 19.3024L5.28374 23.3531C4.81683 23.634 4.24273 23.2164 4.36593 22.6866L6.14242 15.046L0.212988 9.90864C-0.198487 9.5526 0.0208021 8.87625 0.564097 8.82944L8.37966 8.15801L11.4325 0.933745C11.6444 0.431102 12.3552 0.431102 12.5671 0.933745Z"
+                                                          fill="#FFCB08"/>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_6945_183">
+                                                        <rect width="23.9998" height="24" fill="white"
+                                                              transform="translate(-0.000244141)"/>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                                                                    <svg xmlns="http://www.w3.org/2000/svg" class="reviews-section-item-star"
+                                                 width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <g clip-path="url(#clip0_6945_183)">
+                                                    <path d="M12.5671 0.933745L15.6199 8.15925L23.4355 8.83067C23.9775 8.87748 24.198 9.55383 23.7866 9.90987L17.8584 15.046L19.6349 22.6866C19.7581 23.2176 19.1827 23.6352 18.7171 23.3531L12.0004 19.3024L5.28374 23.3531C4.81683 23.634 4.24273 23.2164 4.36593 22.6866L6.14242 15.046L0.212988 9.90864C-0.198487 9.5526 0.0208021 8.87625 0.564097 8.82944L8.37966 8.15801L11.4325 0.933745C11.6444 0.431102 12.3552 0.431102 12.5671 0.933745Z"
+                                                          fill="#FFCB08"/>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_6945_183">
+                                                        <rect width="23.9998" height="24" fill="white"
+                                                              transform="translate(-0.000244141)"/>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                                                            </div>
+                                    <p class="reviews-section-item-counter">91 reviews</p>
+                                </div>
+                                <div class="reviews-section-item-more">
+                                    <p class="reviews-section-item-more-text">More</p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="services-section-item-more-icon" viewBox="0 0 24 24" fill="none">
+                                        <g clip-path="url(#clip0_6945_515)">
+                                            <path d="M8 6.696L14.5017 13L8 19.304L9.74917 21L18 13L9.74917 5L8 6.696Z" fill="#FFCB08"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_6945_515">
+                                                <rect width="24" height="24" fill="white"/>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                                            </div>
+                </div>
+                    </div>
+    </div>
+</section><section class="our-team-section animated">
+    <div class="our-team-header-nav">
+        <div class="container">
+            <h3 class="section-title">Our Team</h3>
+            <div class="slick-arrows">
+                <button class="slick-arrow slick-arrow-prev" aria-label="Previous slide"></button>
+                <button class="slick-arrow slick-arrow-next" aria-label="Next slide"></button>
+            </div>
+        </div>
+    </div>
+    <div class="our-team-slider-container">
+                    <div class="our-team-slider">
+                                                            <div class="our-team-slide">
+                            <div class="our-team-slide-item-container">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAArwAAAMgAQAAAADpEoxiAAAAAnRSTlMAAHaTzTgAAABbSURBVHja7cEBAQAAAIIg/69uSEABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACvBhYvAAECVgRCAAAAAElFTkSuQmCC"
+                                        alt="Alex Khorunzhyi"
+                                        class="our-team-slide-item-image lazyload" data-src="https://drumncode.com/wp-content/uploads/2023/06/seo-alex-khorunzyi-2025.jpg" decoding="async" width="700" height="800" data-eio-rwidth="700" data-eio-rheight="800"><noscript><img src="https://drumncode.com/wp-content/uploads/2023/06/seo-alex-khorunzyi-2025.jpg"
+                                        alt="Alex Khorunzhyi"
+                                        class="our-team-slide-item-image" data-eio="l"></noscript>
+                                                                <h4 class="our-team-slide-item-title">Alex Khorunzhyi</h4>
+                                <span class="our-team-slide-item-position">CEO</span>
+                            </div>
+                        </div>
+                                                                                <div class="our-team-slide">
+                            <div class="our-team-slide-item-container">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAArwAAAMgAQAAAADpEoxiAAAAAnRSTlMAAHaTzTgAAABbSURBVHja7cEBAQAAAIIg/69uSEABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACvBhYvAAECVgRCAAAAAElFTkSuQmCC"
+                                        alt="Bogdan Shtybin"
+                                        class="our-team-slide-item-image lazyload" data-src="https://drumncode.com/wp-content/uploads/2023/06/cto-bogdan-shtybin-2025.jpg" decoding="async" width="700" height="800" data-eio-rwidth="700" data-eio-rheight="800"><noscript><img src="https://drumncode.com/wp-content/uploads/2023/06/cto-bogdan-shtybin-2025.jpg"
+                                        alt="Bogdan Shtybin"
+                                        class="our-team-slide-item-image" data-eio="l"></noscript>
+                                                                <h4 class="our-team-slide-item-title">Bogdan Shtybin</h4>
+                                <span class="our-team-slide-item-position">CTO</span>
+                            </div>
+                        </div>
+                                                                                <div class="our-team-slide">
+                            <div class="our-team-slide-item-container">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAArwAAAMgAQAAAADpEoxiAAAAAnRSTlMAAHaTzTgAAABbSURBVHja7cEBAQAAAIIg/69uSEABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACvBhYvAAECVgRCAAAAAElFTkSuQmCC"
+                                        alt="Arthur Goncharenko"
+                                        class="our-team-slide-item-image lazyload" data-src="https://drumncode.com/wp-content/uploads/2023/06/head-of-hr-arthur-goncharenko-2025.jpg" decoding="async" width="700" height="800" data-eio-rwidth="700" data-eio-rheight="800"><noscript><img src="https://drumncode.com/wp-content/uploads/2023/06/head-of-hr-arthur-goncharenko-2025.jpg"
+                                        alt="Arthur Goncharenko"
+                                        class="our-team-slide-item-image" data-eio="l"></noscript>
+                                                                <h4 class="our-team-slide-item-title">Arthur Goncharenko</h4>
+                                <span class="our-team-slide-item-position">Head of HR Department</span>
+                            </div>
+                        </div>
+                                                                                <div class="our-team-slide">
+                            <div class="our-team-slide-item-container">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAArwAAAMgAQAAAADpEoxiAAAAAnRSTlMAAHaTzTgAAABbSURBVHja7cEBAQAAAIIg/69uSEABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACvBhYvAAECVgRCAAAAAElFTkSuQmCC"
+                                        alt="Oleksandr Shevchenko"
+                                        class="our-team-slide-item-image lazyload ewww_webp_lazy_load" data-src="https://drumncode.com/wp-content/uploads/2023/06/head-of-sales-alexander-shevchenko-2025.jpg" decoding="async" width="700" height="800" data-eio-rwidth="700" data-eio-rheight="800" data-src-webp="https://drumncode.com/wp-content/uploads/2023/06/head-of-sales-alexander-shevchenko-2025.jpg.webp"><noscript><img src="https://drumncode.com/wp-content/uploads/2023/06/head-of-sales-alexander-shevchenko-2025.jpg"
+                                        alt="Oleksandr Shevchenko"
+                                        class="our-team-slide-item-image" data-eio="l"></noscript>
+                                                                <h4 class="our-team-slide-item-title">Oleksandr Shevchenko</h4>
+                                <span class="our-team-slide-item-position">Head of Sales</span>
+                            </div>
+                        </div>
+                                                                                <div class="our-team-slide">
+                            <div class="our-team-slide-item-container">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAArwAAAMgAQAAAADpEoxiAAAAAnRSTlMAAHaTzTgAAABbSURBVHja7cEBAQAAAIIg/69uSEABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACvBhYvAAECVgRCAAAAAElFTkSuQmCC"
+                                        alt="Oleksii Dibrova"
+                                        class="our-team-slide-item-image lazyload" data-src="https://drumncode.com/wp-content/uploads/2025/08/frontend-team-lead-oleksii-dibrova-2025.jpg" decoding="async" width="700" height="800" data-eio-rwidth="700" data-eio-rheight="800"><noscript><img src="https://drumncode.com/wp-content/uploads/2025/08/frontend-team-lead-oleksii-dibrova-2025.jpg"
+                                        alt="Oleksii Dibrova"
+                                        class="our-team-slide-item-image" data-eio="l"></noscript>
+                                                                <h4 class="our-team-slide-item-title">Oleksii Dibrova</h4>
+                                <span class="our-team-slide-item-position">Head of Engineering</span>
+                            </div>
+                        </div>
+                                                                                <div class="our-team-slide">
+                            <div class="our-team-slide-item-container">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAArwAAAMgAQAAAADpEoxiAAAAAnRSTlMAAHaTzTgAAABbSURBVHja7cEBAQAAAIIg/69uSEABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACvBhYvAAECVgRCAAAAAElFTkSuQmCC"
+                                        alt="Yaroslav Petrov"
+                                        class="our-team-slide-item-image lazyload" data-src="https://drumncode.com/wp-content/uploads/2023/06/back-end-team-lead-yaroslav-petrov-2025.jpg" decoding="async" width="700" height="800" data-eio-rwidth="700" data-eio-rheight="800"><noscript><img src="https://drumncode.com/wp-content/uploads/2023/06/back-end-team-lead-yaroslav-petrov-2025.jpg"
+                                        alt="Yaroslav Petrov"
+                                        class="our-team-slide-item-image" data-eio="l"></noscript>
+                                                                <h4 class="our-team-slide-item-title">Yaroslav Petrov</h4>
+                                <span class="our-team-slide-item-position">Back-End Team Lead</span>
+                            </div>
+                        </div>
+                                                                                <div class="our-team-slide">
+                            <div class="our-team-slide-item-container">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAArwAAAMgAQAAAADpEoxiAAAAAnRSTlMAAHaTzTgAAABbSURBVHja7cEBAQAAAIIg/69uSEABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACvBhYvAAECVgRCAAAAAElFTkSuQmCC"
+                                        alt="Ivan Karpus"
+                                        class="our-team-slide-item-image lazyload" data-src="https://drumncode.com/wp-content/uploads/2023/06/mobile-team-lead-ivan-karpus-2025.jpg" decoding="async" width="700" height="800" data-eio-rwidth="700" data-eio-rheight="800"><noscript><img src="https://drumncode.com/wp-content/uploads/2023/06/mobile-team-lead-ivan-karpus-2025.jpg"
+                                        alt="Ivan Karpus"
+                                        class="our-team-slide-item-image" data-eio="l"></noscript>
+                                                                <h4 class="our-team-slide-item-title">Ivan Karpus</h4>
+                                <span class="our-team-slide-item-position">Mobile Team Lead</span>
+                            </div>
+                        </div>
+                                                                                <div class="our-team-slide">
+                            <div class="our-team-slide-item-container">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAArwAAAMgAQAAAADpEoxiAAAAAnRSTlMAAHaTzTgAAABbSURBVHja7cEBAQAAAIIg/69uSEABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACvBhYvAAECVgRCAAAAAElFTkSuQmCC"
+                                        alt="Anna Krugovaya"
+                                        class="our-team-slide-item-image lazyload" data-src="https://drumncode.com/wp-content/uploads/2025/08/design-team-lead-anna-krugovaya.jpg" decoding="async" width="700" height="800" data-eio-rwidth="700" data-eio-rheight="800"><noscript><img src="https://drumncode.com/wp-content/uploads/2025/08/design-team-lead-anna-krugovaya.jpg"
+                                        alt="Anna Krugovaya"
+                                        class="our-team-slide-item-image" data-eio="l"></noscript>
+                                                                <h4 class="our-team-slide-item-title">Anna Krugovaya</h4>
+                                <span class="our-team-slide-item-position">Design Team Lead</span>
+                            </div>
+                        </div>
+                                                                                <div class="our-team-slide">
+                            <div class="our-team-slide-item-container">
+                                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAArwAAAMgAQAAAADpEoxiAAAAAnRSTlMAAHaTzTgAAABbSURBVHja7cEBAQAAAIIg/69uSEABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACvBhYvAAECVgRCAAAAAElFTkSuQmCC"
+                                        alt="Maxim Dorodnov"
+                                        class="our-team-slide-item-image lazyload" data-src="https://drumncode.com/wp-content/uploads/2025/08/qa-team-lead-maxim.jpg" decoding="async" width="700" height="800" data-eio-rwidth="700" data-eio-rheight="800"><noscript><img src="https://drumncode.com/wp-content/uploads/2025/08/qa-team-lead-maxim.jpg"
+                                        alt="Maxim Dorodnov"
+                                        class="our-team-slide-item-image" data-eio="l"></noscript>
+                                                                <h4 class="our-team-slide-item-title">Maxim Dorodnov</h4>
+                                <span class="our-team-slide-item-position">QA Team Lead</span>
+                            </div>
+                        </div>
+                                                                                                                                                                                                                                                                                                                                                                                    </div>
+            </div>
+</section><section class="section-ticker">
+    <div class="ticker-talk-slider ">
+                    <div class="ticker-talk-slide">
+                <div class="ticker-talk-item sidebar-open"
+                     data-sidebar="sidebar-form-0">Get in Touch                </div>
+            </div>
+                    <div class="ticker-talk-slide">
+                <div class="ticker-talk-item sidebar-open"
+                     data-sidebar="sidebar-form-0">Get in Touch                </div>
+            </div>
+                    <div class="ticker-talk-slide">
+                <div class="ticker-talk-item sidebar-open"
+                     data-sidebar="sidebar-form-0">Get in Touch                </div>
+            </div>
+            </div>
+    <div class="ticker-talk-mobile">
+        <p class="ticker-talk-mobile-text">Do You <br>Have an Idea?</p>
+        <button class="ticker-talk-mobile-button sidebar-open"
+                data-sidebar="sidebar-form-0">Get In Touch        </button>
+    </div>
+</section>
+</main>
+<footer id="footer">
+    <div class="footer-container">
+        <nav class="footer-navigation">
+            <div class="footer-lines">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQgAAAA8AQAAAACyERldAAAAAnRSTlMAAHaTzTgAAAAWSURBVBgZYxgFo2AUjIJRMApGwYgBAAf4AAFeqbr0AAAAAElFTkSuQmCC"
+                     class="footer-sound-gif lazyload" alt="Sound Animation" data-src="https://drumncode.com/wp-content/themes/drumncode/assets/images/audio.gif" decoding="async" width="264" height="60" data-eio-rwidth="264" data-eio-rheight="60" /><noscript><img src="https://drumncode.com/wp-content/themes/drumncode/assets/images/audio.gif"
+                     class="footer-sound-gif" alt="Sound Animation" data-eio="l" /></noscript>
+            </div>
+            <div class="footer-navigation-column">
+                <h5 class="footer-navigation-column-title">About</h5>
+                <ul id="footer-menu-about" class="menu"><li id="menu-item-801" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-801"><a href="https://drumncode.com/how-we-work/">How We Work</a></li>
+<li id="menu-item-263" class="menu-item menu-item-type-post_type_archive menu-item-object-portfolio menu-item-263"><a href="https://drumncode.com/portfolio/">Portfolio</a></li>
+<li id="menu-item-265" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-265"><a href="https://drumncode.com/agency/">Agency</a></li>
+<li id="menu-item-264" class="menu-item menu-item-type-post_type_archive menu-item-object-careers menu-item-264"><a href="https://drumncode.com/careers/">Careers</a></li>
+<li id="menu-item-438" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-438"><a href="https://drumncode.com/blog/">Blog</a></li>
+</ul>            </div>
+            <div class="footer-navigation-column">
+                <h5 class="footer-navigation-column-title">Services</h5>
+                                    <ul>
+                                                    <li class="footer-navigation-item">
+                                <a class="footer-navigation-item-link"
+                                   href="https://drumncode.com/services/ux-ui-design/">UX/UI Design</a>
+                            </li>
+                                                    <li class="footer-navigation-item">
+                                <a class="footer-navigation-item-link"
+                                   href="https://drumncode.com/services/web-development/">Web Development</a>
+                            </li>
+                                                    <li class="footer-navigation-item">
+                                <a class="footer-navigation-item-link"
+                                   href="https://drumncode.com/services/dedicated-developers/">Dedicated Developers</a>
+                            </li>
+                                                    <li class="footer-navigation-item">
+                                <a class="footer-navigation-item-link"
+                                   href="https://drumncode.com/services/mobile-app-development/">Mobile App Development</a>
+                            </li>
+                                                    <li class="footer-navigation-item">
+                                <a class="footer-navigation-item-link"
+                                   href="https://drumncode.com/services/solutions-development/">Solutions Development</a>
+                            </li>
+                                            </ul>
+                            </div>
+            <div class="footer-navigation-column">
+                <h5 class="footer-navigation-column-title">Contacts</h5>
+                <div class="footer-navigation-item">
+                    <div class="footer-navigation-item-location">
+                        <div class="footer-navigation-item-location-inner">
+<h4>LLC DRUMNCODE</h4>
+<p>Prorizna str., bld. 10, Kyiv, Ukraine, 01001</p>
+<p>Tax no: 43362956</p>
+</div>
+<div class="footer-navigation-item-location-inner">
+<h4>Drumncode OÜ</h4>
+<p>Kesklinna linnaosa Tuukri tn<br />
+19 315 10120 Tallinn, Estonia</p>
+<p>Tax no: 16162259</p>
+<p>VAT REGISTRATION NUMBER: EE102586312</p>
+</div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="footer-copyright-wrapper">
+            <p class="footer-copyright-text">
+                © DNC. All rights reserved 2026                                    <br><span class="footer-small">Partnered with&nbsp;<a href="https://enji.ai/" target="_blank">enji.ai</a></span>
+                            </p>
+            <p class="footer-email">
+                <a href="mailto:info@drumncode.com" class="footer-navigation-item-link">info@drumncode.com</a>
+            </p>
+            <div class="social-links">
+    <a href="https://www.behance.net/drumncode" target="_blank"
+        rel="noopener noreferrer" class="social-links-single-item">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.87381 11.2806C10.3719 11.03 10.7484 10.751 11.0064 10.4495C11.4654 9.90644 11.692 9.18638 11.692 8.29381C11.692 7.42524 11.4654 6.68268 11.0124 6.06013C10.2563 5.04605 8.97674 4.527 7.16759 4.5H0V19.1307H6.68305C7.43611 19.1307 8.13367 19.0662 8.77872 18.9342C9.42377 18.8007 9.98182 18.5562 10.4544 18.1991C10.8744 17.8886 11.2254 17.5031 11.5044 17.0485C11.9455 16.3615 12.166 15.5829 12.166 14.7158C12.166 13.8758 11.9725 13.1602 11.5885 12.5722C11.1999 11.9841 10.6299 11.5536 9.87381 11.2806ZM2.95674 7.04121H6.18501C6.89457 7.04121 7.47961 7.11771 7.93865 7.26923C8.46969 7.48975 8.73522 7.93828 8.73522 8.62234C8.73522 9.23589 8.5327 9.66492 8.13217 9.90644C7.72863 10.148 7.20509 10.2695 6.56304 10.2695H2.95674V7.04121ZM8.06166 16.3345C7.70463 16.507 7.20209 16.5925 6.55854 16.5925H2.95674V12.6907H6.60804C7.24409 12.6952 7.73913 12.7792 8.09316 12.9367C8.72322 13.2217 9.03674 13.7438 9.03674 14.5073C9.03674 15.4074 8.71271 16.0134 8.06166 16.3345Z" fill="#A1A1A1" />
+            <path d="M21.692 5.17969H15.3359V7.00084H21.692V5.17969Z" fill="#A1A1A1" />
+            <path d="M23.9005 12.3678C23.7685 11.5202 23.4775 10.7747 23.0245 10.1311C22.5279 9.40206 21.8979 8.86802 21.1313 8.53049C20.3677 8.19146 19.5082 8.02195 18.5511 8.02345C16.9445 8.02345 15.6393 8.52599 14.6298 9.52357C13.6232 10.5242 13.1191 11.9628 13.1191 13.8379C13.1191 15.8376 13.6757 17.2822 14.7948 18.1688C15.9094 19.0569 17.1965 19.4994 18.6576 19.4994C20.4262 19.4994 21.8019 18.9728 22.7844 17.9228C23.413 17.2597 23.7685 16.6072 23.8465 15.9666H20.9183C20.7488 16.2831 20.5522 16.5306 20.3272 16.7107C19.9192 17.0407 19.3882 17.2057 18.7371 17.2057C18.1176 17.2057 17.5925 17.0692 17.1545 16.7977C16.4314 16.3626 16.0534 15.6006 16.0054 14.516H23.9965C24.0085 13.5814 23.9785 12.8628 23.9005 12.3678ZM16.0774 12.6483C16.1824 11.9448 16.4374 11.3867 16.8424 10.9742C17.2475 10.5632 17.8205 10.3561 18.5541 10.3546C19.2306 10.3546 19.7962 10.5482 20.2567 10.9367C20.7113 11.3282 20.9678 11.8968 21.0203 12.6483H16.0774Z" fill="#A1A1A1" />
+        </svg>
+    </a>
+    <a href="https://dribbble.com/drumncode" target="_blank"
+        rel="noopener noreferrer" class="social-links-single-item">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.5314 13.1355C14.4219 15.7759 14.9115 18.6448 14.9563 21.5623C14.0331 21.8456 13.0539 22 12.0391 22C10.1088 22 8.31123 21.4387 6.78338 20.4846C6.86358 18.9336 7.48792 17.4173 8.64062 16.1246C9.86712 14.7494 11.5822 13.72 13.5314 13.1355ZM17.3125 12.5859C18.9195 12.5859 20.4755 12.8742 21.889 13.4062C21.4019 16.8302 19.1747 19.7345 16.1273 21.1131C16.0417 18.2591 15.5402 15.4509 14.674 12.8532C15.5272 12.6808 16.4117 12.586 17.3125 12.5859ZM12.4963 10.5245C12.725 11.0192 12.9415 11.5211 13.1399 12.0328C11.0069 12.6833 9.12354 13.8234 7.76616 15.3452C6.62499 16.6247 5.92416 18.1537 5.69052 19.7077C3.48562 17.8793 2 15.0817 2 12C2 11.6803 2.01836 11.3649 2.04794 11.0527C3.35409 11.2822 4.7951 11.4141 6.17969 11.4141C8.44288 11.4141 10.5901 11.0898 12.4963 10.5245ZM19.3917 5.30344C21.006 7.07435 22 9.42056 22 12C22 12.0674 21.9916 12.1328 21.9902 12.1998C20.5289 11.691 18.9438 11.4141 17.3125 11.4141C16.2763 11.4141 15.2602 11.5343 14.2798 11.7452C14.0746 11.2072 13.8566 10.6755 13.6193 10.1552C15.5282 9.44708 17.1262 8.47319 18.2012 7.27521C18.7581 6.65464 19.1535 5.98979 19.3917 5.30344ZM7.33647 3.18342C9.19667 4.97618 10.7557 7.12014 11.968 9.4494C10.2088 9.95048 8.23466 10.2422 6.17969 10.2422C4.854 10.2422 3.47374 10.1152 2.22816 9.89506C2.85193 7.00893 4.80497 4.54498 7.33647 3.18342ZM12.04 2C14.4677 2.00011 16.693 2.91457 18.4231 4.36328C18.298 5.0961 17.9412 5.81033 17.3294 6.49219C16.369 7.56277 14.8812 8.44534 13.0964 9.09073C11.885 6.71933 10.3363 4.52212 8.48438 2.66673C9.5903 2.24226 10.7863 2 12.04 2Z" fill="#A1A1A1" />
+        </svg>
+    </a>
+    <a href="https://www.instagram.com/drum.n.code.it/" target="_blank"
+       aria-label="Instagram" rel="noopener noreferrer" class="social-links-single-item">
+       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 9C10.3458 9 9 10.3458 9 12C9 13.6542 10.3458 15 12 15C13.6542 15 15 13.6542 15 12C15 10.3458 13.6542 9 12 9Z" fill="#A1A1A1"/>
+            <path d="M16.5176 2C19.5406 2.00015 21.9998 4.45945 22 7.48242V16.5176C21.9999 19.5405 19.5406 21.9999 16.5176 22H7.48242C4.45947 21.9999 2.00015 19.5406 2 16.5176V7.48242C2.00017 4.45945 4.45949 2.00015 7.48242 2H16.5176ZM12 6.51465C8.97523 6.51465 6.51465 8.9752 6.51465 12C6.51465 15.0248 8.9752 17.4854 12 17.4854C15.0248 17.4854 17.4854 15.0248 17.4854 12C17.4854 8.97523 15.0248 6.51465 12 6.51465ZM18.5 4C17.6716 4 17 4.67157 17 5.5C17 6.32843 17.6716 7 18.5 7C19.3284 7 20 6.32843 20 5.5C20 4.67157 19.3284 4 18.5 4Z" fill="#A1A1A1"/>
+        </svg>
+    </a>
+    <a href="https://www.linkedin.com/company/drumncode" aria-label="LinkedIn"
+       target="_blank" rel="noopener noreferrer" class="social-links-single-item">
+       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21.995 22V21.9991H22V14.4971C22 10.8271 21.2231 8 17.004 8C14.9758 8 13.6147 9.13186 13.059 10.2049H13.0003V8.34263H9V21.9991H13.1654V15.2369C13.1654 13.4565 13.4973 11.7348 15.6655 11.7348C17.8019 11.7348 17.8337 13.7667 17.8337 15.3512V22H21.995Z" fill="#A1A1A1" />
+            <path d="M2 9H6V22H2V9Z" fill="#A1A1A1" />
+            <path d="M4.5 2C3.11988 2 2 3.11466 2 4.48834C2 5.86203 3.11988 7 4.5 7C5.88012 7 7 5.86203 7 4.48834C6.99913 3.11466 5.87925 2 4.5 2V2Z" fill="#A1A1A1" />
+        </svg>
+    </a>
+    <a href="https://www.facebook.com/drum.n.code.it" target="_blank"
+       aria-label="Facebook" rel="noopener noreferrer" class="social-links-single-item">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.5334 23H8.24631V15.2228H6V10.0664H8.24631V6.60729C8.24631 3.51528 10.6271 1 13.5533 1H17V6.58621H14.3839C13.915 6.58621 13.5334 6.98931 13.5334 7.48452V10.0663H15.7797V15.2228H13.5334V23Z" fill="#A1A1A1" />
+        </svg>
+    </a>
+    <a href="https://www.tiktok.com/@drum.n.code.it" target="_blank"
+       aria-label="TikTok" rel="noopener noreferrer" class="social-links-single-item">
+       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21.3184 6.5085C20.0609 6.5085 18.9006 6.09192 17.9689 5.38916C16.9004 4.58354 16.1326 3.40179 15.8615 2.03973C15.7944 1.70319 15.7582 1.3559 15.7548 1H12.1626V10.8155L12.1583 16.1918C12.1583 17.6292 11.2223 18.848 9.92481 19.2766C9.54825 19.401 9.14157 19.4599 8.7181 19.4367C8.17758 19.407 7.67106 19.2439 7.23081 18.9805C6.29393 18.4202 5.65873 17.4037 5.64152 16.2409C5.61441 14.4235 7.08363 12.9418 8.89971 12.9418C9.25819 12.9418 9.60247 13.0004 9.92481 13.1066V10.4238V9.45942C9.58483 9.40907 9.23883 9.38282 8.88895 9.38282C6.90116 9.38282 5.04204 10.2091 3.71311 11.6977C2.70867 12.8226 2.10618 14.2578 2.01322 15.7628C1.89143 17.7398 2.61486 19.6192 4.0178 21.0058C4.22394 21.2093 4.44041 21.3982 4.66677 21.5725C5.8696 22.4982 7.34012 23 8.88895 23C9.23883 23 9.58483 22.9742 9.92481 22.9238C11.3716 22.7095 12.7066 22.0472 13.7601 21.0058C15.0546 19.7263 15.7698 18.0277 15.7776 16.2198L15.7591 8.19117C16.3766 8.66757 17.0519 9.06178 17.7766 9.36775C18.9037 9.84329 20.0987 10.0843 21.3287 10.0839V7.4755V6.50764C21.3296 6.5085 21.3192 6.5085 21.3184 6.5085Z" fill="#A1A1A1" />
+        </svg>
+    </a>    
+</div>        </div>
+    </div>
+</footer>
+<div id="sidebar-form-0" class="sidebar-wrapper">
+    <div class="sidebar-inner">
+        <div class="sidebar-inner-container">
+            <div class="sidebar-top">
+                <button id="sidebar-close" aria-label="Close Sidebar"></button>
+                <button id="sidebar-back" aria-label="Back"></button>
+            </div>
+                            <div id="sidebar-nav" class="open">
+                    <h2 class="sidebar-title">What's your goal?</h2>
+                    <div class="sidebar-nav-list">
+                        <div class="sidebar-nav-list-buttons">
+                            <button class="activate-sidebar-form" data-form="sidebar-form-1">I need rock star developers</button><button class="activate-sidebar-form" data-form="sidebar-form-2">I want to join your team</button><button class="activate-sidebar-form" data-form="sidebar-form-3">I just want to chat</button>                        </div>
+                    </div>
+                </div>
+                                    <div id="sidebar-form-1" class="sidebar-form">
+                        <h2 class="sidebar-title">I need rock star developers</h2>
+                        
+<div class="wpcf7 no-js" id="wpcf7-f273-o1" lang="en-US" dir="ltr" data-wpcf7-id="273">
+<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+<form action="/#wpcf7-f273-o1" method="post" class="wpcf7-form init" aria-label="Contact form" enctype="multipart/form-data" novalidate="novalidate" data-status="init">
+<fieldset class="hidden-fields-container"><input type="hidden" name="_wpcf7" value="273" /><input type="hidden" name="_wpcf7_version" value="6.1.1" /><input type="hidden" name="_wpcf7_locale" value="en_US" /><input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f273-o1" /><input type="hidden" name="_wpcf7_container_post" value="0" /><input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+</fieldset>
+<div class="form-field">
+<p>Which services do you need?</p>
+<span class="wpcf7-form-control-wrap" data-name="services"><span class="wpcf7-form-control wpcf7-checkbox wpcf7-exclusive-checkbox"><span class="wpcf7-list-item first"><label><input type="checkbox" name="services" value="UX/UI Design" /><span class="wpcf7-list-item-label">UX/UI Design</span></label></span><span class="wpcf7-list-item"><label><input type="checkbox" name="services" value="Mobile app" /><span class="wpcf7-list-item-label">Mobile app</span></label></span><span class="wpcf7-list-item"><label><input type="checkbox" name="services" value="Web app" /><span class="wpcf7-list-item-label">Web app</span></label></span><span class="wpcf7-list-item"><label><input type="checkbox" name="services" value="Landing page" /><span class="wpcf7-list-item-label">Landing page</span></label></span><span class="wpcf7-list-item"><label><input type="checkbox" name="services" value="E-commerce" /><span class="wpcf7-list-item-label">E-commerce</span></label></span><span class="wpcf7-list-item"><label><input type="checkbox" name="services" value="DevOps" /><span class="wpcf7-list-item-label">DevOps</span></label></span><span class="wpcf7-list-item last"><label><input type="checkbox" name="services" value="Help me decide!" /><span class="wpcf7-list-item-label">Help me decide!</span></label></span></span></span>
+</div>
+<div class="form-field range">
+<p>What's your budget?</p>
+<span class="wpcf7-form-control-wrap" data-name="your-range"><input class="wpcf7-form-control wpcf7-range wpcf7-validates-as-required wpcf7-validates-as-number" id="range" min="10" max="1000" step="10" aria-required="true" aria-invalid="false" value="10" type="range" name="your-range" /></span>
+<div class="start-range">$10k</div>
+<div class="end-range">$1m</div>
+<div id="current-range">$10k</div>
+</div>
+<div class="form-field">
+<label for="your_name">What's your name?</label>
+<span class="wpcf7-form-control-wrap" data-name="your_name"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Enter your name" value="" type="text" name="your_name" /></span>
+</div>
+<div class="form-field">
+<label for="your_email">Enter your email</label>
+<span class="wpcf7-form-control-wrap" data-name="your_email"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="user@example.com" value="" type="email" name="your_email" /></span>
+</div>
+<div class="form-field">
+<label for="your_email">Ask your question</label>
+<span class="wpcf7-form-control-wrap" data-name="your_question"><textarea cols="40" rows="3" maxlength="2000" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Your text" name="your_question"></textarea></span>
+</div>
+<div class="form-field file-upload">
+<label for="your-upload">Upload your attachment (.pdf .doc)</label>
+<span class="wpcf7-form-control-wrap" data-name="your-attachment"><input size="40" class="wpcf7-form-control wpcf7-file" id="your-upload" accept=".pdf,.doc,.docx" aria-invalid="false" type="file" name="your-attachment" /></span>
+<div class="file-info" data-target="your-upload"></div>
+</div>
+<div class="form-field">
+<input class="wpcf7-form-control wpcf7-submit has-spinner" type="submit" value="Let&#039;s Rock" />
+</div><div class="wpcf7-response-output" aria-hidden="true"></div>
+</form>
+</div>
+                    </div>
+                                        <div id="sidebar-form-2" class="sidebar-form">
+                        <h2 class="sidebar-title">I want to join your team</h2>
+                        
+<div class="wpcf7 no-js" id="wpcf7-f275-o2" lang="en-US" dir="ltr" data-wpcf7-id="275">
+<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+<form action="/#wpcf7-f275-o2" method="post" class="wpcf7-form init" aria-label="Contact form" enctype="multipart/form-data" novalidate="novalidate" data-status="init">
+<fieldset class="hidden-fields-container"><input type="hidden" name="_wpcf7" value="275" /><input type="hidden" name="_wpcf7_version" value="6.1.1" /><input type="hidden" name="_wpcf7_locale" value="en_US" /><input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f275-o2" /><input type="hidden" name="_wpcf7_container_post" value="0" /><input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+</fieldset>
+<div class="form-field">
+<label for="your_name">What's your name?</label>
+<span class="wpcf7-form-control-wrap" data-name="your_name"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Enter your name" value="" type="text" name="your_name" /></span>
+</div>
+<div class="form-field">
+<label for="your_email">Enter your Telegram username</label>
+<span class="wpcf7-form-control-wrap" data-name="your_telegram"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="@drumncode" value="" type="text" name="your_telegram" /></span>
+</div>
+<div class="form-field">
+<label for="your_question">Ask your question</label>
+<span class="wpcf7-form-control-wrap" data-name="your_question"><textarea cols="40" rows="4" maxlength="2000" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Your text" name="your_question"></textarea></span>
+</div>
+<div class="form-field file-upload">
+<label for="your-cv">Upload your CV (.pdf .doc)</label>
+<span class="wpcf7-form-control-wrap" data-name="your-cv"><input size="40" class="wpcf7-form-control wpcf7-file" id="your-cv" accept=".pdf,.doc,.docx" aria-invalid="false" type="file" name="your-cv" /></span>
+<div class="file-info" data-target="your-cv"></div>
+</div>
+<div class="form-field">
+<input class="wpcf7-form-control wpcf7-submit has-spinner" type="submit" value="Send CV" />
+</div><div class="wpcf7-response-output" aria-hidden="true"></div>
+</form>
+</div>
+                    </div>
+                                        <div id="sidebar-form-3" class="sidebar-form">
+                        <h2 class="sidebar-title">I just want to chat</h2>
+                        
+<div class="wpcf7 no-js" id="wpcf7-f276-o3" lang="en-US" dir="ltr" data-wpcf7-id="276">
+<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+<form action="/#wpcf7-f276-o3" method="post" class="wpcf7-form init" aria-label="Contact form" enctype="multipart/form-data" novalidate="novalidate" data-status="init">
+<fieldset class="hidden-fields-container"><input type="hidden" name="_wpcf7" value="276" /><input type="hidden" name="_wpcf7_version" value="6.1.1" /><input type="hidden" name="_wpcf7_locale" value="en_US" /><input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f276-o3" /><input type="hidden" name="_wpcf7_container_post" value="0" /><input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+</fieldset>
+<div class="form-field">
+<label for="your_name">What's your name?</label>
+<span class="wpcf7-form-control-wrap" data-name="your_name"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Enter your name" value="" type="text" name="your_name" /></span>
+</div>
+<div class="form-field">
+<label for="your_email">Enter your email</label>
+<span class="wpcf7-form-control-wrap" data-name="your_email"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="user@example.com" value="" type="email" name="your_email" /></span>
+</div>
+<div class="form-field">
+<label for="your_question">Ask your question</label>
+<span class="wpcf7-form-control-wrap" data-name="your_question"><textarea cols="40" rows="5" maxlength="2000" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Your text" name="your_question"></textarea></span>
+</div>
+<div class="form-field file-upload">
+<label for="your-attachment">Upload your attachment (.pdf .doc)</label>
+<span class="wpcf7-form-control-wrap" data-name="your-attachment"><input size="40" class="wpcf7-form-control wpcf7-file" id="your-attachment" accept=".pdf,.doc,.docx" aria-invalid="false" type="file" name="your-attachment" /></span>
+<div class="file-info" data-target="your-attachment"></div>
+</div>
+<div class="form-field">
+<input class="wpcf7-form-control wpcf7-submit has-spinner" type="submit" value="Let&#039;s Rock" />
+</div><div class="wpcf7-response-output" aria-hidden="true"></div>
+</form>
+</div>
+                    </div>
+                    <div class="sidebar-success">
+    <img class="sidebar-success-image lazyload ewww_webp_lazy_load"
+         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkAQAAAABYmaj5AAAAAnRSTlMAAHaTzTgAAAATSURBVBgZYxgFo2AUjIJRQFcAAAV4AAHcRQIbAAAAAElFTkSuQmCC" alt="Success" data-src="https://drumncode.com/wp-content/themes/drumncode/assets/images/success.png" decoding="async" width="100" height="100" data-eio-rwidth="100" data-eio-rheight="100" data-src-webp="https://drumncode.com/wp-content/themes/drumncode/assets/images/success.png.webp" /><noscript><img class="sidebar-success-image"
+         src="https://drumncode.com/wp-content/themes/drumncode/assets/images/success.png" alt="Success" data-eio="l" /></noscript>
+    <h2 class="sidebar-success-title">Your message has been sent!</h2>
+</div>        </div>
+        <div class="social-links">
+    <a href="https://www.behance.net/drumncode" target="_blank"
+        rel="noopener noreferrer" class="social-links-single-item">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.87381 11.2806C10.3719 11.03 10.7484 10.751 11.0064 10.4495C11.4654 9.90644 11.692 9.18638 11.692 8.29381C11.692 7.42524 11.4654 6.68268 11.0124 6.06013C10.2563 5.04605 8.97674 4.527 7.16759 4.5H0V19.1307H6.68305C7.43611 19.1307 8.13367 19.0662 8.77872 18.9342C9.42377 18.8007 9.98182 18.5562 10.4544 18.1991C10.8744 17.8886 11.2254 17.5031 11.5044 17.0485C11.9455 16.3615 12.166 15.5829 12.166 14.7158C12.166 13.8758 11.9725 13.1602 11.5885 12.5722C11.1999 11.9841 10.6299 11.5536 9.87381 11.2806ZM2.95674 7.04121H6.18501C6.89457 7.04121 7.47961 7.11771 7.93865 7.26923C8.46969 7.48975 8.73522 7.93828 8.73522 8.62234C8.73522 9.23589 8.5327 9.66492 8.13217 9.90644C7.72863 10.148 7.20509 10.2695 6.56304 10.2695H2.95674V7.04121ZM8.06166 16.3345C7.70463 16.507 7.20209 16.5925 6.55854 16.5925H2.95674V12.6907H6.60804C7.24409 12.6952 7.73913 12.7792 8.09316 12.9367C8.72322 13.2217 9.03674 13.7438 9.03674 14.5073C9.03674 15.4074 8.71271 16.0134 8.06166 16.3345Z" fill="#A1A1A1" />
+            <path d="M21.692 5.17969H15.3359V7.00084H21.692V5.17969Z" fill="#A1A1A1" />
+            <path d="M23.9005 12.3678C23.7685 11.5202 23.4775 10.7747 23.0245 10.1311C22.5279 9.40206 21.8979 8.86802 21.1313 8.53049C20.3677 8.19146 19.5082 8.02195 18.5511 8.02345C16.9445 8.02345 15.6393 8.52599 14.6298 9.52357C13.6232 10.5242 13.1191 11.9628 13.1191 13.8379C13.1191 15.8376 13.6757 17.2822 14.7948 18.1688C15.9094 19.0569 17.1965 19.4994 18.6576 19.4994C20.4262 19.4994 21.8019 18.9728 22.7844 17.9228C23.413 17.2597 23.7685 16.6072 23.8465 15.9666H20.9183C20.7488 16.2831 20.5522 16.5306 20.3272 16.7107C19.9192 17.0407 19.3882 17.2057 18.7371 17.2057C18.1176 17.2057 17.5925 17.0692 17.1545 16.7977C16.4314 16.3626 16.0534 15.6006 16.0054 14.516H23.9965C24.0085 13.5814 23.9785 12.8628 23.9005 12.3678ZM16.0774 12.6483C16.1824 11.9448 16.4374 11.3867 16.8424 10.9742C17.2475 10.5632 17.8205 10.3561 18.5541 10.3546C19.2306 10.3546 19.7962 10.5482 20.2567 10.9367C20.7113 11.3282 20.9678 11.8968 21.0203 12.6483H16.0774Z" fill="#A1A1A1" />
+        </svg>
+    </a>
+    <a href="https://dribbble.com/drumncode" target="_blank"
+        rel="noopener noreferrer" class="social-links-single-item">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.5314 13.1355C14.4219 15.7759 14.9115 18.6448 14.9563 21.5623C14.0331 21.8456 13.0539 22 12.0391 22C10.1088 22 8.31123 21.4387 6.78338 20.4846C6.86358 18.9336 7.48792 17.4173 8.64062 16.1246C9.86712 14.7494 11.5822 13.72 13.5314 13.1355ZM17.3125 12.5859C18.9195 12.5859 20.4755 12.8742 21.889 13.4062C21.4019 16.8302 19.1747 19.7345 16.1273 21.1131C16.0417 18.2591 15.5402 15.4509 14.674 12.8532C15.5272 12.6808 16.4117 12.586 17.3125 12.5859ZM12.4963 10.5245C12.725 11.0192 12.9415 11.5211 13.1399 12.0328C11.0069 12.6833 9.12354 13.8234 7.76616 15.3452C6.62499 16.6247 5.92416 18.1537 5.69052 19.7077C3.48562 17.8793 2 15.0817 2 12C2 11.6803 2.01836 11.3649 2.04794 11.0527C3.35409 11.2822 4.7951 11.4141 6.17969 11.4141C8.44288 11.4141 10.5901 11.0898 12.4963 10.5245ZM19.3917 5.30344C21.006 7.07435 22 9.42056 22 12C22 12.0674 21.9916 12.1328 21.9902 12.1998C20.5289 11.691 18.9438 11.4141 17.3125 11.4141C16.2763 11.4141 15.2602 11.5343 14.2798 11.7452C14.0746 11.2072 13.8566 10.6755 13.6193 10.1552C15.5282 9.44708 17.1262 8.47319 18.2012 7.27521C18.7581 6.65464 19.1535 5.98979 19.3917 5.30344ZM7.33647 3.18342C9.19667 4.97618 10.7557 7.12014 11.968 9.4494C10.2088 9.95048 8.23466 10.2422 6.17969 10.2422C4.854 10.2422 3.47374 10.1152 2.22816 9.89506C2.85193 7.00893 4.80497 4.54498 7.33647 3.18342ZM12.04 2C14.4677 2.00011 16.693 2.91457 18.4231 4.36328C18.298 5.0961 17.9412 5.81033 17.3294 6.49219C16.369 7.56277 14.8812 8.44534 13.0964 9.09073C11.885 6.71933 10.3363 4.52212 8.48438 2.66673C9.5903 2.24226 10.7863 2 12.04 2Z" fill="#A1A1A1" />
+        </svg>
+    </a>
+    <a href="https://www.instagram.com/drum.n.code.it/" target="_blank"
+       aria-label="Instagram" rel="noopener noreferrer" class="social-links-single-item">
+       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 9C10.3458 9 9 10.3458 9 12C9 13.6542 10.3458 15 12 15C13.6542 15 15 13.6542 15 12C15 10.3458 13.6542 9 12 9Z" fill="#A1A1A1"/>
+            <path d="M16.5176 2C19.5406 2.00015 21.9998 4.45945 22 7.48242V16.5176C21.9999 19.5405 19.5406 21.9999 16.5176 22H7.48242C4.45947 21.9999 2.00015 19.5406 2 16.5176V7.48242C2.00017 4.45945 4.45949 2.00015 7.48242 2H16.5176ZM12 6.51465C8.97523 6.51465 6.51465 8.9752 6.51465 12C6.51465 15.0248 8.9752 17.4854 12 17.4854C15.0248 17.4854 17.4854 15.0248 17.4854 12C17.4854 8.97523 15.0248 6.51465 12 6.51465ZM18.5 4C17.6716 4 17 4.67157 17 5.5C17 6.32843 17.6716 7 18.5 7C19.3284 7 20 6.32843 20 5.5C20 4.67157 19.3284 4 18.5 4Z" fill="#A1A1A1"/>
+        </svg>
+    </a>
+    <a href="https://www.linkedin.com/company/drumncode" aria-label="LinkedIn"
+       target="_blank" rel="noopener noreferrer" class="social-links-single-item">
+       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21.995 22V21.9991H22V14.4971C22 10.8271 21.2231 8 17.004 8C14.9758 8 13.6147 9.13186 13.059 10.2049H13.0003V8.34263H9V21.9991H13.1654V15.2369C13.1654 13.4565 13.4973 11.7348 15.6655 11.7348C17.8019 11.7348 17.8337 13.7667 17.8337 15.3512V22H21.995Z" fill="#A1A1A1" />
+            <path d="M2 9H6V22H2V9Z" fill="#A1A1A1" />
+            <path d="M4.5 2C3.11988 2 2 3.11466 2 4.48834C2 5.86203 3.11988 7 4.5 7C5.88012 7 7 5.86203 7 4.48834C6.99913 3.11466 5.87925 2 4.5 2V2Z" fill="#A1A1A1" />
+        </svg>
+    </a>
+    <a href="https://www.facebook.com/drum.n.code.it" target="_blank"
+       aria-label="Facebook" rel="noopener noreferrer" class="social-links-single-item">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.5334 23H8.24631V15.2228H6V10.0664H8.24631V6.60729C8.24631 3.51528 10.6271 1 13.5533 1H17V6.58621H14.3839C13.915 6.58621 13.5334 6.98931 13.5334 7.48452V10.0663H15.7797V15.2228H13.5334V23Z" fill="#A1A1A1" />
+        </svg>
+    </a>
+    <a href="https://www.tiktok.com/@drum.n.code.it" target="_blank"
+       aria-label="TikTok" rel="noopener noreferrer" class="social-links-single-item">
+       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21.3184 6.5085C20.0609 6.5085 18.9006 6.09192 17.9689 5.38916C16.9004 4.58354 16.1326 3.40179 15.8615 2.03973C15.7944 1.70319 15.7582 1.3559 15.7548 1H12.1626V10.8155L12.1583 16.1918C12.1583 17.6292 11.2223 18.848 9.92481 19.2766C9.54825 19.401 9.14157 19.4599 8.7181 19.4367C8.17758 19.407 7.67106 19.2439 7.23081 18.9805C6.29393 18.4202 5.65873 17.4037 5.64152 16.2409C5.61441 14.4235 7.08363 12.9418 8.89971 12.9418C9.25819 12.9418 9.60247 13.0004 9.92481 13.1066V10.4238V9.45942C9.58483 9.40907 9.23883 9.38282 8.88895 9.38282C6.90116 9.38282 5.04204 10.2091 3.71311 11.6977C2.70867 12.8226 2.10618 14.2578 2.01322 15.7628C1.89143 17.7398 2.61486 19.6192 4.0178 21.0058C4.22394 21.2093 4.44041 21.3982 4.66677 21.5725C5.8696 22.4982 7.34012 23 8.88895 23C9.23883 23 9.58483 22.9742 9.92481 22.9238C11.3716 22.7095 12.7066 22.0472 13.7601 21.0058C15.0546 19.7263 15.7698 18.0277 15.7776 16.2198L15.7591 8.19117C16.3766 8.66757 17.0519 9.06178 17.7766 9.36775C18.9037 9.84329 20.0987 10.0843 21.3287 10.0839V7.4755V6.50764C21.3296 6.5085 21.3192 6.5085 21.3184 6.5085Z" fill="#A1A1A1" />
+        </svg>
+    </a>    
+</div>    </div>
+</div><script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/drumncode/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script type="text/javascript" id="eio-lazy-load-js-before">
+/* <![CDATA[ */
+var eio_lazy_vars = {"exactdn_domain":"","skip_autoscale":0,"threshold":0,"use_dpr":1};
+//# sourceURL=eio-lazy-load-js-before
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://drumncode.com/wp-content/plugins/ewww-image-optimizer/includes/lazysizes.min.js?ver=820" id="eio-lazy-load-js" async="async" data-wp-strategy="async"></script>
+<script type="text/javascript" src="https://drumncode.com/wp-includes/js/dist/hooks.min.js?ver=dd5603f07f9220ed27f1" id="wp-hooks-js"></script>
+<script type="text/javascript" src="https://drumncode.com/wp-includes/js/dist/i18n.min.js?ver=c26c3dc7bed366793375" id="wp-i18n-js"></script>
+<script type="text/javascript" id="wp-i18n-js-after">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://drumncode.com/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=6.1.1" id="swv-js"></script>
+<script type="text/javascript" id="contact-form-7-js-before">
+/* <![CDATA[ */
+var wpcf7 = {
+    "api": {
+        "root": "https:\/\/drumncode.com\/wp-json\/",
+        "namespace": "contact-form-7\/v1"
+    },
+    "cached": 1
+};
+//# sourceURL=contact-form-7-js-before
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://drumncode.com/wp-content/plugins/contact-form-7/includes/js/index.js?ver=6.1.1" id="contact-form-7-js"></script>
+<script type="text/javascript" src="https://drumncode.com/wp-content/plugins/honeypot/includes/js/wpa.js?ver=2.2.14" id="wpascript-js"></script>
+<script type="text/javascript" id="wpascript-js-after">
+/* <![CDATA[ */
+wpa_field_info = {"wpa_field_name":"xrugqm2485","wpa_field_value":107914,"wpa_add_test":"no"}
+//# sourceURL=wpascript-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" id="pll_cookie_script-js-after">
+/* <![CDATA[ */
+(function() {
+				var expirationDate = new Date();
+				expirationDate.setTime( expirationDate.getTime() + 31536000 * 1000 );
+				document.cookie = "pll_language=en; expires=" + expirationDate.toUTCString() + "; path=/; secure; SameSite=Lax";
+			}());
+
+//# sourceURL=pll_cookie_script-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://unpkg.com/aos@2.3.1/dist/aos.js?ver=2554ac17b88a157635cba181cdc9f45d" id="aos-js-js"></script>
+<script type="text/javascript" src="https://drumncode.com/wp-content/themes/drumncode/assets/js/packages/slick.min.js?ver=2554ac17b88a157635cba181cdc9f45d" id="slick-js-js"></script>
+<script type="text/javascript" src="https://drumncode.com/wp-content/themes/drumncode/assets/js/main.js?ver=1777384592" id="main-js-js"></script>
+<script type="text/javascript" id="post_page_load_more-js-extra">
+/* <![CDATA[ */
+var post_page_load_more_params = {"ajaxurl":"https://drumncode.com/wp-admin/admin-ajax.php","posts":"{\"error\":\"\",\"m\":\"\",\"p\":2,\"post_parent\":\"\",\"subpost\":\"\",\"subpost_id\":\"\",\"attachment\":\"\",\"attachment_id\":0,\"name\":\"\",\"pagename\":\"\",\"page_id\":2,\"second\":\"\",\"minute\":\"\",\"hour\":\"\",\"day\":0,\"monthnum\":0,\"year\":0,\"w\":0,\"category_name\":\"\",\"tag\":\"\",\"cat\":\"\",\"tag_id\":\"\",\"author\":\"\",\"author_name\":\"\",\"feed\":\"\",\"tb\":\"\",\"paged\":0,\"meta_key\":\"\",\"meta_value\":\"\",\"preview\":\"\",\"s\":\"\",\"sentence\":\"\",\"title\":\"\",\"fields\":\"all\",\"menu_order\":\"\",\"embed\":\"\",\"category__in\":[],\"category__not_in\":[],\"category__and\":[],\"post__in\":[],\"post__not_in\":[],\"post_name__in\":[],\"tag__in\":[],\"tag__not_in\":[],\"tag__and\":[],\"tag_slug__in\":[],\"tag_slug__and\":[],\"post_parent__in\":[],\"post_parent__not_in\":[],\"author__in\":[],\"author__not_in\":[],\"search_columns\":[],\"tax_query\":[{\"taxonomy\":\"language\",\"field\":\"term_taxonomy_id\",\"terms\":[224],\"operator\":\"IN\"}],\"ignore_sticky_posts\":false,\"suppress_filters\":false,\"cache_results\":true,\"update_post_term_cache\":true,\"update_menu_item_cache\":false,\"lazy_load_term_meta\":true,\"update_post_meta_cache\":true,\"post_type\":\"\",\"posts_per_page\":10,\"nopaging\":false,\"comments_per_page\":\"50\",\"no_found_rows\":false,\"order\":\"DESC\"}","current_page":"1","max_page":"0"};
+//# sourceURL=post_page_load_more-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://drumncode.com/wp-content/themes/drumncode/assets/js/post_page_load_more.js?ver=2554ac17b88a157635cba181cdc9f45d" id="post_page_load_more-js"></script>
+</body>
+</html>
