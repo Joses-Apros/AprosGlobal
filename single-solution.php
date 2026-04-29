@@ -11,7 +11,22 @@ if (!have_posts()) {
 the_post();
 
 $post_id = get_the_ID();
-$template_path = __DIR__ . '/index copy.html';
+$slug = get_post_field('post_name', $post_id);
+
+$template_candidates = [
+  __DIR__ . '/src/solutions/' . $slug . '.html',
+  __DIR__ . '/src/solutions/ux-ui-design.html',
+  __DIR__ . '/index.html',
+];
+
+$template_path = '';
+foreach ($template_candidates as $candidate) {
+  if (file_exists($candidate)) {
+    $template_path = $candidate;
+    break;
+  }
+}
+
 $html = file_exists($template_path) ? file_get_contents($template_path) : '';
 
 if (!$html) {
@@ -35,7 +50,6 @@ $title = get_the_title();
 $excerpt = has_excerpt() ? get_the_excerpt() : wp_strip_all_tags(get_the_content());
 $excerpt = wp_trim_words($excerpt, 45);
 $permalink = get_permalink($post_id);
-$slug = get_post_field('post_name', $post_id);
 
 $summary = (string) $get_acf('solution_summary', $excerpt);
 $subtitle = (string) $get_acf('solution_subtitle', $title);
