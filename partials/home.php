@@ -316,39 +316,46 @@ pointer-events:none;
             </div>
             <div class="w-dyn-list">
               <div fs-cmsslider-element="list" role="list" class="recent-work_main-grid w-dyn-items">
-                <div role="listitem" class="w-dyn-item">
-                  <div data-w-id="a0126b2e-7c71-6dcf-6287-589d86511c92" class="recent-work_item">
-                    <a href="#" class="recent-work_item-cover w-inline-block"><img loading="lazy" alt="" src="" class="recent-work_item-cover-img w-dyn-bind-empty"></a>
-                    <div class="recent-work_item-content">
-                      <a href="#" class="recent-work_item-title w-inline-block">
-                        <h3 class="w-dyn-bind-empty"></h3>
-                      </a>
-                      <div class="recent-work_item-info">
-                        <p class="text-color-grey w-dyn-bind-empty"></p>
-                      </div>
-                      <div class="recent-work_item-content-btn">
-                        <a href="#" class="button is-secondary w-inline-block">
-                          <div>View solution</div><img src="images/icon-btn.svg" loading="lazy" alt="" class="icon-1x1-small">
+                <?php
+                $solutions_query = new WP_Query([
+                  'post_type' => 'solution',
+                  'post_status' => 'publish',
+                  'posts_per_page' => 6,
+                ]);
+                ?>
+                <?php if ($solutions_query->have_posts()) : ?>
+                  <?php while ($solutions_query->have_posts()) : $solutions_query->the_post(); ?>
+                    <div role="listitem" class="w-dyn-item">
+                      <div data-w-id="a0126b2e-7c71-6dcf-6287-589d86511c92" class="recent-work_item">
+                        <a href="<?php echo esc_url(get_permalink()); ?>" class="recent-work_item-cover w-inline-block">
+                          <?php if (has_post_thumbnail()) : ?>
+                            <?php the_post_thumbnail('large', ['class' => 'recent-work_item-cover-img']); ?>
+                          <?php else : ?>
+                            <img loading="lazy" alt="<?php echo esc_attr(get_the_title()); ?>" src="<?php echo esc_url($theme_uri . '/src/images/cover-img.png'); ?>" class="recent-work_item-cover-img">
+                          <?php endif; ?>
                         </a>
+                        <div class="recent-work_item-content">
+                          <a href="<?php echo esc_url(get_permalink()); ?>" class="recent-work_item-title w-inline-block">
+                            <h3><?php the_title(); ?></h3>
+                          </a>
+                          <div class="recent-work_item-info">
+                            <p class="text-color-grey"><?php echo esc_html(get_the_excerpt()); ?></p>
+                          </div>
+                          <div class="recent-work_item-content-btn">
+                            <a href="<?php echo esc_url(get_permalink()); ?>" class="button is-secondary w-inline-block">
+                              <div>View solution</div><img src="images/icon-btn.svg" loading="lazy" alt="" class="icon-1x1-small">
+                            </a>
+                          </div>
+                        </div>
                       </div>
                     </div>
+                  <?php endwhile; ?>
+                <?php else : ?>
+                  <div class="w-dyn-empty">
+                    <div>No items found.</div>
                   </div>
-                </div>
-              </div>
-              <div class="w-dyn-empty">
-                <div>No items found.</div>
-              </div>
-              <div role="navigation" aria-label="List" class="w-pagination-wrapper">
-                <a href="#" aria-label="Previous Page" class="w-pagination-previous"><svg class="w-pagination-previous-icon" height="12px" width="12px" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 12 12" transform="translate(0, 1)">
-                    <path fill="none" stroke="currentColor" fill-rule="evenodd" d="M8 10L4 6l4-4"></path>
-                  </svg>
-                  <div class="w-inline-block">Previous</div>
-                </a>
-                <a href="#" aria-label="Next Page" class="w-pagination-next">
-                  <div class="w-inline-block">Next</div><svg class="w-pagination-next-icon" height="12px" width="12px" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 12 12" transform="translate(0, 1)">
-                    <path fill="none" stroke="currentColor" fill-rule="evenodd" d="M4 2l4 4-4 4"></path>
-                  </svg>
-                </a>
+                <?php endif; ?>
+                <?php wp_reset_postdata(); ?>
               </div>
             </div>
           </div>
@@ -662,39 +669,60 @@ Change the color of the text here, instead of on Webflow for this to work */
                   <div class="blog_slider-nav w-slider-nav w-round"></div>
                 </div>
                 <div class="blog_footer-btn">
-                  <a href="insights.html" class="button w-inline-block">
+                  <a href="<?php echo esc_url(home_url('/insights')); ?>" class="button w-inline-block">
                     <div>View more</div><img src="images/icon-btn.svg" loading="lazy" alt="" class="icon-1x1-small">
                   </a>
                 </div>
                 <div class="blog_cl-wrapper w-dyn-list">
                   <div fs-cmsslider-element="list-2" role="list" class="blog_cl-list w-dyn-items">
-                    <div id="w-node-_179a9d84-3c1e-58de-1df1-47d15bd8ac66-674b7325" role="listitem" class="blog_cl-item w-dyn-item">
-                      <a data-w-id="5c9befd4-44dc-d4cf-677e-a89c226bbf47" href="#" class="blog_item w-inline-block">
-                        <div class="blog_item-cover"><img loading="lazy" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" alt="" src="" class="blog_item-cover-img w-dyn-bind-empty"></div>
-                        <div class="blog_item-info">
-                          <div class="blog_item-category-wrapper">
-                            <div class="tag-item is-blog">
-                              <div class="tag-item_text w-dyn-bind-empty"></div>
+                    <?php
+                    $insights_query = new WP_Query([
+                      'post_type' => 'insight',
+                      'post_status' => 'publish',
+                      'posts_per_page' => 6,
+                    ]);
+                    $has_insights = $insights_query->have_posts();
+                    ?>
+                    <?php if ($has_insights) : ?>
+                      <?php while ($insights_query->have_posts()) : $insights_query->the_post(); ?>
+                        <div id="w-node-_179a9d84-3c1e-58de-1df1-47d15bd8ac66-674b7325" role="listitem" class="blog_cl-item w-dyn-item">
+                          <a data-w-id="5c9befd4-44dc-d4cf-677e-a89c226bbf47" href="<?php echo esc_url(get_permalink()); ?>" class="blog_item w-inline-block">
+                            <div class="blog_item-cover">
+                              <?php if (has_post_thumbnail()) : ?>
+                                <?php the_post_thumbnail('large', ['class' => 'blog_item-cover-img']); ?>
+                              <?php else : ?>
+                                <img loading="lazy" alt="<?php echo esc_attr(get_the_title()); ?>" src="<?php echo esc_url($theme_uri . '/src/images/cover-img.png'); ?>" class="blog_item-cover-img">
+                              <?php endif; ?>
                             </div>
-                          </div>
-                          <div class="blog_item-title">
-                            <h3 class="heading-style-h4 w-dyn-bind-empty"></h3>
-                          </div>
-                          <div class="blog_item-footer">
-                            <div class="blog_item-date-wrapper">
-                              <div class="blog_item-date w-dyn-bind-empty"></div>
+                            <div class="blog_item-info">
+                              <div class="blog_item-category-wrapper">
+                                <div class="tag-item is-blog">
+                                  <div class="tag-item_text">Insight</div>
+                                </div>
+                              </div>
+                              <div class="blog_item-title">
+                                <h3 class="heading-style-h4"><?php the_title(); ?></h3>
+                              </div>
+                              <div class="blog_item-footer">
+                                <div class="blog_item-date-wrapper">
+                                  <div class="blog_item-date"><?php echo esc_html(get_the_date()); ?></div>
+                                </div>
+                                <div class="button is-secondary is-small is-dark">
+                                  <div>Read more</div>
+                                </div>
+                              </div>
                             </div>
-                            <div class="button is-secondary is-small is-dark">
-                              <div>Read more</div>
-                            </div>
-                          </div>
+                          </a>
                         </div>
-                      </a>
+                      <?php endwhile; ?>
+                    <?php endif; ?>
+                    <?php wp_reset_postdata(); ?>
+                  </div>
+                  <?php if (!$has_insights) : ?>
+                    <div class="w-dyn-empty">
+                      <div>No items found.</div>
                     </div>
-                  </div>
-                  <div class="w-dyn-empty">
-                    <div>No items found.</div>
-                  </div>
+                  <?php endif; ?>
                 </div>
               </div>
             </div>

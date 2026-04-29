@@ -135,116 +135,65 @@
               <img src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/src/assets/cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/63506093376d59c86842884e_icon-trigger.svg" loading="lazy" fs-cmsfilter-element="tag-remove" alt="" class="recent-work_form-tag-close"/>
             </div>
           </div>
+          <?php
+          $insights_query = new WP_Query([
+            'post_type' => 'insight',
+            'post_status' => 'publish',
+            'posts_per_page' => 12,
+            'orderby' => 'date',
+            'order' => 'DESC',
+          ]);
+          ?>
           <div class="collection-list-wrapper w-dyn-list">
             <div fs-cmsfilter-element="list" fs-cmsload-element="list" fs-cmsload-mode="infinite" fs-cmsload-duration="800" fs-cmsload-stagger="200" role="list" class="recent-work_main-grid w-dyn-items">
-              <div role="listitem" class="recent-work_item-cl w-dyn-item">
-                <a data-w-id="f60ce262-174f-1e3a-4caf-a21ba9cddc0b" href="/insights/how-artificial-intelligence-can-optimize-business-decision-making" class="blog_item w-inline-block">
-                  <div class="blog_item-cover">
-                    <img loading="lazy" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" alt="" src="https://cdn.prod.website-files.com/635abb3fb86e8e277dc9fba4/67cb34636fd9af1111b04a1b_Overcoming%20BLOG%20(2).png" sizes="(max-width: 479px) 100vw, (max-width: 991px) 44vw, 30vw" srcset="https://cdn.prod.website-files.com/635abb3fb86e8e277dc9fba4/67cb34636fd9af1111b04a1b_Overcoming%20BLOG%20(2)-p-500.png 500w, https://cdn.prod.website-files.com/635abb3fb86e8e277dc9fba4/67cb34636fd9af1111b04a1b_Overcoming%20BLOG%20(2)-p-800.png 800w, https://cdn.prod.website-files.com/635abb3fb86e8e277dc9fba4/67cb34636fd9af1111b04a1b_Overcoming%20BLOG%20(2)-p-1080.png 1080w, https://cdn.prod.website-files.com/635abb3fb86e8e277dc9fba4/67cb34636fd9af1111b04a1b_Overcoming%20BLOG%20(2).png 1200w" class="blog_item-cover-img"/>
+              <?php if ($insights_query->have_posts()) : ?>
+                <?php while ($insights_query->have_posts()) : $insights_query->the_post(); ?>
+                  <?php
+                  $card_id = get_the_ID();
+                  $card_cover = (string) get_field('insight_cover_image', $card_id);
+                  $card_category = (string) get_field('insight_category', $card_id);
+                  $card_date = (string) get_field('insight_publish_date_text', $card_id);
+                  if ($card_date === '') {
+                    $card_date = (string) get_field('insight_publish_label', $card_id);
+                  }
+                  if ($card_date === '') {
+                    $card_date = get_the_date();
+                  }
+                  ?>
+                  <div role="listitem" class="recent-work_item-cl w-dyn-item">
+                    <a data-w-id="f60ce262-174f-1e3a-4caf-a21ba9cddc0b" href="<?php the_permalink(); ?>" class="blog_item w-inline-block">
+                      <div class="blog_item-cover">
+                        <?php if ($card_cover !== '') : ?>
+                          <img loading="lazy" alt="<?php the_title_attribute(); ?>" src="<?php echo esc_url($card_cover); ?>" class="blog_item-cover-img"/>
+                        <?php endif; ?>
+                      </div>
+                      <div class="blog_item-info">
+                        <div class="blog_item-category-wrapper">
+                          <div class="tag-item is-blog">
+                            <div fs-cmsfilter-field="categoria" class="tag-item_text"><?php echo esc_html($card_category); ?></div>
+                          </div>
+                        </div>
+                        <div class="blog_item-title">
+                          <h3 class="heading-style-h4"><?php the_title(); ?></h3>
+                        </div>
+                        <div class="blog_item-footer">
+                          <div class="blog_item-date-wrapper">
+                            <div class="blog_item-date"><?php echo esc_html($card_date); ?></div>
+                          </div>
+                          <div class="button is-secondary is-small is-dark">
+                            <div>Read more</div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
                   </div>
-                  <div class="blog_item-info">
-                    <div class="blog_item-category-wrapper">
-                      <div class="tag-item is-blog">
-                        <div fs-cmsfilter-field="categoria" class="tag-item_text">
-                          Artificial Intelligence
-                        </div>
-                      </div>
-                    </div>
-                    <div class="blog_item-title">
-                      <h3 class="heading-style-h4">
-                        How artificial intelligence can optimize business decision-making
-                      </h3>
-                    </div>
-                    <div class="blog_item-footer">
-                      <div class="blog_item-date-wrapper">
-                        <div class="blog_item-date">
-                          March 7, 2025
-                        </div>
-                      </div>
-                      <div class="button is-secondary is-small is-dark">
-                        <div>
-                          Read more
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div role="listitem" class="recent-work_item-cl w-dyn-item">
-                <a data-w-id="f60ce262-174f-1e3a-4caf-a21ba9cddc0b" href="/insights/how-to-boost-your-productivity-with-these-two-home-office-tools-daily-and-queonda" class="blog_item w-inline-block">
-                  <div class="blog_item-cover">
-                    <img loading="lazy" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" alt="" src="https://cdn.prod.website-files.com/635abb3fb86e8e277dc9fba4/67cb29661a999d6f5e9dc345_Overcoming%20BLOG%20(1).png" sizes="(max-width: 479px) 100vw, (max-width: 991px) 44vw, 30vw" srcset="https://cdn.prod.website-files.com/635abb3fb86e8e277dc9fba4/67cb29661a999d6f5e9dc345_Overcoming%20BLOG%20(1)-p-500.png 500w, https://cdn.prod.website-files.com/635abb3fb86e8e277dc9fba4/67cb29661a999d6f5e9dc345_Overcoming%20BLOG%20(1)-p-800.png 800w, https://cdn.prod.website-files.com/635abb3fb86e8e277dc9fba4/67cb29661a999d6f5e9dc345_Overcoming%20BLOG%20(1)-p-1080.png 1080w, https://cdn.prod.website-files.com/635abb3fb86e8e277dc9fba4/67cb29661a999d6f5e9dc345_Overcoming%20BLOG%20(1).png 1200w" class="blog_item-cover-img"/>
-                  </div>
-                  <div class="blog_item-info">
-                    <div class="blog_item-category-wrapper">
-                      <div class="tag-item is-blog">
-                        <div fs-cmsfilter-field="categoria" class="tag-item_text">
-                          B2B / Corporate
-                        </div>
-                      </div>
-                    </div>
-                    <div class="blog_item-title">
-                      <h3 class="heading-style-h4">
-                        How to boost your productivity with these two home office tools: Daily and Que’onda
-                      </h3>
-                    </div>
-                    <div class="blog_item-footer">
-                      <div class="blog_item-date-wrapper">
-                        <div class="blog_item-date">
-                          March 7, 2025
-                        </div>
-                      </div>
-                      <div class="button is-secondary is-small is-dark">
-                        <div>
-                          Read more
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div role="listitem" class="recent-work_item-cl w-dyn-item">
-                <a data-w-id="f60ce262-174f-1e3a-4caf-a21ba9cddc0b" href="/insights/5-books-every-digital-marketer-needs-to-read" class="blog_item w-inline-block">
-                  <div class="blog_item-cover">
-                    <img loading="lazy" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" alt="" src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/src/assets/cdn.prod.website-files.com/635abb3fb86e8e277dc9fba4/6729299aadb741c76ac806ba_blog.png" sizes="(max-width: 479px) 100vw, (max-width: 991px) 44vw, 30vw" srcset="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/src/assets/cdn.prod.website-files.com/635abb3fb86e8e277dc9fba4/6729299aadb741c76ac806ba_blog-p-500.png 500w, <?php echo esc_url( get_stylesheet_directory_uri() ); ?>/src/assets/cdn.prod.website-files.com/635abb3fb86e8e277dc9fba4/6729299aadb741c76ac806ba_blog-p-800.png 800w, <?php echo esc_url( get_stylesheet_directory_uri() ); ?>/src/assets/cdn.prod.website-files.com/635abb3fb86e8e277dc9fba4/6729299aadb741c76ac806ba_blog-p-1080.png 1080w, <?php echo esc_url( get_stylesheet_directory_uri() ); ?>/src/assets/cdn.prod.website-files.com/635abb3fb86e8e277dc9fba4/6729299aadb741c76ac806ba_blog.png 1200w" class="blog_item-cover-img"/>
-                  </div>
-                  <div class="blog_item-info">
-                    <div class="blog_item-category-wrapper">
-                      <div class="tag-item is-blog">
-                        <div fs-cmsfilter-field="categoria" class="tag-item_text">
-                          Digital Marketing
-                        </div>
-                      </div>
-                    </div>
-                    <div class="blog_item-title">
-                      <h3 class="heading-style-h4">
-                        5 Books every digital marketer needs to read
-                      </h3>
-                    </div>
-                    <div class="blog_item-footer">
-                      <div class="blog_item-date-wrapper">
-                        <div class="blog_item-date">
-                          November 4, 2024
-                        </div>
-                      </div>
-                      <div class="button is-secondary is-small is-dark">
-                        <div>
-                          Read more
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div role="navigation" aria-label="List" class="w-pagination-wrapper recent-work_pagination">
-              <a href="?bf5adf42_page=2" aria-label="Next Page" class="w-pagination-next button">
-                <div class="w-inline-block">
-                  Next
+                <?php endwhile; ?>
+                <?php wp_reset_postdata(); ?>
+              <?php else : ?>
+                <div role="listitem" class="recent-work_item-cl w-dyn-item">
+                  <p><?php esc_html_e('No insights found.', 'apros-global-theme'); ?></p>
                 </div>
-                <img src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/src/assets/cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/634edabd05e56b610501f907_icon-btn.svg" loading="lazy" alt="" class="icon-1x1-small"/>
-              </a>
-              <link rel="prerender" href="?bf5adf42_page=2"/>
+              <?php endif; ?>
             </div>
           </div>
         </div>
