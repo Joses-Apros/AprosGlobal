@@ -139,9 +139,9 @@
           $insights_query = new WP_Query([
             'post_type' => 'insight',
             'post_status' => 'publish',
-            'posts_per_page' => 12,
+            'posts_per_page' => -1,
             'orderby' => 'date',
-            'order' => 'DESC',
+            'order' => 'ASC',
           ]);
           ?>
           <div class="collection-list-wrapper w-dyn-list">
