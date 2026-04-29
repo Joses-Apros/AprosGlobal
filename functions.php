@@ -310,22 +310,6 @@ add_action('acf/init', static function () {
 });
 
 /**
- * Use safe v2 template for single insight posts.
- */
-add_filter('single_template', static function ($single_template) {
-  if (get_post_type() !== 'insight') {
-    return $single_template;
-  }
-
-  $v2_template = __DIR__ . '/single-insight-v2.php';
-  if (file_exists($v2_template)) {
-    return $v2_template;
-  }
-
-  return $single_template;
-});
-
-/**
  * Flush rewrite rules once after CPT registration changes.
  */
 add_action('admin_init', static function () {
