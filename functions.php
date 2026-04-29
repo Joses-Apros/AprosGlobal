@@ -72,6 +72,31 @@ add_action('init', static function () {
     'menu_icon' => 'dashicons-media-document',
     'supports' => ['title', 'editor', 'thumbnail', 'excerpt', 'revisions'],
   ]);
+
+  $insight_category_labels = [
+    'name' => __('Categorias', 'apros-global-theme'),
+    'singular_name' => __('Categoria', 'apros-global-theme'),
+    'search_items' => __('Buscar categorias', 'apros-global-theme'),
+    'all_items' => __('Todas las categorias', 'apros-global-theme'),
+    'edit_item' => __('Editar categoria', 'apros-global-theme'),
+    'update_item' => __('Actualizar categoria', 'apros-global-theme'),
+    'add_new_item' => __('Agregar nueva categoria', 'apros-global-theme'),
+    'new_item_name' => __('Nombre de nueva categoria', 'apros-global-theme'),
+    'menu_name' => __('Categorias', 'apros-global-theme'),
+  ];
+
+  register_taxonomy('categorias', ['insight'], [
+    'hierarchical' => true,
+    'labels' => $insight_category_labels,
+    'show_ui' => true,
+    'show_admin_column' => true,
+    'show_in_rest' => true,
+    'query_var' => true,
+    'rewrite' => [
+      'slug' => 'categorias',
+      'with_front' => false,
+    ],
+  ]);
 });
 
 /**
@@ -319,5 +344,101 @@ add_action('admin_init', static function () {
 
   flush_rewrite_rules(false);
   update_option('apros_rewrite_flushed_v3', '1');
+});
+
+/**
+ * Seed insight categorias terms once.
+ */
+add_action('admin_init', static function () {
+  if (get_option('apros_insight_categorias_seeded_v1') === '1') {
+    return;
+  }
+
+  $terms = [
+    ['name' => 'Beauty & Health', 'slug' => 'beauty-health'],
+    ['name' => 'Finance / Fintech', 'slug' => 'finance-fintech'],
+    ['name' => 'Real Estate', 'slug' => 'real-estate'],
+    ['name' => 'Retail', 'slug' => 'retail'],
+    ['name' => 'B2B / Corporate', 'slug' => 'b2b-corporate'],
+    ['name' => 'Agencies & Consultancies', 'slug' => 'agencies-consultancies'],
+    ['name' => 'Cultural & Non profit', 'slug' => 'cultural-non-profit'],
+    ['name' => 'Business Technology', 'slug' => 'business-technology'],
+    ['name' => 'Cybersecurity', 'slug' => 'cybersecurity'],
+    ['name' => 'Digital Marketing', 'slug' => 'digital-marketing'],
+    ['name' => 'Cloud Computing', 'slug' => 'cloud-computing'],
+    ['name' => 'Methodologies', 'slug' => 'methodologies'],
+    ['name' => 'Artificial Intelligence', 'slug' => 'artificial-intelligence'],
+    ['name' => 'Restaurants', 'slug' => 'restaurants'],
+    ['name' => 'Mindful tech consumption', 'slug' => 'mindful-tech-consumption'],
+    ['name' => 'Miscellaneous', 'slug' => 'events-miscellaneous'],
+  ];
+
+  foreach ($terms as $term) {
+    if (term_exists($term['slug'], 'categorias')) {
+      continue;
+    }
+
+    wp_insert_term($term['name'], 'categorias', [
+      'slug' => $term['slug'],
+    ]);
+  }
+
+  update_option('apros_insight_categorias_seeded_v1', '1');
+});
+
+/**
+ * Assign insight categorias from CSV once.
+ */
+add_action('admin_init', static function () {
+  if (get_option('apros_insight_categorias_assigned_v1') === '1') {
+    return;
+  }
+
+  $csv_path = 'd:\\Usuario\\Descargas\\Apros Global - Insights - 65b4453c9e0f05c6674b73b3.csv';
+  if (!file_exists($csv_path)) {
+    return;
+  }
+
+  $handle = fopen($csv_path, 'r');
+  if ($handle === false) {
+    return;
+  }
+
+  $header = fgetcsv($handle);
+  if (!is_array($header)) {
+    fclose($handle);
+    return;
+  }
+
+  $slug_index = array_search('Slug', $header, true);
+  $categoria_index = array_search('Categorias', $header, true);
+  if ($slug_index === false || $categoria_index === false) {
+    fclose($handle);
+    return;
+  }
+
+  while (($row = fgetcsv($handle)) !== false) {
+    $post_slug = isset($row[$slug_index]) ? trim((string) $row[$slug_index]) : '';
+    $term_slug = isset($row[$categoria_index]) ? trim((string) $row[$categoria_index]) : '';
+
+    if ($post_slug === '' || $term_slug === '') {
+      continue;
+    }
+
+    $insight = get_page_by_path($post_slug, 'OBJECT', 'insight');
+    if (!$insight instanceof WP_Post) {
+      continue;
+    }
+
+    $term = get_term_by('slug', $term_slug, 'categorias');
+    if (!$term || is_wp_error($term)) {
+      continue;
+    }
+
+    wp_set_object_terms($insight->ID, [(int) $term->term_id], 'categorias', false);
+  }
+
+  fclose($handle);
+  update_option('apros_insight_categorias_assigned_v1', '1');
 });
 

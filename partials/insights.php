@@ -32,6 +32,15 @@
       <div class="container-large">
         <div class="recent-work_main-wrapper">
           <div class="recent-work_form-filter">
+            <?php
+            $insight_terms = get_terms([
+              'taxonomy' => 'categorias',
+              'hide_empty' => false,
+              'orderby' => 'name',
+              'order' => 'ASC',
+            ]);
+            $selected_categoria = isset($_GET['categoria']) ? sanitize_title(wp_unslash($_GET['categoria'])) : '';
+            ?>
             <div data-animation="default" data-collapse="tiny" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="recent-work_nav-filter w-nav">
               <div class="recent-work_nav-title">
                 <div class="recent-work_nav-title-filter">
@@ -42,69 +51,26 @@
                     <form id="email-form-2" name="email-form-2" data-name="Email Form 2" method="get" fs-cmsfilter-element="filters" class="recent-work_form-wrapper" data-wf-page-id="65b4453c9e0f05c6674b733e" data-wf-element-id="31b1934b-527a-746f-a120-9a9664498579">
                       <input type="submit" data-wait="Please wait..." class="button hide-all w-button" value="Submit"/>
                       <div class="recent-work_form-overflow">
-                        <a fs-cmsfilter-element="clear" href="#" class="recent-work_form-check-field is-all w-inline-block">
+                        <a fs-cmsfilter-element="clear" href="<?php echo esc_url(remove_query_arg('categoria')); ?>" class="recent-work_form-check-field is-all w-inline-block">
                           <div class="recent-work_form-check-text">
                             All
                           </div>
                         </a>
                         <div class="recent-work_form-cl w-dyn-list">
                           <div role="list" class="recent-work_form-cl-list w-dyn-items">
-                            <div role="listitem" class="recent-work_form-cl-item w-dyn-item">
-                              <label class="recent-work_form-check-field w-radio">
-                                <input type="radio" data-name="Radio" id="radio" name="radio" class="w-form-formradioinput recent-work_form-check-icon w-radio-input" value="Radio"/>
-                                <span fs-cmsfilter-active="is-active" fs-cmsfilter-field="categoria" class="recent-work_form-check-text w-form-label" for="radio">
-                                  Business Technology
-                                </span>
-                              </label>
-                            </div>
-                            <div role="listitem" class="recent-work_form-cl-item w-dyn-item">
-                              <label class="recent-work_form-check-field w-radio">
-                                <input type="radio" data-name="Radio" id="radio" name="radio" class="w-form-formradioinput recent-work_form-check-icon w-radio-input" value="Radio"/>
-                                <span fs-cmsfilter-active="is-active" fs-cmsfilter-field="categoria" class="recent-work_form-check-text w-form-label" for="radio">
-                                  Cybersecurity
-                                </span>
-                              </label>
-                            </div>
-                            <div role="listitem" class="recent-work_form-cl-item w-dyn-item">
-                              <label class="recent-work_form-check-field w-radio">
-                                <input type="radio" data-name="Radio" id="radio" name="radio" class="w-form-formradioinput recent-work_form-check-icon w-radio-input" value="Radio"/>
-                                <span fs-cmsfilter-active="is-active" fs-cmsfilter-field="categoria" class="recent-work_form-check-text w-form-label" for="radio">
-                                  Digital Marketing
-                                </span>
-                              </label>
-                            </div>
-                            <div role="listitem" class="recent-work_form-cl-item w-dyn-item">
-                              <label class="recent-work_form-check-field w-radio">
-                                <input type="radio" data-name="Radio" id="radio" name="radio" class="w-form-formradioinput recent-work_form-check-icon w-radio-input" value="Radio"/>
-                                <span fs-cmsfilter-active="is-active" fs-cmsfilter-field="categoria" class="recent-work_form-check-text w-form-label" for="radio">
-                                  Cloud Computing
-                                </span>
-                              </label>
-                            </div>
-                            <div role="listitem" class="recent-work_form-cl-item w-dyn-item">
-                              <label class="recent-work_form-check-field w-radio">
-                                <input type="radio" data-name="Radio" id="radio" name="radio" class="w-form-formradioinput recent-work_form-check-icon w-radio-input" value="Radio"/>
-                                <span fs-cmsfilter-active="is-active" fs-cmsfilter-field="categoria" class="recent-work_form-check-text w-form-label" for="radio">
-                                  Methodologies
-                                </span>
-                              </label>
-                            </div>
-                            <div role="listitem" class="recent-work_form-cl-item w-dyn-item">
-                              <label class="recent-work_form-check-field w-radio">
-                                <input type="radio" data-name="Radio" id="radio" name="radio" class="w-form-formradioinput recent-work_form-check-icon w-radio-input" value="Radio"/>
-                                <span fs-cmsfilter-active="is-active" fs-cmsfilter-field="categoria" class="recent-work_form-check-text w-form-label" for="radio">
-                                  Artificial Intelligence
-                                </span>
-                              </label>
-                            </div>
-                            <div role="listitem" class="recent-work_form-cl-item w-dyn-item">
-                              <label class="recent-work_form-check-field w-radio">
-                                <input type="radio" data-name="Radio" id="radio" name="radio" class="w-form-formradioinput recent-work_form-check-icon w-radio-input" value="Radio"/>
-                                <span fs-cmsfilter-active="is-active" fs-cmsfilter-field="categoria" class="recent-work_form-check-text w-form-label" for="radio">
-                                  Mindful tech consumption
-                                </span>
-                              </label>
-                            </div>
+                            <?php if (!is_wp_error($insight_terms) && !empty($insight_terms)) : ?>
+                              <?php foreach ($insight_terms as $term) : ?>
+                                <?php $radio_id = 'categoria-' . $term->term_id; ?>
+                                <div role="listitem" class="recent-work_form-cl-item w-dyn-item">
+                                  <label class="recent-work_form-check-field w-radio" for="<?php echo esc_attr($radio_id); ?>">
+                                    <input type="radio" data-name="Radio" id="<?php echo esc_attr($radio_id); ?>" name="categoria" fs-cmsfilter-field="categoria" class="w-form-formradioinput recent-work_form-check-icon w-radio-input" value="<?php echo esc_attr($term->slug); ?>" <?php checked($selected_categoria, $term->slug); ?>/>
+                                    <span fs-cmsfilter-active="is-active" class="recent-work_form-check-text w-form-label">
+                                      <?php echo esc_html($term->name); ?>
+                                    </span>
+                                  </label>
+                                </div>
+                              <?php endforeach; ?>
+                            <?php endif; ?>
                           </div>
                         </div>
                       </div>
@@ -136,14 +102,36 @@
             </div>
           </div>
           <?php
-          $insights_query = new WP_Query([
+          $insights_query_args = [
             'post_type' => 'insight',
             'post_status' => 'publish',
             'posts_per_page' => -1,
             'orderby' => 'date',
-            'order' => 'ASC',
-          ]);
+            'order' => 'ASC'
+          ];
+          if ($selected_categoria !== '') {
+            $insights_query_args['tax_query'] = [
+              [
+                'taxonomy' => 'categorias',
+                'field' => 'slug',
+                'terms' => [$selected_categoria],
+              ],
+            ];
+          }
+          $insights_query = new WP_Query($insights_query_args);
           ?>
+          <script>
+            document.addEventListener('DOMContentLoaded', function () {
+              const filterForm = document.getElementById('email-form-2');
+              if (!filterForm) return;
+              const radioFilters = filterForm.querySelectorAll('input[name="categoria"]');
+              radioFilters.forEach(function (radio) {
+                radio.addEventListener('change', function () {
+                  filterForm.submit();
+                });
+              });
+            });
+          </script>
           <div class="collection-list-wrapper w-dyn-list">
             <div fs-cmsfilter-element="list" fs-cmsload-element="list" fs-cmsload-mode="infinite" fs-cmsload-duration="800" fs-cmsload-stagger="200" role="list" class="recent-work_main-grid w-dyn-items">
               <?php if ($insights_query->have_posts()) : ?>
@@ -151,7 +139,19 @@
                   <?php
                   $card_id = get_the_ID();
                   $card_cover = (string) get_field('insight_cover_image', $card_id);
-                  $card_category = (string) get_field('insight_category', $card_id);
+                  $card_terms = get_the_terms($card_id, 'categorias');
+                  $card_category = '';
+
+                  if (is_array($card_terms) && !empty($card_terms)) {
+                    $first_term = reset($card_terms);
+                    if ($first_term instanceof WP_Term) {
+                      $card_category = $first_term->name;
+                      $card_category_slug = $first_term->slug;
+                    }
+                  }
+                  if ($card_category === '') {
+                    $card_category = (string) get_field('insight_category', $card_id);
+                  }
                   $card_date = (string) get_field('insight_publish_date_text', $card_id);
                   if ($card_date === '') {
                     $card_date = (string) get_field('insight_publish_label', $card_id);
@@ -160,7 +160,7 @@
                     $card_date = get_the_date();
                   }
                   ?>
-                  <div role="listitem" class="recent-work_item-cl w-dyn-item">
+                  <div role="listitem" class="recent-work_item-cl w-dyn-item" data-category="<?php echo esc_attr($card_category); ?>">
                     <a data-w-id="f60ce262-174f-1e3a-4caf-a21ba9cddc0b" href="<?php the_permalink(); ?>" class="blog_item w-inline-block">
                       <div class="blog_item-cover">
                         <?php if ($card_cover !== '') : ?>
@@ -169,8 +169,8 @@
                       </div>
                       <div class="blog_item-info">
                         <div class="blog_item-category-wrapper">
-                          <div class="tag-item is-blog">
-                            <div fs-cmsfilter-field="categoria" class="tag-item_text"><?php echo esc_html($card_category); ?></div>
+                          <div class="tag-item is-blog">                        
+                            <div class="tag-item_text"><?php echo esc_html($card_category); ?></div>
                           </div>
                         </div>
                         <div class="blog_item-title">
