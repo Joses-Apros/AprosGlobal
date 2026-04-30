@@ -3,6 +3,24 @@
     "title": "Page:Jobs",
     "fields": [
         {
+            "key": "field_69f2e4052e08c",
+            "label": "Employment type",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
             "key": "field_69f23557dd4e2",
             "label": "Employment type",
             "name": "employment_type",
@@ -48,6 +66,24 @@
                 }
             ],
             "acfe_repeater_stylised_button": 0
+        },
+        {
+            "key": "field_69f2e3e92e08b",
+            "label": "Departments",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_69f258adbe006",
@@ -97,6 +133,24 @@
             "acfe_repeater_stylised_button": 0
         },
         {
+            "key": "field_69f2e3db2e08a",
+            "label": "Level",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
             "key": "field_69f253e07c004",
             "label": "Level",
             "name": "level",
@@ -144,6 +198,24 @@
             "acfe_repeater_stylised_button": 0
         },
         {
+            "key": "field_69f2e39c2e087",
+            "label": "Status",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
             "key": "field_69f2562f9d005",
             "label": "Status",
             "name": "status",
@@ -189,6 +261,24 @@
                 }
             ],
             "acfe_repeater_stylised_button": 0
+        },
+        {
+            "key": "field_69f2e38b2e086",
+            "label": "Jobs",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_69f25d11ac007",
@@ -424,5 +514,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1777491485
+    "modified": 1777525787
 }

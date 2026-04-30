@@ -862,5 +862,55 @@ add_action('admin_init', static function () {
   update_option('apros_about_us_equipos_imported_v1', '1');
 });
 
+/**
+ * Import About Us ISO cards repeater once.
+ */
+add_action('admin_init', static function () {
+  if (get_option('apros_about_us_cards_iso_imported_v1') === '1') {
+    return;
+  }
+
+  if (!function_exists('update_field')) {
+    return;
+  }
+
+  $about_pages = get_posts([
+    'post_type' => 'page',
+    'post_status' => 'any',
+    'posts_per_page' => -1,
+    'meta_key' => '_wp_page_template',
+    'meta_value' => 'templates/about_us.php',
+    'fields' => 'ids',
+  ]);
+
+  if (empty($about_pages)) {
+    return;
+  }
+
+  $rows = [
+    [
+      'titulo' => 'Corporate governance',
+      'descripcion' => 'At APROS, we are committed to building a culture of transparency, integrity, and trust in all our operations. Our corporate governance model ensures the proper management and supervision of the company, guaranteeing compliance with the highest standards of ethical behavior and decision-making aligned with our strategic objectives.',
+      'orden' => 1,
+    ],
+    [
+      'titulo' => 'Quality policy',
+      'descripcion' => 'We focus on delivering digital products and services that meet high-quality standards, exceeding our clients\' expectations.',
+      'orden' => 2,
+    ],
+    [
+      'titulo' => 'Privacy policy',
+      'descripcion' => 'We protect our clients\' personal and confidential information through strict privacy standards, offering them confidence and peace of mind in every interaction.',
+      'orden' => 3,
+    ],
+  ];
+
+  foreach ($about_pages as $about_page_id) {
+    update_field('field_69f3261bcardsiso', $rows, (int) $about_page_id);
+  }
+
+  update_option('apros_about_us_cards_iso_imported_v1', '1');
+});
+
 
 

@@ -1098,47 +1098,35 @@
                     data-w-id="e929075a-02d0-feb5-290c-d6e26475d5fd"
                     class="block-wrapper"
                   >
-                    <div tabindex="0" class="block _1">
+                    <?php
+                    $iso_cards = get_field('cards_iso');
+                    if (is_array($iso_cards) && !empty($iso_cards)) {
+                      usort($iso_cards, static function ($a, $b) {
+                        return ((int) ($a['orden'] ?? 0)) <=> ((int) ($b['orden'] ?? 0));
+                      });
+
+                      foreach ($iso_cards as $index => $card) {
+                        $titulo = trim((string) ($card['titulo'] ?? ''));
+                        $descripcion = trim((string) ($card['descripcion'] ?? ''));
+                        if ($titulo === '') {
+                          continue;
+                        }
+                        $block_class = '_'.($index + 1);
+                    ?>
+                    <div tabindex="0" class="block <?php echo esc_attr($block_class); ?>">
                       <div class="equipo_item">
-                        <h3 class="heading-style-h4">Corporate governance</h3>
+                        <h3 class="heading-style-h4"><?php echo esc_html($titulo); ?></h3>
                         <div class="partners_item-prf">
                           <div class="text-size-medium">
-                            At APROS, we are committed to building a culture of
-                            transparency, integrity, and trust in all our
-                            operations. Our corporate governance model ensures
-                            the proper management and supervision of the
-                            company, guaranteeing compliance with the highest
-                            standards of ethical behavior and decision-making
-                            aligned with our strategic objectives.
+                            <?php echo esc_html($descripcion); ?>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div tabindex="0" class="block _2">
-                      <div class="equipo_item">
-                        <h3 class="heading-style-h4">Quality policy</h3>
-                        <div class="partners_item-prf">
-                          <div class="text-size-medium">
-                            We focus on delivering digital products and services
-                            that meet high-quality standards, exceeding our
-                            clients&#x27; expectations.
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div tabindex="0" class="block _3">
-                      <div class="equipo_item">
-                        <h3 class="heading-style-h4">Privacy policy</h3>
-                        <div class="partners_item-prf">
-                          <div class="text-size-medium">
-                            We protect our clients’ personal and confidential
-                            information through strict privacy standards,
-                            offering them confidence and peace of mind in every
-                            interaction.
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    <?php
+                      }
+                    }
+                    ?>
                   </div>
                 </div>
               </div>
