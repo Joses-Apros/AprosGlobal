@@ -1699,29 +1699,31 @@
     <script src="https://cdn.jsdelivr.net/gh/videsigns/webflow-tools@latest/multi-step.js"></script>
 
     <script>
-      const lenis = new Lenis({
-        duration: 1.2,
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
-        direction: "vertical", // vertical, horizontal
-        gestureDirection: "vertical", // vertical, horizontal, both
-        smooth: true,
-        mouseMultiplier: 1,
-        smoothTouch: false,
-        touchMultiplier: 2,
-        infinite: false,
-      });
+      if (typeof Lenis !== "undefined") {
+        const lenis = new Lenis({
+          duration: 1.2,
+          easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
+          direction: "vertical", // vertical, horizontal
+          gestureDirection: "vertical", // vertical, horizontal, both
+          smooth: true,
+          mouseMultiplier: 1,
+          smoothTouch: false,
+          touchMultiplier: 2,
+          infinite: false,
+        });
 
-      //get scroll value
-      lenis.on("scroll", ({ scroll, limit, velocity, direction, progress }) => {
-        console.log({ scroll, limit, velocity, direction, progress });
-      });
+        // get scroll value (debug)
+        lenis.on("scroll", ({ scroll, limit, velocity, direction, progress }) => {
+          console.log({ scroll, limit, velocity, direction, progress });
+        });
 
-      function raf(time) {
-        lenis.raf(time);
+        function raf(time) {
+          lenis.raf(time);
+          requestAnimationFrame(raf);
+        }
+
         requestAnimationFrame(raf);
       }
-
-      requestAnimationFrame(raf);
 
       var btns_latam = document.querySelectorAll(".btn-latam");
       var arrows_btn_latam = document.querySelectorAll(".arrow-btn-latam");
@@ -1878,6 +1880,50 @@
 
         // Avoid flash of unstyled content
         gsap.set("[text-split]", { opacity: 1 });
+      });
+    </script>
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        const createHorizontalScroll = () => {
+          ScrollTrigger.getAll().forEach((trigger) => {
+            if (trigger.vars && trigger.vars.id === "about-horizontal-scroll") {
+              trigger.kill();
+            }
+          });
+
+          document.querySelectorAll(".section-height").forEach((section) => {
+            const track = section.querySelector(".track");
+            const stickyElement = section.querySelector(".sticky-element");
+
+            if (!track || !stickyElement) return;
+
+            const maxScroll = Math.max(0, track.scrollWidth - window.innerWidth);
+            gsap.set(track, { x: 0 });
+
+            if (maxScroll <= 0) return;
+
+            gsap.to(track, {
+              x: -maxScroll,
+              ease: "none",
+              scrollTrigger: {
+                id: "about-horizontal-scroll",
+                trigger: section,
+                start: "top top",
+                end: () => `+=${maxScroll}`,
+                scrub: 1,
+                pin: stickyElement,
+                invalidateOnRefresh: true,
+              },
+            });
+          });
+
+          ScrollTrigger.refresh();
+        };
+
+        createHorizontalScroll();
+        window.addEventListener("resize", createHorizontalScroll);
       });
     </script>
 
