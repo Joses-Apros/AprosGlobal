@@ -910,6 +910,10 @@
                       <?php
                       $team_rows = get_field('equipos');
                       if (is_array($team_rows) && !empty($team_rows)) {
+                        $team_rows = array_values(array_filter($team_rows, static function ($team_member) {
+                          $inactive_value = $team_member['inactivo'] ?? 0;
+                          return !in_array($inactive_value, [1, '1', true, 'true', 'on', 'yes'], true);
+                        }));
                         usort($team_rows, static function ($a, $b) {
                           return ((int) ($a['order'] ?? 0)) <=> ((int) ($b['order'] ?? 0));
                         });
