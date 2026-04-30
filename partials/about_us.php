@@ -196,6 +196,17 @@
       .popup_gradient {
         pointer-events: none;
       }
+
+      /* ISO stack cards readability on overlap */
+      .block-wrapper .block {
+        position: relative;
+      }
+      .block-wrapper .block._2,
+      .block-wrapper .block._3 {
+        background-color: #070926;
+        border-radius: 1rem;
+        box-shadow: 0 12px 32px rgba(15, 23, 42, 0.12);
+      }
     </style>
   </head>
   <body data-rsssl="1">
@@ -1924,6 +1935,62 @@
 
         createHorizontalScroll();
         window.addEventListener("resize", createHorizontalScroll);
+      });
+    </script>
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        const createStackedBlocks = () => {
+          ScrollTrigger.getAll().forEach((trigger) => {
+            if (trigger.vars && trigger.vars.id === "about-iso-stack") {
+              trigger.kill();
+            }
+          });
+
+          document.querySelectorAll(".block-wrapper").forEach((wrapper) => {
+            const blocks = Array.from(wrapper.querySelectorAll(".block"));
+            if (blocks.length < 2) return;
+            const section = wrapper.closest(".equipo_component") || wrapper;
+
+            gsap.set(blocks, { clearProps: "transform" });
+            blocks.forEach((block, index) => {
+              gsap.set(block, { zIndex: index + 1 });
+            });
+
+            const baseOffset = blocks[0].offsetTop;
+            const tl = gsap.timeline({
+              scrollTrigger: {
+                id: "about-iso-stack",
+                trigger: section,
+                start: "top top",
+                end: () => `+=${(blocks.length - 1) * 540}`,
+                scrub: 1.8,
+                pin: section,
+                pinSpacing: true,
+                anticipatePin: 1,
+                invalidateOnRefresh: true,
+              },
+            });
+
+            blocks.slice(1).forEach((block, index) => {
+              tl.to(
+                block,
+                {
+                  y: -(block.offsetTop - baseOffset),
+                  ease: "power1.inOut",
+                  duration: 1,
+                },
+                index * 0.5,
+              );
+            });
+          });
+
+          ScrollTrigger.refresh();
+        };
+
+        createStackedBlocks();
+        window.addEventListener("resize", createStackedBlocks);
       });
     </script>
 
