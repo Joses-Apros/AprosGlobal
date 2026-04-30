@@ -100,239 +100,8 @@ add_action('init', static function () {
 });
 
 /**
- * Register ACF fields for solution post type.
+ * ACF field groups are managed via Local JSON in /acf-json.
  */
-add_action('acf/init', static function () {
-  if (!function_exists('acf_add_local_field_group')) {
-    return;
-  }
-
-  acf_add_local_field_group([
-    'key' => 'group_solution_fields',
-    'title' => 'Solution Fields',
-    'fields' => [
-      [
-        'key' => 'field_solution_subtitle',
-        'label' => 'Solution Subtitle',
-        'name' => 'solution_subtitle',
-        'type' => 'text',
-      ],
-      [
-        'key' => 'field_solution_summary',
-        'label' => 'Solution Summary',
-        'name' => 'solution_summary',
-        'type' => 'textarea',
-        'rows' => 4,
-      ],
-      [
-        'key' => 'field_solution_icon',
-        'label' => 'Solution Icon',
-        'name' => 'solution_icon',
-        'type' => 'url',
-      ],
-      [
-        'key' => 'field_solution_demo_url',
-        'label' => 'Demo URL',
-        'name' => 'solution_demo_url',
-        'type' => 'url',
-      ],
-      [
-        'key' => 'field_solution_hero_video_mp4',
-        'label' => 'Hero Video MP4 URL',
-        'name' => 'solution_hero_video_mp4',
-        'type' => 'url',
-      ],
-      [
-        'key' => 'field_solution_hero_video_webm',
-        'label' => 'Hero Video WEBM URL',
-        'name' => 'solution_hero_video_webm',
-        'type' => 'url',
-      ],
-      [
-        'key' => 'field_solution_cta_heading',
-        'label' => 'CTA Heading',
-        'name' => 'solution_cta_heading',
-        'type' => 'text',
-      ],
-      [
-        'key' => 'field_solution_features',
-        'label' => 'Solution Features',
-        'name' => 'solution_features',
-        'type' => 'repeater',
-        'layout' => 'row',
-        'button_label' => 'Add Feature',
-        'sub_fields' => [
-          [
-            'key' => 'field_solution_feature_title',
-            'label' => 'Title',
-            'name' => 'title',
-            'type' => 'text',
-          ],
-          [
-            'key' => 'field_solution_feature_description',
-            'label' => 'Description',
-            'name' => 'description',
-            'type' => 'textarea',
-            'rows' => 3,
-          ],
-          [
-            'key' => 'field_solution_feature_image',
-            'label' => 'Image',
-            'name' => 'image',
-            'type' => 'url',
-          ],
-        ],
-      ],
-      [
-        'key' => 'field_solution_process_items',
-        'label' => 'Process Items',
-        'name' => 'solution_process_items',
-        'type' => 'repeater',
-        'layout' => 'row',
-        'button_label' => 'Add Process Item',
-        'sub_fields' => [
-          [
-            'key' => 'field_solution_process_icon',
-            'label' => 'Icon',
-            'name' => 'icon',
-            'type' => 'url',
-          ],
-          [
-            'key' => 'field_solution_process_title',
-            'label' => 'Title',
-            'name' => 'title',
-            'type' => 'text',
-          ],
-          [
-            'key' => 'field_solution_process_description',
-            'label' => 'Description',
-            'name' => 'description',
-            'type' => 'textarea',
-            'rows' => 3,
-          ],
-        ],
-      ],
-      [
-        'key' => 'field_solution_problem_title',
-        'label' => 'Problem List Title',
-        'name' => 'solution_problem_title',
-        'type' => 'text',
-      ],
-      [
-        'key' => 'field_solution_problem_list',
-        'label' => 'Problem List (HTML)',
-        'name' => 'solution_problem_list',
-        'type' => 'wysiwyg',
-        'tabs' => 'all',
-        'toolbar' => 'basic',
-        'media_upload' => 0,
-      ],
-      [
-        'key' => 'field_solution_success_title',
-        'label' => 'Success List Title',
-        'name' => 'solution_success_title',
-        'type' => 'text',
-      ],
-      [
-        'key' => 'field_solution_success_list',
-        'label' => 'Success List (HTML)',
-        'name' => 'solution_success_list',
-        'type' => 'wysiwyg',
-        'tabs' => 'all',
-        'toolbar' => 'basic',
-        'media_upload' => 0,
-      ],
-    ],
-    'location' => [
-      [
-        [
-          'param' => 'post_type',
-          'operator' => '==',
-          'value' => 'solution',
-        ],
-      ],
-    ],
-    'position' => 'normal',
-    'style' => 'default',
-    'active' => true,
-  ]);
-
-  acf_add_local_field_group([
-    'key' => 'group_insight_fields',
-    'title' => 'Insight Fields',
-    'fields' => [
-      [
-        'key' => 'field_insight_category',
-        'label' => 'Insight Category',
-        'name' => 'insight_category',
-        'type' => 'text',
-      ],
-      [
-        'key' => 'field_insight_cover_image',
-        'label' => 'Insight Cover Image URL',
-        'name' => 'insight_cover_image',
-        'type' => 'url',
-      ],
-      [
-        'key' => 'field_insight_body_html',
-        'label' => 'Insight Body (HTML)',
-        'name' => 'insight_body_html',
-        'type' => 'wysiwyg',
-        'tabs' => 'all',
-        'toolbar' => 'full',
-        'media_upload' => 1,
-      ],
-      [
-        'key' => 'field_insight_publish_label',
-        'label' => 'Publish Label',
-        'name' => 'insight_publish_label',
-        'type' => 'text',
-      ],
-      [
-        'key' => 'field_insight_publish_date_text',
-        'label' => 'Publish Date Text',
-        'name' => 'insight_publish_date_text',
-        'type' => 'text',
-      ],
-      [
-        'key' => 'field_insight_webflow_published_on',
-        'label' => 'Webflow Published On',
-        'name' => 'insight_webflow_published_on',
-        'type' => 'text',
-      ],
-      [
-        'key' => 'field_insight_spanish_url',
-        'label' => 'Read in Spanish URL',
-        'name' => 'insight_spanish_url',
-        'type' => 'url',
-      ],
-      [
-        'key' => 'field_insight_sidebar_cta_text',
-        'label' => 'Sidebar CTA Text',
-        'name' => 'insight_sidebar_cta_text',
-        'type' => 'text',
-      ],
-      [
-        'key' => 'field_insight_sidebar_cta_url',
-        'label' => 'Sidebar CTA URL',
-        'name' => 'insight_sidebar_cta_url',
-        'type' => 'url',
-      ],
-    ],
-    'location' => [
-      [
-        [
-          'param' => 'post_type',
-          'operator' => '==',
-          'value' => 'insight',
-        ],
-      ],
-    ],
-    'position' => 'normal',
-    'style' => 'default',
-    'active' => true,
-  ]);
-});
 
 /**
  * Flush rewrite rules once after CPT registration changes.
@@ -441,4 +210,657 @@ add_action('admin_init', static function () {
   fclose($handle);
   update_option('apros_insight_categorias_assigned_v1', '1');
 });
+
+/**
+ * Import Jobs employment types from CSV once.
+ */
+add_action('admin_init', static function () {
+  if (get_option('apros_jobs_employment_type_imported_v1') === '1') {
+    return;
+  }
+
+  if (!function_exists('update_field')) {
+    return;
+  }
+
+  $csv_path = 'd:\\Usuario\\Descargas\\Apros Global - Jobs Times - 65b4453c9e0f05c6674b744a.csv';
+  if (!file_exists($csv_path)) {
+    return;
+  }
+
+  $jobs_pages = get_posts([
+    'post_type' => 'page',
+    'post_status' => 'any',
+    'posts_per_page' => -1,
+    'meta_key' => '_wp_page_template',
+    'meta_value' => 'templates/jobs.php',
+    'fields' => 'ids',
+  ]);
+
+  if (empty($jobs_pages)) {
+    return;
+  }
+
+  $handle = fopen($csv_path, 'r');
+  if ($handle === false) {
+    return;
+  }
+
+  $header = fgetcsv($handle);
+  if (!is_array($header)) {
+    fclose($handle);
+    return;
+  }
+
+  $column_map = [
+    'Name' => 'name',
+    'Slug' => 'slug',
+    'Collection ID' => 'collection_id',
+    'Locale ID' => 'locale_id',
+    'Item ID' => 'item_id',
+    'Archived' => 'archived',
+    'Draft' => 'draft',
+    'Created On' => 'created_on',
+    'Updated On' => 'updated_on',
+    'Published On' => 'published_on',
+  ];
+
+  $indexes = [];
+  foreach ($column_map as $csv_column => $field_name) {
+    $index = array_search($csv_column, $header, true);
+    if ($index === false) {
+      fclose($handle);
+      return;
+    }
+    $indexes[$field_name] = $index;
+  }
+
+  $rows = [];
+  while (($row = fgetcsv($handle)) !== false) {
+    $repeater_row = [];
+    foreach ($indexes as $field_name => $index) {
+      $repeater_row[$field_name] = isset($row[$index]) ? trim((string) $row[$index]) : '';
+    }
+    $rows[] = $repeater_row;
+  }
+  fclose($handle);
+
+  foreach ($jobs_pages as $jobs_page_id) {
+    update_field('field_69f23557dd4e2', $rows, (int) $jobs_page_id);
+  }
+
+  update_option('apros_jobs_employment_type_imported_v1', '1');
+});
+
+/**
+ * Import Jobs locations names into Talent Development repeater once.
+ */
+add_action('admin_init', static function () {
+  if (get_option('apros_jobs_talent_development_imported_v1') === '1') {
+    return;
+  }
+
+  if (!function_exists('update_field')) {
+    return;
+  }
+
+  $csv_path = 'd:\\Usuario\\Descargas\\Apros Global - Jobs Locations - 65b4453c9e0f05c6674b7449.csv';
+  if (!file_exists($csv_path)) {
+    return;
+  }
+
+  $jobs_pages = get_posts([
+    'post_type' => 'page',
+    'post_status' => 'any',
+    'posts_per_page' => -1,
+    'meta_key' => '_wp_page_template',
+    'meta_value' => 'templates/jobs.php',
+    'fields' => 'ids',
+  ]);
+
+  if (empty($jobs_pages)) {
+    return;
+  }
+
+  $handle = fopen($csv_path, 'r');
+  if ($handle === false) {
+    return;
+  }
+
+  $header = fgetcsv($handle);
+  if (!is_array($header)) {
+    fclose($handle);
+    return;
+  }
+
+  $name_index = array_search('Name', $header, true);
+  if ($name_index === false) {
+    fclose($handle);
+    return;
+  }
+
+  $rows = [];
+  while (($row = fgetcsv($handle)) !== false) {
+    $name = isset($row[$name_index]) ? trim((string) $row[$name_index]) : '';
+    if ($name === '') {
+      continue;
+    }
+    $rows[] = [
+      'name' => $name,
+    ];
+  }
+  fclose($handle);
+
+  foreach ($jobs_pages as $jobs_page_id) {
+    update_field('field_69f24a7a2c001', $rows, (int) $jobs_page_id);
+  }
+
+  update_option('apros_jobs_talent_development_imported_v1', '1');
+});
+
+/**
+ * Import Jobs levels names into Specialist Level repeater once.
+ */
+add_action('admin_init', static function () {
+  if (get_option('apros_jobs_specialist_level_imported_v1') === '1') {
+    return;
+  }
+
+  if (!function_exists('update_field')) {
+    return;
+  }
+
+  $csv_path = 'd:\\Usuario\\Descargas\\Apros Global - Jobs Levels - 65b4453c9e0f05c6674b7436.csv';
+  if (!file_exists($csv_path)) {
+    return;
+  }
+
+  $jobs_pages = get_posts([
+    'post_type' => 'page',
+    'post_status' => 'any',
+    'posts_per_page' => -1,
+    'meta_key' => '_wp_page_template',
+    'meta_value' => 'templates/jobs.php',
+    'fields' => 'ids',
+  ]);
+
+  if (empty($jobs_pages)) {
+    return;
+  }
+
+  $handle = fopen($csv_path, 'r');
+  if ($handle === false) {
+    return;
+  }
+
+  $header = fgetcsv($handle);
+  if (!is_array($header)) {
+    fclose($handle);
+    return;
+  }
+
+  $name_index = array_search('Name', $header, true);
+  if ($name_index === false) {
+    fclose($handle);
+    return;
+  }
+
+  $rows = [];
+  while (($row = fgetcsv($handle)) !== false) {
+    $name = isset($row[$name_index]) ? trim((string) $row[$name_index]) : '';
+    if ($name === '') {
+      continue;
+    }
+    $rows[] = [
+      'name' => $name,
+    ];
+  }
+  fclose($handle);
+
+  foreach ($jobs_pages as $jobs_page_id) {
+    update_field('field_69f24f3e5a002', $rows, (int) $jobs_page_id);
+  }
+
+  update_option('apros_jobs_specialist_level_imported_v1', '1');
+});
+
+/**
+ * Import Jobs locations names into Talent Departments repeater once.
+ */
+add_action('admin_init', static function () {
+  if (get_option('apros_jobs_talent_departments_imported_v1') === '1') {
+    return;
+  }
+
+  if (!function_exists('update_field')) {
+    return;
+  }
+
+  $csv_path = 'd:\\Usuario\\Descargas\\Apros Global - Jobs Locations - 65b4453c9e0f05c6674b7449.csv';
+  if (!file_exists($csv_path)) {
+    return;
+  }
+
+  $jobs_pages = get_posts([
+    'post_type' => 'page',
+    'post_status' => 'any',
+    'posts_per_page' => -1,
+    'meta_key' => '_wp_page_template',
+    'meta_value' => 'templates/jobs.php',
+    'fields' => 'ids',
+  ]);
+
+  if (empty($jobs_pages)) {
+    return;
+  }
+
+  $handle = fopen($csv_path, 'r');
+  if ($handle === false) {
+    return;
+  }
+
+  $header = fgetcsv($handle);
+  if (!is_array($header)) {
+    fclose($handle);
+    return;
+  }
+
+  $name_index = array_search('Name', $header, true);
+  if ($name_index === false) {
+    fclose($handle);
+    return;
+  }
+
+  $rows = [];
+  while (($row = fgetcsv($handle)) !== false) {
+    $name = isset($row[$name_index]) ? trim((string) $row[$name_index]) : '';
+    if ($name === '') {
+      continue;
+    }
+    $rows[] = [
+      'name' => $name,
+    ];
+  }
+  fclose($handle);
+
+  foreach ($jobs_pages as $jobs_page_id) {
+    update_field('field_69f2518d8b003', $rows, (int) $jobs_page_id);
+  }
+
+  update_option('apros_jobs_talent_departments_imported_v1', '1');
+});
+
+/**
+ * Import Jobs levels names into Level repeater once.
+ */
+add_action('admin_init', static function () {
+  if (get_option('apros_jobs_level_imported_v1') === '1') {
+    return;
+  }
+
+  if (!function_exists('update_field')) {
+    return;
+  }
+
+  $csv_path = 'd:\\Usuario\\Descargas\\Apros Global - Jobs Levels - 65b4453c9e0f05c6674b7436.csv';
+  if (!file_exists($csv_path)) {
+    return;
+  }
+
+  $jobs_pages = get_posts([
+    'post_type' => 'page',
+    'post_status' => 'any',
+    'posts_per_page' => -1,
+    'meta_key' => '_wp_page_template',
+    'meta_value' => 'templates/jobs.php',
+    'fields' => 'ids',
+  ]);
+
+  if (empty($jobs_pages)) {
+    return;
+  }
+
+  $handle = fopen($csv_path, 'r');
+  if ($handle === false) {
+    return;
+  }
+
+  $header = fgetcsv($handle);
+  if (!is_array($header)) {
+    fclose($handle);
+    return;
+  }
+
+  $name_index = array_search('Name', $header, true);
+  if ($name_index === false) {
+    fclose($handle);
+    return;
+  }
+
+  $rows = [];
+  while (($row = fgetcsv($handle)) !== false) {
+    $name = isset($row[$name_index]) ? trim((string) $row[$name_index]) : '';
+    if ($name === '') {
+      continue;
+    }
+    $rows[] = [
+      'name' => $name,
+    ];
+  }
+  fclose($handle);
+
+  foreach ($jobs_pages as $jobs_page_id) {
+    update_field('field_69f253e07c004', $rows, (int) $jobs_page_id);
+  }
+
+  update_option('apros_jobs_level_imported_v1', '1');
+});
+
+/**
+ * Import Jobs countries names into Status repeater once.
+ */
+add_action('admin_init', static function () {
+  if (get_option('apros_jobs_status_imported_v1') === '1') {
+    return;
+  }
+
+  if (!function_exists('update_field')) {
+    return;
+  }
+
+  $csv_path = 'd:\\Usuario\\Descargas\\Apros Global - Jobs Countries - 65b4453c9e0f05c6674b741c.csv';
+  if (!file_exists($csv_path)) {
+    return;
+  }
+
+  $jobs_pages = get_posts([
+    'post_type' => 'page',
+    'post_status' => 'any',
+    'posts_per_page' => -1,
+    'meta_key' => '_wp_page_template',
+    'meta_value' => 'templates/jobs.php',
+    'fields' => 'ids',
+  ]);
+
+  if (empty($jobs_pages)) {
+    return;
+  }
+
+  $handle = fopen($csv_path, 'r');
+  if ($handle === false) {
+    return;
+  }
+
+  $header = fgetcsv($handle);
+  if (!is_array($header)) {
+    fclose($handle);
+    return;
+  }
+
+  $name_index = array_search('Name', $header, true);
+  if ($name_index === false) {
+    fclose($handle);
+    return;
+  }
+
+  $rows = [];
+  while (($row = fgetcsv($handle)) !== false) {
+    $name = isset($row[$name_index]) ? trim((string) $row[$name_index]) : '';
+    if ($name === '') {
+      continue;
+    }
+    $rows[] = [
+      'name' => $name,
+    ];
+  }
+  fclose($handle);
+
+  foreach ($jobs_pages as $jobs_page_id) {
+    update_field('field_69f2562f9d005', $rows, (int) $jobs_page_id);
+  }
+
+  update_option('apros_jobs_status_imported_v1', '1');
+});
+
+/**
+ * Import Jobs locations names into Departments repeater once.
+ */
+add_action('admin_init', static function () {
+  if (get_option('apros_jobs_departments_imported_v1') === '1') {
+    return;
+  }
+
+  if (!function_exists('update_field')) {
+    return;
+  }
+
+  $csv_path = 'd:\\Usuario\\Descargas\\Apros Global - Jobs Locations - 65b4453c9e0f05c6674b7449.csv';
+  if (!file_exists($csv_path)) {
+    return;
+  }
+
+  $jobs_pages = get_posts([
+    'post_type' => 'page',
+    'post_status' => 'any',
+    'posts_per_page' => -1,
+    'meta_key' => '_wp_page_template',
+    'meta_value' => 'templates/jobs.php',
+    'fields' => 'ids',
+  ]);
+
+  if (empty($jobs_pages)) {
+    return;
+  }
+
+  $handle = fopen($csv_path, 'r');
+  if ($handle === false) {
+    return;
+  }
+
+  $header = fgetcsv($handle);
+  if (!is_array($header)) {
+    fclose($handle);
+    return;
+  }
+
+  $name_index = array_search('Name', $header, true);
+  if ($name_index === false) {
+    fclose($handle);
+    return;
+  }
+
+  $rows = [];
+  while (($row = fgetcsv($handle)) !== false) {
+    $name = isset($row[$name_index]) ? trim((string) $row[$name_index]) : '';
+    if ($name === '') {
+      continue;
+    }
+    $rows[] = [
+      'name' => $name,
+    ];
+  }
+  fclose($handle);
+
+  foreach ($jobs_pages as $jobs_page_id) {
+    update_field('field_69f258adbe006', $rows, (int) $jobs_page_id);
+  }
+
+  update_option('apros_jobs_departments_imported_v1', '1');
+});
+
+/**
+ * Import Jobs rows into Jobs repeater once.
+ */
+add_action('admin_init', static function () {
+  if (get_option('apros_jobs_rows_imported_v1') === '1') {
+    return;
+  }
+
+  if (!function_exists('update_field')) {
+    return;
+  }
+
+  $csv_path = 'd:\\Usuario\\Descargas\\Apros Global - Jobs - 65b4453c9e0f05c6674b7403.csv';
+  if (!file_exists($csv_path)) {
+    return;
+  }
+
+  $jobs_pages = get_posts([
+    'post_type' => 'page',
+    'post_status' => 'any',
+    'posts_per_page' => -1,
+    'meta_key' => '_wp_page_template',
+    'meta_value' => 'templates/jobs.php',
+    'fields' => 'ids',
+  ]);
+
+  if (empty($jobs_pages)) {
+    return;
+  }
+
+  $handle = fopen($csv_path, 'r');
+  if ($handle === false) {
+    return;
+  }
+
+  $header = fgetcsv($handle);
+  if (!is_array($header)) {
+    fclose($handle);
+    return;
+  }
+
+  $column_map = [
+    'Name' => 'name',
+    'Slug' => 'slug',
+    'Collection ID' => 'collection_id',
+    'Locale ID' => 'locale_id',
+    'Item ID' => 'item_id',
+    'Archived' => 'archived',
+    'Draft' => 'draft',
+    'Created On' => 'created_on',
+    'Updated On' => 'updated_on',
+    'Published On' => 'published_on',
+    'Time' => 'time',
+    'Location' => 'location',
+    'Level' => 'level',
+    'Country' => 'country',
+    'Description' => 'description',
+    'Link linkedin' => 'link_linkedin',
+  ];
+
+  $indexes = [];
+  foreach ($column_map as $csv_column => $field_name) {
+    $index = array_search($csv_column, $header, true);
+    if ($index === false) {
+      fclose($handle);
+      return;
+    }
+    $indexes[$field_name] = $index;
+  }
+
+  $rows = [];
+  while (($row = fgetcsv($handle)) !== false) {
+    $repeater_row = [];
+    foreach ($indexes as $field_name => $index) {
+      $repeater_row[$field_name] = isset($row[$index]) ? trim((string) $row[$index]) : '';
+    }
+    if ($repeater_row['name'] === '') {
+      continue;
+    }
+    $rows[] = $repeater_row;
+  }
+  fclose($handle);
+
+  foreach ($jobs_pages as $jobs_page_id) {
+    update_field('field_69f25d11ac007', $rows, (int) $jobs_page_id);
+  }
+
+  update_option('apros_jobs_rows_imported_v1', '1');
+});
+
+/**
+ * Import About Us team rows into Equipos repeater once.
+ */
+add_action('admin_init', static function () {
+  if (get_option('apros_about_us_equipos_imported_v1') === '1') {
+    return;
+  }
+
+  if (!function_exists('update_field')) {
+    return;
+  }
+
+  $csv_path = 'd:\\Usuario\\Descargas\\Apros Global - Equipos - 65b4453c9e0f05c6674b7382.csv';
+  if (!file_exists($csv_path)) {
+    return;
+  }
+
+  $about_pages = get_posts([
+    'post_type' => 'page',
+    'post_status' => 'any',
+    'posts_per_page' => -1,
+    'meta_key' => '_wp_page_template',
+    'meta_value' => 'templates/about_us.php',
+    'fields' => 'ids',
+  ]);
+
+  if (empty($about_pages)) {
+    return;
+  }
+
+  $handle = fopen($csv_path, 'r');
+  if ($handle === false) {
+    return;
+  }
+
+  $header = fgetcsv($handle);
+  if (!is_array($header)) {
+    fclose($handle);
+    return;
+  }
+
+  $column_map = [
+    'Name' => 'name',
+    'Slug' => 'slug',
+    'Perfil' => 'perfil',
+    'Descripción' => 'descripcion',
+    'Cargo' => 'cargo',
+    'linkedin' => 'linkedin',
+    'Order' => 'order',
+  ];
+
+  $indexes = [];
+  foreach ($column_map as $csv_column => $field_name) {
+    $index = array_search($csv_column, $header, true);
+    if ($index === false) {
+      fclose($handle);
+      return;
+    }
+    $indexes[$field_name] = $index;
+  }
+
+  $rows = [];
+  while (($row = fgetcsv($handle)) !== false) {
+    $repeater_row = [];
+    foreach ($indexes as $field_name => $index) {
+      $repeater_row[$field_name] = isset($row[$index]) ? trim((string) $row[$index]) : '';
+    }
+
+    if ($repeater_row['name'] === '') {
+      continue;
+    }
+
+    $repeater_row['order'] = (int) $repeater_row['order'];
+    $rows[] = $repeater_row;
+  }
+  fclose($handle);
+
+  foreach ($about_pages as $about_page_id) {
+    update_field('field_69f2c69bb6696', $rows, (int) $about_page_id);
+  }
+
+  update_option('apros_about_us_equipos_imported_v1', '1');
+});
+
+
 

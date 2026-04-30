@@ -1,0 +1,77 @@
+{
+  "key": "group_insight_fields",
+  "title": "Insight Fields",
+  "fields": [
+    {
+      "key": "field_insight_category",
+      "label": "Insight Category",
+      "name": "insight_category",
+      "type": "text"
+    },
+    {
+      "key": "field_insight_cover_image",
+      "label": "Insight Cover Image URL",
+      "name": "insight_cover_image",
+      "type": "url"
+    },
+    {
+      "key": "field_insight_body_html",
+      "label": "Insight Body (HTML)",
+      "name": "insight_body_html",
+      "type": "wysiwyg",
+      "tabs": "all",
+      "toolbar": "full",
+      "media_upload": 1
+    },
+    {
+      "key": "field_insight_publish_label",
+      "label": "Publish Label",
+      "name": "insight_publish_label",
+      "type": "text"
+    },
+    {
+      "key": "field_insight_publish_date_text",
+      "label": "Publish Date Text",
+      "name": "insight_publish_date_text",
+      "type": "text"
+    },
+    {
+      "key": "field_insight_webflow_published_on",
+      "label": "Webflow Published On",
+      "name": "insight_webflow_published_on",
+      "type": "text"
+    },
+    {
+      "key": "field_insight_spanish_url",
+      "label": "Read in Spanish URL",
+      "name": "insight_spanish_url",
+      "type": "url"
+    },
+    {
+      "key": "field_insight_sidebar_cta_text",
+      "label": "Sidebar CTA Text",
+      "name": "insight_sidebar_cta_text",
+      "type": "text"
+    },
+    {
+      "key": "field_insight_sidebar_cta_url",
+      "label": "Sidebar CTA URL",
+      "name": "insight_sidebar_cta_url",
+      "type": "url"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "insight"
+      }
+    ]
+  ],
+  "position": "normal",
+  "style": "default",
+  "active": true,
+  "description": "",
+  "modified": 1777460001
+}

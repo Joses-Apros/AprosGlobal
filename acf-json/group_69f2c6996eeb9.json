@@ -1,0 +1,389 @@
+{
+    "key": "group_69f2c6996eeb9",
+    "title": "Page:About_us",
+    "fields": [
+        {
+            "key": "field_69f2c69bb6696",
+            "label": "Equipos",
+            "name": "equipos",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "row",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Agregar Fila",
+            "rows_per_page": 20,
+            "default_value": [
+                {
+                    "descripcion": "<p id=\"\">A web strategist with over a decade providing quality web consulting services with accurate and cost effective solutions.<\/p>",
+                    "name": "Fernando Trigoso",
+                    "cargo": "Chief technical officer",
+                    "linkedin": "https:\/\/www.linkedin.com\/in\/victor-costa-descailleaux\/",
+                    "perfil": "https:\/\/uploads-ssl.webflow.com\/635abb3fb86e8e277dc9fba4\/63a4cc6590ad16e1fca521ae_Rectangle%201.png",
+                    "slug": "fernando-trigoso",
+                    "order": 2
+                },
+                {
+                    "descripcion": "<p id=\"\">\"Keep moving forward, going back is the easy way out.\"<\/p>",
+                    "name": "Gabriel Soto",
+                    "cargo": "Front end developer",
+                    "linkedin": "",
+                    "perfil": "https:\/\/uploads-ssl.webflow.com\/635abb3fb86e8e277dc9fba4\/63bd621c5a5d692ea4a82252_Gabriel.jpg",
+                    "slug": "gabriel-soto",
+                    "order": 7
+                },
+                {
+                    "descripcion": "<p>\"Everything you've ever wanted is on the other side of fear.\"<\/p>",
+                    "name": "AristÃ³teles Iriarte",
+                    "cargo": "Digital transformation advisor",
+                    "linkedin": "",
+                    "perfil": "https:\/\/uploads-ssl.webflow.com\/635abb3fb86e8e277dc9fba4\/65b0353a04c8e0a6e36b9271_308f3874-ce6e-4019-8aaf-8ffd0061ff5d.jpg",
+                    "slug": "aristoteles-iriarte",
+                    "order": 16
+                },
+                {
+                    "descripcion": "<p>Don't let life pass you by without making decisions, because the years go by and if you don't act, you regress.<\/p>",
+                    "name": "Andrea Reyes",
+                    "cargo": "Digital transformation advisor",
+                    "linkedin": "https:\/\/www.linkedin.com\/in\/andrea-reyes-campos\/",
+                    "perfil": "https:\/\/uploads-ssl.webflow.com\/635abb3fb86e8e277dc9fba4\/65e74a73c13a79f17145d289_711f9027-d468-472f-94c4-5fb4275ddbb4.jpeg",
+                    "slug": "andrea-reyes",
+                    "order": 17
+                },
+                {
+                    "descripcion": "<p id=\"\">\"Hello! I am a Ui designer and Webflow developer, with extensive experience in building friendly digital interfaces and with a good user experience.\"<\/p><p id=\"\">â€<\/p>",
+                    "name": "Efrain BriceÃ±o",
+                    "cargo": "Webflow Developer \/ UI Designer",
+                    "linkedin": "https:\/\/www.linkedin.com\/in\/efrain-brice%C3%B1o-asto-1b9476106\/",
+                    "perfil": "https:\/\/uploads-ssl.webflow.com\/635abb3fb86e8e277dc9fba4\/63a4cd65c8c1bd3b5bf2de23_1614877978300%20(1).jpeg",
+                    "slug": "efrain-briceno",
+                    "order": 4
+                },
+                {
+                    "descripcion": "<p id=\"\">\"There is no single way to solve a problem, there are many possible solutions and it is important to evaluate the best one for each situation.\"<\/p>",
+                    "name": "Oswaldo Huillca",
+                    "cargo": "Back end developer",
+                    "linkedin": "",
+                    "perfil": "https:\/\/uploads-ssl.webflow.com\/635abb3fb86e8e277dc9fba4\/63bd60a4ae40a2bf8172a73f_oswaldo.jpg",
+                    "slug": "oswaldo-huillca",
+                    "order": 5
+                },
+                {
+                    "descripcion": "<p>â€œTechnology is nothing. The important thing is that you have faith in people, that they are basically good and intelligent, and if you give them tools, they will do wonderful things with them.â€ Steve Jobs<\/p>",
+                    "name": "Juan Carlos Pampa",
+                    "cargo": "Full stack developer",
+                    "linkedin": "",
+                    "perfil": "https:\/\/uploads-ssl.webflow.com\/635abb3fb86e8e277dc9fba4\/63bd61ad1c6ab0302b239d33_Juan%20Carlos.jpg",
+                    "slug": "juan-carlos-pampa",
+                    "order": 9
+                },
+                {
+                    "descripcion": "<p id=\"\">\"Choose a job you love and you will never have to work a day in your life.\"<\/p>",
+                    "name": "Zarela Mendoza",
+                    "cargo": "Full stack developer",
+                    "linkedin": "",
+                    "perfil": "https:\/\/uploads-ssl.webflow.com\/635abb3fb86e8e277dc9fba4\/63bd61f23ca60b48048d1398_Zarela.jpg",
+                    "slug": "zarela-mendoza",
+                    "order": 10
+                },
+                {
+                    "descripcion": "<p id=\"\">A good thing about working with Apros is that you always have someone by your side. None of us is as smart as all of us.<\/p>",
+                    "name": "Brian Medina",
+                    "cargo": "Project Manager",
+                    "linkedin": "",
+                    "perfil": "https:\/\/uploads-ssl.webflow.com\/635abb3fb86e8e277dc9fba4\/65b034bdf3e938a096048832_brian-web.jpg",
+                    "slug": "brian-medina",
+                    "order": 2
+                },
+                {
+                    "descripcion": "<p id=\"\">\"It is a pleasure to be able to renew energy by learning about people's interests, knowing about their projects and experiences, letting us be surprised by their dreams. And even more to see that their projections are fulfilled\"<\/p><p>â€<\/p>",
+                    "name": "Ana Ruth Costa",
+                    "cargo": "UX Writer & communication strategist",
+                    "linkedin": "",
+                    "perfil": "https:\/\/uploads-ssl.webflow.com\/635abb3fb86e8e277dc9fba4\/63bd8379b1ec2f7b1acfb250_image%2086.jpg",
+                    "slug": "ana-ruth",
+                    "order": 12
+                },
+                {
+                    "descripcion": "<p id=\"\">\"I love design, I love people, I love black &amp; white.\"<\/p>",
+                    "name": "Carmen Trigoso",
+                    "cargo": "UX Director",
+                    "linkedin": "",
+                    "perfil": "https:\/\/uploads-ssl.webflow.com\/635abb3fb86e8e277dc9fba4\/643ea7aa816a0912e728a7c0_carmen.png",
+                    "slug": "carmen-trigoso",
+                    "order": 8
+                },
+                {
+                    "descripcion": "<p id=\"\">\"Each project brings us a new opportunity to demonstrate our talent and dedication.\"<\/p>",
+                    "name": "Zaskia Salas",
+                    "cargo": "Process improvement manager",
+                    "linkedin": "",
+                    "perfil": "https:\/\/uploads-ssl.webflow.com\/635abb3fb86e8e277dc9fba4\/64516b6610d0f4068dcc0b94_ZASKIA.png",
+                    "slug": "zaskia-salas",
+                    "order": 13
+                },
+                {
+                    "descripcion": "<p id=\"\">\"Every person who crosses our path has something to teach, we never stop learning if we pay attention even to the smallest details.\"<\/p><p id=\"\"><br><\/p>",
+                    "name": "Natalia Medina",
+                    "cargo": "Digital Marketer",
+                    "linkedin": "",
+                    "perfil": "https:\/\/uploads-ssl.webflow.com\/635abb3fb86e8e277dc9fba4\/64650370a34ea9ab58eeabb3_natalia%20medina%201.png",
+                    "slug": "natalia-medina",
+                    "order": 6
+                },
+                {
+                    "descripcion": "<p id=\"\">\"Success is not the key to happiness in programming. Happiness is the key to success. If you love programming and enjoy what you do, you will succeed in the world of technology and creation.\"<\/p>",
+                    "name": "JosÃ© Chavez",
+                    "cargo": "Front end developer",
+                    "linkedin": "",
+                    "perfil": "https:\/\/uploads-ssl.webflow.com\/635abb3fb86e8e277dc9fba4\/646505079a807b663680bd9e_josechavez.png",
+                    "slug": "jose-chavez",
+                    "order": 3
+                },
+                {
+                    "descripcion": "<p id=\"\">\"Nothing is over until you stop trying\"<\/p>",
+                    "name": "Fernando Varas",
+                    "cargo": "Front end developer",
+                    "linkedin": "",
+                    "perfil": "https:\/\/uploads-ssl.webflow.com\/635abb3fb86e8e277dc9fba4\/6465053690d0b7ea1c1b22e8_fernando.png",
+                    "slug": "fernando-varas",
+                    "order": 11
+                },
+                {
+                    "descripcion": "<p>\"Just because something didn't turn out the way you wanted it to doesn't mean it's useless.\"<\/p><p>Thomas Edison (Inventor)<\/p>",
+                    "name": "Iris Velazco",
+                    "cargo": "Assistant to Operations & Finance Management",
+                    "linkedin": "",
+                    "perfil": "https:\/\/uploads-ssl.webflow.com\/635abb3fb86e8e277dc9fba4\/650afaec1542b865c3e8da88_image_720.png",
+                    "slug": "iris-velazco",
+                    "order": 14
+                },
+                {
+                    "descripcion": "<p>\"Time is the most valuable thing a person can spend, use it well, live, have fun and learn. With enough time and effort, you can learn anything.\"<\/p>",
+                    "name": "Luis Calloapaza",
+                    "cargo": "Developer Intern",
+                    "linkedin": "",
+                    "perfil": "https:\/\/uploads-ssl.webflow.com\/635abb3fb86e8e277dc9fba4\/650afb3e93b4496ca1c2f39a_image_720%20(1).png",
+                    "slug": "luis-calloapaza",
+                    "order": 15
+                },
+                {
+                    "descripcion": "<p>\"The great achievements do not lie in being the best of all, they generally depend on many hands, hearts, and minds.\"<\/p>",
+                    "name": "Kiatarek Salas",
+                    "cargo": "Project Assistant",
+                    "linkedin": "",
+                    "perfil": "https:\/\/uploads-ssl.webflow.com\/635abb3fb86e8e277dc9fba4\/66019dba1af4190eca501891_foto%20Apros.jpg",
+                    "slug": "kiatarek-salas",
+                    "order": 18
+                },
+                {
+                    "descripcion": "<p>As a designer, I find in design the tangible expression of imagination, where every shape, color and detail intertwine to tell visual stories that inspire and connect.<\/p>",
+                    "name": "FÃ¡tima Lezcano",
+                    "cargo": "UX\/UI Junior designer",
+                    "linkedin": "",
+                    "perfil": "https:\/\/uploads-ssl.webflow.com\/635abb3fb86e8e277dc9fba4\/667429f753b1bc60535dbbe4_Foto%20perfil%20vertical.png",
+                    "slug": "fatima-lezcano",
+                    "order": 17
+                },
+                {
+                    "descripcion": "<p id=\"\">A web strategist with over a decade providing quality web consulting services with accurate and cost effective solutions.<\/p><p id=\"\">As a martial arts practitioner for the past 25 years, Victor brings a fun and competitive vibe for always giving our best for individual and team efficiency.<\/p>",
+                    "name": "Victor Costa",
+                    "cargo": "CEO & Strategy Lead",
+                    "linkedin": "https:\/\/www.linkedin.com\/in\/victor-costa-descailleaux\/",
+                    "perfil": "https:\/\/cdn.prod.website-files.com\/635abb3fb86e8e277dc9fba4\/63bd691511b64282a1fff10f_Victor%20(2).jpg",
+                    "slug": "victor-costa",
+                    "order": 1
+                }
+            ],
+            "acfe_repeater_stylised_button": 0,
+            "sub_fields": [
+                {
+                    "key": "field_69f2c6996eeb9_name",
+                    "label": "Name",
+                    "name": "name",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "append": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "parent_repeater": "field_69f2c69bb6696",
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0
+                },
+                {
+                    "key": "field_69f2c6996eeb9_slug",
+                    "label": "Slug",
+                    "name": "slug",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "append": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "parent_repeater": "field_69f2c69bb6696",
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0
+                },
+                {
+                    "key": "field_69f2c6996eeb9_profile",
+                    "label": "Perfil",
+                    "name": "perfil",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "parent_repeater": "field_69f2c69bb6696",
+                    "placeholder": "",
+                    "default_value": "",
+                    "allow_in_bindings": 0
+                },
+                {
+                    "key": "field_69f2c6996eeb9_description",
+                    "label": "Descripcion",
+                    "name": "descripcion",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "toolbar": "basic",
+                    "delay": 0,
+                    "media_upload": 0,
+                    "parent_repeater": "field_69f2c69bb6696",
+                    "default_value": "",
+                    "allow_in_bindings": 0,
+                    "tabs": "all"
+                },
+                {
+                    "key": "field_69f2c6996eeb9_position",
+                    "label": "Cargo",
+                    "name": "cargo",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "append": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "parent_repeater": "field_69f2c69bb6696",
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0
+                },
+                {
+                    "key": "field_69f2c6996eeb9_linkedin",
+                    "label": "Linkedin",
+                    "name": "linkedin",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "parent_repeater": "field_69f2c69bb6696",
+                    "placeholder": "",
+                    "default_value": "",
+                    "allow_in_bindings": 0
+                },
+                {
+                    "key": "field_69f2c6996eeb9_order",
+                    "label": "Order",
+                    "name": "order",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "append": "",
+                    "placeholder": "",
+                    "parent_repeater": "field_69f2c69bb6696",
+                    "min": "",
+                    "default_value": "",
+                    "prepend": "",
+                    "max": "",
+                    "allow_in_bindings": 0,
+                    "step": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates\/about_us.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1777519099
+}
