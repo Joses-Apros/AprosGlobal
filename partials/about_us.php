@@ -1037,7 +1037,7 @@
         <div class="equipo_component">
           <div class="padding-section-large">
             <div class="padding-global">
-              <div class="container cc-flex-h">
+              <div class="container cc-flex-h !px-0">
                 <div class="col-left">
                   <div class="learn_wrapper">
                     <div class="partners_title">
