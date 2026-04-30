@@ -1141,12 +1141,12 @@
             </div>
           </div>
         </div>
-        <div id="contact" class="start-project_component">
+        <div id="contact" class="start-project_component mt-30">
           <div class="padding-global">
             <div class="container-large">
               <div class="padding-section-large">
                 <div class="start-project_wrapper">
-                  <div class="title-section_component is-start-project">
+                  <div class="title-section_component is-start-project ">
                     <div class="title-section_content">
                       <h2 class="heading-style-h1-big">
                         Do you want to
@@ -1967,7 +1967,7 @@
                 end: () => `+=${(blocks.length - 1) * 540}`,
                 scrub: 1.8,
                 pin: section,
-                pinSpacing: true,
+                pinSpacing: false,
                 anticipatePin: 1,
                 invalidateOnRefresh: true,
               },
