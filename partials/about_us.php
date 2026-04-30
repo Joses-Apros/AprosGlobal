@@ -491,16 +491,37 @@
               <div class="track-wrapper">
                 <div class="track">
                   <div class="track-flex">
+                    <?php
+                    $why_us_rows = get_field('why_us');
+                    if (!is_array($why_us_rows) || empty($why_us_rows)) {
+                      $why_us_rows = [];
+                    }
+                    usort($why_us_rows, static function ($a, $b) {
+                      return ((int) ($a['order'] ?? 0)) <=> ((int) ($b['order'] ?? 0));
+                    });
+
+                    foreach ($why_us_rows as $index => $item) {
+                      $title_prefix = trim((string) ($item['title_prefix'] ?? ''));
+                      $title_suffix = trim((string) ($item['title_suffix'] ?? ''));
+                      $description = trim((string) ($item['description'] ?? ''));
+                      $poster_url = trim((string) ($item['poster_url'] ?? ''));
+                      $video_mp4 = trim((string) ($item['video_mp4'] ?? ''));
+                      $video_webm = trim((string) ($item['video_webm'] ?? ''));
+
+                      if ($description === '' || $poster_url === '' || $video_mp4 === '') {
+                        continue;
+                      }
+
+                      $video_urls = $video_mp4;
+                      if ($video_webm !== '') {
+                        $video_urls .= ',' . $video_webm;
+                      }
+                      $video_id = 'why-us-video-' . ($index + 1);
+                    ?>
                     <div class="panel1">
                       <div class="about_expect-item">
-                        <div
-                          id="w-node-_801c1709-12bd-783b-80e5-9b18582a2ffa-674b732d"
-                          class="about_expect-video"
-                        >
-                          <div
-                            id="w-node-ecb82eef-8726-3e01-70fc-b1f8f637b28b-674b732d"
-                            class="about_circle-bg"
-                          >
+                        <div class="about_expect-video">
+                          <div class="about_circle-bg">
                             <div class="circle-chek_component">
                               <img
                                 src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/6356c11143d2fe247c1f8719_text-circle-vf.svg"
@@ -516,58 +537,39 @@
                             </div>
                           </div>
                           <div
-                            data-poster-url="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/63a9fe50860562a6dc31f29d_young-men-wrestlers-practice-pain-techniques-in-ju-2021-10-21-02-57-52-utc-poster-00001.jpg"
-                            data-video-urls="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/63a9fe50860562a6dc31f29d_young-men-wrestlers-practice-pain-techniques-in-ju-2021-10-21-02-57-52-utc-transcode.mp4,https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/63a9fe50860562a6dc31f29d_young-men-wrestlers-practice-pain-techniques-in-ju-2021-10-21-02-57-52-utc-transcode.webm"
+                            data-poster-url="<?php echo esc_url($poster_url); ?>"
+                            data-video-urls="<?php echo esc_attr($video_urls); ?>"
                             data-autoplay="true"
                             data-loop="true"
                             data-wf-ignore="true"
                             class="about_expect-video w-background-video w-background-video-atom"
                           >
                             <video
-                              id="345187dc-f18f-7fb7-3abd-8c673b9affe1-video"
+                              id="<?php echo esc_attr($video_id); ?>"
                               autoplay=""
                               loop=""
-                              style="
-                                background-image: url(&quot;https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/63a9fe50860562a6dc31f29d_young-men-wrestlers-practice-pain-techniques-in-ju-2021-10-21-02-57-52-utc-poster-00001.jpg&quot;);
-                              "
+                              style="background-image: url('<?php echo esc_url($poster_url); ?>');"
                               muted=""
                               playsinline=""
                               data-wf-ignore="true"
                               data-object-fit="cover"
                             >
                               <source
-                                src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/63a9fe50860562a6dc31f29d_young-men-wrestlers-practice-pain-techniques-in-ju-2021-10-21-02-57-52-utc-transcode.mp4"
+                                src="<?php echo esc_url($video_mp4); ?>"
                                 data-wf-ignore="true"
                               />
+                              <?php if ($video_webm !== '') { ?>
                               <source
-                                src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/63a9fe50860562a6dc31f29d_young-men-wrestlers-practice-pain-techniques-in-ju-2021-10-21-02-57-52-utc-transcode.webm"
+                                src="<?php echo esc_url($video_webm); ?>"
                                 data-wf-ignore="true"
-                              /></video
-                            ><noscript
-                              ><style>
-                                [data-wf-bgvideo-fallback-img] {
-                                  display: none;
-                                }
-                                @media (prefers-reduced-motion: reduce) {
-                                  [data-wf-bgvideo-fallback-img] {
-                                    position: absolute;
-                                    z-index: -100;
-                                    display: inline-block;
-                                    height: 100%;
-                                    width: 100%;
-                                    object-fit: cover;
-                                  }
-                                }</style
-                              ><img
-                                data-wf-bgvideo-fallback-img="true"
-                                src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/63a9fe50860562a6dc31f29d_young-men-wrestlers-practice-pain-techniques-in-ju-2021-10-21-02-57-52-utc-poster-00001.jpg"
-                                alt=""
-                            /></noscript>
+                              />
+                              <?php } ?>
+                            </video>
                             <div aria-live="polite">
                               <button
                                 type="button"
                                 data-w-bg-video-control="true"
-                                aria-controls="345187dc-f18f-7fb7-3abd-8c673b9affe1-video"
+                                aria-controls="<?php echo esc_attr($video_id); ?>"
                                 class="w-backgroundvideo-backgroundvideoplaypausebutton w-background-video--control"
                               >
                                 <span
@@ -583,264 +585,28 @@
                             </div>
                           </div>
                         </div>
-                        <div
-                          id="w-node-_89e2e20f-26f5-d118-1f1c-955ab6cb3030-674b732d"
-                          class="about_expect-info"
-                        >
+                        <div class="about_expect-info">
                           <div class="about_expect-title">
-                            <h2
-                              data-w-id="74f1621d-b929-7c81-6cbe-773a2a7e4777"
-                              class="text-color-degrade"
-                            >
-                              <strong> Judo inspired</strong>
-                            </h2>
-                            <h3 text-split="" words-slide-from-right="">
-                              efficiency approach
-                            </h3>
-                          </div>
-                          <div class="about_expect-prf">
-                            <p words-slide-from-right="" text-split="">
-                              We face every challenge with a martial art’s
-                              perspective; with a calm and open mind, always
-                              ready to act, aware of whats at stake. Our
-                              framework aims to deliver high-quality solutions
-                              with accurate and low-complexity technical
-                              execution. We want to make your problems go. away,
-                              and go away fast.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="panel1">
-                      <div class="about_expect-item">
-                        <div
-                          id="w-node-_2033f7b8-91e4-0800-827f-a2cf8b8829f1-674b732d"
-                          class="about_expect-video"
-                        >
-                          <div
-                            id="w-node-_2033f7b8-91e4-0800-827f-a2cf8b8829f2-674b732d"
-                            class="about_circle-bg"
-                          >
-                            <div class="circle-chek_component">
-                              <img
-                                src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/6356c11143d2fe247c1f8719_text-circle-vf.svg"
-                                loading="lazy"
-                                alt=""
-                                class="circle-chek_text-circle-img"
-                              /><img
-                                src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/634ed0dafc477ada004efe8e_check-circle%20(3).svg"
-                                loading="lazy"
-                                alt=""
-                                class="circle-chek_img-check"
-                              />
-                            </div>
-                          </div>
-                          <div
-                            data-poster-url="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/63a9fd700fc2731fc33a73f9_multinational-team-working-on-project-in-office-2022-08-04-23-29-49-utc-poster-00001.jpg"
-                            data-video-urls="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/63a9fd700fc2731fc33a73f9_multinational-team-working-on-project-in-office-2022-08-04-23-29-49-utc-transcode.mp4,https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/63a9fd700fc2731fc33a73f9_multinational-team-working-on-project-in-office-2022-08-04-23-29-49-utc-transcode.webm"
-                            data-autoplay="true"
-                            data-loop="true"
-                            data-wf-ignore="true"
-                            class="about_expect-video w-background-video w-background-video-atom"
-                          >
-                            <video
-                              id="2033f7b8-91e4-0800-827f-a2cf8b8829f4-video"
-                              autoplay=""
-                              loop=""
-                              style="
-                                background-image: url(&quot;https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/63a9fd700fc2731fc33a73f9_multinational-team-working-on-project-in-office-2022-08-04-23-29-49-utc-poster-00001.jpg&quot;);
-                              "
-                              muted=""
-                              playsinline=""
-                              data-wf-ignore="true"
-                              data-object-fit="cover"
-                            >
-                              <source
-                                src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/63a9fd700fc2731fc33a73f9_multinational-team-working-on-project-in-office-2022-08-04-23-29-49-utc-transcode.mp4"
-                                data-wf-ignore="true"
-                              />
-                              <source
-                                src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/63a9fd700fc2731fc33a73f9_multinational-team-working-on-project-in-office-2022-08-04-23-29-49-utc-transcode.webm"
-                                data-wf-ignore="true"
-                              /></video
-                            ><noscript
-                              ><style>
-                                [data-wf-bgvideo-fallback-img] {
-                                  display: none;
-                                }
-                                @media (prefers-reduced-motion: reduce) {
-                                  [data-wf-bgvideo-fallback-img] {
-                                    position: absolute;
-                                    z-index: -100;
-                                    display: inline-block;
-                                    height: 100%;
-                                    width: 100%;
-                                    object-fit: cover;
-                                  }
-                                }</style
-                              ><img
-                                data-wf-bgvideo-fallback-img="true"
-                                src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/63a9fd700fc2731fc33a73f9_multinational-team-working-on-project-in-office-2022-08-04-23-29-49-utc-poster-00001.jpg"
-                                alt=""
-                            /></noscript>
-                            <div aria-live="polite">
-                              <button
-                                type="button"
-                                data-w-bg-video-control="true"
-                                aria-controls="2033f7b8-91e4-0800-827f-a2cf8b8829f4-video"
-                                class="w-backgroundvideo-backgroundvideoplaypausebutton w-background-video--control"
-                              >
-                                <span
-                                  ><img
-                                    src="https://cdn.prod.website-files.com/6022af993a6b2191db3ed10c/628299f8aa233b83918e24fd_Pause.svg"
-                                    alt="Pause video" /></span
-                                ><span hidden=""
-                                  ><img
-                                    src="https://cdn.prod.website-files.com/6022af993a6b2191db3ed10c/628298b20ae0236682d4b87f_Play-24.svg"
-                                    alt="Play video"
-                                /></span>
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          id="w-node-e54d831a-e087-0a23-36bd-2fbc50e6bf6d-674b732d"
-                          class="about_expect-info"
-                        >
-                          <div class="about_expect-title">
+                            <?php if ($title_prefix !== '') { ?>
                             <h2 class="text-color-degrade">
-                              <strong>Friendly</strong>
+                              <strong><?php echo esc_html($title_prefix); ?></strong>
                             </h2>
+                            <?php } ?>
+                            <?php if ($title_suffix !== '') { ?>
                             <h3 words-slide-from-right="" text-split="">
-                              experienced consultants
+                              <?php echo esc_html($title_suffix); ?>
                             </h3>
+                            <?php } ?>
                           </div>
                           <div class="about_expect-prf">
                             <p words-slide-from-right="" text-split="">
-                              Every new client is a new relationship we take
-                              seriously. Our consultants take great pride in
-                              understanding your business and your customers. As
-                              a plus, a senior project manager will guide you
-                              every step of the way.
+                              <?php echo esc_html($description); ?>
                             </p>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="panel1">
-                      <div class="about_expect-item">
-                        <div
-                          id="w-node-_74e872ad-152d-70df-c8f8-dc97d6a1cfde-674b732d"
-                          class="about_expect-video"
-                        >
-                          <div
-                            id="w-node-_74e872ad-152d-70df-c8f8-dc97d6a1cfdf-674b732d"
-                            class="about_circle-bg"
-                          >
-                            <div class="circle-chek_component">
-                              <img
-                                src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/6356c11143d2fe247c1f8719_text-circle-vf.svg"
-                                loading="lazy"
-                                alt=""
-                                class="circle-chek_text-circle-img"
-                              /><img
-                                src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/634ed0dafc477ada004efe8e_check-circle%20(3).svg"
-                                loading="lazy"
-                                alt=""
-                                class="circle-chek_img-check"
-                              />
-                            </div>
-                          </div>
-                          <div
-                            data-poster-url="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/63a9ff6ff1c7f66960f341cf_creative-human-brain-hd-2022-08-04-15-50-26-utc-poster-00001.jpg"
-                            data-video-urls="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/63a9ff6ff1c7f66960f341cf_creative-human-brain-hd-2022-08-04-15-50-26-utc-transcode.mp4,https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/63a9ff6ff1c7f66960f341cf_creative-human-brain-hd-2022-08-04-15-50-26-utc-transcode.webm"
-                            data-autoplay="true"
-                            data-loop="true"
-                            data-wf-ignore="true"
-                            class="about_expect-video w-background-video w-background-video-atom"
-                          >
-                            <video
-                              id="74e872ad-152d-70df-c8f8-dc97d6a1cfe1-video"
-                              autoplay=""
-                              loop=""
-                              style="
-                                background-image: url(&quot;https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/63a9ff6ff1c7f66960f341cf_creative-human-brain-hd-2022-08-04-15-50-26-utc-poster-00001.jpg&quot;);
-                              "
-                              muted=""
-                              playsinline=""
-                              data-wf-ignore="true"
-                              data-object-fit="cover"
-                            >
-                              <source
-                                src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/63a9ff6ff1c7f66960f341cf_creative-human-brain-hd-2022-08-04-15-50-26-utc-transcode.mp4"
-                                data-wf-ignore="true"
-                              />
-                              <source
-                                src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/63a9ff6ff1c7f66960f341cf_creative-human-brain-hd-2022-08-04-15-50-26-utc-transcode.webm"
-                                data-wf-ignore="true"
-                              /></video
-                            ><noscript
-                              ><style>
-                                [data-wf-bgvideo-fallback-img] {
-                                  display: none;
-                                }
-                                @media (prefers-reduced-motion: reduce) {
-                                  [data-wf-bgvideo-fallback-img] {
-                                    position: absolute;
-                                    z-index: -100;
-                                    display: inline-block;
-                                    height: 100%;
-                                    width: 100%;
-                                    object-fit: cover;
-                                  }
-                                }</style
-                              ><img
-                                data-wf-bgvideo-fallback-img="true"
-                                src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/63a9ff6ff1c7f66960f341cf_creative-human-brain-hd-2022-08-04-15-50-26-utc-poster-00001.jpg"
-                                alt=""
-                            /></noscript>
-                            <div aria-live="polite">
-                              <button
-                                type="button"
-                                data-w-bg-video-control="true"
-                                aria-controls="74e872ad-152d-70df-c8f8-dc97d6a1cfe1-video"
-                                class="w-backgroundvideo-backgroundvideoplaypausebutton w-background-video--control"
-                              >
-                                <span
-                                  ><img
-                                    src="https://cdn.prod.website-files.com/6022af993a6b2191db3ed10c/628299f8aa233b83918e24fd_Pause.svg"
-                                    alt="Pause video" /></span
-                                ><span hidden=""
-                                  ><img
-                                    src="https://cdn.prod.website-files.com/6022af993a6b2191db3ed10c/628298b20ae0236682d4b87f_Play-24.svg"
-                                    alt="Play video"
-                                /></span>
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          id="w-node-_30e30d22-39f6-0755-7df8-602bef072d7d-674b732d"
-                          class="about_expect-info"
-                        >
-                          <div class="about_expect-title">
-                            <h2 class="text-color-degrade">
-                              <strong>Diverse and creative team</strong>
-                            </h2>
-                          </div>
-                          <div class="about_expect-prf">
-                            <p text-split="" words-slide-from-right="">
-                              We come from different backgrounds and we love
-                              thinking outside the box. A new challenge is the
-                              perfect opportunity to experiment and tailor a
-                              solution for your business. We know you want to
-                              stand out.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    <?php } ?>
                     <div class="panel1-space"></div>
                   </div>
                 </div>

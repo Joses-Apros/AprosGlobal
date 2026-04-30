@@ -912,5 +912,67 @@ add_action('admin_init', static function () {
   update_option('apros_about_us_cards_iso_imported_v1', '1');
 });
 
+/**
+ * Import About Us Why Us repeater once.
+ */
+add_action('admin_init', static function () {
+  if (get_option('apros_about_us_why_us_imported_v2') === '1') {
+    return;
+  }
+
+  if (!function_exists('update_field')) {
+    return;
+  }
+
+  $about_pages = get_posts([
+    'post_type' => 'page',
+    'post_status' => 'any',
+    'posts_per_page' => -1,
+    'meta_key' => '_wp_page_template',
+    'meta_value' => 'templates/about_us.php',
+    'fields' => 'ids',
+  ]);
+
+  if (empty($about_pages)) {
+    return;
+  }
+
+  $rows = [
+    [
+      'title_prefix' => 'Judo inspired',
+      'title_suffix' => 'efficiency approach',
+      'description' => "We face every challenge with a martial art's perspective; with a calm and open mind, always ready to act, aware of whats at stake. Our framework aims to deliver high-quality solutions with accurate and low-complexity technical execution. We want to make your problems go. away, and go away fast.",
+      'poster_url' => 'https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/63a9fe50860562a6dc31f29d_young-men-wrestlers-practice-pain-techniques-in-ju-2021-10-21-02-57-52-utc-poster-00001.jpg',
+      'video_mp4' => 'https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/63a9fe50860562a6dc31f29d_young-men-wrestlers-practice-pain-techniques-in-ju-2021-10-21-02-57-52-utc-transcode.mp4',
+      'video_webm' => 'https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/63a9fe50860562a6dc31f29d_young-men-wrestlers-practice-pain-techniques-in-ju-2021-10-21-02-57-52-utc-transcode.webm',
+      'order' => 1,
+    ],
+    [
+      'title_prefix' => 'Friendly',
+      'title_suffix' => 'experienced consultants',
+      'description' => 'Every new client is a new relationship we take seriously. Our consultants take great pride in understanding your business and your customers. As a plus, a senior project manager will guide you every step of the way.',
+      'poster_url' => 'https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/63a9fd700fc2731fc33a73f9_multinational-team-working-on-project-in-office-2022-08-04-23-29-49-utc-poster-00001.jpg',
+      'video_mp4' => 'https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/63a9fd700fc2731fc33a73f9_multinational-team-working-on-project-in-office-2022-08-04-23-29-49-utc-transcode.mp4',
+      'video_webm' => 'https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/63a9fd700fc2731fc33a73f9_multinational-team-working-on-project-in-office-2022-08-04-23-29-49-utc-transcode.webm',
+      'order' => 2,
+    ],
+    [
+      'title_prefix' => 'Diverse and creative team',
+      'title_suffix' => '',
+      'description' => 'We come from different backgrounds and we love thinking outside the box. A new challenge is the perfect opportunity to experiment and tailor a solution for your business. We know you want to stand out.',
+      'poster_url' => 'https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/63a9ff6ff1c7f66960f341cf_creative-human-brain-hd-2022-08-04-15-50-26-utc-poster-00001.jpg',
+      'video_mp4' => 'https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/63a9ff6ff1c7f66960f341cf_creative-human-brain-hd-2022-08-04-15-50-26-utc-transcode.mp4',
+      'video_webm' => 'https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/63a9ff6ff1c7f66960f341cf_creative-human-brain-hd-2022-08-04-15-50-26-utc-transcode.webm',
+      'order' => 3,
+    ],
+  ];
+
+  foreach ($about_pages as $about_page_id) {
+    update_field('field_69f32d5awhyus', $rows, (int) $about_page_id);
+  }
+
+  update_option('apros_about_us_why_us_imported_v2', '1');
+});
+
 
 
