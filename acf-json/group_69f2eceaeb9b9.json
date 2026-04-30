@@ -83,6 +83,7 @@
                     "order": 5
                 }
             ],
+            "acfe_repeater_stylised_button": 0,
             "sub_fields": [
                 {
                     "key": "field_69f33a1fsolutions_title",
@@ -93,7 +94,11 @@
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
-                    "wrapper": {"width": "", "class": "", "id": ""},
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
                     "default_value": "",
                     "maxlength": "",
                     "allow_in_bindings": 0,
@@ -111,14 +116,19 @@
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
-                    "wrapper": {"width": "", "class": "", "id": ""},
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
                     "default_value": "",
                     "maxlength": "",
                     "rows": 4,
                     "placeholder": "",
                     "new_lines": "br",
                     "allow_in_bindings": 0,
-                    "parent_repeater": "field_69f33a1fsolutions_lab"
+                    "parent_repeater": "field_69f33a1fsolutions_lab",
+                    "acfe_textarea_code": 0
                 },
                 {
                     "key": "field_69f33a1fsolutions_poster",
@@ -129,7 +139,11 @@
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
-                    "wrapper": {"width": "", "class": "", "id": ""},
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
                     "default_value": "",
                     "placeholder": "",
                     "allow_in_bindings": 0,
@@ -144,7 +158,11 @@
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
-                    "wrapper": {"width": "", "class": "", "id": ""},
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
                     "default_value": "",
                     "placeholder": "",
                     "allow_in_bindings": 0,
@@ -159,7 +177,11 @@
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
-                    "wrapper": {"width": "", "class": "", "id": ""},
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
                     "default_value": "",
                     "placeholder": "",
                     "allow_in_bindings": 0,
@@ -174,7 +196,11 @@
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
-                    "wrapper": {"width": "", "class": "", "id": ""},
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
                     "default_value": "",
                     "min": "",
                     "max": "",
@@ -185,8 +211,7 @@
                     "step": "",
                     "parent_repeater": "field_69f33a1fsolutions_lab"
                 }
-            ],
-            "acfe_repeater_stylised_button": 0
+            ]
         }
     ],
     "location": [
@@ -214,5 +239,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1999999999
+    "modified": 1777561354
 }
