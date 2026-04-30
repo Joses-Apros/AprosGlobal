@@ -974,5 +974,80 @@ add_action('admin_init', static function () {
   update_option('apros_about_us_why_us_imported_v2', '1');
 });
 
+/**
+ * Import Home Solutions Lab repeater once.
+ */
+add_action('admin_init', static function () {
+  if (get_option('apros_home_solutions_lab_imported_v1') === '1') {
+    return;
+  }
+
+  if (!function_exists('update_field')) {
+    return;
+  }
+
+  $home_pages = get_posts([
+    'post_type' => 'page',
+    'post_status' => 'any',
+    'posts_per_page' => -1,
+    'meta_key' => '_wp_page_template',
+    'meta_value' => 'templates/home.php',
+    'fields' => 'ids',
+  ]);
+
+  if (empty($home_pages)) {
+    return;
+  }
+
+  $rows = [
+    [
+      'title' => 'Solution customization and strategy',
+      'description' => 'Using our expertise across sectors, we adapt our proven products to align with your goals, ensuring efficiency and measurable results.',
+      'poster_url' => 'https://uploads-ssl.webflow.com/634ecebdb4ffd446e52e6f19/63508758e0b2646f152b2720_pexels-kindel-media-6774633 (1)-poster-00001.jpg',
+      'video_mp4' => 'https://uploads-ssl.webflow.com/634ecebdb4ffd446e52e6f19/63508758e0b2646f152b2720_pexels-kindel-media-6774633 (1)-transcode.mp4',
+      'video_webm' => 'https://uploads-ssl.webflow.com/634ecebdb4ffd446e52e6f19/63508758e0b2646f152b2720_pexels-kindel-media-6774633 (1)-transcode.webm',
+      'order' => 1,
+    ],
+    [
+      'title' => 'Design, integration and planning',
+      'description' => 'Our design team excels at We create tailored user interfaces and map out how the solution integrates smoothly with your business operations.creating high-impact and user-friendly interfaces to create the best first impression.',
+      'poster_url' => 'https://uploads-ssl.webflow.com/634ecebdb4ffd446e52e6f19/63555e7c4f90fd6516acd943_meeting-of-ux-developer-and-ui-designer-brainstorm-2021-09-24-23-35-38-utc-poster-00001.jpg',
+      'video_mp4' => 'https://uploads-ssl.webflow.com/634ecebdb4ffd446e52e6f19/63555e7c4f90fd6516acd943_meeting-of-ux-developer-and-ui-designer-brainstorm-2021-09-24-23-35-38-utc-transcode.mp4',
+      'video_webm' => 'https://uploads-ssl.webflow.com/634ecebdb4ffd446e52e6f19/63555e7c4f90fd6516acd943_meeting-of-ux-developer-and-ui-designer-brainstorm-2021-09-24-23-35-38-utc-transcode.webm',
+      'order' => 2,
+    ],
+    [
+      'title' => 'Implementation and configuration',
+      'description' => 'Our pre-built core ensures rapid deployment while we configure and integrate the solution to suit your specific requirements.',
+      'poster_url' => 'https://uploads-ssl.webflow.com/634ecebdb4ffd446e52e6f19/635560be299a9b8479aaf064_two-programmers-doing-high-five-hand-gesture-at-de-2022-07-21-07-32-31-utc-poster-00001.jpg',
+      'video_mp4' => 'https://uploads-ssl.webflow.com/634ecebdb4ffd446e52e6f19/635560be299a9b8479aaf064_two-programmers-doing-high-five-hand-gesture-at-de-2022-07-21-07-32-31-utc-transcode.mp4',
+      'video_webm' => 'https://uploads-ssl.webflow.com/634ecebdb4ffd446e52e6f19/635560be299a9b8479aaf064_two-programmers-doing-high-five-hand-gesture-at-de-2022-07-21-07-32-31-utc-transcode.webm',
+      'order' => 3,
+    ],
+    [
+      'title' => 'Testing and refinement',
+      'description' => 'We validate the solution\'s functionality through rigorous testing and refine it based on your feedback.',
+      'poster_url' => 'https://uploads-ssl.webflow.com/634ecebdb4ffd446e52e6f19/635088739e3aaafc2d0863fe_pexels-valiantsin-konan-10527947-poster-00001.jpg',
+      'video_mp4' => 'https://uploads-ssl.webflow.com/634ecebdb4ffd446e52e6f19/635088739e3aaafc2d0863fe_pexels-valiantsin-konan-10527947-transcode.mp4',
+      'video_webm' => 'https://uploads-ssl.webflow.com/634ecebdb4ffd446e52e6f19/635088739e3aaafc2d0863fe_pexels-valiantsin-konan-10527947-transcode.webm',
+      'order' => 4,
+    ],
+    [
+      'title' => 'Launch and optimization',
+      'description' => 'The solution is deployed live, ready to improve your operations, with our support ensuring a smooth transition.',
+      'poster_url' => 'https://uploads-ssl.webflow.com/634ecebdb4ffd446e52e6f19/6350886348dbe92c50f188af_pexels-kindel-media-6774772-poster-00001.jpg',
+      'video_mp4' => 'https://uploads-ssl.webflow.com/634ecebdb4ffd446e52e6f19/6350886348dbe92c50f188af_pexels-kindel-media-6774772-transcode.mp4',
+      'video_webm' => 'https://uploads-ssl.webflow.com/634ecebdb4ffd446e52e6f19/6350886348dbe92c50f188af_pexels-kindel-media-6774772-transcode.webm',
+      'order' => 5,
+    ],
+  ];
+
+  foreach ($home_pages as $home_page_id) {
+    update_field('field_69f33a1fsolutions_lab', $rows, (int) $home_page_id);
+  }
+
+  update_option('apros_home_solutions_lab_imported_v1', '1');
+});
+
 
 

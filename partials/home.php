@@ -444,181 +444,56 @@ pointer-events:none;
                   </div>
                 </div>
                 <div class="cta_component">
-                  <div data-w-id="7cebf91b-91fb-592e-f20e-b631743c1838" class="cta_link-block">
+                  <?php
+                  $solutions_lab_rows = get_field('solutions_lab');
+                  if (is_array($solutions_lab_rows) && !empty($solutions_lab_rows)) {
+                    usort($solutions_lab_rows, static function ($a, $b) {
+                      return ((int) ($a['order'] ?? 0)) <=> ((int) ($b['order'] ?? 0));
+                    });
+
+                    foreach ($solutions_lab_rows as $index => $row) {
+                      $title = trim((string) ($row['title'] ?? ''));
+                      $description = trim((string) ($row['description'] ?? ''));
+                      $poster_url = trim((string) ($row['poster_url'] ?? ''));
+                      $video_mp4 = trim((string) ($row['video_mp4'] ?? ''));
+                      $video_webm = trim((string) ($row['video_webm'] ?? ''));
+
+                      if ($title === '' || $description === '' || $poster_url === '' || $video_mp4 === '') {
+                        continue;
+                      }
+
+                      $video_urls = $video_mp4;
+                      if ($video_webm !== '') {
+                        $video_urls .= ',' . $video_webm;
+                      }
+                      $video_id = 'solutions-lab-video-' . ($index + 1);
+                  ?>
+                  <div class="cta_link-block">
                     <div class="what-we-do_acordeon-trigger">
                       <div class="what-we-do_acordeon-title">
-                        <h3 class="cta_link-text">Solution customization and strategy</h3>
+                        <h3 class="cta_link-text"><?php echo esc_html($title); ?></h3>
                       </div><img src="images/icon-trigger.svg" loading="lazy" alt="" class="what-we-do_acordeon-icon">
                     </div>
                     <div class="what-we-do_acordeon-content">
                       <div class="what-we-do_acordeon-content-wrapper">
-                        <p class="text-color-grey">Using our expertise across sectors, we adapt our proven products to align with your goals, ensuring efficiency and measurable results.</p>
+                        <p class="text-color-grey"><?php echo esc_html($description); ?></p>
                       </div>
                     </div>
-                    <div class="cta_link-image-wrapper clickable-off"><img src="images/riseverse-work.webp" loading="eager" sizes="(max-width: 1920px) 100vw, 1920px" srcset="images/riseverse-work-p-500.jpeg 500w, images/riseverse-work-p-800.jpeg 800w, images/riseverse-work-p-1080.jpeg 1080w, images/riseverse-work-p-1600.jpeg 1600w, images/riseverse-work.webp 1920w" alt="RiseVerse work" class="cta_link-image hide-all">
-                      <div data-poster-url="https://uploads-ssl.webflow.com/634ecebdb4ffd446e52e6f19/63508758e0b2646f152b2720_pexels-kindel-media-6774633 (1)-poster-00001.jpg" data-video-urls="https://uploads-ssl.webflow.com/634ecebdb4ffd446e52e6f19/63508758e0b2646f152b2720_pexels-kindel-media-6774633 (1)-transcode.mp4,https://uploads-ssl.webflow.com/634ecebdb4ffd446e52e6f19/63508758e0b2646f152b2720_pexels-kindel-media-6774633 (1)-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="cta_link-image w-background-video w-background-video-atom"><video id="7cebf91b-91fb-592e-f20e-b631743c1844-video" autoplay="" loop="" style="background-image:url(&quot;https://uploads-ssl.webflow.com/634ecebdb4ffd446e52e6f19/63508758e0b2646f152b2720_pexels-kindel-media-6774633 (1)-poster-00001.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
-                          <source src="https://uploads-ssl.webflow.com/634ecebdb4ffd446e52e6f19/63508758e0b2646f152b2720_pexels-kindel-media-6774633 (1)-transcode.mp4" data-wf-ignore="true">
-                          <source src="https://uploads-ssl.webflow.com/634ecebdb4ffd446e52e6f19/63508758e0b2646f152b2720_pexels-kindel-media-6774633 (1)-transcode.webm" data-wf-ignore="true">
-                        </video><noscript>
-                          <style>
-  [data-wf-bgvideo-fallback-img] {
-    display: none;
-  }
-  @media (prefers-reduced-motion: reduce) {
-    [data-wf-bgvideo-fallback-img] {
-      position: absolute;
-      z-index: -100;
-      display: inline-block;
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-    }
-  }</style><img data-wf-bgvideo-fallback-img="true" src="documents/pexels-kindel-media-6774633-1.mp4" alt="">
-                        </noscript>
-                        <div aria-live="polite"><button type="button" data-w-bg-video-control="true" aria-controls="7cebf91b-91fb-592e-f20e-b631743c1844-video" class="w-backgroundvideo-backgroundvideoplaypausebutton w-background-video--control"><span><img src="https://uploads-ssl.webflow.com/6022af993a6b2191db3ed10c/628299f8aa233b83918e24fd_Pause.svg" alt="Pause video"></span><span hidden=""><img src="https://uploads-ssl.webflow.com/6022af993a6b2191db3ed10c/628298b20ae0236682d4b87f_Play-24.svg" alt="Play video"></span></button></div>
+                    <div class="cta_link-image-wrapper clickable-off">
+                      <div data-poster-url="<?php echo esc_url($poster_url); ?>" data-video-urls="<?php echo esc_attr($video_urls); ?>" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="cta_link-image w-background-video w-background-video-atom"><video id="<?php echo esc_attr($video_id); ?>" autoplay="" loop="" style="background-image:url('<?php echo esc_url($poster_url); ?>')" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
+                          <source src="<?php echo esc_url($video_mp4); ?>" data-wf-ignore="true">
+                          <?php if ($video_webm !== '') { ?>
+                          <source src="<?php echo esc_url($video_webm); ?>" data-wf-ignore="true">
+                          <?php } ?>
+                        </video>
+                        <div aria-live="polite"><button type="button" data-w-bg-video-control="true" aria-controls="<?php echo esc_attr($video_id); ?>" class="w-backgroundvideo-backgroundvideoplaypausebutton w-background-video--control"><span><img src="https://uploads-ssl.webflow.com/6022af993a6b2191db3ed10c/628299f8aa233b83918e24fd_Pause.svg" alt="Pause video"></span><span hidden=""><img src="https://uploads-ssl.webflow.com/6022af993a6b2191db3ed10c/628298b20ae0236682d4b87f_Play-24.svg" alt="Play video"></span></button></div>
                       </div>
                     </div>
                   </div>
-                  <div data-w-id="7cebf91b-91fb-592e-f20e-b631743c184a" class="cta_link-block">
-                    <div data-w-id="7cebf91b-91fb-592e-f20e-b631743c184b" class="what-we-do_acordeon-trigger">
-                      <div class="what-we-do_acordeon-title">
-                        <h3 class="cta_link-text">Design, integration and planning</h3>
-                      </div><img src="images/icon-trigger.svg" loading="lazy" alt="" class="what-we-do_acordeon-icon">
-                    </div>
-                    <div class="what-we-do_acordeon-content">
-                      <div class="what-we-do_acordeon-content-wrapper">
-                        <p class="text-color-grey">Our design team excels at We create tailored user interfaces and map out how the solution integrates smoothly with your business operations.creating high-impact and user-friendly interfaces to create the best first impression.</p>
-                      </div>
-                    </div>
-                    <div class="cta_link-image-wrapper clickable-off"><img src="images/ui-img.webp" loading="eager" alt="" class="cta_link-image hide-all">
-                      <div data-poster-url="https://uploads-ssl.webflow.com/634ecebdb4ffd446e52e6f19/63555e7c4f90fd6516acd943_meeting-of-ux-developer-and-ui-designer-brainstorm-2021-09-24-23-35-38-utc-poster-00001.jpg" data-video-urls="https://uploads-ssl.webflow.com/634ecebdb4ffd446e52e6f19/63555e7c4f90fd6516acd943_meeting-of-ux-developer-and-ui-designer-brainstorm-2021-09-24-23-35-38-utc-transcode.mp4,https://uploads-ssl.webflow.com/634ecebdb4ffd446e52e6f19/63555e7c4f90fd6516acd943_meeting-of-ux-developer-and-ui-designer-brainstorm-2021-09-24-23-35-38-utc-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="cta_link-image w-background-video w-background-video-atom"><video id="7cebf91b-91fb-592e-f20e-b631743c1856-video" autoplay="" loop="" style="background-image:url(&quot;https://uploads-ssl.webflow.com/634ecebdb4ffd446e52e6f19/63555e7c4f90fd6516acd943_meeting-of-ux-developer-and-ui-designer-brainstorm-2021-09-24-23-35-38-utc-poster-00001.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
-                          <source src="https://uploads-ssl.webflow.com/634ecebdb4ffd446e52e6f19/63555e7c4f90fd6516acd943_meeting-of-ux-developer-and-ui-designer-brainstorm-2021-09-24-23-35-38-utc-transcode.mp4" data-wf-ignore="true">
-                          <source src="https://uploads-ssl.webflow.com/634ecebdb4ffd446e52e6f19/63555e7c4f90fd6516acd943_meeting-of-ux-developer-and-ui-designer-brainstorm-2021-09-24-23-35-38-utc-transcode.webm" data-wf-ignore="true">
-                        </video><noscript>
-                          <style>
-  [data-wf-bgvideo-fallback-img] {
-    display: none;
-  }
-  @media (prefers-reduced-motion: reduce) {
-    [data-wf-bgvideo-fallback-img] {
-      position: absolute;
-      z-index: -100;
-      display: inline-block;
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-    }
-  }</style><img data-wf-bgvideo-fallback-img="true" src="documents/meeting-of-ux-developer-and-ui-designer-brainstorm-2021-09-24-23-35-38-utc.mp4" alt="">
-                        </noscript>
-                        <div aria-live="polite"><button type="button" data-w-bg-video-control="true" aria-controls="7cebf91b-91fb-592e-f20e-b631743c1856-video" class="w-backgroundvideo-backgroundvideoplaypausebutton w-background-video--control"><span><img src="https://uploads-ssl.webflow.com/6022af993a6b2191db3ed10c/628299f8aa233b83918e24fd_Pause.svg" alt="Pause video"></span><span hidden=""><img src="https://uploads-ssl.webflow.com/6022af993a6b2191db3ed10c/628298b20ae0236682d4b87f_Play-24.svg" alt="Play video"></span></button></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div data-w-id="7cebf91b-91fb-592e-f20e-b631743c185c" class="cta_link-block">
-                    <div data-w-id="7cebf91b-91fb-592e-f20e-b631743c185d" class="what-we-do_acordeon-trigger">
-                      <div class="what-we-do_acordeon-title">
-                        <h3 class="cta_link-text">Implementation and configuration</h3>
-                      </div><img src="images/icon-trigger.svg" loading="lazy" alt="" class="what-we-do_acordeon-icon">
-                    </div>
-                    <div class="what-we-do_acordeon-content">
-                      <div class="what-we-do_acordeon-content-wrapper">
-                        <p class="text-color-grey">Our pre-built core ensures rapid deployment while we configure and integrate the solution to suit your specific requirements.</p>
-                      </div>
-                    </div>
-                    <div class="cta_link-image-wrapper clickable-off"><img src="images/riseverse-work.webp" loading="eager" sizes="(max-width: 1920px) 100vw, 1920px" srcset="images/riseverse-work-p-500.jpeg 500w, images/riseverse-work-p-800.jpeg 800w, images/riseverse-work-p-1080.jpeg 1080w, images/riseverse-work-p-1600.jpeg 1600w, images/riseverse-work.webp 1920w" alt="RiseVerse work" class="cta_link-image hide-all">
-                      <div data-poster-url="https://uploads-ssl.webflow.com/634ecebdb4ffd446e52e6f19/635560be299a9b8479aaf064_two-programmers-doing-high-five-hand-gesture-at-de-2022-07-21-07-32-31-utc-poster-00001.jpg" data-video-urls="https://uploads-ssl.webflow.com/634ecebdb4ffd446e52e6f19/635560be299a9b8479aaf064_two-programmers-doing-high-five-hand-gesture-at-de-2022-07-21-07-32-31-utc-transcode.mp4,https://uploads-ssl.webflow.com/634ecebdb4ffd446e52e6f19/635560be299a9b8479aaf064_two-programmers-doing-high-five-hand-gesture-at-de-2022-07-21-07-32-31-utc-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="cta_link-image w-background-video w-background-video-atom"><video id="7cebf91b-91fb-592e-f20e-b631743c1868-video" autoplay="" loop="" style="background-image:url(&quot;https://uploads-ssl.webflow.com/634ecebdb4ffd446e52e6f19/635560be299a9b8479aaf064_two-programmers-doing-high-five-hand-gesture-at-de-2022-07-21-07-32-31-utc-poster-00001.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
-                          <source src="https://uploads-ssl.webflow.com/634ecebdb4ffd446e52e6f19/635560be299a9b8479aaf064_two-programmers-doing-high-five-hand-gesture-at-de-2022-07-21-07-32-31-utc-transcode.mp4" data-wf-ignore="true">
-                          <source src="https://uploads-ssl.webflow.com/634ecebdb4ffd446e52e6f19/635560be299a9b8479aaf064_two-programmers-doing-high-five-hand-gesture-at-de-2022-07-21-07-32-31-utc-transcode.webm" data-wf-ignore="true">
-                        </video><noscript>
-                          <style>
-  [data-wf-bgvideo-fallback-img] {
-    display: none;
-  }
-  @media (prefers-reduced-motion: reduce) {
-    [data-wf-bgvideo-fallback-img] {
-      position: absolute;
-      z-index: -100;
-      display: inline-block;
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-    }
-  }</style><img data-wf-bgvideo-fallback-img="true" src="documents/two-programmers-doing-high-five-hand-gesture-at-de-2022-07-21-07-32-31-utc.mp4" alt="">
-                        </noscript>
-                        <div aria-live="polite"><button type="button" data-w-bg-video-control="true" aria-controls="7cebf91b-91fb-592e-f20e-b631743c1868-video" class="w-backgroundvideo-backgroundvideoplaypausebutton w-background-video--control"><span><img src="https://uploads-ssl.webflow.com/6022af993a6b2191db3ed10c/628299f8aa233b83918e24fd_Pause.svg" alt="Pause video"></span><span hidden=""><img src="https://uploads-ssl.webflow.com/6022af993a6b2191db3ed10c/628298b20ae0236682d4b87f_Play-24.svg" alt="Play video"></span></button></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div data-w-id="7cebf91b-91fb-592e-f20e-b631743c186e" class="cta_link-block">
-                    <div data-w-id="7cebf91b-91fb-592e-f20e-b631743c186f" class="what-we-do_acordeon-trigger">
-                      <div class="what-we-do_acordeon-title">
-                        <h3 class="cta_link-text">Testing and refinement</h3>
-                      </div><img src="images/icon-trigger.svg" loading="lazy" alt="" class="what-we-do_acordeon-icon">
-                    </div>
-                    <div class="what-we-do_acordeon-content">
-                      <div class="what-we-do_acordeon-content-wrapper">
-                        <p class="text-color-grey">We validate the solution&#x27;s functionality through rigorous testing and refine it based on your feedback.</p>
-                      </div>
-                    </div>
-                    <div class="cta_link-image-wrapper clickable-off"><img src="images/riseverse-work.webp" loading="eager" sizes="(max-width: 1920px) 100vw, 1920px" srcset="images/riseverse-work-p-500.jpeg 500w, images/riseverse-work-p-800.jpeg 800w, images/riseverse-work-p-1080.jpeg 1080w, images/riseverse-work-p-1600.jpeg 1600w, images/riseverse-work.webp 1920w" alt="RiseVerse work" class="cta_link-image hide-all">
-                      <div data-poster-url="https://uploads-ssl.webflow.com/634ecebdb4ffd446e52e6f19/635088739e3aaafc2d0863fe_pexels-valiantsin-konan-10527947-poster-00001.jpg" data-video-urls="https://uploads-ssl.webflow.com/634ecebdb4ffd446e52e6f19/635088739e3aaafc2d0863fe_pexels-valiantsin-konan-10527947-transcode.mp4,https://uploads-ssl.webflow.com/634ecebdb4ffd446e52e6f19/635088739e3aaafc2d0863fe_pexels-valiantsin-konan-10527947-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="cta_link-image w-background-video w-background-video-atom"><video id="7cebf91b-91fb-592e-f20e-b631743c187a-video" autoplay="" loop="" style="background-image:url(&quot;https://uploads-ssl.webflow.com/634ecebdb4ffd446e52e6f19/635088739e3aaafc2d0863fe_pexels-valiantsin-konan-10527947-poster-00001.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
-                          <source src="https://uploads-ssl.webflow.com/634ecebdb4ffd446e52e6f19/635088739e3aaafc2d0863fe_pexels-valiantsin-konan-10527947-transcode.mp4" data-wf-ignore="true">
-                          <source src="https://uploads-ssl.webflow.com/634ecebdb4ffd446e52e6f19/635088739e3aaafc2d0863fe_pexels-valiantsin-konan-10527947-transcode.webm" data-wf-ignore="true">
-                        </video><noscript>
-                          <style>
-  [data-wf-bgvideo-fallback-img] {
-    display: none;
-  }
-  @media (prefers-reduced-motion: reduce) {
-    [data-wf-bgvideo-fallback-img] {
-      position: absolute;
-      z-index: -100;
-      display: inline-block;
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-    }
-  }</style><img data-wf-bgvideo-fallback-img="true" src="documents/pexels-valiantsin-konan-10527947.mp4" alt="">
-                        </noscript>
-                        <div aria-live="polite"><button type="button" data-w-bg-video-control="true" aria-controls="7cebf91b-91fb-592e-f20e-b631743c187a-video" class="w-backgroundvideo-backgroundvideoplaypausebutton w-background-video--control"><span><img src="https://uploads-ssl.webflow.com/6022af993a6b2191db3ed10c/628299f8aa233b83918e24fd_Pause.svg" alt="Pause video"></span><span hidden=""><img src="https://uploads-ssl.webflow.com/6022af993a6b2191db3ed10c/628298b20ae0236682d4b87f_Play-24.svg" alt="Play video"></span></button></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div data-w-id="7cebf91b-91fb-592e-f20e-b631743c1880" class="cta_link-block">
-                    <div data-w-id="7cebf91b-91fb-592e-f20e-b631743c1881" class="what-we-do_acordeon-trigger">
-                      <div class="what-we-do_acordeon-title">
-                        <h3 class="cta_link-text">Launch and optimization</h3>
-                      </div><img src="images/icon-trigger.svg" loading="lazy" alt="" class="what-we-do_acordeon-icon">
-                    </div>
-                    <div class="what-we-do_acordeon-content">
-                      <div class="what-we-do_acordeon-content-wrapper">
-                        <p class="text-color-grey">The solution is deployed live, ready to improve your operations, with our support ensuring a smooth transition.</p>
-                      </div>
-                    </div>
-                    <div class="cta_link-image-wrapper clickable-off"><img src="images/riseverse-work.webp" loading="eager" sizes="(max-width: 1920px) 100vw, 1920px" srcset="images/riseverse-work-p-500.jpeg 500w, images/riseverse-work-p-800.jpeg 800w, images/riseverse-work-p-1080.jpeg 1080w, images/riseverse-work-p-1600.jpeg 1600w, images/riseverse-work.webp 1920w" alt="RiseVerse work" class="cta_link-image hide-all">
-                      <div data-poster-url="https://uploads-ssl.webflow.com/634ecebdb4ffd446e52e6f19/6350886348dbe92c50f188af_pexels-kindel-media-6774772-poster-00001.jpg" data-video-urls="https://uploads-ssl.webflow.com/634ecebdb4ffd446e52e6f19/6350886348dbe92c50f188af_pexels-kindel-media-6774772-transcode.mp4,https://uploads-ssl.webflow.com/634ecebdb4ffd446e52e6f19/6350886348dbe92c50f188af_pexels-kindel-media-6774772-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="cta_link-image w-background-video w-background-video-atom"><video id="7cebf91b-91fb-592e-f20e-b631743c188c-video" autoplay="" loop="" style="background-image:url(&quot;https://uploads-ssl.webflow.com/634ecebdb4ffd446e52e6f19/6350886348dbe92c50f188af_pexels-kindel-media-6774772-poster-00001.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
-                          <source src="https://uploads-ssl.webflow.com/634ecebdb4ffd446e52e6f19/6350886348dbe92c50f188af_pexels-kindel-media-6774772-transcode.mp4" data-wf-ignore="true">
-                          <source src="https://uploads-ssl.webflow.com/634ecebdb4ffd446e52e6f19/6350886348dbe92c50f188af_pexels-kindel-media-6774772-transcode.webm" data-wf-ignore="true">
-                        </video><noscript>
-                          <style>
-  [data-wf-bgvideo-fallback-img] {
-    display: none;
-  }
-  @media (prefers-reduced-motion: reduce) {
-    [data-wf-bgvideo-fallback-img] {
-      position: absolute;
-      z-index: -100;
-      display: inline-block;
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-    }
-  }</style><img data-wf-bgvideo-fallback-img="true" src="documents/pexels-kindel-media-6774772.mp4" alt="">
-                        </noscript>
-                        <div aria-live="polite"><button type="button" data-w-bg-video-control="true" aria-controls="7cebf91b-91fb-592e-f20e-b631743c188c-video" class="w-backgroundvideo-backgroundvideoplaypausebutton w-background-video--control"><span><img src="https://uploads-ssl.webflow.com/6022af993a6b2191db3ed10c/628299f8aa233b83918e24fd_Pause.svg" alt="Pause video"></span><span hidden=""><img src="https://uploads-ssl.webflow.com/6022af993a6b2191db3ed10c/628298b20ae0236682d4b87f_Play-24.svg" alt="Play video"></span></button></div>
-                      </div>
-                    </div>
-                  </div>
+                  <?php
+                    }
+                  }
+                  ?>
                   <div class="cta_hover-css w-embed">
                     <style>
 /* Prevents hover states from being used on Tablet & Mobile */
@@ -641,6 +516,84 @@ Change the color of the text here, instead of on Webflow for this to work */
 }
 </style>
                   </div>
+                  <div class="w-embed">
+                    <style>
+                      .cta_component .what-we-do_acordeon-content {
+                        overflow: hidden;
+                        max-height: 0;
+                        transition: max-height 0.35s ease;
+                      }
+                      .cta_component .cta_link-image-wrapper {
+                        display: none;
+                        opacity: 0;
+                        pointer-events: none;
+                        transition: opacity 0.35s ease;
+                      }
+                      .cta_component .cta_link-block.is-active .cta_link-image-wrapper {
+                        display: flex;
+                        opacity: 1;
+                        pointer-events: auto;
+                      }
+                    </style>
+                  </div>
+                  <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                      const ctaComponent = document.querySelector(".cta_component");
+                      if (!ctaComponent) return;
+                      const blocks = Array.from(
+                        ctaComponent.querySelectorAll(".cta_link-block"),
+                      );
+                      if (!blocks.length) return;
+
+                      const setActive = (activeBlock) => {
+                        blocks.forEach((block) => {
+                          const isActive = block === activeBlock;
+                          block.classList.toggle("is-active", isActive);
+
+                          const content = block.querySelector(".what-we-do_acordeon-content");
+                          if (content) {
+                            content.style.maxHeight = isActive ? content.scrollHeight + "px" : "0px";
+                          }
+
+                          const video = block.querySelector(".cta_link-image video");
+                          if (video) {
+                            if (isActive) {
+                              const playPromise = video.play();
+                              if (playPromise && typeof playPromise.catch === "function") {
+                                playPromise.catch(function () {});
+                              }
+                            } else {
+                              video.pause();
+                            }
+                          }
+                        });
+                      };
+
+                      blocks.forEach((block) => {
+                        const trigger = block.querySelector(".what-we-do_acordeon-trigger");
+                        if (!trigger) return;
+
+                        block.addEventListener("mouseenter", function () {
+                          setActive(block);
+                        });
+
+                        trigger.addEventListener("mouseenter", function () {
+                          setActive(block);
+                        });
+
+                        trigger.addEventListener("click", function (event) {
+                          event.preventDefault();
+                          setActive(block);
+                        });
+                      });
+
+                      ctaComponent.addEventListener("mouseleave", function () {
+                        setActive(null);
+                      });
+
+                      setActive(null);
+                    });
+                  </script>
                 </div>
               </div>
             </div>
