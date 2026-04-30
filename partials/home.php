@@ -361,7 +361,7 @@ pointer-events:none;
           </div>
         </div>
         <div class="recent-work_btn">
-          <a href="cases.html" class="button w-inline-block">
+          <a href="https://apros.pe/en/proyectos/" class="button w-inline-block">
             <div>View more</div><img src="images/icon-btn.svg" loading="lazy" alt="" class="icon-1x1-small">
           </a>
         </div>
