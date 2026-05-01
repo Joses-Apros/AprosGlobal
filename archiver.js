@@ -4,7 +4,7 @@ import pjson from './package.json' with { type: "json" }
 import path from 'path'
 import { fileURLToPath } from 'url'
 
-const ZIP_NAME = 'apros_theme'
+const ZIP_NAME = 'apros_global_theme_prd'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 

@@ -82,6 +82,8 @@
     "page.php",
     "screenshot.png",
     "404.php",
+    "single-insight.php",
+    "single-solution.php",
     "style.css"
   ]
 }

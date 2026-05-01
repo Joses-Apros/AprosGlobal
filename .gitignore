@@ -31,12 +31,11 @@ yarn-lock.json
 composer.lock
 bun.lockb
 generatepress_child.zip
-apros_theme.zip
-apros_global.zip
+apros_global_theme_prd.zip
 
 #folders
 wp_data
 db_data
 vendor
 .codegpt
-apros_theme.zip
+apros_global_theme_prd.zip
