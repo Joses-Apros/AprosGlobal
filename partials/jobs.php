@@ -243,138 +243,118 @@ $status = get_field('status');
               </div>
             </div>
             <div class="position_main w-form">
-              <form id="email-form" name="email-form" data-name="Email Form" method="get" fs-cmsfilter-element="filters"
-                class="position_filter-wrapper" data-wf-page-id="65b4453c9e0f05c6674b733f"
-                data-wf-element-id="0c444f7a-f058-0766-09f4-b682aa2c33d1">
-                <div class="position_cms-content">
-                  <div class="position_cms-wrapper">
-                    <div class="w-dyn-list">
-                      <div role="list" class="w-dyn-items">
-                        <?php foreach ($employment_types as $employment_type): ?>
-                          <div role="listitem" class="w-dyn-item">
-                            <div class="position_filter-item">
-                              <div fs-cmsfilter-field="time" fs-cmsselect-element="text-value">
-                                <?php echo $employment_type['name'] ?? ''; ?>
-                              </div>
-                            </div>
-                          </div>
-                        <?php endforeach; ?>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="position_cms-wrapper">
-                    <div class="w-dyn-list">
-                      <div role="list" class="w-dyn-items">
-                        <?php foreach ($departments as $department): ?>
-                          <div role="listitem" class="w-dyn-item">
-                            <div fs-cmsfilter-field="location" fs-cmsselect-element="text-value-2">
-                              <?php echo $department['name'] ?? ''; ?>
-                            </div>
-                          </div>
-                        <?php endforeach; ?>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="position_cms-wrapper">
-                    <div class="w-dyn-list">
-                      <div role="list" class="w-dyn-items">
-                        <?php foreach ($levels as $level): ?>
-                          <div role="listitem" class="w-dyn-item">
-                            <div fs-cmsfilter-field="level" fs-cmsselect-element="text-value-3">
-                              <?php echo $level['name'] ?? ''; ?>
-                            </div>
-                          </div>
-                        <?php endforeach; ?>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="position_cms-wrapper">
-                    <div class="w-dyn-list">
-                      <div role="list" class="w-dyn-items">
-                        <?php foreach ($status as $status): ?>
-                          <div role="listitem" class="w-dyn-item">
-                            <div fs-cmsfilter-field="country" fs-cmsselect-element="text-value-4">
-                              <?php echo $status['name'] ?? ''; ?>
-                            </div>
-                          </div>
-                        <?php endforeach; ?>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <form id="email-form" method="get" class="position_filter-wrapper">
                 <div class="position_filter-header">
                   <div>
                     Filter by:
                   </div>
                   <div class="position_filter-checkbox">
                     <div class="position_filter-select">
-                      <select id="Job-Employment-type" name="Job-Employment-type" data-name="Job Employment type"
-                        fs-cmsselect-element="select" fs-cmsfilter-field="time" class="position_select w-select">
-                        <option value="">
-                          Employment type
-                        </option>
+                      <select id="Job-Employment-type" name="Job-Employment-type" class="position_select w-select">
+                        <option value="">Employment type</option>
+                        <?php if(!empty($employment_types)): foreach($employment_types as $item): ?>
+                          <option value="<?php echo esc_attr($item['name']); ?>" <?php selected($_GET['Job-Employment-type'] ?? '', $item['name']); ?>><?php echo esc_html($item['name']); ?></option>
+                        <?php endforeach; endif; ?>
                       </select>
                     </div>
                     <div class="position_filter-select">
-                      <select id="Job-Departments" name="Job-Departments" data-name="Job Departments"
-                        fs-cmsselect-element="select-2" fs-cmsfilter-field="location" class="position_select w-select">
-                        <option value="">
-                          Departments
-                        </option>
+                      <select id="Job-Departments" name="Job-Departments" class="position_select w-select">
+                        <option value="">Departments</option>
+                        <?php if(!empty($departments)): foreach($departments as $item): ?>
+                          <option value="<?php echo esc_attr($item['name']); ?>" <?php selected($_GET['Job-Departments'] ?? '', $item['name']); ?>><?php echo esc_html($item['name']); ?></option>
+                        <?php endforeach; endif; ?>
                       </select>
                     </div>
                     <div class="position_filter-select">
-                      <select id="Job-Level" name="Job-Level" data-name="Job Level" fs-cmsselect-element="select-3"
-                        fs-cmsfilter-field="level" class="position_select w-select">
-                        <option value="">
-                          Level
-                        </option>
+                      <select id="Job-Level" name="Job-Level" class="position_select w-select">
+                        <option value="">Level</option>
+                        <?php if(!empty($levels)): foreach($levels as $item): ?>
+                          <option value="<?php echo esc_attr($item['name']); ?>" <?php selected($_GET['Job-Level'] ?? '', $item['name']); ?>><?php echo esc_html($item['name']); ?></option>
+                        <?php endforeach; endif; ?>
                       </select>
                     </div>
                     <div class="position_filter-select">
-                      <select id="Status" name="Status" data-name="Status" fs-cmsselect-element="select-4"
-                        fs-cmsfilter-field="country" class="position_select w-select">
-                        <option value="">
-                          Status
-                        </option>
+                      <select id="Status" name="Status" class="position_select w-select">
+                        <option value="">Status</option>
+                        <?php if(!empty($status)): foreach($status as $item): ?>
+                          <option value="<?php echo esc_attr($item['name']); ?>" <?php selected($_GET['Status'] ?? '', $item['name']); ?>><?php echo esc_html($item['name']); ?></option>
+                        <?php endforeach; endif; ?>
                       </select>
                     </div>
                   </div>
                 </div>
                 <script>
                   document.addEventListener('DOMContentLoaded', function () {
-                    const timeOptions = document.querySelectorAll('.position_filter-item [fs-cmsfilter-field="time"]');
-                    const jobsList = document.querySelector('[fs-cmsfilter-element="list"]');
-                    if (!timeOptions.length || !jobsList) return;
+                    const filterForm = document.getElementById('email-form');
+                    const gridContainer = document.querySelector('.position_acordeon-wrapper');
+                    if (!filterForm || !gridContainer) return;
 
-                    const normalize = function (value) {
-                      return (value || '').trim().toLowerCase().replace(/\s+/g, ' ');
+                    const fetchJobs = (url) => {
+                      gridContainer.style.opacity = '0.5';
+                      gridContainer.style.transition = 'opacity 0.2s ease';
+
+                      fetch(url)
+                        .then(response => response.text())
+                        .then(html => {
+                          const parser = new DOMParser();
+                          const doc = parser.parseFromString(html, 'text/html');
+                          const newList = doc.querySelector('.position_acordeon-wrapper');
+
+                          if (newList) {
+                            gridContainer.innerHTML = newList.innerHTML;
+                            gridContainer.style.opacity = '1';
+
+                            window.history.pushState(null, '', url);
+
+                            // Re-inicializar Webflow para que funcionen los acordeones
+                            if (window.Webflow && window.Webflow.destroy) {
+                              window.Webflow.destroy();
+                              window.Webflow.ready();
+                              if (window.Webflow.require('ix2')) window.Webflow.require('ix2').init();
+                            }
+                          }
+                        })
+                        .catch(error => {
+                          console.error('Error AJAX Jobs:', error);
+                          gridContainer.style.opacity = '1';
+                        });
                     };
 
-                    const filterByTime = function (selectedTime) {
-                      const normalizedSelectedTime = normalize(selectedTime);
-                      const jobs = jobsList.querySelectorAll(':scope > .w-dyn-item');
-
-                      jobs.forEach(function (jobItem) {
-                        const timeNode = jobItem.querySelector('[fs-cmsfilter-field="time"]');
-                        const jobTime = normalize(timeNode ? timeNode.textContent : '');
-                        jobItem.style.display = jobTime === normalizedSelectedTime ? '' : 'none';
-                      });
-                    };
-
-                    timeOptions.forEach(function (option) {
-                      option.style.cursor = 'pointer';
-                      option.addEventListener('click', function () {
-                        filterByTime(option.textContent);
+                    filterForm.querySelectorAll('select').forEach(select => {
+                      select.addEventListener('change', function() {
+                        const formData = new FormData(filterForm);
+                        const params = new URLSearchParams(formData).toString();
+                        const targetUrl = window.location.pathname + '?' + params;
+                        fetchJobs(targetUrl);
                       });
                     });
                   });
                 </script>
                 <div class="position_acordeon-wrapper">
                   <div class="w-dyn-list">
-                    <div fs-cmsfilter-element="list" role="list" class="w-dyn-items">
-                      <?php $jobs = get_field('jobs'); ?>
-                      <?php if (!empty($jobs) && is_array($jobs)) : ?>
+                    <div role="list" class="w-dyn-items">
+                      <?php 
+                      $jobs = get_field('jobs'); 
+                      
+                      // Filtrado en el servidor
+                      $sel_time = $_GET['Job-Employment-type'] ?? '';
+                      $sel_dept = $_GET['Job-Departments'] ?? '';
+                      $sel_level = $_GET['Job-Level'] ?? '';
+                      $sel_status = $_GET['Status'] ?? '';
+
+                      if (!empty($jobs) && is_array($jobs)) {
+                          if ($sel_time || $sel_dept || $sel_level || $sel_status) {
+                              $jobs = array_filter($jobs, function($job) use ($sel_time, $sel_dept, $sel_level, $sel_status) {
+                                  if ($sel_time && ($job['time'] ?? '') !== $sel_time) return false;
+                                  if ($sel_dept && ($job['location'] ?? '') !== $sel_dept) return false;
+                                  if ($sel_level && ($job['level'] ?? '') !== $sel_level) return false;
+                                  if ($sel_status && ($job['country'] ?? '') !== $sel_status) return false;
+                                  return true;
+                              });
+                          }
+                      }
+                      ?>
+                      <?php if (!empty($jobs)) : ?>
                         <?php foreach ($jobs as $job) : ?>
                           <div role="listitem" class="w-dyn-item">
                             <div class="position_acordeon-item">
@@ -388,7 +368,7 @@ $status = get_field('status');
                                       <img
                                         src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/src/assets/cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/64ca9d607d5002a98d327651_countries-icon.svg"
                                         loading="lazy" alt="" />
-                                      <div fs-cmsfilter-field="country" class="text-size-small">
+                                      <div class="text-size-small">
                                         <?php echo esc_html($job['country'] ?? ''); ?>
                                       </div>
                                     </div>
@@ -396,7 +376,7 @@ $status = get_field('status');
                                       <img
                                         src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/src/assets/cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/64d10fdb98b119aae24dc998_iconoworkvf.svg"
                                         loading="lazy" alt="" />
-                                      <div fs-cmsfilter-field="location" class="text-size-small">
+                                      <div class="text-size-small">
                                         <?php echo esc_html($job['location'] ?? ''); ?>
                                       </div>
                                     </div>
@@ -404,7 +384,7 @@ $status = get_field('status');
                                       <img
                                         src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/src/assets/cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/64ca9dbd3178de565c2fb413_level-icon.svg"
                                         loading="lazy" alt="" />
-                                      <div fs-cmsfilter-field="level" class="text-size-small">
+                                      <div class="text-size-small">
                                         <?php echo esc_html($job['level'] ?? ''); ?>
                                       </div>
                                     </div>
@@ -412,7 +392,7 @@ $status = get_field('status');
                                       <img
                                         src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/src/assets/cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/64c93825ea0396a2493de009_reloj-tres.svg"
                                         loading="lazy" alt="" />
-                                      <div fs-cmsfilter-field="time" class="text-size-small">
+                                      <div class="text-size-small">
                                         <?php echo esc_html($job['time'] ?? ''); ?>
                                       </div>
                                     </div>
