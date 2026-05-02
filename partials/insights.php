@@ -48,10 +48,10 @@
                 </div>
                 <nav role="navigation" class="recent-work_nav-menu w-nav-menu">
                   <div class="recent-work_form w-form">
-                    <form id="email-form-2" name="email-form-2" data-name="Email Form 2" method="get" fs-cmsfilter-element="filters" class="recent-work_form-wrapper" data-wf-page-id="65b4453c9e0f05c6674b733e" data-wf-element-id="31b1934b-527a-746f-a120-9a9664498579">
-                      <input type="submit" data-wait="Please wait..." class="button hide-all w-button" value="Submit"/>
+                    <form id="email-form-2" method="get" class="recent-work_form-wrapper">
+                      <input type="submit" class="hide-all" value="Submit"/>
                       <div class="recent-work_form-overflow">
-                        <a fs-cmsfilter-element="clear" href="<?php echo esc_url(remove_query_arg('categoria')); ?>" class="recent-work_form-check-field is-all w-inline-block">
+                        <a href="<?php echo esc_url(remove_query_arg('categoria')); ?>" class="recent-work_form-check-field is-all w-inline-block">
                           <div class="recent-work_form-check-text">
                             All
                           </div>
@@ -63,8 +63,8 @@
                                 <?php $radio_id = 'categoria-' . $term->term_id; ?>
                                 <div role="listitem" class="recent-work_form-cl-item w-dyn-item">
                                   <label class="recent-work_form-check-field w-radio" for="<?php echo esc_attr($radio_id); ?>">
-                                    <input type="radio" data-name="Radio" id="<?php echo esc_attr($radio_id); ?>" name="categoria" fs-cmsfilter-field="categoria" class="w-form-formradioinput recent-work_form-check-icon w-radio-input" value="<?php echo esc_attr($term->slug); ?>" <?php checked($selected_categoria, $term->slug); ?>/>
-                                    <span fs-cmsfilter-active="is-active" class="recent-work_form-check-text w-form-label">
+                                    <input type="radio" id="<?php echo esc_attr($radio_id); ?>" name="categoria" class="w-form-formradioinput recent-work_form-check-icon w-radio-input" value="<?php echo esc_attr($term->slug); ?>" <?php checked($selected_categoria, $term->slug); ?>/>
+                                    <span class="recent-work_form-check-text w-form-label">
                                       <?php echo esc_html($term->name); ?>
                                     </span>
                                   </label>
@@ -93,12 +93,12 @@
               </div>
             </div>
           </div>
-          <div class="recent-work_form-tag">
-            <div fs-cmsfilter-element="tag-template" class="recent-work_form-tag-item">
-              <div fs-cmsfilter-element="tag-text" class="recent-work_form-tag-text">
+          <div class="recent-work_form-tag" style="display:none;">
+            <div class="recent-work_form-tag-item">
+              <div class="recent-work_form-tag-text">
                 Filter: All
               </div>
-              <img src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/src/assets/cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/63506093376d59c86842884e_icon-trigger.svg" loading="lazy" fs-cmsfilter-element="tag-remove" alt="" class="recent-work_form-tag-close"/>
+              <img src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/src/assets/cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/63506093376d59c86842884e_icon-trigger.svg" loading="lazy" alt="" class="recent-work_form-tag-close"/>
             </div>
           </div>
           <?php
@@ -124,16 +124,69 @@
             document.addEventListener('DOMContentLoaded', function () {
               const filterForm = document.getElementById('email-form-2');
               if (!filterForm) return;
+
+              const gridContainer = document.querySelector('.recent-work_main-grid');
               const radioFilters = filterForm.querySelectorAll('input[name="categoria"]');
+              const allLink = filterForm.querySelector('.is-all');
+
+              // Función para realizar la carga AJAX
+              const fetchResults = (url) => {
+                // Efecto de carga
+                gridContainer.style.opacity = '0.4';
+                gridContainer.style.transition = 'opacity 0.2s ease';
+
+                fetch(url)
+                  .then(response => response.text())
+                  .then(html => {
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(html, 'text/html');
+                    const newGrid = doc.querySelector('.recent-work_main-grid');
+
+                    if (newGrid && gridContainer) {
+                      gridContainer.innerHTML = newGrid.innerHTML;
+                      gridContainer.style.opacity = '1';
+
+                      // Actualizar la URL en el navegador sin recargar
+                      window.history.pushState(null, '', url);
+
+                      // Re-inicializar Webflow (IX2) para que las animaciones funcionen en los nuevos items
+                      if (window.Webflow && window.Webflow.destroy) {
+                        window.Webflow.destroy();
+                        window.Webflow.ready();
+                        if (window.Webflow.require('ix2')) window.Webflow.require('ix2').init();
+                      }
+                    }
+                  })
+                  .catch(error => {
+                    console.error('Error en el filtro AJAX:', error);
+                    gridContainer.style.opacity = '1';
+                  });
+              };
+
+              // Evento para los radio buttons
               radioFilters.forEach(function (radio) {
                 radio.addEventListener('change', function () {
-                  filterForm.submit();
+                  const formData = new FormData(filterForm);
+                  const params = new URLSearchParams(formData).toString();
+                  const targetUrl = window.location.pathname + '?' + params;
+                  fetchResults(targetUrl);
                 });
               });
+
+              // Evento para el botón "All"
+              if (allLink) {
+                allLink.addEventListener('click', function (e) {
+                  e.preventDefault();
+                  // Desmarcar todos los radios
+                  radioFilters.forEach(r => r.checked = false);
+                  const targetUrl = this.getAttribute('href');
+                  fetchResults(targetUrl);
+                });
+              }
             });
           </script>
           <div class="collection-list-wrapper w-dyn-list">
-            <div fs-cmsfilter-element="list" fs-cmsload-element="list" fs-cmsload-mode="infinite" fs-cmsload-duration="800" fs-cmsload-stagger="200" role="list" class="recent-work_main-grid w-dyn-items">
+            <div role="list" class="recent-work_main-grid w-dyn-items">
               <?php if ($insights_query->have_posts()) : ?>
                 <?php while ($insights_query->have_posts()) : $insights_query->the_post(); ?>
                   <?php
@@ -600,38 +653,19 @@ requestAnimationFrame(raf)
 </script>
 <!-- F’in sweet Webflow Hacks -->
 <script>
-// if viewportWidth width
-<= 991
+// Corrección de sintaxis para el chequeo de ancho de pantalla
 if(window.innerWidth <= 991){
-  // load mobile script
-  
    jQuery( ".w-form-formradioinput" ).click(function() {
         jQuery('.recent-work_nav-btn').click();
     });
-  
-}
-else{ // viewportWidth width >
-991
-  // load desktop script
-    
 }
 
-// loadScriptFile func
+// Función loadScriptFile corregida
 function loadScriptFile(src){
-  // create element
-<script>
-const $script = $('
-<script>
-');
-  // add type attribute
-  $script.attr('type', 'text/javascript');
-  // add src attribute
-  $script.attr('src', src);
-  // append the
-<script>
-element to
-<head>
-$script.appendTo('head');
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = src;
+  document.getElementsByTagName('head')[0].appendChild(script);
 }
 </script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"62b39089df424b0998c64f4a84ffe7c1","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous">
