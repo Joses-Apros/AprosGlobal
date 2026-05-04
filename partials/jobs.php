@@ -1,224 +1,263 @@
 <?php
+$banner = get_field('banner');
+$we_love_what_we_do = get_field('we_love_what_we_do');
+$remote_positions = get_field('remote_positions');
 $employment_types = get_field('employment_type');
 $departments = get_field('departments');
 $levels = get_field('level');
 $status = get_field('status');
 ?>
 <div class="main-wrapper">
-  <div class="title-page_component">
-    <div class="padding-global">
-      <div class="container-large is-jobs">
-        <div class="padding-section-small">
-          <div class="jobs_wrapper">
-            <div class="title-page_wrapper is-job">
-              <img
-                src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/src/assets/cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/64beee59d18bf76f66251b32_banner-jobs.png"
-                loading="lazy" sizes="(max-width: 479px) 100vw, (max-width: 767px) 95vw, (max-width: 991px) 92vw, 93vw"
-                srcset="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/src/assets/cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/64beee59d18bf76f66251b32_banner-jobs-p-500.png 500w, <?php echo esc_url(get_stylesheet_directory_uri()); ?>/src/assets/cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/64beee59d18bf76f66251b32_banner-jobs-p-800.png 800w, <?php echo esc_url(get_stylesheet_directory_uri()); ?>/src/assets/cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/64beee59d18bf76f66251b32_banner-jobs-p-1080.png 1080w, <?php echo esc_url(get_stylesheet_directory_uri()); ?>/src/assets/cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/64beee59d18bf76f66251b32_banner-jobs.png 1642w"
-                alt="" class="jobs_bg" />
-              <div class="title-page_title">
-                <h1 class="heading-style-h1-big text-color-degrade-light">
-                  Jobs
-                  <span class="text-color-degrade-light">
-                  </span>
-                </h1>
-                <div class="circle-chek_component">
-                  <img
-                    src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/src/assets/cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/6356c11143d2fe247c1f8719_text-circle-vf.svg"
-                    loading="lazy" alt="" class="circle-chek_text-circle-img" />
-                  <img
-                    src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/634ed0dafc477ada004efe8e_check-circle%20(3).svg"
-                    loading="lazy" alt="" class="circle-chek_img-check" />
+  <?php if ($banner): ?>
+    <div class="title-page_component">
+      <div class="padding-global">
+        <div class="container-large is-jobs">
+          <div class="padding-section-small">
+            <div class="jobs_wrapper">
+              <div class="title-page_wrapper is-job">
+                <img
+                  src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/src/assets/cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/64beee59d18bf76f66251b32_banner-jobs.png"
+                  loading="lazy" sizes="(max-width: 479px) 100vw, (max-width: 767px) 95vw, (max-width: 991px) 92vw, 93vw"
+                  srcset="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/src/assets/cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/64beee59d18bf76f66251b32_banner-jobs-p-500.png 500w, <?php echo esc_url(get_stylesheet_directory_uri()); ?>/src/assets/cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/64beee59d18bf76f66251b32_banner-jobs-p-800.png 800w, <?php echo esc_url(get_stylesheet_directory_uri()); ?>/src/assets/cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/64beee59d18bf76f66251b32_banner-jobs-p-1080.png 1080w, <?php echo esc_url(get_stylesheet_directory_uri()); ?>/src/assets/cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/64beee59d18bf76f66251b32_banner-jobs.png 1642w"
+                  alt="" class="jobs_bg" />
+                <div class="title-page_title">
+                  <h1 class="heading-style-h1-big text-color-degrade-light">
+                    <?php echo $banner['title']; ?>
+                    <span class="text-color-degrade-light">
+                    </span>
+                  </h1>
+                  <div class="circle-chek_component">
+                    <img
+                      src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/src/assets/cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/6356c11143d2fe247c1f8719_text-circle-vf.svg"
+                      loading="lazy" alt="" class="circle-chek_text-circle-img" />
+                    <img
+                      src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/634ed0dafc477ada004efe8e_check-circle%20(3).svg"
+                      loading="lazy" alt="" class="circle-chek_img-check" />
+                  </div>
                 </div>
-              </div>
-              <div class="title-page_info">
-                <p>
-                  Welcome to our jobs page! Get to know our values and open job offers to join our crew.
-                  <br />
-                  <br />
-                  Apros has transitioned to a fully remote model, demonstrating that with a positive attitude and good
-                  team coordination, we can all thrive in our roles.
-                  <br />
-                </p>
+                <div class="title-page_info">
+                  <?php echo $banner['description']; ?>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="about_component">
-    <div class="padding-global">
-      <div class="container-large">
-        <div class="padding-section-medium">
-          <div class="about_wrapper">
-            <div class="process_wrapper">
-              <div class="process_header">
-                <div class="heading-style-h3">
-                  We love
-                  <span class="text-color-degrade-light">
-                    what we do
-                  </span>
+  <?php endif; ?>
+  <?php if ($we_love_what_we_do): ?>
+    <div class="about_component">
+      <div class="padding-global">
+        <div class="container-large">
+          <div class="padding-section-medium">
+            <div class="about_wrapper">
+              <div class="process_wrapper">
+                <div class="process_header">
+                  <div class="heading-style-h3">
+                    <?php echo $we_love_what_we_do['title_part_1']; ?>
+                    <span class="text-color-degrade-light">
+                      <?php echo $we_love_what_we_do['title_part_2']; ?>
+                    </span>
+                  </div>
+                  <div class="process_header-info">
+                    <p class="text-align-center">
+                      <?php echo $we_love_what_we_do['description']; ?>
+                    </p>
+                  </div>
                 </div>
-                <div class="process_header-info">
-                  <p class="text-align-center">
-                    We are a dynamic and rapidly growing web development company that specializes in creating innovative
-                    and engaging websites. With a focus on delivering exceptional results, we leverage cutting-edge
-                    technologies and creative solutions to help businesses thrive in the digital landscape. As we expand
-                    our operations, we are seeking a highly motivated and detail-oriented specialists to join our team.
+                <div id="w-node-a65200c8-44d6-e3f3-f7c1-1008778251be-674b733f" class="process_item-wrapper">
+                  <!-- <div class="process_item">
+                    <div class="process_item-header">
+                      <img
+                        src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/src/assets/cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/648b5037d62691bca7126fd6_icon-beneficios-01.png"
+                        loading="lazy" alt="" class="process_item-icon" />
+                      <div class="process_item-header-title">
+                        <h3 class="heading-style-h4">
+                          Collaboration
+                        </h3>
+                      </div>
+                    </div>
+                    <div class="process_item-info">
+                      <p>
+                        We believe in the power of collaboration, fostering unity, open communication, and mutual respect
+                        to achieve remarkable results together.
+                      </p>
+                    </div>
+                  </div> -->
+                  <!-- <div class="process_item">
+                    <div class="process_item-header">
+                      <img
+                        src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/src/assets/cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/648b50378407ac64de295048_icon-beneficios-02.png"
+                        loading="lazy" alt="" class="process_item-icon" />
+                      <div class="process_item-header-title">
+                        <h3 class="heading-style-h4">
+                          Innovation
+                        </h3>
+                      </div>
+                    </div>
+                    <div class="process_item-info">
+                      <p>
+                        Embracing innovation, we encourage creativity, out-of-the-box thinking, and a passion for
+                        exploring new ideas that drive continuous improvement.
+                      </p>
+                    </div>
+                  </div> -->
+                  <!-- <div class="process_item">
+                    <div class="process_item-header">
+                      <img
+                        src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/src/assets/cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/648b50363a8d0832b7ba7eaf_icon-beneficios-03.png"
+                        loading="lazy" alt="" class="process_item-icon" />
+                      <div class="process_item-header-title">
+                        <h3 class="heading-style-h4">
+                          Accountability
+                        </h3>
+                      </div>
+                    </div>
+                    <div class="process_item-info">
+                      <p>
+                        We value accountability, taking ownership of our work, meeting deadlines, and delivering
+                        exceptional results with pride and integrity.
+                      </p>
+                    </div>
+                  </div> -->
+                  <!-- <div class="process_item">
+                    <div class="process_item-header">
+                      <img
+                        src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/src/assets/cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/64d1101fc51d93a95c8fdafc_icon-growth.svg"
+                        loading="lazy" alt="" class="process_item-icon" />
+                      <div class="process_item-header-title">
+                        <h3 class="heading-style-h4">
+                          Growth Mindset
+                        </h3>
+                      </div>
+                    </div>
+                    <div class="process_item-info">
+                      <p>
+                        We nurture a growth mindset, embracing challenges, learning from failures, and continuously
+                        developing our skills for personal and collective growth.
+                      </p>
+                    </div>
+                  </div> -->
+                  <?php if ($we_love_what_we_do['cards']):
+                    foreach ($we_love_what_we_do['cards'] as $key => $card):
+                      ?>
+                      <div class="process_item">
+                        <div class="process_item-header">
+                          <img
+                            src="<?php echo ($card['icon']) ? wp_get_attachment_url($card['icon']) : esc_url(get_stylesheet_directory_uri()) . '/src/assets/cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/648b5037d62691bca7126fd6_icon-beneficios-01.png'; ?>"
+                            loading="lazy" alt="icon" class="process_item-icon" />
+                          <div class="process_item-header-title">
+                            <h3 class="heading-style-h4">
+                              <?php echo $card['title']; ?>
+                            </h3>
+                          </div>
+                        </div>
+                        <div class="process_item-info">
+                          <p>
+                            <?php echo $card['description']; ?>
+                          </p>
+                        </div>
+                      </div>
+                    <?php endforeach; endif; ?>
+                </div>
+              </div>
+              <div class="about_numbers-wrapper">
+                <!-- <div class="about_numbers-item">
+                  <div class="about_numbers-text">
+                    <div class="about_numbers-big-text text-color-degrade">
+                      +
+                    </div>
+                    <div class="about_numbers-big-text text-color-degrade counterup">
+                      15
+                    </div>
+                  </div>
+                  <p class="text-letter">
+                    years of experience
                   </p>
                 </div>
-              </div>
-              <div id="w-node-a65200c8-44d6-e3f3-f7c1-1008778251be-674b733f" class="process_item-wrapper">
-                <div class="process_item">
-                  <div class="process_item-header">
-                    <img
-                      src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/src/assets/cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/648b5037d62691bca7126fd6_icon-beneficios-01.png"
-                      loading="lazy" alt="" class="process_item-icon" />
-                    <div class="process_item-header-title">
-                      <h3 class="heading-style-h4">
-                        Collaboration
-                      </h3>
+                <div class="about_numbers-item">
+                  <div class="about_numbers-text">
+                    <div class="about_numbers-big-text text-color-degrade">
+                      +
+                    </div>
+                    <div class="about_numbers-big-text text-color-degrade counterup">
+                      500
                     </div>
                   </div>
-                  <div class="process_item-info">
-                    <p>
-                      We believe in the power of collaboration, fostering unity, open communication, and mutual respect
-                      to achieve remarkable results together.
-                    </p>
-                  </div>
+                  <p class="text-letter">
+                    Projects Completed
+                  </p>
                 </div>
-                <div class="process_item">
-                  <div class="process_item-header">
-                    <img
-                      src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/src/assets/cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/648b50378407ac64de295048_icon-beneficios-02.png"
-                      loading="lazy" alt="" class="process_item-icon" />
-                    <div class="process_item-header-title">
-                      <h3 class="heading-style-h4">
-                        Innovation
-                      </h3>
+                <div class="about_numbers-item">
+                  <div class="about_numbers-text">
+                    <div class="about_numbers-big-text text-color-degrade">
+                      +
+                    </div>
+                    <div class="about_numbers-big-text text-color-degrade counterup">
+                      20
                     </div>
                   </div>
-                  <div class="process_item-info">
-                    <p>
-                      Embracing innovation, we encourage creativity, out-of-the-box thinking, and a passion for
-                      exploring new ideas that drive continuous improvement.
-                    </p>
-                  </div>
+                  <p class="text-letter">
+                    multidisciplinary experts
+                  </p>
                 </div>
-                <div class="process_item">
-                  <div class="process_item-header">
-                    <img
-                      src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/src/assets/cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/648b50363a8d0832b7ba7eaf_icon-beneficios-03.png"
-                      loading="lazy" alt="" class="process_item-icon" />
-                    <div class="process_item-header-title">
-                      <h3 class="heading-style-h4">
-                        Accountability
-                      </h3>
+                <div class="about_numbers-item">
+                  <div class="about_numbers-text">
+                    <div class="about_numbers-big-text text-color-degrade">
+                      +
+                    </div>
+                    <div class="about_numbers-big-text text-color-degrade counterup">
+                      90
+                    </div>
+                    <div class="about_numbers-big-text text-color-degrade">
+                      %
                     </div>
                   </div>
-                  <div class="process_item-info">
-                    <p>
-                      We value accountability, taking ownership of our work, meeting deadlines, and delivering
-                      exceptional results with pride and integrity.
-                    </p>
-                  </div>
+                  <p class="text-letter">
+                    Client Satisfaction Rate
+                  </p>
                 </div>
-                <div class="process_item">
-                  <div class="process_item-header">
-                    <img
-                      src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/src/assets/cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/64d1101fc51d93a95c8fdafc_icon-growth.svg"
-                      loading="lazy" alt="" class="process_item-icon" />
-                    <div class="process_item-header-title">
-                      <h3 class="heading-style-h4">
-                        Growth Mindset
-                      </h3>
+                <div class="about_numbers-item ">
+                  <div class="about_numbers-text">
+                    <div class="about_numbers-big-text text-color-degrade">
+                      +
+                    </div>
+                    <div class="about_numbers-big-text text-color-degrade counterup">
+                      30
                     </div>
                   </div>
-                  <div class="process_item-info">
-                    <p>
-                      We nurture a growth mindset, embracing challenges, learning from failures, and continuously
-                      developing our skills for personal and collective growth.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="about_numbers-wrapper">
-              <div class="about_numbers-item">
-                <div class="about_numbers-text">
-                  <div class="about_numbers-big-text text-color-degrade">
-                    +
-                  </div>
-                  <div class="about_numbers-big-text text-color-degrade counterup">
-                    15
-                  </div>
-                </div>
-                <p class="text-letter">
-                  years of experience
-                </p>
-              </div>
-              <div class="about_numbers-item">
-                <div class="about_numbers-text">
-                  <div class="about_numbers-big-text text-color-degrade">
-                    +
-                  </div>
-                  <div class="about_numbers-big-text text-color-degrade counterup">
-                    500
-                  </div>
-                </div>
-                <p class="text-letter">
-                  Projects Completed
-                </p>
-              </div>
-              <div class="about_numbers-item">
-                <div class="about_numbers-text">
-                  <div class="about_numbers-big-text text-color-degrade">
-                    +
-                  </div>
-                  <div class="about_numbers-big-text text-color-degrade counterup">
-                    20
-                  </div>
-                </div>
-                <p class="text-letter">
-                  multidisciplinary experts
-                </p>
-              </div>
-              <div class="about_numbers-item">
-                <div class="about_numbers-text">
-                  <div class="about_numbers-big-text text-color-degrade">
-                    +
-                  </div>
-                  <div class="about_numbers-big-text text-color-degrade counterup">
-                    90
-                  </div>
-                  <div class="about_numbers-big-text text-color-degrade">
-                    %
-                  </div>
-                </div>
-                <p class="text-letter">
-                  Client Satisfaction Rate
-                </p>
-              </div>
-              <div class="about_numbers-item hide-all">
-                <div class="about_numbers-text">
-                  <div class="about_numbers-big-text text-color-degrade">
-                    +
-                  </div>
-                  <div class="about_numbers-big-text text-color-degrade counterup">
-                    30
-                  </div>
-                </div>
-                <p class="text-letter">
-                  Mastered web design technologies
-                </p>
+                  <p class="text-letter">
+                    Mastered web design technologies
+                  </p>
+                </div> -->
+                <?php if ($we_love_what_we_do['numbers']): ?>
+                  <?php foreach ($we_love_what_we_do['numbers'] as $number): ?>
+                    <div class="about_numbers-item">
+                      <div class="about_numbers-text">
+                        <div class="about_numbers-big-text text-color-degrade">
+                          <?php echo $number['symbol']; ?>
+                        </div>
+                        <div class="about_numbers-big-text text-color-degrade counterup">
+                          <?php echo $number['number']; ?>
+                        </div>
+                        <?php if ($number['symbol_2']): ?>
+                          <div class="about_numbers-big-text text-color-degrade">
+                            <?php echo $number['symbol_2']; ?>
+                          </div>
+                        <?php endif; ?>
+                      </div>
+                      <p class="text-letter">
+                        <?php echo $number['text']; ?>
+                      </p>
+                    </div>
+                  <?php endforeach; endif; ?>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  <?php endif; ?>
   <div class="position">
     <div class="padding-global">
       <div class="container-large">
@@ -226,11 +265,14 @@ $status = get_field('status');
           <div class="position_wrapper">
             <div class="title-page_wrapper is-job">
               <div class="title-page_title is-center">
-                <h2 class="heading-style-h1 text-weight-medium">
-                  Remote
-                  <span class="text-color-degrade-light">
-                    positions
-                  </span>
+                <?php if ($remote_positions): ?>
+                  <h2 class="heading-style-h1 text-weight-medium">
+                    <?php echo $remote_positions['title_part_1']; ?>
+                    <span class="text-color-degrade-light">
+                      <?php echo $remote_positions['title_part_2']; ?>
+                    </span>
+                  </h2>
+                <?php endif; ?>
                 </h2>
                 <div class="circle-chek_component">
                   <img
@@ -255,7 +297,8 @@ $status = get_field('status');
                         <?php if (!empty($employment_types)):
                           foreach ($employment_types as $item): ?>
                             <option value="<?php echo esc_attr($item['name']); ?>" <?php selected($_GET['Job-Employment-type'] ?? '', $item['name']); ?>>
-                              <?php echo esc_html($item['name']); ?></option>
+                              <?php echo esc_html($item['name']); ?>
+                            </option>
                           <?php endforeach; endif; ?>
                       </select>
                     </div>
