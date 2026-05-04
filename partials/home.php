@@ -1,4 +1,9 @@
 ﻿<?php
+$banner = get_field('banner');
+$just_out = get_field('just_out');
+$digital_presence = get_field('digital_presence');
+$solutions_lab_content = get_field('solutions_lab_content');
+$digital_insights = get_field('digital_insights');
 $theme_uri = get_stylesheet_directory_uri();
 ob_start();
 ?>
@@ -67,25 +72,6 @@ ob_start();
       margin-left: auto !important;
     }
 
-    /* 
-Make the following elements inherit typography styles from the parent and not have hardcoded values. 
-Important: You will not be able to style for example "All Links" in Designer with this CSS applied.
-Uncomment this CSS to use it in the project. Leave this message for future hand-off.
-*/
-    /*
-a,
-.w-input,
-.w-select,
-.w-tab-link,
-.w-nav-link,
-.w-dropdown-btn,
-.w-dropdown-toggle,
-.w-dropdown-link {
-  color: inherit;
-  text-decoration: inherit;
-  font-size: inherit;
-}
-*/
     /* Apply "..." after 3 lines of text */
     .text-style-3lines {
       display: -webkit-box;
@@ -289,342 +275,330 @@ a,
   </style>
 </div>
 <main class="main-wrapper">
-  <div data-w-id="b9464cc7-fede-95b1-ba59-509d3c48c118" class="home-header_component">
-    <div data-w-id="1b682546-2eae-66a0-3831-369e4a96e6ae" class="home-header_carrusel">
-      <div data-w-id="88ef29c3-08f5-72fd-768f-ca3bf87d2d08" class="home-header_carrusel-move">
-        <div class="home-header_carrusel-wrapper"><img src="images/img-rezise-17.webp" loading="lazy"
-            alt="Custom web development" class="home-header_carrusel-item"><img src="images/img-rezise-19.webp"
-            loading="lazy" alt="" class="home-header_carrusel-item"><img src="images/img-rezise-16.webp" loading="lazy"
-            alt="" class="home-header_carrusel-item"><img src="images/img-rezise-14.webp" loading="lazy" alt=""
-            class="home-header_carrusel-item"><img src="images/img-rezise-08.webp" loading="lazy" alt=""
-            class="home-header_carrusel-item"><img src="images/img-rezise-15.webp" loading="lazy" alt=""
-            class="home-header_carrusel-item"><img src="images/img-rezise-02.webp" loading="lazy" alt=""
-            class="home-header_carrusel-item"><img src="images/img-rezise-04.webp" loading="lazy" alt=""
-            class="home-header_carrusel-item"><img src="images/img-rezise-12.webp" loading="lazy" alt=""
-            class="home-header_carrusel-item"><img src="images/img-rezise-07.webp" loading="lazy" alt=""
-            class="home-header_carrusel-item"><img src="images/img-rezise-12.webp" loading="lazy" alt=""
-            class="home-header_carrusel-item"><img src="images/img-rezise-03.webp" loading="lazy" alt=""
-            class="home-header_carrusel-item"><img src="images/img-rezise-01.webp" loading="lazy" alt=""
-            class="home-header_carrusel-item"><img src="images/img-rezise-18.webp" loading="lazy" alt=""
-            class="home-header_carrusel-item"><img src="images/img-rezise-09.webp" loading="lazy" alt=""
-            class="home-header_carrusel-item"><img src="images/img-rezise-13.webp" loading="lazy" alt=""
-            class="home-header_carrusel-item"><img src="images/img-rezise-10.webp" loading="lazy" alt=""
-            class="home-header_carrusel-item"><img src="images/img-rezise-05.webp" loading="lazy" alt=""
-            class="home-header_carrusel-item"></div>
+  <?php if ($banner): ?>
+    <div data-w-id="b9464cc7-fede-95b1-ba59-509d3c48c118" class="home-header_component">
+      <div data-w-id="1b682546-2eae-66a0-3831-369e4a96e6ae" class="home-header_carrusel">
+        <div data-w-id="88ef29c3-08f5-72fd-768f-ca3bf87d2d08" class="home-header_carrusel-move">
+          <div class="home-header_carrusel-wrapper"><img src="images/img-rezise-17.webp" loading="lazy"
+              alt="Custom web development" class="home-header_carrusel-item"><img src="images/img-rezise-19.webp"
+              loading="lazy" alt="" class="home-header_carrusel-item"><img src="images/img-rezise-16.webp" loading="lazy"
+              alt="" class="home-header_carrusel-item"><img src="images/img-rezise-14.webp" loading="lazy" alt=""
+              class="home-header_carrusel-item"><img src="images/img-rezise-08.webp" loading="lazy" alt=""
+              class="home-header_carrusel-item"><img src="images/img-rezise-15.webp" loading="lazy" alt=""
+              class="home-header_carrusel-item"><img src="images/img-rezise-02.webp" loading="lazy" alt=""
+              class="home-header_carrusel-item"><img src="images/img-rezise-04.webp" loading="lazy" alt=""
+              class="home-header_carrusel-item"><img src="images/img-rezise-12.webp" loading="lazy" alt=""
+              class="home-header_carrusel-item"><img src="images/img-rezise-07.webp" loading="lazy" alt=""
+              class="home-header_carrusel-item"><img src="images/img-rezise-12.webp" loading="lazy" alt=""
+              class="home-header_carrusel-item"><img src="images/img-rezise-03.webp" loading="lazy" alt=""
+              class="home-header_carrusel-item"><img src="images/img-rezise-01.webp" loading="lazy" alt=""
+              class="home-header_carrusel-item"><img src="images/img-rezise-18.webp" loading="lazy" alt=""
+              class="home-header_carrusel-item"><img src="images/img-rezise-09.webp" loading="lazy" alt=""
+              class="home-header_carrusel-item"><img src="images/img-rezise-13.webp" loading="lazy" alt=""
+              class="home-header_carrusel-item"><img src="images/img-rezise-10.webp" loading="lazy" alt=""
+              class="home-header_carrusel-item"><img src="images/img-rezise-05.webp" loading="lazy" alt=""
+              class="home-header_carrusel-item"></div>
+        </div>
       </div>
-    </div>
-    <div data-w-id="e8905133-aab2-c90f-5ff0-5651a5ae1b21" class="home-header_carrusel is-second-row">
-      <div class="home-header_carrusel-move">
-        <div class="home-header_carrusel-wrapper"><img src="images/img-rezise-05.webp" loading="lazy" alt=""
-            class="home-header_carrusel-item"><img src="images/img-rezise-10.webp" loading="lazy" alt=""
-            class="home-header_carrusel-item"><img src="images/img-rezise-13.webp" loading="lazy" alt=""
-            class="home-header_carrusel-item"><img src="images/img-rezise-09.webp" loading="lazy" alt=""
-            class="home-header_carrusel-item"><img src="images/img-rezise-18.webp" loading="lazy" alt=""
-            class="home-header_carrusel-item"><img src="images/img-rezise-01.webp" loading="lazy" alt=""
-            class="home-header_carrusel-item"><img src="images/img-rezise-03.webp" loading="lazy" alt=""
-            class="home-header_carrusel-item"><img src="images/img-rezise-12.webp" loading="lazy" alt=""
-            class="home-header_carrusel-item"><img src="images/img-rezise-07.webp" loading="lazy" alt=""
-            class="home-header_carrusel-item"><img src="images/img-rezise-12.webp" loading="lazy" alt=""
-            class="home-header_carrusel-item"><img src="images/img-rezise-04.webp" loading="lazy" alt=""
-            class="home-header_carrusel-item"><img src="images/img-rezise-02.webp" loading="lazy" alt=""
-            class="home-header_carrusel-item"><img src="images/img-rezise-15.webp" loading="lazy" alt=""
-            class="home-header_carrusel-item"><img src="images/img-rezise-08.webp" loading="lazy" alt=""
-            class="home-header_carrusel-item"><img src="images/img-rezise-14.webp" loading="lazy" alt=""
-            class="home-header_carrusel-item"><img src="images/img-rezise-16.webp" loading="lazy" alt=""
-            class="home-header_carrusel-item"><img src="images/img-rezise-19.webp" loading="lazy" alt=""
-            class="home-header_carrusel-item"><img src="images/img-rezise-17.webp" loading="lazy"
-            alt="Custom web development" class="home-header_carrusel-item"></div>
+      <div data-w-id="e8905133-aab2-c90f-5ff0-5651a5ae1b21" class="home-header_carrusel is-second-row">
+        <div class="home-header_carrusel-move">
+          <div class="home-header_carrusel-wrapper"><img src="images/img-rezise-05.webp" loading="lazy" alt=""
+              class="home-header_carrusel-item"><img src="images/img-rezise-10.webp" loading="lazy" alt=""
+              class="home-header_carrusel-item"><img src="images/img-rezise-13.webp" loading="lazy" alt=""
+              class="home-header_carrusel-item"><img src="images/img-rezise-09.webp" loading="lazy" alt=""
+              class="home-header_carrusel-item"><img src="images/img-rezise-18.webp" loading="lazy" alt=""
+              class="home-header_carrusel-item"><img src="images/img-rezise-01.webp" loading="lazy" alt=""
+              class="home-header_carrusel-item"><img src="images/img-rezise-03.webp" loading="lazy" alt=""
+              class="home-header_carrusel-item"><img src="images/img-rezise-12.webp" loading="lazy" alt=""
+              class="home-header_carrusel-item"><img src="images/img-rezise-07.webp" loading="lazy" alt=""
+              class="home-header_carrusel-item"><img src="images/img-rezise-12.webp" loading="lazy" alt=""
+              class="home-header_carrusel-item"><img src="images/img-rezise-04.webp" loading="lazy" alt=""
+              class="home-header_carrusel-item"><img src="images/img-rezise-02.webp" loading="lazy" alt=""
+              class="home-header_carrusel-item"><img src="images/img-rezise-15.webp" loading="lazy" alt=""
+              class="home-header_carrusel-item"><img src="images/img-rezise-08.webp" loading="lazy" alt=""
+              class="home-header_carrusel-item"><img src="images/img-rezise-14.webp" loading="lazy" alt=""
+              class="home-header_carrusel-item"><img src="images/img-rezise-16.webp" loading="lazy" alt=""
+              class="home-header_carrusel-item"><img src="images/img-rezise-19.webp" loading="lazy" alt=""
+              class="home-header_carrusel-item"><img src="images/img-rezise-17.webp" loading="lazy"
+              alt="Custom web development" class="home-header_carrusel-item"></div>
+        </div>
       </div>
-    </div>
-    <div data-w-id="fdbd29d8-daa0-1d20-3036-039df3690c19" class="home-header_carrusel hide-all">
-      <div class="home-header_carrusel-move">
-        <div class="home-header_carrusel-wrapper"><img src="images/item-carrusel-03.webp" loading="lazy" sizes="100vw"
-            srcset="images/item-carrusel-03-p-500.png 500w, images/item-carrusel-03-p-800.png 800w, images/item-carrusel-03.webp 1111w"
-            alt="" class="home-header_carrusel-item"><img src="images/item-carrusel-04.webp" loading="lazy"
-            sizes="100vw"
-            srcset="images/item-carrusel-04-p-500.png 500w, images/item-carrusel-04-p-800.png 800w, images/item-carrusel-04-p-1080.png 1080w, images/item-carrusel-04.webp 1111w"
-            alt="" class="home-header_carrusel-item"><img src="images/item-carrusel-02.webp" loading="lazy"
-            sizes="100vw"
-            srcset="images/item-carrusel-02-p-500.png 500w, images/item-carrusel-02-p-800.png 800w, images/item-carrusel-02.webp 1111w"
-            alt="" class="home-header_carrusel-item"><img src="images/item-carrusel-01.webp" loading="lazy"
-            sizes="100vw"
-            srcset="images/item-carrusel-01-p-500.png 500w, images/item-carrusel-01-p-800.png 800w, images/item-carrusel-01-p-1080.png 1080w, images/item-carrusel-01.webp 1111w"
-            alt="" class="home-header_carrusel-item"><img src="images/item-carrusel-05.webp" loading="lazy"
-            sizes="100vw"
-            srcset="images/item-carrusel-05-p-500.png 500w, images/item-carrusel-05-p-800.png 800w, images/item-carrusel-05-p-1080.png 1080w, images/item-carrusel-05.webp 1111w"
-            alt="" class="home-header_carrusel-item"><img src="images/item-carrusel-03.webp" loading="lazy"
-            sizes="100vw"
-            srcset="images/item-carrusel-03-p-500.png 500w, images/item-carrusel-03-p-800.png 800w, images/item-carrusel-03.webp 1111w"
-            alt="" class="home-header_carrusel-item"><img src="images/item-carrusel-04.webp" loading="lazy"
-            sizes="100vw"
-            srcset="images/item-carrusel-04-p-500.png 500w, images/item-carrusel-04-p-800.png 800w, images/item-carrusel-04-p-1080.png 1080w, images/item-carrusel-04.webp 1111w"
-            alt="" class="home-header_carrusel-item"><img src="images/item-carrusel-02.webp" loading="lazy"
-            sizes="100vw"
-            srcset="images/item-carrusel-02-p-500.png 500w, images/item-carrusel-02-p-800.png 800w, images/item-carrusel-02.webp 1111w"
-            alt="" class="home-header_carrusel-item"><img src="images/item-carrusel-01.webp" loading="lazy"
-            sizes="100vw"
-            srcset="images/item-carrusel-01-p-500.png 500w, images/item-carrusel-01-p-800.png 800w, images/item-carrusel-01-p-1080.png 1080w, images/item-carrusel-01.webp 1111w"
-            alt="" class="home-header_carrusel-item"><img src="images/item-carrusel-02.webp" loading="lazy"
-            sizes="100vw"
-            srcset="images/item-carrusel-02-p-500.png 500w, images/item-carrusel-02-p-800.png 800w, images/item-carrusel-02.webp 1111w"
-            alt="" class="home-header_carrusel-item"><img src="images/item-carrusel-05.webp" loading="lazy"
-            sizes="100vw"
-            srcset="images/item-carrusel-05-p-500.png 500w, images/item-carrusel-05-p-800.png 800w, images/item-carrusel-05-p-1080.png 1080w, images/item-carrusel-05.webp 1111w"
-            alt="" class="home-header_carrusel-item"><img src="images/item-carrusel-04.webp" loading="lazy"
-            sizes="100vw"
-            srcset="images/item-carrusel-04-p-500.png 500w, images/item-carrusel-04-p-800.png 800w, images/item-carrusel-04-p-1080.png 1080w, images/item-carrusel-04.webp 1111w"
-            alt="" class="home-header_carrusel-item"><img src="images/item-carrusel-01.webp" loading="lazy"
-            sizes="100vw"
-            srcset="images/item-carrusel-01-p-500.png 500w, images/item-carrusel-01-p-800.png 800w, images/item-carrusel-01-p-1080.png 1080w, images/item-carrusel-01.webp 1111w"
-            alt="" class="home-header_carrusel-item"><img src="images/item-carrusel-04.webp" loading="lazy"
-            sizes="100vw"
-            srcset="images/item-carrusel-04-p-500.png 500w, images/item-carrusel-04-p-800.png 800w, images/item-carrusel-04-p-1080.png 1080w, images/item-carrusel-04.webp 1111w"
-            alt="" class="home-header_carrusel-item"><img src="images/item-carrusel-02.webp" loading="lazy"
-            sizes="100vw"
-            srcset="images/item-carrusel-02-p-500.png 500w, images/item-carrusel-02-p-800.png 800w, images/item-carrusel-02.webp 1111w"
-            alt="" class="home-header_carrusel-item"><img src="images/item-carrusel-04.webp" loading="lazy"
-            sizes="100vw"
-            srcset="images/item-carrusel-04-p-500.png 500w, images/item-carrusel-04-p-800.png 800w, images/item-carrusel-04-p-1080.png 1080w, images/item-carrusel-04.webp 1111w"
-            alt="" class="home-header_carrusel-item"></div>
+      <div data-w-id="fdbd29d8-daa0-1d20-3036-039df3690c19" class="home-header_carrusel hide-all">
+        <div class="home-header_carrusel-move">
+          <div class="home-header_carrusel-wrapper"><img src="images/item-carrusel-03.webp" loading="lazy" sizes="100vw"
+              srcset="images/item-carrusel-03-p-500.png 500w, images/item-carrusel-03-p-800.png 800w, images/item-carrusel-03.webp 1111w"
+              alt="" class="home-header_carrusel-item"><img src="images/item-carrusel-04.webp" loading="lazy"
+              sizes="100vw"
+              srcset="images/item-carrusel-04-p-500.png 500w, images/item-carrusel-04-p-800.png 800w, images/item-carrusel-04-p-1080.png 1080w, images/item-carrusel-04.webp 1111w"
+              alt="" class="home-header_carrusel-item"><img src="images/item-carrusel-02.webp" loading="lazy"
+              sizes="100vw"
+              srcset="images/item-carrusel-02-p-500.png 500w, images/item-carrusel-02-p-800.png 800w, images/item-carrusel-02.webp 1111w"
+              alt="" class="home-header_carrusel-item"><img src="images/item-carrusel-01.webp" loading="lazy"
+              sizes="100vw"
+              srcset="images/item-carrusel-01-p-500.png 500w, images/item-carrusel-01-p-800.png 800w, images/item-carrusel-01-p-1080.png 1080w, images/item-carrusel-01.webp 1111w"
+              alt="" class="home-header_carrusel-item"><img src="images/item-carrusel-05.webp" loading="lazy"
+              sizes="100vw"
+              srcset="images/item-carrusel-05-p-500.png 500w, images/item-carrusel-05-p-800.png 800w, images/item-carrusel-05-p-1080.png 1080w, images/item-carrusel-05.webp 1111w"
+              alt="" class="home-header_carrusel-item"><img src="images/item-carrusel-03.webp" loading="lazy"
+              sizes="100vw"
+              srcset="images/item-carrusel-03-p-500.png 500w, images/item-carrusel-03-p-800.png 800w, images/item-carrusel-03.webp 1111w"
+              alt="" class="home-header_carrusel-item"><img src="images/item-carrusel-04.webp" loading="lazy"
+              sizes="100vw"
+              srcset="images/item-carrusel-04-p-500.png 500w, images/item-carrusel-04-p-800.png 800w, images/item-carrusel-04-p-1080.png 1080w, images/item-carrusel-04.webp 1111w"
+              alt="" class="home-header_carrusel-item"><img src="images/item-carrusel-02.webp" loading="lazy"
+              sizes="100vw"
+              srcset="images/item-carrusel-02-p-500.png 500w, images/item-carrusel-02-p-800.png 800w, images/item-carrusel-02.webp 1111w"
+              alt="" class="home-header_carrusel-item"><img src="images/item-carrusel-01.webp" loading="lazy"
+              sizes="100vw"
+              srcset="images/item-carrusel-01-p-500.png 500w, images/item-carrusel-01-p-800.png 800w, images/item-carrusel-01-p-1080.png 1080w, images/item-carrusel-01.webp 1111w"
+              alt="" class="home-header_carrusel-item"><img src="images/item-carrusel-02.webp" loading="lazy"
+              sizes="100vw"
+              srcset="images/item-carrusel-02-p-500.png 500w, images/item-carrusel-02-p-800.png 800w, images/item-carrusel-02.webp 1111w"
+              alt="" class="home-header_carrusel-item"><img src="images/item-carrusel-05.webp" loading="lazy"
+              sizes="100vw"
+              srcset="images/item-carrusel-05-p-500.png 500w, images/item-carrusel-05-p-800.png 800w, images/item-carrusel-05-p-1080.png 1080w, images/item-carrusel-05.webp 1111w"
+              alt="" class="home-header_carrusel-item"><img src="images/item-carrusel-04.webp" loading="lazy"
+              sizes="100vw"
+              srcset="images/item-carrusel-04-p-500.png 500w, images/item-carrusel-04-p-800.png 800w, images/item-carrusel-04-p-1080.png 1080w, images/item-carrusel-04.webp 1111w"
+              alt="" class="home-header_carrusel-item"><img src="images/item-carrusel-01.webp" loading="lazy"
+              sizes="100vw"
+              srcset="images/item-carrusel-01-p-500.png 500w, images/item-carrusel-01-p-800.png 800w, images/item-carrusel-01-p-1080.png 1080w, images/item-carrusel-01.webp 1111w"
+              alt="" class="home-header_carrusel-item"><img src="images/item-carrusel-04.webp" loading="lazy"
+              sizes="100vw"
+              srcset="images/item-carrusel-04-p-500.png 500w, images/item-carrusel-04-p-800.png 800w, images/item-carrusel-04-p-1080.png 1080w, images/item-carrusel-04.webp 1111w"
+              alt="" class="home-header_carrusel-item"><img src="images/item-carrusel-02.webp" loading="lazy"
+              sizes="100vw"
+              srcset="images/item-carrusel-02-p-500.png 500w, images/item-carrusel-02-p-800.png 800w, images/item-carrusel-02.webp 1111w"
+              alt="" class="home-header_carrusel-item"><img src="images/item-carrusel-04.webp" loading="lazy"
+              sizes="100vw"
+              srcset="images/item-carrusel-04-p-500.png 500w, images/item-carrusel-04-p-800.png 800w, images/item-carrusel-04-p-1080.png 1080w, images/item-carrusel-04.webp 1111w"
+              alt="" class="home-header_carrusel-item"></div>
+        </div>
       </div>
-    </div>
-    <div class="home-header_titles-wrapper">
-      <div data-w-id="5aa01402-6e72-9d36-9341-2cf147aed9fc" class="home-header_title-wrapper is-top-right">
-        <div class="home-header_title-style">Discover</div>
-        <div class="home-header_title-style is-absolute outline">Discover</div>
-        <div data-w-id="5aa01402-6e72-9d36-9341-2cf147aeda01" class="home-header_title-mask"></div>
-      </div>
-      <div data-w-id="32ee7e4f-4f59-cea6-b6b0-c216edb3373e" class="home-header_title-wrapper is-center">
-        <div class="home-header_title-style">implement</div>
-        <div class="home-header_title-mask is-color-green"></div>
-      </div>
-      <div class="home-header_title-wrapper is-bottom-right">
-        <div data-w-id="26e85ff7-7089-b870-3075-1123acaa59cf" class="home-header_title-style">and grow</div>
-        <div class="home-header_title-style is-absolute outline">and grow</div>
-        <div class="home-header_title-mask is-color-blue"></div>
-      </div>
-      <div class="home-header_devices-wrapper"><img src="images/img-devices-desktop.webp" loading="eager"
-          data-w-id="aa53bdc6-fb77-c663-4e45-eb69039d4cdc" sizes="(max-width: 1330px) 100vw, 1330px" alt=""
-          srcset="images/img-devices-desktop-p-500.png 500w, images/img-devices-desktop-p-800.png 800w, images/img-devices-desktop-p-1080.png 1080w, images/img-devices-desktop.webp 1330w"
-          class="home-header_device-laptop"><img src="images/img-devices-desktop.webp" loading="lazy"
-          data-w-id="1486544e-f80d-250c-fd4b-79b763465901" sizes="(max-width: 1330px) 100vw, 1330px" alt=""
-          srcset="images/img-devices-desktop-p-500.png 500w, images/img-devices-desktop-p-800.png 800w, images/img-devices-desktop-p-1080.png 1080w, images/img-devices-desktop.webp 1330w"
-          class="home-header_device-laptop-mobile"><img src="images/img-devices-tablet.webp" loading="eager"
-          data-w-id="ea58ec49-00f4-1ee7-8546-186181f580cc" sizes="(max-width: 1330px) 100vw, 1330px" alt=""
-          srcset="images/img-devices-tablet-p-500.png 500w, images/img-devices-tablet-p-800.png 800w, images/img-devices-tablet-p-1080.png 1080w, images/img-devices-tablet.webp 1330w"
-          class="home-header_device-tablet"><img src="images/img-devices-tablet.webp" loading="lazy"
-          data-w-id="c352b74c-9a75-a194-c48e-c815e247921e" sizes="(max-width: 1330px) 100vw, 1330px" alt=""
-          srcset="images/img-devices-tablet-p-500.png 500w, images/img-devices-tablet-p-800.png 800w, images/img-devices-tablet-p-1080.png 1080w, images/img-devices-tablet.webp 1330w"
-          class="home-header_device-tablet-mobile"><img src="images/mobile-2-vf-2.webp" loading="eager"
-          data-w-id="e62cc2be-cb9d-fa43-c67b-bcc77015dce6" sizes="(max-width: 1330px) 100vw, 1330px" alt=""
-          srcset="images/mobile-2-vf-2-p-500.png 500w, images/mobile-2-vf-2-p-800.png 800w, images/mobile-2-vf-2-p-1080.png 1080w, images/mobile-2-vf-2.webp 1330w"
-          class="home-header_device-mobile"><img src="images/mobile-2-vf-2.webp" loading="lazy"
-          data-w-id="3b71c6f3-8d1c-e64d-04e3-eff4b2365376" sizes="(max-width: 1330px) 100vw, 1330px" alt=""
-          srcset="images/mobile-2-vf-2-p-500.png 500w, images/mobile-2-vf-2-p-800.png 800w, images/mobile-2-vf-2-p-1080.png 1080w, images/mobile-2-vf-2.webp 1330w"
-          class="home-header_device-mobile-mobile"><img src="images/imac-vf-apros.webp"
-          srcset="images/imac-vf-apros-p-500.png 500w, images/imac-vf-apros-p-800.png 800w, images/imac-vf-apros.webp 1330w"
-          data-w-id="8632f031-88be-2d03-d3e6-67b829c7d421" sizes="(max-width: 1330px) 100vw, 1330px" alt=""
-          class="home-header_device-imac"><img src="images/imac-vf-apros.webp" loading="eager"
-          data-w-id="ff92fefb-8e4e-2429-0765-b5aa36dbe8b2" sizes="(max-width: 1330px) 100vw, 1330px" alt=""
-          srcset="images/imac-vf-apros-p-500.png 500w, images/imac-vf-apros-p-800.png 800w, images/imac-vf-apros.webp 1330w"
-          class="home-header_device-imac-mobile"></div>
-    </div>
-    <div class="home-header_titles-wrapper show-dekstop-only">
-      <div class="home-header_title-wrapper is-top-right">
-        <div class="home-header_title-style outline">Discover</div>
-        <div class="home-header_title-mask"></div>
-      </div>
-      <div class="home-header_title-wrapper is-center">
-        <div class="home-header_title-style outline">implement</div>
-        <div class="home-header_title-mask is-color-green"></div>
-      </div>
-      <div class="home-header_title-wrapper is-bottom-right">
-        <div class="home-header_title-style outline">and grow</div>
-        <div class="home-header_title-mask is-color-blue"></div>
-      </div>
-    </div>
-  </div>
-  <div id="work" class="recent-work_component">
-    <div class="container-large">
-      <div class="padding-top padding-xhuge"></div>
-      <div class="recent-work_wrapper">
-        <div class="padding-global">
-          <div class="title-section_component">
-            <div class="title-section_content">
-              <h2>Just <span class="text-color-degrade-light">Out</span></h2>
-            </div>
-            <div class="circle-chek_component"><img src="images/text-circle-vf.svg" loading="lazy" alt=""
-                class="circle-chek_text-circle-img"><img src="images/check-circle-3.svg" loading="lazy" alt=""
-                class="circle-chek_img-check"></div>
+
+      <div class="home-header_titles-wrapper">
+        <div data-w-id="5aa01402-6e72-9d36-9341-2cf147aed9fc" class="home-header_title-wrapper is-top-right">
+          <div class="home-header_title-style"><?php echo $banner['word_1']; ?></div>
+          <div class="home-header_title-style is-absolute outline"><?php echo $banner['word_1']; ?></div>
+          <div data-w-id="5aa01402-6e72-9d36-9341-2cf147aeda01" class="home-header_title-mask"></div>
+        </div>
+        <div data-w-id="32ee7e4f-4f59-cea6-b6b0-c216edb3373e" class="home-header_title-wrapper is-center">
+          <div class="home-header_title-style"><?php echo $banner['word_2']; ?></div>
+          <div class="home-header_title-mask is-color-green"></div>
+        </div>
+        <div class="home-header_title-wrapper is-bottom-right">
+          <div data-w-id="26e85ff7-7089-b870-3075-1123acaa59cf" class="home-header_title-style">
+            <?php echo $banner['word_3']; ?>
           </div>
-          <div class="max-width-large">
-            <p class="text-size-medium">Explore our ready-to-use products and custom software development services.</p>
+          <div class="home-header_title-style is-absolute outline"><?php echo $banner['word_3']; ?></div>
+          <div class="home-header_title-mask is-color-blue"></div>
+        </div>
+        <div class="home-header_devices-wrapper"><img src="images/img-devices-desktop.webp" loading="eager"
+            data-w-id="aa53bdc6-fb77-c663-4e45-eb69039d4cdc" sizes="(max-width: 1330px) 100vw, 1330px" alt=""
+            srcset="images/img-devices-desktop-p-500.png 500w, images/img-devices-desktop-p-800.png 800w, images/img-devices-desktop-p-1080.png 1080w, images/img-devices-desktop.webp 1330w"
+            class="home-header_device-laptop"><img src="images/img-devices-desktop.webp" loading="lazy"
+            data-w-id="1486544e-f80d-250c-fd4b-79b763465901" sizes="(max-width: 1330px) 100vw, 1330px" alt=""
+            srcset="images/img-devices-desktop-p-500.png 500w, images/img-devices-desktop-p-800.png 800w, images/img-devices-desktop-p-1080.png 1080w, images/img-devices-desktop.webp 1330w"
+            class="home-header_device-laptop-mobile"><img src="images/img-devices-tablet.webp" loading="eager"
+            data-w-id="ea58ec49-00f4-1ee7-8546-186181f580cc" sizes="(max-width: 1330px) 100vw, 1330px" alt=""
+            srcset="images/img-devices-tablet-p-500.png 500w, images/img-devices-tablet-p-800.png 800w, images/img-devices-tablet-p-1080.png 1080w, images/img-devices-tablet.webp 1330w"
+            class="home-header_device-tablet"><img src="images/img-devices-tablet.webp" loading="lazy"
+            data-w-id="c352b74c-9a75-a194-c48e-c815e247921e" sizes="(max-width: 1330px) 100vw, 1330px" alt=""
+            srcset="images/img-devices-tablet-p-500.png 500w, images/img-devices-tablet-p-800.png 800w, images/img-devices-tablet-p-1080.png 1080w, images/img-devices-tablet.webp 1330w"
+            class="home-header_device-tablet-mobile"><img src="images/mobile-2-vf-2.webp" loading="eager"
+            data-w-id="e62cc2be-cb9d-fa43-c67b-bcc77015dce6" sizes="(max-width: 1330px) 100vw, 1330px" alt=""
+            srcset="images/mobile-2-vf-2-p-500.png 500w, images/mobile-2-vf-2-p-800.png 800w, images/mobile-2-vf-2-p-1080.png 1080w, images/mobile-2-vf-2.webp 1330w"
+            class="home-header_device-mobile"><img src="images/mobile-2-vf-2.webp" loading="lazy"
+            data-w-id="3b71c6f3-8d1c-e64d-04e3-eff4b2365376" sizes="(max-width: 1330px) 100vw, 1330px" alt=""
+            srcset="images/mobile-2-vf-2-p-500.png 500w, images/mobile-2-vf-2-p-800.png 800w, images/mobile-2-vf-2-p-1080.png 1080w, images/mobile-2-vf-2.webp 1330w"
+            class="home-header_device-mobile-mobile"><img src="images/imac-vf-apros.webp"
+            srcset="images/imac-vf-apros-p-500.png 500w, images/imac-vf-apros-p-800.png 800w, images/imac-vf-apros.webp 1330w"
+            data-w-id="8632f031-88be-2d03-d3e6-67b829c7d421" sizes="(max-width: 1330px) 100vw, 1330px" alt=""
+            class="home-header_device-imac"><img src="images/imac-vf-apros.webp" loading="eager"
+            data-w-id="ff92fefb-8e4e-2429-0765-b5aa36dbe8b2" sizes="(max-width: 1330px) 100vw, 1330px" alt=""
+            srcset="images/imac-vf-apros-p-500.png 500w, images/imac-vf-apros-p-800.png 800w, images/imac-vf-apros.webp 1330w"
+            class="home-header_device-imac-mobile"></div>
+      </div>
+
+      <div class="home-header_titles-wrapper show-dekstop-only">
+        <div class="home-header_title-wrapper is-top-right">
+          <div class="home-header_title-style outline"><?php echo $banner['word_1']; ?></div>
+          <div class="home-header_title-mask"></div>
+        </div>
+        <div class="home-header_title-wrapper is-center">
+          <div class="home-header_title-style outline"><?php echo $banner['word_2']; ?></div>
+          <div class="home-header_title-mask is-color-green"></div>
+        </div>
+        <div class="home-header_title-wrapper is-bottom-right">
+          <div class="home-header_title-style outline">
+            <?php echo $banner['word_3']; ?>
           </div>
+          <div class="home-header_title-mask is-color-blue"></div>
         </div>
       </div>
     </div>
-    <div class="recent-work_slider-wrapper">
-      <div class="padding-section-medium">
-        <div data-delay="2500" data-animation="slide" class="recent-work_slider w-slider" data-autoplay="true"
-          data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0"
-          data-nav-spacing="15" data-duration="500" data-infinite="true" fs-cmsslider-element="slider">
-          <div class="recent-work_mask w-slider-mask">
-            <div class="recent-work_slide w-slide"></div>
-          </div>
-          <div class="recent-work_arrow w-slider-arrow-left"><img src="images/apros-left.svg" loading="lazy" alt=""
-              class="recent-work_arrow-icon"></div>
-          <div class="recent-work_arrow is-right w-slider-arrow-right"><img src="images/icon-btn.svg" loading="lazy"
-              alt="" class="recent-work_arrow-icon"></div>
-          <div class="recent-work_nav w-slider-nav w-round"></div>
-        </div>
-        <div class="w-dyn-list">
-          <div fs-cmsslider-element="list" role="list" class="recent-work_main-grid w-dyn-items">
-            <?php
-            $solutions_query = new WP_Query([
-              'post_type' => 'solution',
-              'post_status' => 'publish',
-              'posts_per_page' => 6,
-            ]);
-            ?>
-            <?php if ($solutions_query->have_posts()): ?>
-              <?php while ($solutions_query->have_posts()):
-                $solutions_query->the_post(); ?>
-                <div role="listitem" class="w-dyn-item">
-                  <div data-w-id="a0126b2e-7c71-6dcf-6287-589d86511c92" class="recent-work_item">
-                    <a href="<?php echo esc_url(get_permalink()); ?>" class="recent-work_item-cover w-inline-block">
-                      <?php if (has_post_thumbnail()): ?>
-                        <?php the_post_thumbnail('large', ['class' => 'recent-work_item-cover-img']); ?>
-                      <?php else: ?>
-                        <img loading="lazy" alt="<?php echo esc_attr(get_the_title()); ?>"
-                          src="<?php echo esc_url($theme_uri . '/src/images/cover-img.png'); ?>"
-                          class="recent-work_item-cover-img">
-                      <?php endif; ?>
-                    </a>
-                    <div class="recent-work_item-content">
-                      <a href="<?php echo esc_url(get_permalink()); ?>" class="recent-work_item-title w-inline-block">
-                        <h3><?php the_title(); ?></h3>
-                      </a>
-                      <div class="recent-work_item-info">
-                        <p class="text-color-grey"><?php echo esc_html(get_the_excerpt()); ?></p>
-                      </div>
-                      <div class="recent-work_item-content-btn">
-                        <a href="<?php echo esc_url(get_permalink()); ?>" class="button is-secondary w-inline-block">
-                          <div>View solution</div><img src="images/icon-btn.svg" loading="lazy" alt=""
-                            class="icon-1x1-small">
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              <?php endwhile; ?>
-            <?php else: ?>
-              <div class="w-dyn-empty">
-                <div>No items found.</div>
-              </div>
-            <?php endif; ?>
-            <?php wp_reset_postdata(); ?>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="recent-work_btn">
-      <a href="https://apros.pe/en/proyectos/" class="button w-inline-block btnStyle">
-        <div>View more</div><img src="images/icon-btn.svg" loading="lazy" alt="" class="icon-1x1-small">
-      </a>
-    </div>
-  </div>
-  <div class="about_component">
-    <div class="padding-global">
+  <?php endif; ?>
+  <?php if ($just_out): ?>
+    <div id="work" class="recent-work_component">
       <div class="container-large">
-        <div class="padding-section-small">
-          <div class="about_wrapper">
-            <div class="about_numbers-wrapper">
-              <div class="about_numbers-item">
-                <div class="about_numbers-text">
-                  <div class="about_numbers-big-text text-color-degrade">%</div>
-                  <div class="about_numbers-big-text text-color-degrade counterup">100</div>
-                </div>
-                <p class="text-letter">CUSTOM SOLUTIONS</p>
+        <div class="padding-top padding-xhuge"></div>
+        <div class="recent-work_wrapper">
+          <div class="padding-global">
+            <div class="title-section_component">
+              <div class="title-section_content">
+                <h2><?php echo $just_out['title_part_1']; ?><span
+                    class="text-color-degrade-light"><?php echo $just_out['title_part_2']; ?></span></h2>
               </div>
-              <div class="about_numbers-item">
-                <div class="about_numbers-text">
-                  <div class="about_numbers-big-text text-color-degrade">+</div>
-                  <div class="about_numbers-big-text text-color-degrade counterup">2 </div>
-                  <div class="about_numbers-big-text text-color-degrade">M</div>
-                </div>
-                <p class="text-letter">USERS <strong>ReaCHED</strong></p>
-              </div>
-              <div class="about_numbers-item">
-                <div class="about_numbers-text">
-                  <div class="about_numbers-big-text text-color-degrade">+</div>
-                  <div class="about_numbers-big-text text-color-degrade counterup">30</div>
-                </div>
-                <p class="text-letter">INDUSTRIES SERVED</p>
-              </div>
-              <div class="about_numbers-item">
-                <div class="about_numbers-text">
-                  <div class="about_numbers-big-text text-color-degrade"></div>
-                  <div class="about_numbers-big-text text-color-degrade counterup">24</div>
-                  <div class="about_numbers-big-text text-color-degrade">hrs</div>
-                </div>
-                <p class="text-letter">SUPPORT COVERAGE<br></p>
-              </div>
-              <div class="about_numbers-item hide-all">
-                <div class="about_numbers-text">
-                  <div class="about_numbers-big-text text-color-degrade">+</div>
-                  <div class="about_numbers-big-text text-color-degrade counterup">30</div>
-                </div>
-                <p class="text-letter">Mastered web design technologies</p>
-              </div>
-            </div>
-            <div class="about_top">
               <div class="circle-chek_component"><img src="images/text-circle-vf.svg" loading="lazy" alt=""
                   class="circle-chek_text-circle-img"><img src="images/check-circle-3.svg" loading="lazy" alt=""
                   class="circle-chek_img-check"></div>
-              <h2 class="heading-style-h3">Ready for a <span class="text-color-degrade-light">digital</span> presence
-                across<span class="text-color-degrade-light">LATAM and THE USA since 2011.</span></h2>
             </div>
-            <div class="about_story"><img src="images/gif-apros-slow.gif" loading="lazy" width="Auto"
-                id="w-node-_65166f0a-19af-2dcf-8cd7-8668d8e4bdc1-d8e4bdb1" alt="" class="about_story-img is-home">
-              <div id="w-node-_65166f0a-19af-2dcf-8cd7-8668d8e4bdc2-d8e4bdb1" class="about_story-content">
-                <p class="text-size-medium">At Apros Global, we have a proven track record of supporting businesses in
-                  achieving their digital goals.<br>‍<br>Since 2011, we have collaborated with various industries across
-                  LATAM and the USA, driven by our purpose of making our clients&#x27; digital presence memorable. We
-                  specialize in creating impactful software products and digital solutions that connect people in more
-                  meaningful ways through technology.</p>
-                <a href="about-us.html" class="button w-inline-block btnStyle">
-                  <div>More about us</div><img src="images/icon-btn.svg" loading="lazy" alt="" class="icon-1x1-small">
-                </a>
-              </div><img src="images/pointer-green-small.webp" loading="lazy"
-                id="w-node-_65166f0a-19af-2dcf-8cd7-8668d8e4bdc9-d8e4bdb1" alt="" class="about_story-pointer-left"><img
-                src="images/pointer-blue-medium.webp" loading="lazy"
-                id="w-node-_65166f0a-19af-2dcf-8cd7-8668d8e4bdca-d8e4bdb1" alt="" class="about_story-pointer-right">
+            <div class="max-width-large">
+              <p class="text-size-medium">Explore our ready-to-use products and custom software development services.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="recent-work_slider-wrapper">
+        <div class="padding-section-medium">
+          <div data-delay="2500" data-animation="slide" class="recent-work_slider w-slider" data-autoplay="true"
+            data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0"
+            data-nav-spacing="15" data-duration="500" data-infinite="true" fs-cmsslider-element="slider">
+            <div class="recent-work_mask w-slider-mask">
+              <div class="recent-work_slide w-slide"></div>
+            </div>
+            <div class="recent-work_arrow w-slider-arrow-left"><img src="images/apros-left.svg" loading="lazy" alt=""
+                class="recent-work_arrow-icon"></div>
+            <div class="recent-work_arrow is-right w-slider-arrow-right"><img src="images/icon-btn.svg" loading="lazy"
+                alt="" class="recent-work_arrow-icon"></div>
+            <div class="recent-work_nav w-slider-nav w-round"></div>
+          </div>
+          <div class="w-dyn-list">
+            <div fs-cmsslider-element="list" role="list" class="recent-work_main-grid w-dyn-items">
+              <?php
+              $solutions_query = new WP_Query([
+                'post_type' => 'solution',
+                'post_status' => 'publish',
+                'posts_per_page' => 6,
+              ]);
+              ?>
+              <?php if ($solutions_query->have_posts()): ?>
+                <?php while ($solutions_query->have_posts()):
+                  $solutions_query->the_post(); ?>
+                  <div role="listitem" class="w-dyn-item">
+                    <div data-w-id="a0126b2e-7c71-6dcf-6287-589d86511c92" class="recent-work_item">
+                      <a href="<?php echo esc_url(get_permalink()); ?>" class="recent-work_item-cover w-inline-block">
+                        <?php if (has_post_thumbnail()): ?>
+                          <?php the_post_thumbnail('large', ['class' => 'recent-work_item-cover-img']); ?>
+                        <?php else: ?>
+                          <img loading="lazy" alt="<?php echo esc_attr(get_the_title()); ?>"
+                            src="<?php echo esc_url($theme_uri . '/src/images/cover-img.png'); ?>"
+                            class="recent-work_item-cover-img">
+                        <?php endif; ?>
+                      </a>
+                      <div class="recent-work_item-content">
+                        <a href="<?php echo esc_url(get_permalink()); ?>" class="recent-work_item-title w-inline-block">
+                          <h3><?php the_title(); ?></h3>
+                        </a>
+                        <div class="recent-work_item-info">
+                          <p class="text-color-grey"><?php echo esc_html(get_the_excerpt()); ?></p>
+                        </div>
+                        <div class="recent-work_item-content-btn">
+                          <a href="<?php echo esc_url(get_permalink()); ?>" class="button is-secondary w-inline-block">
+                            <div>View solution</div><img src="images/icon-btn.svg" loading="lazy" alt=""
+                              class="icon-1x1-small">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <?php endwhile; ?>
+              <?php else: ?>
+                <div class="w-dyn-empty">
+                  <div>No items found.</div>
+                </div>
+              <?php endif; ?>
+              <?php wp_reset_postdata(); ?>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="recent-work_btn">
+        <a href="https://apros.pe/en/proyectos/" class="button w-inline-block btnStyle">
+          <div>View more</div><img src="images/icon-btn.svg" loading="lazy" alt="" class="icon-1x1-small">
+        </a>
+      </div>
+    </div>
+    <div class="about_component">
+      <div class="padding-global">
+        <div class="container-large">
+          <div class="padding-section-small">
+            <div class="about_wrapper">
+              <div class="about_numbers-wrapper">
+                <?php if ($just_out['values']):
+                  foreach ($just_out['values'] as $value): ?>
+                    <div class="about_numbers-item">
+                      <div class="about_numbers-text">
+                        <div class="about_numbers-big-text text-color-degrade"><?php echo $value['prefix']; ?></div>
+                        <div class="about_numbers-big-text text-color-degrade counterup"><?php echo $value['number']; ?></div>
+                        <div class="about_numbers-big-text text-color-degrade"><?php echo $value['subfix']; ?></div>
+                      </div>
+                      <p class="text-letter">><?php echo $value['text']; ?></p>
+                    </div>
+                  <?php endforeach; endif; ?>
+              </div>
+              <?php if ($digital_presence): ?>
+                <div class="about_top">
+                  <div class="circle-chek_component"><img src="images/text-circle-vf.svg" loading="lazy" alt=""
+                      class="circle-chek_text-circle-img"><img src="images/check-circle-3.svg" loading="lazy" alt=""
+                      class="circle-chek_img-check"></div>
+                  <h2 class="heading-style-h3"><?php echo $digital_presence['title']; ?></h2>
+                </div>
+                <div class="about_story"><img src="images/gif-apros-slow.gif" loading="lazy" width="Auto"
+                    id="w-node-_65166f0a-19af-2dcf-8cd7-8668d8e4bdc1-d8e4bdb1" alt="" class="about_story-img is-home">
+                  <div id="w-node-_65166f0a-19af-2dcf-8cd7-8668d8e4bdc2-d8e4bdb1" class="about_story-content">
+                    <?php echo $digital_presence['paragraph']; ?>
+                    <a href="about-us.html" class="button w-inline-block btnStyle">
+                      <div>More about us</div><img src="images/icon-btn.svg" loading="lazy" alt="" class="icon-1x1-small">
+                    </a>
+                  </div><img src="images/pointer-green-small.webp" loading="lazy"
+                    id="w-node-_65166f0a-19af-2dcf-8cd7-8668d8e4bdc9-d8e4bdb1" alt="" class="about_story-pointer-left"><img
+                    src="images/pointer-blue-medium.webp" loading="lazy"
+                    id="w-node-_65166f0a-19af-2dcf-8cd7-8668d8e4bdca-d8e4bdb1" alt="" class="about_story-pointer-right">
+                </div>
+              <?php endif; ?>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  <?php endif; ?>
   <div id="we-do" class="what-we-do_component">
     <div class="padding-global">
       <div class="container-large">
         <div class="padding-section-large">
           <div class="what-we-do_wrapper">
-            <div id="w-node-_7cebf91b-91fb-592e-f20e-b631743c1829-743c1824" class="what-we-do_info-left">
-              <div class="title-section_component flex-vertical">
-                <div class="title-section_content">
-                  <h2>Solutions<span class="text-color-degrade-light"> lab</span></h2>
+            <?php if ($solutions_lab_content): ?>
+              <div id="w-node-_7cebf91b-91fb-592e-f20e-b631743c1829-743c1824" class="what-we-do_info-left">
+                <div class="title-section_component flex-vertical">
+                  <div class="title-section_content">
+                    <h2 class="text-nowrap"><?php echo $solutions_lab_content['title_part_1'] ?><span
+                        class="text-color-degrade-light">
+                        <?php echo $solutions_lab_content['title_part_2'] ?></span></h2>
+                  </div>
+                  <p class="text-size-medium">
+                    <?php echo $solutions_lab_content['description'] ?>
+                  </p>
                 </div>
-                <p class="text-size-medium">Our process for delivering proven digital solutions</p>
+                <div class="what-we-do_circle-wrapper">
+                  <div class="circle-chek_component is-center"><img src="images/text-circle-vf.svg" loading="lazy" alt=""
+                      class="circle-chek_text-circle-img"><img src="images/check-circle-3.svg" loading="lazy" alt=""
+                      class="circle-chek_img-check"></div><img src="images/w-wedo-grid-vf.webp" loading="lazy"
+                    sizes="100vw" srcset="images/w-wedo-grid-vf-p-500.png 500w, images/w-wedo-grid-vf.webp 716w" alt=""
+                    class="what-we-do_img-grid">
+                </div>
               </div>
-              <div class="what-we-do_circle-wrapper">
-                <div class="circle-chek_component is-center"><img src="images/text-circle-vf.svg" loading="lazy" alt=""
-                    class="circle-chek_text-circle-img"><img src="images/check-circle-3.svg" loading="lazy" alt=""
-                    class="circle-chek_img-check"></div><img src="images/w-wedo-grid-vf.webp" loading="lazy"
-                  sizes="100vw" srcset="images/w-wedo-grid-vf-p-500.png 500w, images/w-wedo-grid-vf.webp 716w" alt=""
-                  class="what-we-do_img-grid">
-              </div>
-            </div>
+            <?php endif; ?>
             <div class="cta_component">
               <?php
               $solutions_lab_rows = get_field('solutions_lab');
@@ -804,14 +778,15 @@ Change the color of the text here, instead of on Webflow for this to work */
         <div class="padding-section-large">
           <div class="blog_wrapper">
             <div class="title-section_component">
-              <div class="title-section_content is-2-col">
-                <h2>Digital <span class="text-color-degrade-light">Insights</span></h2>
-                <div class="max-width-large">
-                  <p class="text-size-medium">Stay up-to-date with the latest in cybersecurity, digital marketing, SEO,
-                    conversion rate optimization, web design practices, AI in business, and more with our informative
-                    blog</p>
+              <?php if ($digital_insights): ?>
+                <div class="title-section_content is-2-col">
+                  <h2><?php echo $digital_insights['title_part_1'] ?> <span
+                      class="text-color-degrade-light"><?php echo $digital_insights['title_part_2'] ?></span></h2>
+                  <div class="max-width-large">
+                    <p class="text-size-medium"><?php echo $digital_insights['description'] ?></p>
+                  </div>
                 </div>
-              </div>
+              <?php endif; ?>
             </div>
             <div data-delay="4000" data-animation="slide" class="blog_slider w-slider" data-autoplay="false"
               data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0"
