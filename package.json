@@ -74,6 +74,7 @@
     "dist/**/*",
     "src/assets/**/*",
     "src/images/**/*",
+    "src/fonts/**/*",
     "src/scripts/**/*",
     "partials/**/*",
     "public/**/*",
