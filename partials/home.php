@@ -1147,13 +1147,13 @@ Change the color of the text here, instead of on Webflow for this to work */
           <div class="start-project_contact">
             <div class="heading-style-h4 text-color-degrade-light">Start a conversation</div>
             <div class="start-project_contact-btn">
-              <a href="mailto:hello@apros.global?subject=Start%20a%20conversation"
+              <a href="mailto:hello@apros.pe?subject=Start%20a%20conversation"
                 class="button is-secondary is-large w-inline-block">
-                <div class="text-size-medium">hello@apros.global</div><img src="images/icon-btn.svg" loading="lazy"
-                  alt="" class="icon-1x1-small">
+                <div class="text-size-medium">hello@apros.pe</div><img src="images/icon-btn.svg" loading="lazy" alt=""
+                  class="icon-1x1-small">
               </a>
-              <a href="https://wa.me/message/YI4NHTF5YXGOA1" target="_blank"
-                class="button is-secondary is-large w-inline-block">
+              <a href="https://api.whatsapp.com/send/?phone=51906459245&text=Hola%2C+tengo+una+consulta+sobre+los+servicios+que+ofrecen.&type=phone_number&app_absent=0"
+                target="_blank" class="button is-secondary is-large w-inline-block">
                 <div class="text-size-medium">Whatsapp</div><img src="images/icon-btn.svg" loading="lazy" alt=""
                   class="icon-1x1-small">
               </a>

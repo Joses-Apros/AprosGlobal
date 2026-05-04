@@ -1,174 +1,371 @@
 <!DOCTYPE html>
 <!-- Last Published: Fri May 02 2025 16:13:51 GMT+0000 (Coordinated Universal Time) -->
-<html
-  data-wf-domain="apros.webflow.io"
-  data-wf-page="65b4453c9e0f05c6674b732d"
-  data-wf-site="634ecebdb4ffd446e52e6f19"
->
-  <head>
-    <meta charset="utf-8" />
-    <link
-      href="https://cdn.prod.website-files.com"
-      rel="preconnect"
-      crossorigin="anonymous"
-    />
-    <title>About us</title>
-    <meta content="About us" property="og:title" />
-    <meta content="About us" property="twitter:title" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <link
-      href="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/css/apros.webflow.shared.5d0444e5c.min.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script type="text/javascript">
-      !(function (o, c) {
-        var n = c.documentElement,
-          t = " w-mod-";
-        ((n.className += t + "js"),
-          ("ontouchstart" in o ||
-            (o.DocumentTouch && c instanceof DocumentTouch)) &&
-            (n.className += t + "touch"));
-      })(window, document);
-    </script>
-    <link
-      href="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/634ed29e47a8e619784d1f34_apros-favi-32.png"
-      rel="shortcut icon"
-      type="image/x-icon"
-    />
-    <link
-      href="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/634ed2a115b6f085e15025c8_apros-favi-256.png"
-      rel="apple-touch-icon"
-    />
-    <link href="https://apros.global/about-us" rel="canonical" />
-    <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-KQZCF6N");
-    </script>
-    <!-- End Google Tag Manager -->
-    <style>
+<html data-wf-domain="apros.webflow.io" data-wf-page="65b4453c9e0f05c6674b732d" data-wf-site="634ecebdb4ffd446e52e6f19">
+
+<head>
+  <meta charset="utf-8" />
+  <link href="https://cdn.prod.website-files.com" rel="preconnect" crossorigin="anonymous" />
+  <title>About us</title>
+  <meta content="About us" property="og:title" />
+  <meta content="About us" property="twitter:title" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <link href="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/css/apros.webflow.shared.5d0444e5c.min.css"
+    rel="stylesheet" type="text/css" />
+  <script type="text/javascript">
+    !(function (o, c) {
+      var n = c.documentElement,
+        t = " w-mod-";
+      ((n.className += t + "js"),
+        ("ontouchstart" in o ||
+          (o.DocumentTouch && c instanceof DocumentTouch)) &&
+        (n.className += t + "touch"));
+    })(window, document);
+  </script>
+  <link href="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/634ed29e47a8e619784d1f34_apros-favi-32.png"
+    rel="shortcut icon" type="image/x-icon" />
+  <link href="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/634ed2a115b6f085e15025c8_apros-favi-256.png"
+    rel="apple-touch-icon" />
+  <link href="https://apros.global/about-us" rel="canonical" />
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != "dataLayer" ? "&l=" + l : "";
+      j.async = true;
+      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "GTM-KQZCF6N");
+  </script>
+  <!-- End Google Tag Manager -->
+  <style>
+    html {
+      font-size: calc(0.625rem + 0.41666666666666663vw);
+    }
+
+    @media screen and (max-width: 1920px) {
       html {
-        font-size: calc(0.625rem + 0.41666666666666663vw);
+        font-size: calc(0.625rem + 0.41666666666666674vw);
       }
-      @media screen and (max-width: 1920px) {
-        html {
-          font-size: calc(0.625rem + 0.41666666666666674vw);
-        }
+    }
+
+    @media screen and (max-width: 1440px) {
+      html {
+        font-size: calc(0.6876951092611863rem + 0.20811654526534862vw);
       }
-      @media screen and (max-width: 1440px) {
-        html {
-          font-size: calc(0.6876951092611863rem + 0.20811654526534862vw);
-        }
+    }
+
+    @media screen and (max-width: 479px) {
+      html {
+        font-size: calc(0.7497384937238494rem + 0.41841004184100417vw);
       }
-      @media screen and (max-width: 479px) {
-        html {
-          font-size: calc(0.7497384937238494rem + 0.41841004184100417vw);
-        }
+    }
+
+    .w-webflow-badge {
+      display: none !important;
+    }
+
+    html:not(.w-editor) .loader {
+      display: flex;
+    }
+
+    .arrow-btn-latam.active {
+      transform: rotate(90deg);
+    }
+  </style>
+  <style>
+    .popup_bg,
+    .popup_content,
+    .popup_close {
+      opacity: 0;
+    }
+
+    .popup_item {
+      display: none;
+    }
+
+    .popup_item.active {
+      display: block;
+    }
+
+    /* Optional - Remove Scroll Bounce */
+    body {
+      overscroll-behavior: none;
+    }
+
+    /* Team Slider */
+    .swiper-slide.is-team:nth-child(3n + 1) {
+      width: 34.11%;
+    }
+
+    .swiper-slide.is-team:nth-child(3n + 2) {
+      width: 19.96%;
+    }
+
+    .swiper-slide.is-team:nth-child(3n + 3) {
+      width: 27.01%;
+    }
+
+    @media screen and (max-width: 767px) {
+      .swiper-slide.is-team:nth-child(3n + 1) {
+        width: 50%;
       }
 
-      .w-webflow-badge {
-        display: none !important;
+      .swiper-slide.is-team:nth-child(3n + 2) {
+        width: 38%;
       }
 
-      html:not(.w-editor) .loader {
+      .swiper-slide.is-team:nth-child(3n + 3) {
+        width: 43%;
+      }
+    }
+
+    @media screen and (max-width: 479px) {
+      .swiper-slide.is-team:nth-child(3n + 1) {
+        width: 80%;
+      }
+
+      .swiper-slide.is-team:nth-child(3n + 2) {
+        width: 68%;
+      }
+
+      .swiper-slide.is-team:nth-child(3n + 3) {
+        width: 73%;
+      }
+    }
+
+    .swiper.is-team {
+      overflow: visible;
+    }
+
+    .team_link:hover .image {
+      filter: saturate(0%);
+    }
+
+    .swiper-wrapper.is-team * {
+      user-select: none;
+    }
+
+    .team_photo-height {
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+      transition: all 0.6s;
+    }
+
+    .team_link:hover .team_color {
+      opacity: 1;
+    }
+
+    /* Cursor */
+    .cursor {
+      display: none;
+    }
+
+    @media (pointer: fine) {
+      .cursor {
         display: flex;
       }
 
-      .arrow-btn-latam.active {
-        transform: rotate(90deg);
+      .team_photo-height.scaled {
+        clip-path: polygon(4% 4%, 96% 4%, 96% 96%, 4% 96%);
+        transition: all 0.6s;
       }
-    </style>
+    }
+
+    body:hover .cursor {
+      opacity: 1;
+    }
+
+    .cursor_dot.show {
+      opacity: 1;
+    }
+
+    .cursor_dot.small .cursor_svg {
+      opacity: 0;
+    }
+
+    .cursor_dot.small {
+      width: 2em;
+      height: 2em;
+      padding: 0px;
+    }
+
+    .cursor_dot.small .cursor_dot-fill {
+      background-color: var(--main-red);
+    }
+
+    .cursor_dot.pressed .cursor_svg {
+      opacity: 0;
+    }
+
+    .cursor_dot.hide {
+      transform: scale(0.6);
+      opacity: 0;
+    }
+
+    /* Popup */
+    .popup_gradient {
+      pointer-events: none;
+    }
+
+    /* ISO stack cards readability on overlap */
+    .block-wrapper .block {
+      position: relative;
+    }
+
+    .block-wrapper .block._2,
+    .block-wrapper .block._3 {
+      background-color: #070926;
+      border-radius: 1rem;
+      box-shadow: 0 12px 32px rgba(15, 23, 42, 0.12);
+    }
+  </style>
+</head>
+
+<body data-rsssl="1">
+  <div class="w-embed w-iframe">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQZCF6N" height="0" width="0"
+        style="display: none; visibility: hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+  </div>
+  <div class="noise"></div>
+  <div class="custom-code-about w-embed">
     <style>
-      .popup_bg,
-      .popup_content,
-      .popup_close {
-        opacity: 0;
-      }
-      .popup_item {
-        display: none;
-      }
-      .popup_item.active {
-        display: block;
+      /* Max Font Size */
+      @media screen and (min-width: 1920px) {
+        body {
+          font-size: 1rem;
+        }
       }
 
-      /* Optional - Remove Scroll Bounce */
+      /* Main Variables */
+      :root {
+        --main-dark: #1e1927;
+        --main-light: #faf5ea;
+        --main-yellow: #e9ae23;
+        --main-red: #00ceff;
+      }
+
+      /* Global Styles */
+      ::selection {
+        background: var(--main-yellow);
+        color: var(--main-dark);
+        text-shadow: none;
+      }
+
+      img::selection,
+      svg::selection {
+        background: transparent;
+      }
+
+      /* Link color inherits from parent font color  */
+      a {
+        color: inherit;
+      }
+
+      body::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* Hide scrollbar for IE, Edge and Firefox */
       body {
-        overscroll-behavior: none;
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+      }
+
+      /* Loader */
+      .loader,
+      .nav,
+      .cursor {
+        pointer-events: none;
       }
 
       /* Team Slider */
       .swiper-slide.is-team:nth-child(3n + 1) {
         width: 34.11%;
       }
+
       .swiper-slide.is-team:nth-child(3n + 2) {
         width: 19.96%;
       }
+
       .swiper-slide.is-team:nth-child(3n + 3) {
         width: 27.01%;
       }
+
       @media screen and (max-width: 767px) {
         .swiper-slide.is-team:nth-child(3n + 1) {
           width: 50%;
         }
+
         .swiper-slide.is-team:nth-child(3n + 2) {
           width: 38%;
         }
+
         .swiper-slide.is-team:nth-child(3n + 3) {
           width: 43%;
         }
       }
+
       @media screen and (max-width: 479px) {
         .swiper-slide.is-team:nth-child(3n + 1) {
           width: 80%;
         }
+
         .swiper-slide.is-team:nth-child(3n + 2) {
           width: 68%;
         }
+
         .swiper-slide.is-team:nth-child(3n + 3) {
           width: 73%;
         }
       }
+
       .swiper.is-team {
         overflow: visible;
       }
+
       .team_link:hover .image {
         filter: saturate(0%);
       }
+
       .swiper-wrapper.is-team * {
         user-select: none;
       }
+
       .team_photo-height {
         clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
         transition: all 0.6s;
       }
+
       .team_link:hover .team_color {
         opacity: 1;
       }
+
       /* Cursor */
       .cursor {
         display: none;
       }
+
       @media (pointer: fine) {
         .cursor {
           display: flex;
         }
+
         .team_photo-height.scaled {
           clip-path: polygon(4% 4%, 96% 4%, 96% 96%, 4% 96%);
           transition: all 0.6s;
         }
       }
+
       body:hover .cursor {
         opacity: 1;
       }
+
       .cursor_dot.show {
         opacity: 1;
       }
@@ -176,11 +373,13 @@
       .cursor_dot.small .cursor_svg {
         opacity: 0;
       }
+
       .cursor_dot.small {
         width: 2em;
         height: 2em;
         padding: 0px;
       }
+
       .cursor_dot.small .cursor_dot-fill {
         background-color: var(--main-red);
       }
@@ -188,271 +387,89 @@
       .cursor_dot.pressed .cursor_svg {
         opacity: 0;
       }
+
       .cursor_dot.hide {
         transform: scale(0.6);
         opacity: 0;
       }
+
       /* Popup */
       .popup_gradient {
         pointer-events: none;
       }
-
-      /* ISO stack cards readability on overlap */
-      .block-wrapper .block {
-        position: relative;
-      }
-      .block-wrapper .block._2,
-      .block-wrapper .block._3 {
-        background-color: #070926;
-        border-radius: 1rem;
-        box-shadow: 0 12px 32px rgba(15, 23, 42, 0.12);
-      }
     </style>
-  </head>
-  <body data-rsssl="1">
-    <div class="w-embed w-iframe">
-      <!-- Google Tag Manager (noscript) -->
-      <noscript
-        ><iframe
-          src="https://www.googletagmanager.com/ns.html?id=GTM-KQZCF6N"
-          height="0"
-          width="0"
-          style="display: none; visibility: hidden"
-        ></iframe
-      ></noscript>
-      <!-- End Google Tag Manager (noscript) -->
-    </div>
-    <div class="noise"></div>
-    <div class="custom-code-about w-embed">
-      <style>
-        /* Max Font Size */
-        @media screen and (min-width: 1920px) {
-          body {
-            font-size: 1rem;
-          }
-        }
-
-        /* Main Variables */
-        :root {
-          --main-dark: #1e1927;
-          --main-light: #faf5ea;
-          --main-yellow: #e9ae23;
-          --main-red: #00ceff;
-        }
-
-        /* Global Styles */
-        ::selection {
-          background: var(--main-yellow);
-          color: var(--main-dark);
-          text-shadow: none;
-        }
-        img::selection,
-        svg::selection {
-          background: transparent;
-        }
-
-        /* Link color inherits from parent font color  */
-        a {
-          color: inherit;
-        }
-
-        body::-webkit-scrollbar {
-          display: none;
-        }
-
-        /* Hide scrollbar for IE, Edge and Firefox */
-        body {
-          -ms-overflow-style: none; /* IE and Edge */
-          scrollbar-width: none; /* Firefox */
-        }
-
-        /* Loader */
-        .loader,
-        .nav,
-        .cursor {
-          pointer-events: none;
-        }
-        /* Team Slider */
-        .swiper-slide.is-team:nth-child(3n + 1) {
-          width: 34.11%;
-        }
-        .swiper-slide.is-team:nth-child(3n + 2) {
-          width: 19.96%;
-        }
-        .swiper-slide.is-team:nth-child(3n + 3) {
-          width: 27.01%;
-        }
-        @media screen and (max-width: 767px) {
-          .swiper-slide.is-team:nth-child(3n + 1) {
-            width: 50%;
-          }
-          .swiper-slide.is-team:nth-child(3n + 2) {
-            width: 38%;
-          }
-          .swiper-slide.is-team:nth-child(3n + 3) {
-            width: 43%;
-          }
-        }
-        @media screen and (max-width: 479px) {
-          .swiper-slide.is-team:nth-child(3n + 1) {
-            width: 80%;
-          }
-          .swiper-slide.is-team:nth-child(3n + 2) {
-            width: 68%;
-          }
-          .swiper-slide.is-team:nth-child(3n + 3) {
-            width: 73%;
-          }
-        }
-        .swiper.is-team {
-          overflow: visible;
-        }
-        .team_link:hover .image {
-          filter: saturate(0%);
-        }
-        .swiper-wrapper.is-team * {
-          user-select: none;
-        }
-        .team_photo-height {
-          clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-          transition: all 0.6s;
-        }
-        .team_link:hover .team_color {
-          opacity: 1;
-        }
-        /* Cursor */
-        .cursor {
-          display: none;
-        }
-        @media (pointer: fine) {
-          .cursor {
-            display: flex;
-          }
-          .team_photo-height.scaled {
-            clip-path: polygon(4% 4%, 96% 4%, 96% 96%, 4% 96%);
-            transition: all 0.6s;
-          }
-        }
-        body:hover .cursor {
-          opacity: 1;
-        }
-        .cursor_dot.show {
-          opacity: 1;
-        }
-
-        .cursor_dot.small .cursor_svg {
-          opacity: 0;
-        }
-        .cursor_dot.small {
-          width: 2em;
-          height: 2em;
-          padding: 0px;
-        }
-        .cursor_dot.small .cursor_dot-fill {
-          background-color: var(--main-red);
-        }
-
-        .cursor_dot.pressed .cursor_svg {
-          opacity: 0;
-        }
-        .cursor_dot.hide {
-          transform: scale(0.6);
-          opacity: 0;
-        }
-        /* Popup */
-        .popup_gradient {
-          pointer-events: none;
-        }
-      </style>
-    </div>
-    <div class="page-wrapper overflow-visible">
-      <div class="main-wrapper">
-        <div class="title-page_component">
-          <div class="padding-global">
-            <div class="container-large">
-              <div class="padding-section-medium">
-                <div class="title-page_wrapper">
-                  <div class="title-page_title">
-                    <h1 class="heading-style-h1-big">
-                      About <span class="text-color-degrade-light">us</span>
-                    </h1>
-                    <div class="circle-chek_component">
-                      <img
-                        src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/6356c11143d2fe247c1f8719_text-circle-vf.svg"
-                        loading="lazy"
-                        alt=""
-                        class="circle-chek_text-circle-img"
-                      /><img
-                        src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/634ed0dafc477ada004efe8e_check-circle%20(3).svg"
-                        loading="lazy"
-                        alt=""
-                        class="circle-chek_img-check"
-                      />
-                    </div>
+  </div>
+  <div class="page-wrapper overflow-visible">
+    <div class="main-wrapper">
+      <div class="title-page_component">
+        <div class="padding-global">
+          <div class="container-large">
+            <div class="padding-section-medium">
+              <div class="title-page_wrapper">
+                <div class="title-page_title">
+                  <h1 class="heading-style-h1-big">
+                    About <span class="text-color-degrade-light">us</span>
+                  </h1>
+                  <div class="circle-chek_component">
+                    <img
+                      src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/6356c11143d2fe247c1f8719_text-circle-vf.svg"
+                      loading="lazy" alt="" class="circle-chek_text-circle-img" /><img
+                      src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/634ed0dafc477ada004efe8e_check-circle%20(3).svg"
+                      loading="lazy" alt="" class="circle-chek_img-check" />
                   </div>
-                  <div class="title-page_info is-large">
-                    <p text-split="words-slide-from-right">
-                      At Apros Global, we bring over a decade of experience
-                      helping businesses thrive in the digital space. Since
-                      2011, we have partnered with industries across Latin
-                      America and the United States, driven by a mission to
-                      transform users into loyal customers. Our expertise lies
-                      in developing innovative software solutions designed to
-                      deliver impactful results, creating memorable digital
-                      experiences, and fostering stronger connections through
-                      technology.<br />
-                    </p>
-                  </div>
+                </div>
+                <div class="title-page_info is-large">
+                  <p text-split="words-slide-from-right">
+                    At Apros Global, we bring over a decade of experience
+                    helping businesses thrive in the digital space. Since
+                    2011, we have partnered with industries across Latin
+                    America and the United States, driven by a mission to
+                    transform users into loyal customers. Our expertise lies
+                    in developing innovative software solutions designed to
+                    deliver impactful results, creating memorable digital
+                    experiences, and fostering stronger connections through
+                    technology.<br />
+                  </p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="title-page_bg">
-            <img
-              src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/6352c981fd0a0301dc9c6abc_bg-star-project-grid.webp"
-              loading="lazy"
-              sizes="(max-width: 994px) 100vw, 994px"
-              srcset="
+        </div>
+        <div class="title-page_bg">
+          <img
+            src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/6352c981fd0a0301dc9c6abc_bg-star-project-grid.webp"
+            loading="lazy" sizes="(max-width: 994px) 100vw, 994px" srcset="
                 https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/6352c981fd0a0301dc9c6abc_bg-star-project-grid-p-500.png 500w,
                 https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/6352c981fd0a0301dc9c6abc_bg-star-project-grid-p-800.png 800w,
                 https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/6352c981fd0a0301dc9c6abc_bg-star-project-grid.webp      994w
-              "
-              alt=""
-              class="title-page_bg-img"
-            />
-          </div>
+              " alt="" class="title-page_bg-img" />
         </div>
-        <div class="about_interna-header">
-          <div class="padding-global">
-            <div class="container-large">
-              <div class="padding-section-medium">
-                <div class="about_wrapper">
-                  <div class="about_top">
-                    <h2
-                      words-slide-from-right=""
-                      text-split=""
-                      class="heading-style-h3"
-                    >
-                      We love developing digital solutions that drive growth.
-                      From optimizing conversion to creating tailored
-                      experiences, we transform ideas into innovative tools to
-                      help your business thrive.
-                    </h2>
-                  </div>
+      </div>
+      <div class="about_interna-header">
+        <div class="padding-global">
+          <div class="container-large">
+            <div class="padding-section-medium">
+              <div class="about_wrapper">
+                <div class="about_top">
+                  <h2 words-slide-from-right="" text-split="" class="heading-style-h3">
+                    We love developing digital solutions that drive growth.
+                    From optimizing conversion to creating tailored
+                    experiences, we transform ideas into innovative tools to
+                    help your business thrive.
+                  </h2>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="about_title">
-          <div class="padding-global">
-            <div class="padding-section-large">
-              <div class="container-large">
-                <div class="title-section_component is-start-project">
-                  <div class="title-section_content">
-                    <h2
-                      data-w-id="6b542c45-7b87-0faa-05a0-a0c1076867f4"
-                      style="
+      </div>
+      <div class="about_title">
+        <div class="padding-global">
+          <div class="padding-section-large">
+            <div class="container-large">
+              <div class="title-section_component is-start-project">
+                <div class="title-section_content">
+                  <h2 data-w-id="6b542c45-7b87-0faa-05a0-a0c1076867f4" style="
                         -webkit-transform: translate3d(3rem, 0, 0)
                           scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0)
                           skew(0, 0);
@@ -463,60 +480,52 @@
                         transform: translate3d(3rem, 0, 0) scale3d(1, 1, 1)
                           rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
                         opacity: 0;
-                      "
-                    >
-                      Why <span class="text-color-degrade-light">Us</span>
-                    </h2>
-                  </div>
+                      ">
+                    Why <span class="text-color-degrade-light">Us</span>
+                  </h2>
                 </div>
-                <div class="max-width-large align-center">
-                  <p
-                    text-split=""
-                    words-slide-from-right=""
-                    class="text-size-medium"
-                  >
-                    What you should expect from us
-                  </p>
-                </div>
+              </div>
+              <div class="max-width-large align-center">
+                <p text-split="" words-slide-from-right="" class="text-size-medium">
+                  What you should expect from us
+                </p>
               </div>
             </div>
           </div>
         </div>
-        <div class="section-wrapper">
-          <div
-            data-w-id="452149a3-e02f-0646-4e00-a34181ad0fa8"
-            class="section-height"
-          >
-            <div class="sticky-element disable-overflow">
-              <div class="track-wrapper">
-                <div class="track">
-                  <div class="track-flex">
-                    <?php
-                    $why_us_rows = get_field('why_us');
-                    if (!is_array($why_us_rows) || empty($why_us_rows)) {
-                      $why_us_rows = [];
+      </div>
+      <div class="section-wrapper">
+        <div data-w-id="452149a3-e02f-0646-4e00-a34181ad0fa8" class="section-height">
+          <div class="sticky-element disable-overflow">
+            <div class="track-wrapper">
+              <div class="track">
+                <div class="track-flex">
+                  <?php
+                  $why_us_rows = get_field('why_us');
+                  if (!is_array($why_us_rows) || empty($why_us_rows)) {
+                    $why_us_rows = [];
+                  }
+                  usort($why_us_rows, static function ($a, $b) {
+                    return ((int) ($a['order'] ?? 0)) <=> ((int) ($b['order'] ?? 0));
+                  });
+
+                  foreach ($why_us_rows as $index => $item) {
+                    $title_prefix = trim((string) ($item['title_prefix'] ?? ''));
+                    $title_suffix = trim((string) ($item['title_suffix'] ?? ''));
+                    $description = trim((string) ($item['description'] ?? ''));
+                    $poster_url = trim((string) ($item['poster_url'] ?? ''));
+                    $video_mp4 = trim((string) ($item['video_mp4'] ?? ''));
+                    $video_webm = trim((string) ($item['video_webm'] ?? ''));
+
+                    if ($description === '' || $poster_url === '' || $video_mp4 === '') {
+                      continue;
                     }
-                    usort($why_us_rows, static function ($a, $b) {
-                      return ((int) ($a['order'] ?? 0)) <=> ((int) ($b['order'] ?? 0));
-                    });
 
-                    foreach ($why_us_rows as $index => $item) {
-                      $title_prefix = trim((string) ($item['title_prefix'] ?? ''));
-                      $title_suffix = trim((string) ($item['title_suffix'] ?? ''));
-                      $description = trim((string) ($item['description'] ?? ''));
-                      $poster_url = trim((string) ($item['poster_url'] ?? ''));
-                      $video_mp4 = trim((string) ($item['video_mp4'] ?? ''));
-                      $video_webm = trim((string) ($item['video_webm'] ?? ''));
-
-                      if ($description === '' || $poster_url === '' || $video_mp4 === '') {
-                        continue;
-                      }
-
-                      $video_urls = $video_mp4;
-                      if ($video_webm !== '') {
-                        $video_urls .= ',' . $video_webm;
-                      }
-                      $video_id = 'why-us-video-' . ($index + 1);
+                    $video_urls = $video_mp4;
+                    if ($video_webm !== '') {
+                      $video_urls .= ',' . $video_webm;
+                    }
+                    $video_id = 'why-us-video-' . ($index + 1);
                     ?>
                     <div class="panel1">
                       <div class="about_expect-item">
@@ -525,62 +534,31 @@
                             <div class="circle-chek_component">
                               <img
                                 src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/6356c11143d2fe247c1f8719_text-circle-vf.svg"
-                                loading="lazy"
-                                alt=""
-                                class="circle-chek_text-circle-img"
-                              /><img
+                                loading="lazy" alt="" class="circle-chek_text-circle-img" /><img
                                 src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/634ed0dafc477ada004efe8e_check-circle%20(3).svg"
-                                loading="lazy"
-                                alt=""
-                                class="circle-chek_img-check"
-                              />
+                                loading="lazy" alt="" class="circle-chek_img-check" />
                             </div>
                           </div>
-                          <div
-                            data-poster-url="<?php echo esc_url($poster_url); ?>"
-                            data-video-urls="<?php echo esc_attr($video_urls); ?>"
-                            data-autoplay="true"
-                            data-loop="true"
-                            data-wf-ignore="true"
-                            class="about_expect-video w-background-video w-background-video-atom"
-                          >
-                            <video
-                              id="<?php echo esc_attr($video_id); ?>"
-                              autoplay=""
-                              loop=""
-                              style="background-image: url('<?php echo esc_url($poster_url); ?>');"
-                              muted=""
-                              playsinline=""
-                              data-wf-ignore="true"
-                              data-object-fit="cover"
-                            >
-                              <source
-                                src="<?php echo esc_url($video_mp4); ?>"
-                                data-wf-ignore="true"
-                              />
+                          <div data-poster-url="<?php echo esc_url($poster_url); ?>"
+                            data-video-urls="<?php echo esc_attr($video_urls); ?>" data-autoplay="true" data-loop="true"
+                            data-wf-ignore="true" class="about_expect-video w-background-video w-background-video-atom">
+                            <video id="<?php echo esc_attr($video_id); ?>" autoplay="" loop=""
+                              style="background-image: url('<?php echo esc_url($poster_url); ?>');" muted=""
+                              playsinline="" data-wf-ignore="true" data-object-fit="cover">
+                              <source src="<?php echo esc_url($video_mp4); ?>" data-wf-ignore="true" />
                               <?php if ($video_webm !== '') { ?>
-                              <source
-                                src="<?php echo esc_url($video_webm); ?>"
-                                data-wf-ignore="true"
-                              />
+                                <source src="<?php echo esc_url($video_webm); ?>" data-wf-ignore="true" />
                               <?php } ?>
                             </video>
                             <div aria-live="polite">
-                              <button
-                                type="button"
-                                data-w-bg-video-control="true"
+                              <button type="button" data-w-bg-video-control="true"
                                 aria-controls="<?php echo esc_attr($video_id); ?>"
-                                class="w-backgroundvideo-backgroundvideoplaypausebutton w-background-video--control"
-                              >
-                                <span
-                                  ><img
+                                class="w-backgroundvideo-backgroundvideoplaypausebutton w-background-video--control">
+                                <span><img
                                     src="https://cdn.prod.website-files.com/6022af993a6b2191db3ed10c/628299f8aa233b83918e24fd_Pause.svg"
-                                    alt="Pause video" /></span
-                                ><span hidden=""
-                                  ><img
+                                    alt="Pause video" /></span><span hidden=""><img
                                     src="https://cdn.prod.website-files.com/6022af993a6b2191db3ed10c/628298b20ae0236682d4b87f_Play-24.svg"
-                                    alt="Play video"
-                                /></span>
+                                    alt="Play video" /></span>
                               </button>
                             </div>
                           </div>
@@ -588,14 +566,14 @@
                         <div class="about_expect-info">
                           <div class="about_expect-title">
                             <?php if ($title_prefix !== '') { ?>
-                            <h2 class="text-color-degrade">
-                              <strong><?php echo esc_html($title_prefix); ?></strong>
-                            </h2>
+                              <h2 class="text-color-degrade">
+                                <strong><?php echo esc_html($title_prefix); ?></strong>
+                              </h2>
                             <?php } ?>
                             <?php if ($title_suffix !== '') { ?>
-                            <h3 words-slide-from-right="" text-split="">
-                              <?php echo esc_html($title_suffix); ?>
-                            </h3>
+                              <h3 words-slide-from-right="" text-split="">
+                                <?php echo esc_html($title_suffix); ?>
+                              </h3>
                             <?php } ?>
                           </div>
                           <div class="about_expect-prf">
@@ -606,1318 +584,1036 @@
                         </div>
                       </div>
                     </div>
-                    <?php } ?>
-                    <div class="panel1-space"></div>
+                  <?php } ?>
+                  <div class="panel1-space"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section data-w-id="22e1c2fc-a167-30f4-8053-f129c69d5196" class="our-tem_section">
+        <div class="cursor">
+          <div class="cursor_move">
+            <div class="cursor_dot">
+              <div class="cursor_dot-fill">
+                <img
+                  src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/64aeddda34007b8378964589_svg-drag-icon.svg"
+                  loading="lazy" alt="" class="cursor_svg" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="padding-global">
+          <div class="container-large">
+            <div class="padding-section-medium">
+              <div class="our-tem_wrapper">
+                <div class="our-tem_header">
+                  <div class="title-section_component">
+                    <div class="title-section_content">
+                      <h2>
+                        Our <span class="text-color-degrade-light">team</span>
+                      </h2>
+                    </div>
+                    <div class="circle-chek_component">
+                      <img
+                        src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/6356c11143d2fe247c1f8719_text-circle-vf.svg"
+                        loading="lazy" alt="" class="circle-chek_text-circle-img" /><img
+                        src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/634ed0dafc477ada004efe8e_check-circle%20(3).svg"
+                        loading="lazy" alt="" class="circle-chek_img-check" />
+                    </div>
+                  </div>
+                  <div class="max-width-xlarge">
+                    <p words-slide-from-right="" text-split="" class="text-size-medium">
+                      Great products are built by great teams. Ours is made up
+                      of extremely talented developers, product managers,
+                      designers and marketers. Work with one of us and you’ll
+                      work with all of us. Meet some of the folks here at
+                      Apros.
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper is-team w-dyn-list">
+                  <div role="list" class="swiper-wrapper is-team w-dyn-items">
+                    <?php
+                    $team_rows = get_field('equipos');
+                    if (is_array($team_rows) && !empty($team_rows)) {
+                      $team_rows = array_values(array_filter($team_rows, static function ($team_member) {
+                        $inactive_value = $team_member['inactivo'] ?? 0;
+                        return !in_array($inactive_value, [1, '1', true, 'true', 'on', 'yes'], true);
+                      }));
+                      usort($team_rows, static function ($a, $b) {
+                        return ((int) ($a['order'] ?? 0)) <=> ((int) ($b['order'] ?? 0));
+                      });
+                      foreach ($team_rows as $team_member) {
+                        $name = trim((string) ($team_member['name'] ?? ''));
+                        $cargo = trim((string) ($team_member['cargo'] ?? ''));
+                        $perfil = trim((string) ($team_member['perfil'] ?? ''));
+                        if ($name === '' || $perfil === '') {
+                          continue;
+                        }
+                        ?>
+                        <div role="listitem" class="swiper-slide is-team w-dyn-item">
+                          <div class="team_link">
+                            <div class="team_photo-height">
+                              <img src="<?php echo esc_url($perfil); ?>" loading="eager"
+                                alt="<?php echo esc_attr($name); ?>" class="image" />
+                            </div>
+                            <div class="team_name-info">
+                              <p class="heading-style-h4"><?php echo esc_html($name); ?></p>
+                              <p class="text-color-degrade-light">
+                                <?php echo esc_html($cargo); ?>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <?php
+                      }
+                    }
+                    ?>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <section
-          data-w-id="22e1c2fc-a167-30f4-8053-f129c69d5196"
-          class="our-tem_section"
-        >
-          <div class="cursor">
-            <div class="cursor_move">
-              <div class="cursor_dot">
-                <div class="cursor_dot-fill">
-                  <img
-                    src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/64aeddda34007b8378964589_svg-drag-icon.svg"
-                    loading="lazy"
-                    alt=""
-                    class="cursor_svg"
-                  />
-                </div>
-              </div>
+        <div class="popup">
+          <div class="popup_bg"></div>
+          <div class="popup_wrapper w-dyn-list">
+            <div role="list" class="popup_list w-dyn-items">
+              <?php
+              if (is_array($team_rows) && !empty($team_rows)) {
+                foreach ($team_rows as $team_member) {
+                  $name = trim((string) ($team_member['name'] ?? ''));
+                  $cargo = trim((string) ($team_member['cargo'] ?? ''));
+                  $perfil = trim((string) ($team_member['perfil'] ?? ''));
+                  $descripcion = trim((string) ($team_member['descripcion'] ?? ''));
+                  if ($name === '' || $perfil === '') {
+                    continue;
+                  }
+                  ?>
+                  <div role="listitem" class="popup_item w-dyn-item">
+                    <div class="popup_flex">
+                      <div class="popup_visual">
+                        <div class="popup_img-height">
+                          <div class="popup_img">
+                            <img src="<?php echo esc_url($perfil); ?>" loading="lazy" alt="<?php echo esc_attr($name); ?>"
+                              class="image" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="popup_content">
+                        <div class="popup_content-contain">
+                          <div class="popup_name-wrap">
+                            <div class="popup_name-title">
+                              <p class="heading-style-h1 text-color-white">
+                                <?php echo esc_html($name); ?>
+                              </p>
+                              <div class="popup_name-cargo">
+                                <p class="text-size-medium"><?php echo esc_html($cargo); ?></p>
+                              </div>
+                            </div>
+                            <div class="popup_name-info">
+                              <div class="rich-about w-richtext">
+                                <?php
+                                if ($descripcion !== '') {
+                                  echo wp_kses_post($descripcion);
+                                } else {
+                                  echo '<p>Perfil proximamente.</p>';
+                                }
+                                ?>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="popup_gradient"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <?php
+                }
+              }
+              ?>
             </div>
           </div>
+          <a href="#" class="popup_close w-inline-block">
+            <div class="popup_close-x w-embed">
+              <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 94.149 94.15">
+                <path id="Path_92" data-name="Path 92" d="M-3344.443-15445.694h130.149"
+                  transform="translate(-8555.816 13287.694) rotate(45)" fill="none" stroke="currentColor"
+                  stroke-width="8" />
+                <path id="Path_93" data-name="Path 93" d="M0,0H130.148" transform="translate(93.089 1.061) rotate(135)"
+                  fill="none" stroke="currentColor" stroke-width="8" />
+              </svg>
+            </div>
+          </a>
+        </div>
+      </section>
+      <div class="equipo_component">
+        <div class="padding-section-large">
           <div class="padding-global">
-            <div class="container-large">
-              <div class="padding-section-medium">
-                <div class="our-tem_wrapper">
-                  <div class="our-tem_header">
+            <div class="container cc-flex-h !px-0">
+              <div class="col-left">
+                <div class="learn_wrapper">
+                  <div class="partners_title">
                     <div class="title-section_component">
                       <div class="title-section_content">
                         <h2>
-                          Our <span class="text-color-degrade-light">team</span>
+                          ISO 9001
+                          <span class="text-color-degrade-light">Certification</span>
                         </h2>
                       </div>
                       <div class="circle-chek_component">
                         <img
                           src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/6356c11143d2fe247c1f8719_text-circle-vf.svg"
-                          loading="lazy"
-                          alt=""
-                          class="circle-chek_text-circle-img"
-                        /><img
+                          loading="lazy" alt="" class="circle-chek_text-circle-img" /><img
                           src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/634ed0dafc477ada004efe8e_check-circle%20(3).svg"
-                          loading="lazy"
-                          alt=""
-                          class="circle-chek_img-check"
-                        />
+                          loading="lazy" alt="" class="circle-chek_img-check" />
                       </div>
                     </div>
                     <div class="max-width-xlarge">
-                      <p
-                        words-slide-from-right=""
-                        text-split=""
-                        class="text-size-medium"
-                      >
-                        Great products are built by great teams. Ours is made up
-                        of extremely talented developers, product managers,
-                        designers and marketers. Work with one of us and you’ll
-                        work with all of us. Meet some of the folks here at
-                        Apros.
+                      <p words-slide-from-right="" text-split="" class="text-size-medium">
+                        APROS operates under ISO-certified processes, ensuring
+                        compliance with internationally recognized standards
+                        for quality, efficiency, and continuous improvement.
                       </p>
                     </div>
                   </div>
-                  <div class="swiper is-team w-dyn-list">
-                    <div role="list" class="swiper-wrapper is-team w-dyn-items">
-                      <?php
-                      $team_rows = get_field('equipos');
-                      if (is_array($team_rows) && !empty($team_rows)) {
-                        $team_rows = array_values(array_filter($team_rows, static function ($team_member) {
-                          $inactive_value = $team_member['inactivo'] ?? 0;
-                          return !in_array($inactive_value, [1, '1', true, 'true', 'on', 'yes'], true);
-                        }));
-                        usort($team_rows, static function ($a, $b) {
-                          return ((int) ($a['order'] ?? 0)) <=> ((int) ($b['order'] ?? 0));
-                        });
-                        foreach ($team_rows as $team_member) {
-                          $name = trim((string) ($team_member['name'] ?? ''));
-                          $cargo = trim((string) ($team_member['cargo'] ?? ''));
-                          $perfil = trim((string) ($team_member['perfil'] ?? ''));
-                          if ($name === '' || $perfil === '') {
-                            continue;
-                          }
-                      ?>
-                      <div
-                        role="listitem"
-                        class="swiper-slide is-team w-dyn-item"
-                      >
-                        <div class="team_link">
-                          <div class="team_photo-height">
-                            <img
-                              src="<?php echo esc_url($perfil); ?>"
-                              loading="eager"
-                              alt="<?php echo esc_attr($name); ?>"
-                              class="image"
-                            />
-                          </div>
-                          <div class="team_name-info">
-                            <p class="heading-style-h4"><?php echo esc_html($name); ?></p>
-                            <p class="text-color-degrade-light">
-                              <?php echo esc_html($cargo); ?>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <?php
-                        }
-                      }
-                      ?>
-                    </div>
-                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="popup">
-            <div class="popup_bg"></div>
-            <div class="popup_wrapper w-dyn-list">
-              <div role="list" class="popup_list w-dyn-items">
-                <?php
-                if (is_array($team_rows) && !empty($team_rows)) {
-                  foreach ($team_rows as $team_member) {
-                    $name = trim((string) ($team_member['name'] ?? ''));
-                    $cargo = trim((string) ($team_member['cargo'] ?? ''));
-                    $perfil = trim((string) ($team_member['perfil'] ?? ''));
-                    $descripcion = trim((string) ($team_member['descripcion'] ?? ''));
-                    if ($name === '' || $perfil === '') {
-                      continue;
-                    }
-                ?>
-                <div role="listitem" class="popup_item w-dyn-item">
-                  <div class="popup_flex">
-                    <div class="popup_visual">
-                      <div class="popup_img-height">
-                        <div class="popup_img">
-                          <img
-                            src="<?php echo esc_url($perfil); ?>"
-                            loading="lazy"
-                            alt="<?php echo esc_attr($name); ?>"
-                            class="image"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="popup_content">
-                      <div class="popup_content-contain">
-                        <div class="popup_name-wrap">
-                          <div class="popup_name-title">
-                            <p class="heading-style-h1 text-color-white">
-                              <?php echo esc_html($name); ?>
-                            </p>
-                            <div class="popup_name-cargo">
-                              <p class="text-size-medium"><?php echo esc_html($cargo); ?></p>
-                            </div>
-                          </div>
-                          <div class="popup_name-info">
-                            <div class="rich-about w-richtext">
-                              <?php
-                              if ($descripcion !== '') {
-                                echo wp_kses_post($descripcion);
-                              } else {
-                                echo '<p>Perfil proximamente.</p>';
-                              }
-                              ?>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="popup_gradient"></div>
-                    </div>
-                  </div>
-                </div>
-                <?php
-                  }
-                }
-                ?>
-              </div>
-            </div>
-            <a href="#" class="popup_close w-inline-block"
-              ><div class="popup_close-x w-embed">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="100%"
-                  height="100%"
-                  viewBox="0 0 94.149 94.15"
-                >
-                  <path
-                    id="Path_92"
-                    data-name="Path 92"
-                    d="M-3344.443-15445.694h130.149"
-                    transform="translate(-8555.816 13287.694) rotate(45)"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="8"
-                  />
-                  <path
-                    id="Path_93"
-                    data-name="Path 93"
-                    d="M0,0H130.148"
-                    transform="translate(93.089 1.061) rotate(135)"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="8"
-                  />
-                </svg></div
-            ></a>
-          </div>
-        </section>
-        <div class="equipo_component">
-          <div class="padding-section-large">
-            <div class="padding-global">
-              <div class="container cc-flex-h !px-0">
-                <div class="col-left">
-                  <div class="learn_wrapper">
-                    <div class="partners_title">
-                      <div class="title-section_component">
-                        <div class="title-section_content">
-                          <h2>
-                            ISO 9001
-                            <span class="text-color-degrade-light"
-                              >Certification</span
-                            >
-                          </h2>
-                        </div>
-                        <div class="circle-chek_component">
-                          <img
-                            src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/6356c11143d2fe247c1f8719_text-circle-vf.svg"
-                            loading="lazy"
-                            alt=""
-                            class="circle-chek_text-circle-img"
-                          /><img
-                            src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/634ed0dafc477ada004efe8e_check-circle%20(3).svg"
-                            loading="lazy"
-                            alt=""
-                            class="circle-chek_img-check"
-                          />
-                        </div>
-                      </div>
-                      <div class="max-width-xlarge">
-                        <p
-                          words-slide-from-right=""
-                          text-split=""
-                          class="text-size-medium"
-                        >
-                          APROS operates under ISO-certified processes, ensuring
-                          compliance with internationally recognized standards
-                          for quality, efficiency, and continuous improvement.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-right">
-                  <div
-                    data-w-id="e929075a-02d0-feb5-290c-d6e26475d5fd"
-                    class="block-wrapper"
-                  >
-                    <?php
-                    $iso_cards = get_field('cards_iso');
-                    if (is_array($iso_cards) && !empty($iso_cards)) {
-                      usort($iso_cards, static function ($a, $b) {
-                        return ((int) ($a['orden'] ?? 0)) <=> ((int) ($b['orden'] ?? 0));
-                      });
+              <div class="col-right">
+                <div data-w-id="e929075a-02d0-feb5-290c-d6e26475d5fd" class="block-wrapper">
+                  <?php
+                  $iso_cards = get_field('cards_iso');
+                  if (is_array($iso_cards) && !empty($iso_cards)) {
+                    usort($iso_cards, static function ($a, $b) {
+                      return ((int) ($a['orden'] ?? 0)) <=> ((int) ($b['orden'] ?? 0));
+                    });
 
-                      foreach ($iso_cards as $index => $card) {
-                        $titulo = trim((string) ($card['titulo'] ?? ''));
-                        $descripcion = trim((string) ($card['descripcion'] ?? ''));
-                        if ($titulo === '') {
-                          continue;
-                        }
-                        $block_class = '_'.($index + 1);
-                    ?>
-                    <div tabindex="0" class="block <?php echo esc_attr($block_class); ?>">
-                      <div class="equipo_item">
-                        <h3 class="heading-style-h4"><?php echo esc_html($titulo); ?></h3>
-                        <div class="partners_item-prf">
-                          <div class="text-size-medium">
-                            <?php echo esc_html($descripcion); ?>
+                    foreach ($iso_cards as $index => $card) {
+                      $titulo = trim((string) ($card['titulo'] ?? ''));
+                      $descripcion = trim((string) ($card['descripcion'] ?? ''));
+                      if ($titulo === '') {
+                        continue;
+                      }
+                      $block_class = '_' . ($index + 1);
+                      ?>
+                      <div tabindex="0" class="block <?php echo esc_attr($block_class); ?>">
+                        <div class="equipo_item">
+                          <h3 class="heading-style-h4"><?php echo esc_html($titulo); ?></h3>
+                          <div class="partners_item-prf">
+                            <div class="text-size-medium">
+                              <?php echo esc_html($descripcion); ?>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <?php
-                      }
+                      <?php
                     }
-                    ?>
-                  </div>
+                  }
+                  ?>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div id="contact" class="start-project_component mt-30">
-          <div class="padding-global">
-            <div class="container-large">
-              <div class="padding-section-large">
-                <div class="start-project_wrapper">
-                  <div class="title-section_component is-start-project ">
-                    <div class="title-section_content">
-                      <h2 class="heading-style-h1-big">
-                        Do you want to
-                        <span class="text-color-degrade"
-                          >scale your business?</span
-                        >
-                      </h2>
-                      <div class="title-section_prf">
-                        <div class="heading-style-h4">
-                          Select one of the three boxes below
-                        </div>
+      </div>
+      <div id="contact" class="start-project_component mt-30">
+        <div class="padding-global">
+          <div class="container-large">
+            <div class="padding-section-large">
+              <div class="start-project_wrapper">
+                <div class="title-section_component is-start-project ">
+                  <div class="title-section_content">
+                    <h2 class="heading-style-h1-big">
+                      Do you want to
+                      <span class="text-color-degrade">scale your business?</span>
+                    </h2>
+                    <div class="title-section_prf">
+                      <div class="heading-style-h4">
+                        Select one of the three boxes below
                       </div>
                     </div>
-                    <div class="circle-chek_component">
-                      <img
-                        src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/6356c11143d2fe247c1f8719_text-circle-vf.svg"
-                        loading="lazy"
-                        alt=""
-                        class="circle-chek_text-circle-img"
-                      /><img
-                        src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/634ed0dafc477ada004efe8e_check-circle%20(3).svg"
-                        loading="lazy"
-                        alt=""
-                        class="circle-chek_img-check"
-                      />
-                    </div>
-                    <img
-                      src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/6352c13bc67ea35707ca3618_pinter-center-left.webp"
-                      loading="lazy"
-                      alt=""
-                      class="start-project_pointer-left"
-                    /><img
-                      src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/63502e202b328f0db4bc2bb9_pointer-blue-medium.webp"
-                      loading="lazy"
-                      alt=""
-                      class="start-project_pointer-right"
-                    />
                   </div>
-                  <div class="form-wrapper">
-                    <div class="start-project_form-wrapper w-form">
-                      <form
-                        method="get"
-                        data-form="multistep"
-                        name="email-form"
-                        data-name="Email Form"
-                        data-enter="true"
-                        id="email-form"
-                        class="start-project_form"
-                        data-wf-page-id="65b4453c9e0f05c6674b732d"
-                        data-wf-element-id="1bb21479-b3fd-6123-9361-dece65ec47e6"
-                      >
-                        <div class="form-step-wrapper">
-                          <div data-form="step" class="form-step-item">
-                            <div class="step-wrapper">
-                              <div class="form-field-wrapper">
-                                <div class="form-field-top">
-                                  <div class="form-field-letter">a.</div>
-                                  <label for="Color"
-                                    >What challenge can I assist you
-                                    with?</label
-                                  >
-                                </div>
-                              </div>
-                              <div class="form-input-wrapper">
-                                <div class="form-description">
-                                  (I&#x27;ll try send you materials that may aid
-                                  you.)
-                                </div>
-                              </div>
-                              <div class="form-checkbox-wrapper">
-                                <label class="w-checkbox checkbox-field"
-                                  ><img
-                                    loading="lazy"
-                                    src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/657899eb61cc8bbd33b3dd8e_icon-form-04.svg"
-                                    alt=""
-                                    class="icon-1x1-large"
-                                  />
-                                  <div class="form-field-icon is-test">
-                                    <div class="form-field-letter">A</div>
-                                  </div>
-                                  <div
-                                    class="w-checkbox-input w-checkbox-input--inputType-custom check-box"
-                                  ></div>
-                                  <input
-                                    id="Generate-leads"
-                                    type="checkbox"
-                                    name="Generate-leads"
-                                    data-name="Generate leads"
-                                    style="
-                                      opacity: 0;
-                                      position: absolute;
-                                      z-index: -1;
-                                    "
-                                  /><span
-                                    class="checkbox-label w-form-label"
-                                    for="Generate-leads"
-                                    >Streamlined task and project
-                                    management</span
-                                  ></label
-                                ><label class="w-checkbox checkbox-field"
-                                  ><div class="form-field-icon is-test">
-                                    <div class="form-field-letter">B</div>
-                                  </div>
-                                  <div
-                                    class="w-checkbox-input w-checkbox-input--inputType-custom check-box"
-                                  ></div>
-                                  <input
-                                    id="Making-sales"
-                                    type="checkbox"
-                                    name="Making-sales"
-                                    data-name="Making sales"
-                                    style="
-                                      opacity: 0;
-                                      position: absolute;
-                                      z-index: -1;
-                                    "
-                                  /><img
-                                    loading="lazy"
-                                    src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/657899ebff6b4e0e4aeb252b_icon-form-02.svg"
-                                    alt=""
-                                    class="icon-1x1-large"
-                                  /><span
-                                    class="checkbox-label w-form-label"
-                                    for="Making-sales"
-                                    >Real-time data analysis and
-                                    automation</span
-                                  ></label
-                                ><label class="w-checkbox checkbox-field"
-                                  ><div class="form-field-icon is-test">
-                                    <div class="form-field-letter">C</div>
-                                  </div>
-                                  <div
-                                    class="w-checkbox-input w-checkbox-input--inputType-custom check-box"
-                                  ></div>
-                                  <input
-                                    id="Improve-your-ROI"
-                                    type="checkbox"
-                                    name="Improve-your-ROI"
-                                    data-name="Improve your ROI"
-                                    style="
-                                      opacity: 0;
-                                      position: absolute;
-                                      z-index: -1;
-                                    "
-                                  /><img
-                                    loading="lazy"
-                                    src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/657899ec9c912d3cded4e352_icon-form-03.svg"
-                                    alt=""
-                                    class="icon-1x1-large"
-                                  /><span
-                                    class="checkbox-label w-form-label"
-                                    for="Improve-your-ROI"
-                                    >Enhanced user engagement</span
-                                  ></label
-                                ><label class="w-checkbox checkbox-field"
-                                  ><div class="form-field-icon is-test">
-                                    <div class="form-field-letter">D</div>
-                                  </div>
-                                  <div
-                                    class="w-checkbox-input w-checkbox-input--inputType-custom check-box"
-                                  ></div>
-                                  <input
-                                    id="Other"
-                                    type="checkbox"
-                                    name="Other"
-                                    data-name="Other"
-                                    style="
-                                      opacity: 0;
-                                      position: absolute;
-                                      z-index: -1;
-                                    "
-                                  /><img
-                                    loading="lazy"
-                                    src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/657899eb7abedc68ea6602cd_icon-form-01.svg"
-                                    alt=""
-                                    class="icon-1x1-large"
-                                  /><span
-                                    class="checkbox-label w-form-label"
-                                    for="Other"
-                                    >Other</span
-                                  ></label
-                                >
-                              </div>
-                              <div class="form-button-wrapper">
-                                <a
-                                  data-form="next-btn"
-                                  href="#"
-                                  class="form-button w-button"
-                                  >Next step ✓
-                                </a>
-                                <div class="press-enter-text">
-                                  press <strong>Enter ↵</strong>
-                                </div>
+                  <div class="circle-chek_component">
+                    <img
+                      src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/6356c11143d2fe247c1f8719_text-circle-vf.svg"
+                      loading="lazy" alt="" class="circle-chek_text-circle-img" /><img
+                      src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/634ed0dafc477ada004efe8e_check-circle%20(3).svg"
+                      loading="lazy" alt="" class="circle-chek_img-check" />
+                  </div>
+                  <img
+                    src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/6352c13bc67ea35707ca3618_pinter-center-left.webp"
+                    loading="lazy" alt="" class="start-project_pointer-left" /><img
+                    src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/63502e202b328f0db4bc2bb9_pointer-blue-medium.webp"
+                    loading="lazy" alt="" class="start-project_pointer-right" />
+                </div>
+                <div class="form-wrapper">
+                  <div class="start-project_form-wrapper w-form">
+                    <form method="get" data-form="multistep" name="email-form" data-name="Email Form" data-enter="true"
+                      id="email-form" class="start-project_form" data-wf-page-id="65b4453c9e0f05c6674b732d"
+                      data-wf-element-id="1bb21479-b3fd-6123-9361-dece65ec47e6">
+                      <div class="form-step-wrapper">
+                        <div data-form="step" class="form-step-item">
+                          <div class="step-wrapper">
+                            <div class="form-field-wrapper">
+                              <div class="form-field-top">
+                                <div class="form-field-letter">a.</div>
+                                <label for="Color">What challenge can I assist you
+                                  with?</label>
                               </div>
                             </div>
-                          </div>
-                          <div data-form="step" class="form-step-item">
-                            <div class="step-wrapper">
-                              <div class="form-field-wrapper">
-                                <div class="form-field-top">
-                                  <div class="form-field-letter">b.</div>
-                                  <label for="Color"
-                                    >Where is your business located?</label
-                                  >
-                                </div>
+                            <div class="form-input-wrapper">
+                              <div class="form-description">
+                                (I&#x27;ll try send you materials that may aid
+                                you.)
                               </div>
-                              <div class="form-input-wrapper">
-                                <div class="form-description">
-                                  Just a rough estimate would help us scope out
-                                  the size of the project
+                            </div>
+                            <div class="form-checkbox-wrapper">
+                              <label class="w-checkbox checkbox-field"><img loading="lazy"
+                                  src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/657899eb61cc8bbd33b3dd8e_icon-form-04.svg"
+                                  alt="" class="icon-1x1-large" />
+                                <div class="form-field-icon is-test">
+                                  <div class="form-field-letter">A</div>
                                 </div>
-                              </div>
-                              <div
-                                data-radio-delay="250"
-                                data-radio-skip="true"
-                                class="form-checkbox-wrapper is-3-col"
-                              >
-                                <label class="checkbox-field w-radio"
-                                  ><div
-                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom check-box w-radio-input"
-                                  ></div>
-                                  <input
-                                    id="USA"
-                                    type="radio"
-                                    name="Where-is-your-business-located"
-                                    data-name="Where is your business located?"
-                                    style="
+                                <div class="w-checkbox-input w-checkbox-input--inputType-custom check-box"></div>
+                                <input id="Generate-leads" type="checkbox" name="Generate-leads"
+                                  data-name="Generate leads" style="
                                       opacity: 0;
                                       position: absolute;
                                       z-index: -1;
-                                    "
-                                    value="USA"
-                                  /><img
-                                    loading="lazy"
-                                    src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/657899ec1734bdf716b1bbcb_icon-flag-03.svg"
-                                    alt=""
-                                    class="icon-1x1-large"
-                                  />
-                                  <div class="form-field-icon is-test">
-                                    <div class="form-field-letter">A</div>
-                                  </div>
-                                  <span
-                                    class="checkbox-label w-form-label"
-                                    for="USA"
-                                    >USA</span
-                                  ></label
-                                ><label class="checkbox-field w-radio"
-                                  ><div
-                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom check-box w-radio-input"
-                                  ></div>
-                                  <input
-                                    id="LATAM"
-                                    type="radio"
-                                    name="Where-is-your-business-located"
-                                    data-name="Where is your business located?"
-                                    style="
+                                    " /><span class="checkbox-label w-form-label" for="Generate-leads">Streamlined task
+                                  and project
+                                  management</span>
+                              </label><label class="w-checkbox checkbox-field">
+                                <div class="form-field-icon is-test">
+                                  <div class="form-field-letter">B</div>
+                                </div>
+                                <div class="w-checkbox-input w-checkbox-input--inputType-custom check-box"></div>
+                                <input id="Making-sales" type="checkbox" name="Making-sales" data-name="Making sales"
+                                  style="
                                       opacity: 0;
                                       position: absolute;
                                       z-index: -1;
-                                    "
-                                    value="LATAM"
-                                  /><img
-                                    loading="lazy"
-                                    src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/6578a0220fc74ed333466bab_icon-latam.svg"
-                                    alt=""
-                                    class="icon-1x1-large"
-                                  />
-                                  <div class="form-field-icon is-test">
-                                    <div class="form-field-letter">B</div>
-                                  </div>
-                                  <span
-                                    class="checkbox-label w-form-label"
-                                    for="LATAM"
-                                    >LATAM</span
-                                  ></label
-                                ><label class="checkbox-field w-radio"
-                                  ><div
-                                    class="w-form-formradioinput w-form-formradioinput--inputType-custom check-box w-radio-input"
-                                  ></div>
-                                  <input
-                                    id="OTHER-2"
-                                    type="radio"
-                                    name="Where-is-your-business-located"
-                                    data-name="Where is your business located?"
-                                    style="
+                                    " /><img loading="lazy"
+                                  src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/657899ebff6b4e0e4aeb252b_icon-form-02.svg"
+                                  alt="" class="icon-1x1-large" /><span class="checkbox-label w-form-label"
+                                  for="Making-sales">Real-time data analysis and
+                                  automation</span>
+                              </label><label class="w-checkbox checkbox-field">
+                                <div class="form-field-icon is-test">
+                                  <div class="form-field-letter">C</div>
+                                </div>
+                                <div class="w-checkbox-input w-checkbox-input--inputType-custom check-box"></div>
+                                <input id="Improve-your-ROI" type="checkbox" name="Improve-your-ROI"
+                                  data-name="Improve your ROI" style="
                                       opacity: 0;
                                       position: absolute;
                                       z-index: -1;
-                                    "
-                                    value="OTHER"
-                                  /><img
-                                    loading="lazy"
-                                    src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/657899ecb25fe4f94366890f_icon-flag-01.svg"
-                                    alt=""
-                                    class="icon-1x1-large"
-                                  />
-                                  <div class="form-field-icon is-test">
-                                    <div class="form-field-letter">C</div>
-                                  </div>
-                                  <span
-                                    class="checkbox-label w-form-label"
-                                    for="OTHER-2"
-                                    >OTHER</span
-                                  ></label
-                                >
-                              </div>
-                              <div class="form-button-wrapper">
-                                <a
-                                  data-form="next-btn"
-                                  href="#"
-                                  class="form-button w-button"
-                                  >Next step ✓
-                                </a>
-                                <div class="press-enter-text">
-                                  press <strong>Enter ↵</strong>
+                                    " /><img loading="lazy"
+                                  src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/657899ec9c912d3cded4e352_icon-form-03.svg"
+                                  alt="" class="icon-1x1-large" /><span class="checkbox-label w-form-label"
+                                  for="Improve-your-ROI">Enhanced user engagement</span>
+                              </label><label class="w-checkbox checkbox-field">
+                                <div class="form-field-icon is-test">
+                                  <div class="form-field-letter">D</div>
                                 </div>
-                              </div>
+                                <div class="w-checkbox-input w-checkbox-input--inputType-custom check-box"></div>
+                                <input id="Other" type="checkbox" name="Other" data-name="Other" style="
+                                      opacity: 0;
+                                      position: absolute;
+                                      z-index: -1;
+                                    " /><img loading="lazy"
+                                  src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/657899eb7abedc68ea6602cd_icon-form-01.svg"
+                                  alt="" class="icon-1x1-large" /><span class="checkbox-label w-form-label"
+                                  for="Other">Other</span>
+                              </label>
                             </div>
-                          </div>
-                          <div data-form="step" class="form-step-item">
-                            <div class="step-wrapper">
-                              <div class="form-field-wrapper">
-                                <div class="form-field-top">
-                                  <div class="form-field-letter">c.</div>
-                                  <label for="Color"
-                                    >Describe your business needs in 1-3
-                                    sentences.</label
-                                  >
-                                </div>
-                              </div>
-                              <div class="form-input-wrapper">
-                                <div class="form-description">
-                                  EX: I work at a Miami real estate agency,
-                                  aiming to boost marketing for properties
-                                  ranging from $500k to $5m.
-                                </div>
-                              </div>
-                              <div class="form-field-group">
-                                <div class="form-input-wrapper"></div>
-                                <div class="form-input-wrapper">
-                                  <textarea
-                                    id="Describe-your-business-needs-in-1-3-sentences"
-                                    name="Describe-your-business-needs-in-1-3-sentences"
-                                    maxlength="5000"
-                                    data-name="Describe your business needs in 1-3 sentences."
-                                    placeholder=" Type here... What you offer, target market, your average price"
-                                    class="form-input is-text-area w-input"
-                                  ></textarea>
-                                </div>
-                              </div>
-                              <div class="form-button-wrapper">
-                                <a
-                                  data-form="next-btn"
-                                  href="#"
-                                  class="form-button w-button"
-                                  >Next step ✓
-                                </a>
-                                <div class="press-enter-text">
-                                  press <strong>Enter ↵</strong>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div data-form="step" class="form-step-item">
-                            <div class="step-wrapper">
-                              <div class="form-field-wrapper">
-                                <div class="form-field-top">
-                                  <label for="Color"
-                                    >Finally, how do we contact you?</label
-                                  >
-                                </div>
-                              </div>
-                              <div class="form-field-group">
-                                <div class="form-input-wrapper">
-                                  <input
-                                    class="form-input w-input"
-                                    maxlength="256"
-                                    name="Name"
-                                    data-name="Name"
-                                    placeholder="First name..."
-                                    type="text"
-                                    id="Name-4"
-                                    required=""
-                                  />
-                                </div>
-                                <div class="form-input-wrapper">
-                                  <input
-                                    class="form-input w-input"
-                                    maxlength="256"
-                                    name="Email"
-                                    data-name="Email"
-                                    placeholder="mail@domain.com"
-                                    type="email"
-                                    id="Email-5"
-                                    required=""
-                                  />
-                                </div>
-                              </div>
-                              <div class="form-button-wrapper">
-                                <a
-                                  data-form="next-btn"
-                                  href="#"
-                                  class="form-button w-button"
-                                  >Next step ✓
-                                </a>
-                                <div class="press-enter-text">
-                                  press <strong>Enter ↵</strong>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div data-form="step" class="form-step-item">
-                            <div class="step-wrapper">
-                              <div class="step-content-only">
-                                <h2>
-                                  Ready
-                                  <span class="text-color-degrade-form"
-                                    >to submit</span
-                                  >?
-                                </h2>
-                                <div class="form-button-wrapper">
-                                  <input
-                                    type="submit"
-                                    data-wait="Please wait..."
-                                    data-form="submit-btn"
-                                    class="form-button w-button"
-                                    value="Send it away!"
-                                  />
-                                </div>
+                            <div class="form-button-wrapper">
+                              <a data-form="next-btn" href="#" class="form-button w-button">Next step ✓
+                              </a>
+                              <div class="press-enter-text">
+                                press <strong>Enter ↵</strong>
                               </div>
                             </div>
                           </div>
                         </div>
-                        <div class="fixed-button-wrapper">
-                          <div class="steps-text">
-                            Step<span
-                              data-text="current-step"
-                              class="current-step"
-                              >0</span
-                            >
-                            /
-                            <span data-text="total-steps" class="total-steps"
-                              >5</span
-                            >
+                        <div data-form="step" class="form-step-item">
+                          <div class="step-wrapper">
+                            <div class="form-field-wrapper">
+                              <div class="form-field-top">
+                                <div class="form-field-letter">b.</div>
+                                <label for="Color">Where is your business located?</label>
+                              </div>
+                            </div>
+                            <div class="form-input-wrapper">
+                              <div class="form-description">
+                                Just a rough estimate would help us scope out
+                                the size of the project
+                              </div>
+                            </div>
+                            <div data-radio-delay="250" data-radio-skip="true" class="form-checkbox-wrapper is-3-col">
+                              <label class="checkbox-field w-radio">
+                                <div
+                                  class="w-form-formradioinput w-form-formradioinput--inputType-custom check-box w-radio-input">
+                                </div>
+                                <input id="USA" type="radio" name="Where-is-your-business-located"
+                                  data-name="Where is your business located?" style="
+                                      opacity: 0;
+                                      position: absolute;
+                                      z-index: -1;
+                                    " value="USA" /><img loading="lazy"
+                                  src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/657899ec1734bdf716b1bbcb_icon-flag-03.svg"
+                                  alt="" class="icon-1x1-large" />
+                                <div class="form-field-icon is-test">
+                                  <div class="form-field-letter">A</div>
+                                </div>
+                                <span class="checkbox-label w-form-label" for="USA">USA</span>
+                              </label><label class="checkbox-field w-radio">
+                                <div
+                                  class="w-form-formradioinput w-form-formradioinput--inputType-custom check-box w-radio-input">
+                                </div>
+                                <input id="LATAM" type="radio" name="Where-is-your-business-located"
+                                  data-name="Where is your business located?" style="
+                                      opacity: 0;
+                                      position: absolute;
+                                      z-index: -1;
+                                    " value="LATAM" /><img loading="lazy"
+                                  src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/6578a0220fc74ed333466bab_icon-latam.svg"
+                                  alt="" class="icon-1x1-large" />
+                                <div class="form-field-icon is-test">
+                                  <div class="form-field-letter">B</div>
+                                </div>
+                                <span class="checkbox-label w-form-label" for="LATAM">LATAM</span>
+                              </label><label class="checkbox-field w-radio">
+                                <div
+                                  class="w-form-formradioinput w-form-formradioinput--inputType-custom check-box w-radio-input">
+                                </div>
+                                <input id="OTHER-2" type="radio" name="Where-is-your-business-located"
+                                  data-name="Where is your business located?" style="
+                                      opacity: 0;
+                                      position: absolute;
+                                      z-index: -1;
+                                    " value="OTHER" /><img loading="lazy"
+                                  src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/657899ecb25fe4f94366890f_icon-flag-01.svg"
+                                  alt="" class="icon-1x1-large" />
+                                <div class="form-field-icon is-test">
+                                  <div class="form-field-letter">C</div>
+                                </div>
+                                <span class="checkbox-label w-form-label" for="OTHER-2">OTHER</span>
+                              </label>
+                            </div>
+                            <div class="form-button-wrapper">
+                              <a data-form="next-btn" href="#" class="form-button w-button">Next step ✓
+                              </a>
+                              <div class="press-enter-text">
+                                press <strong>Enter ↵</strong>
+                              </div>
+                            </div>
                           </div>
-                          <a
-                            data-form="back-btn"
-                            href="#"
-                            class="next-button w-button"
-                            >↑</a
-                          ><a
-                            data-form="next-btn"
-                            href="#"
-                            class="back-button w-button"
-                            >↓</a
-                          >
                         </div>
-                        <div data-form="progress" class="progress-wrapper">
-                          <div
-                            data-form="progress-indicator"
-                            class="progress-indicator"
-                          ></div>
-                          <div class="progress-indicator current"></div>
+                        <div data-form="step" class="form-step-item">
+                          <div class="step-wrapper">
+                            <div class="form-field-wrapper">
+                              <div class="form-field-top">
+                                <div class="form-field-letter">c.</div>
+                                <label for="Color">Describe your business needs in 1-3
+                                  sentences.</label>
+                              </div>
+                            </div>
+                            <div class="form-input-wrapper">
+                              <div class="form-description">
+                                EX: I work at a Miami real estate agency,
+                                aiming to boost marketing for properties
+                                ranging from $500k to $5m.
+                              </div>
+                            </div>
+                            <div class="form-field-group">
+                              <div class="form-input-wrapper"></div>
+                              <div class="form-input-wrapper">
+                                <textarea id="Describe-your-business-needs-in-1-3-sentences"
+                                  name="Describe-your-business-needs-in-1-3-sentences" maxlength="5000"
+                                  data-name="Describe your business needs in 1-3 sentences."
+                                  placeholder=" Type here... What you offer, target market, your average price"
+                                  class="form-input is-text-area w-input"></textarea>
+                              </div>
+                            </div>
+                            <div class="form-button-wrapper">
+                              <a data-form="next-btn" href="#" class="form-button w-button">Next step ✓
+                              </a>
+                              <div class="press-enter-text">
+                                press <strong>Enter ↵</strong>
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                      </form>
-                      <div class="start-project_form-success w-form-done">
-                        <img
-                          src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/6352ce11c9635f2f09cc594a_s.gif"
-                          loading="lazy"
-                          alt=""
-                          class="start-project_form-success-img"
-                        />
-                        <div class="start-project_form-text">
-                          <br /><span
-                            class="heading-style-h3 text-color-degrade-light"
-                            >Thank you! <br /></span
-                          >Your submission has been received!
+                        <div data-form="step" class="form-step-item">
+                          <div class="step-wrapper">
+                            <div class="form-field-wrapper">
+                              <div class="form-field-top">
+                                <label for="Color">Finally, how do we contact you?</label>
+                              </div>
+                            </div>
+                            <div class="form-field-group">
+                              <div class="form-input-wrapper">
+                                <input class="form-input w-input" maxlength="256" name="Name" data-name="Name"
+                                  placeholder="First name..." type="text" id="Name-4" required="" />
+                              </div>
+                              <div class="form-input-wrapper">
+                                <input class="form-input w-input" maxlength="256" name="Email" data-name="Email"
+                                  placeholder="mail@domain.com" type="email" id="Email-5" required="" />
+                              </div>
+                            </div>
+                            <div class="form-button-wrapper">
+                              <a data-form="next-btn" href="#" class="form-button w-button">Next step ✓
+                              </a>
+                              <div class="press-enter-text">
+                                press <strong>Enter ↵</strong>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div data-form="step" class="form-step-item">
+                          <div class="step-wrapper">
+                            <div class="step-content-only">
+                              <h2>
+                                Ready
+                                <span class="text-color-degrade-form">to submit</span>?
+                              </h2>
+                              <div class="form-button-wrapper">
+                                <input type="submit" data-wait="Please wait..." data-form="submit-btn"
+                                  class="form-button w-button" value="Send it away!" />
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                      <div class="w-form-fail">
-                        <div>
-                          Oops! Something went wrong while submitting the form.
+                      <div class="fixed-button-wrapper">
+                        <div class="steps-text">
+                          Step<span data-text="current-step" class="current-step">0</span>
+                          /
+                          <span data-text="total-steps" class="total-steps">5</span>
                         </div>
+                        <a data-form="back-btn" href="#" class="next-button w-button">↑</a><a data-form="next-btn"
+                          href="#" class="back-button w-button">↓</a>
+                      </div>
+                      <div data-form="progress" class="progress-wrapper">
+                        <div data-form="progress-indicator" class="progress-indicator"></div>
+                        <div class="progress-indicator current"></div>
+                      </div>
+                    </form>
+                    <div class="start-project_form-success w-form-done">
+                      <img
+                        src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/6352ce11c9635f2f09cc594a_s.gif"
+                        loading="lazy" alt="" class="start-project_form-success-img" />
+                      <div class="start-project_form-text">
+                        <br /><span class="heading-style-h3 text-color-degrade-light">Thank you! <br /></span>Your
+                        submission has been received!
+                      </div>
+                    </div>
+                    <div class="w-form-fail">
+                      <div>
+                        Oops! Something went wrong while submitting the form.
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="start-project_contact">
-                  <div class="heading-style-h4 text-color-degrade-light">
-                    Start a conversation
-                  </div>
-                  <div class="start-project_contact-btn">
-                    <a
-                      href="/cdn-cgi/l/email-protection#630b060f0f0c230213110c104d040f0c01020f5c101601090600175e301702111746515302465153000c0d1506111002170a0c0d"
-                      class="button is-secondary is-large w-inline-block"
-                      ><div class="text-size-medium">
-                        <span
-                          class="__cf_email__"
-                          data-cfemail="046c6168686b446574766b772a63686b666568"
-                          >[email&#160;protected]</span
-                        >
-                      </div>
-                      <img
-                        src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/634edabd05e56b610501f907_icon-btn.svg"
-                        loading="lazy"
-                        alt=""
-                        class="icon-1x1-small" /></a
-                    ><a
-                      href="https://wa.me/message/YI4NHTF5YXGOA1"
-                      target="_blank"
-                      class="button is-secondary is-large w-inline-block"
-                      ><div class="text-size-medium">Whatsapp</div>
-                      <img
-                        src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/634edabd05e56b610501f907_icon-btn.svg"
-                        loading="lazy"
-                        alt=""
-                        class="icon-1x1-small"
-                    /></a>
-                  </div>
+              </div>
+              <div class="start-project_contact">
+                <div class="heading-style-h4 text-color-degrade-light">
+                  Start a conversation
+                </div>
+                <div class="start-project_contact-btn">
+                  <a href="mailto:hello@apros.pe?subject=Start%20a%20conversation"
+                    class="button is-secondary is-large w-inline-block">
+                    <div class="text-size-medium">
+                      <span class="__cf_email__"
+                        data-cfemail="046c6168686b446574766b772a63686b666568">hello@apros.pe</span>
+                    </div>
+                    <img
+                      src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/634edabd05e56b610501f907_icon-btn.svg"
+                      loading="lazy" alt="" class="icon-1x1-small" />
+                  </a><a
+                    href="https://api.whatsapp.com/send/?phone=51906459245&text=Hola%2C+tengo+una+consulta+sobre+los+servicios+que+ofrecen.&type=phone_number&app_absent=0"
+                    target="_blank" class="button is-secondary is-large w-inline-block">
+                    <div class="text-size-medium">Whatsapp</div>
+                    <img
+                      src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/634edabd05e56b610501f907_icon-btn.svg"
+                      loading="lazy" alt="" class="icon-1x1-small" />
+                  </a>
                 </div>
               </div>
             </div>
           </div>
-          <img
-            src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/6352c93735e7540ef4112f89_bg-light-blue-vf.webp"
-            loading="lazy"
-            sizes="(max-width: 1533px) 100vw, 1533px"
-            srcset="
+        </div>
+        <img
+          src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/6352c93735e7540ef4112f89_bg-light-blue-vf.webp"
+          loading="lazy" sizes="(max-width: 1533px) 100vw, 1533px" srcset="
               https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/6352c93735e7540ef4112f89_bg-light-blue-vf-p-500.webp  500w,
               https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/6352c93735e7540ef4112f89_bg-light-blue-vf-p-800.webp  800w,
               https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/6352c93735e7540ef4112f89_bg-light-blue-vf.webp       1533w
-            "
-            alt=""
-            class="start-project_light-img"
-          />
-        </div>
+            " alt="" class="start-project_light-img" />
       </div>
     </div>
-    <script
-      data-cfasync="false"
-      src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
-    ></script>
-    <script
-      src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=634ecebdb4ffd446e52e6f19"
-      type="text/javascript"
-      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/js/webflow.schunk.b7cad701f94860c2.js"
-      type="text/javascript"
-    ></script>
-    <script
-      src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/js/webflow.schunk.712216aa265cd9af.js"
-      type="text/javascript"
-    ></script>
-    <script
-      src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/js/webflow.87bc73bb.52c48133a5448821.js"
-      type="text/javascript"
-    ></script>
-    <script src="https://cdn.jsdelivr.net/gh/videsigns/webflow-tools@latest/multi-step.js"></script>
+  </div>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=634ecebdb4ffd446e52e6f19"
+    type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/js/webflow.schunk.b7cad701f94860c2.js"
+    type="text/javascript"></script>
+  <script src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/js/webflow.schunk.712216aa265cd9af.js"
+    type="text/javascript"></script>
+  <script src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/js/webflow.87bc73bb.52c48133a5448821.js"
+    type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/gh/videsigns/webflow-tools@latest/multi-step.js"></script>
 
-    <script>
-      if (typeof Lenis !== "undefined") {
-        const lenis = new Lenis({
-          duration: 1.2,
-          easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
-          direction: "vertical", // vertical, horizontal
-          gestureDirection: "vertical", // vertical, horizontal, both
-          smooth: true,
-          mouseMultiplier: 1,
-          smoothTouch: false,
-          touchMultiplier: 2,
-          infinite: false,
-        });
+  <script>
+    if (typeof Lenis !== "undefined") {
+      const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
+        direction: "vertical", // vertical, horizontal
+        gestureDirection: "vertical", // vertical, horizontal, both
+        smooth: true,
+        mouseMultiplier: 1,
+        smoothTouch: false,
+        touchMultiplier: 2,
+        infinite: false,
+      });
 
-        // get scroll value (debug)
-        lenis.on("scroll", ({ scroll, limit, velocity, direction, progress }) => {
-          console.log({ scroll, limit, velocity, direction, progress });
-        });
+      // get scroll value (debug)
+      lenis.on("scroll", ({ scroll, limit, velocity, direction, progress }) => {
+        console.log({ scroll, limit, velocity, direction, progress });
+      });
 
-        function raf(time) {
-          lenis.raf(time);
-          requestAnimationFrame(raf);
-        }
-
+      function raf(time) {
+        lenis.raf(time);
         requestAnimationFrame(raf);
       }
 
-      var btns_latam = document.querySelectorAll(".btn-latam");
-      var arrows_btn_latam = document.querySelectorAll(".arrow-btn-latam");
-      btns_latam.forEach(function (btn) {
-        btn.addEventListener("click", function () {
-          arrows_btn_latam.forEach(function (arrow) {
-            arrow.classList.toggle("active");
-          });
+      requestAnimationFrame(raf);
+    }
+
+    var btns_latam = document.querySelectorAll(".btn-latam");
+    var arrows_btn_latam = document.querySelectorAll(".arrow-btn-latam");
+    btns_latam.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        arrows_btn_latam.forEach(function (arrow) {
+          arrow.classList.toggle("active");
         });
       });
-    </script>
-    <script>
-      // Optional - Set sticky section heights based on inner content width
-      // Makes scroll timing feel more natural
-      function setTrackHeights() {
-        $(".section-height").each(function (index) {
-          let trackWidth = $(this).find(".track").outerWidth();
-          $(this).height(trackWidth);
-        });
-      }
+    });
+  </script>
+  <script>
+    // Optional - Set sticky section heights based on inner content width
+    // Makes scroll timing feel more natural
+    function setTrackHeights() {
+      $(".section-height").each(function (index) {
+        let trackWidth = $(this).find(".track").outerWidth();
+        $(this).height(trackWidth);
+      });
+    }
+    setTrackHeights();
+
+    window.addEventListener("resize", function () {
       setTrackHeights();
+    });
+  </script>
 
-      window.addEventListener("resize", function () {
-        setTrackHeights();
-      });
-    </script>
-
-    <script src="https://unpkg.com/split-type"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
-    <script>
-      window.addEventListener("DOMContentLoaded", (event) => {
-        // Split text into spans
-        let typeSplit = new SplitType("[text-split]", {
-          types: "words, chars",
-          tagName: "span",
-        });
-
-        // Link timelines to scroll position
-        function createScrollTrigger(triggerElement, timeline) {
-          // Reset tl when scroll out of view past bottom of screen
-          ScrollTrigger.create({
-            trigger: triggerElement,
-            start: "top bottom",
-            onLeaveBack: () => {
-              timeline.progress(0);
-              timeline.pause();
-            },
-          });
-          // Play tl when scrolled into view (60% from top of screen)
-          ScrollTrigger.create({
-            trigger: triggerElement,
-            start: "top 75%",
-            onEnter: () => timeline.play(),
-          });
-        }
-
-        $("[words-slide-up]").each(function (index) {
-          let tl = gsap.timeline({ paused: true });
-          tl.from($(this).find(".word"), {
-            opacity: 0,
-            yPercent: 100,
-            duration: 0.5,
-            ease: "back.out(2)",
-            stagger: { amount: 0.5 },
-          });
-          createScrollTrigger($(this), tl);
-        });
-
-        $("[words-rotate-in]").each(function (index) {
-          let tl = gsap.timeline({ paused: true });
-          tl.set($(this).find(".word"), { transformPerspective: 1000 });
-          tl.from($(this).find(".word"), {
-            rotationX: -90,
-            duration: 0.6,
-            ease: "power2.out",
-            stagger: { amount: 0.6 },
-          });
-          createScrollTrigger($(this), tl);
-        });
-
-        $("[words-slide-from-right]").each(function (index) {
-          let tl = gsap.timeline({ paused: true });
-          tl.from($(this).find(".word"), {
-            opacity: 0,
-            x: "1em",
-            duration: 0.6,
-            ease: "power2.out",
-            stagger: { amount: 0.2 },
-          });
-          createScrollTrigger($(this), tl);
-        });
-
-        $("[letters-slide-up]").each(function (index) {
-          let tl = gsap.timeline({ paused: true });
-          tl.from($(this).find(".char"), {
-            yPercent: 100,
-            duration: 0.2,
-            ease: "power1.out",
-            stagger: { amount: 0.6 },
-          });
-          createScrollTrigger($(this), tl);
-        });
-
-        $("[letters-slide-down]").each(function (index) {
-          let tl = gsap.timeline({ paused: true });
-          tl.from($(this).find(".char"), {
-            yPercent: -120,
-            duration: 0.3,
-            ease: "power1.out",
-            stagger: { amount: 0.7 },
-          });
-          createScrollTrigger($(this), tl);
-        });
-
-        $("[letters-fade-in]").each(function (index) {
-          let tl = gsap.timeline({ paused: true });
-          tl.from($(this).find(".char"), {
-            opacity: 0,
-            duration: 0.2,
-            ease: "power1.out",
-            stagger: { amount: 0.8 },
-          });
-          createScrollTrigger($(this), tl);
-        });
-
-        $("[letters-fade-in-random]").each(function (index) {
-          let tl = gsap.timeline({ paused: true });
-          tl.from($(this).find(".char"), {
-            opacity: 0,
-            duration: 0.05,
-            ease: "power1.out",
-            stagger: { amount: 0.4, from: "random" },
-          });
-          createScrollTrigger($(this), tl);
-        });
-
-        $("[scrub-each-word]").each(function (index) {
-          let tl = gsap.timeline({
-            scrollTrigger: {
-              trigger: $(this),
-              start: "top 90%",
-              end: "top center",
-              scrub: true,
-            },
-          });
-          tl.from($(this).find(".word"), {
-            opacity: 0.2,
-            duration: 0.2,
-            ease: "power1.out",
-            stagger: { each: 0.4 },
-          });
-        });
-
-        // Avoid flash of unstyled content
-        gsap.set("[text-split]", { opacity: 1 });
-      });
-    </script>
-    <script>
-      window.addEventListener("DOMContentLoaded", () => {
-        gsap.registerPlugin(ScrollTrigger);
-
-        const createHorizontalScroll = () => {
-          ScrollTrigger.getAll().forEach((trigger) => {
-            if (trigger.vars && trigger.vars.id === "about-horizontal-scroll") {
-              trigger.kill();
-            }
-          });
-
-          document.querySelectorAll(".section-height").forEach((section) => {
-            const track = section.querySelector(".track");
-            const stickyElement = section.querySelector(".sticky-element");
-
-            if (!track || !stickyElement) return;
-
-            const maxScroll = Math.max(0, track.scrollWidth - window.innerWidth);
-            gsap.set(track, { x: 0 });
-
-            if (maxScroll <= 0) return;
-
-            gsap.to(track, {
-              x: -maxScroll,
-              ease: "none",
-              scrollTrigger: {
-                id: "about-horizontal-scroll",
-                trigger: section,
-                start: "top top",
-                end: () => `+=${maxScroll}`,
-                scrub: 1,
-                pin: stickyElement,
-                invalidateOnRefresh: true,
-              },
-            });
-          });
-
-          ScrollTrigger.refresh();
-        };
-
-        createHorizontalScroll();
-        window.addEventListener("resize", createHorizontalScroll);
-      });
-    </script>
-    <script>
-      window.addEventListener("DOMContentLoaded", () => {
-        gsap.registerPlugin(ScrollTrigger);
-
-        const createStackedBlocks = () => {
-          ScrollTrigger.getAll().forEach((trigger) => {
-            if (trigger.vars && trigger.vars.id === "about-iso-stack") {
-              trigger.kill();
-            }
-          });
-
-          document.querySelectorAll(".block-wrapper").forEach((wrapper) => {
-            const blocks = Array.from(wrapper.querySelectorAll(".block"));
-            if (blocks.length < 2) return;
-            const section = wrapper.closest(".equipo_component") || wrapper;
-
-            gsap.set(blocks, { clearProps: "transform" });
-            blocks.forEach((block, index) => {
-              gsap.set(block, { zIndex: index + 1 });
-            });
-
-            const baseOffset = blocks[0].offsetTop;
-            const tl = gsap.timeline({
-              scrollTrigger: {
-                id: "about-iso-stack",
-                trigger: section,
-                start: "top top",
-                end: () => `+=${(blocks.length - 1) * 540}`,
-                scrub: 1.8,
-                pin: section,
-                pinSpacing: false,
-                anticipatePin: 1,
-                invalidateOnRefresh: true,
-              },
-            });
-
-            blocks.slice(1).forEach((block, index) => {
-              tl.to(
-                block,
-                {
-                  y: -(block.offsetTop - baseOffset),
-                  ease: "power1.inOut",
-                  duration: 1,
-                },
-                index * 0.5,
-              );
-            });
-          });
-
-          ScrollTrigger.refresh();
-        };
-
-        createStackedBlocks();
-        window.addEventListener("resize", createStackedBlocks);
-      });
-    </script>
-
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
-    />
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/CustomEase.min.js"></script>
-
-    <script>
-      ////////////////////////////////////////////////////////////
-      // Team Slider
-      const teamSwiper = new Swiper(".swiper.is-team", {
-        // Optional parameters
-        slidesPerView: "auto",
-        keyboard: true,
-        direction: "horizontal",
-        loop: false,
-        speed: 800,
-        mousewheel: {
-          forceToAxis: true,
-        },
-        touchEventsTarget: "container",
-        freeMode: true,
-      });
-      let myTimeout;
-      teamSwiper.on("progress", function (e) {
-        clearTimeout(myTimeout);
-        $(".team_photo-height").addClass("scaled");
-        $(".cursor_dot").addClass("hide");
-        myTimeout = setTimeout(function () {
-          // $(".cursor_dot").removeClass("hide");
-          $(".team_photo-height").removeClass("scaled");
-        }, 100);
+  <script src="https://unpkg.com/split-type"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+  <script>
+    window.addEventListener("DOMContentLoaded", (event) => {
+      // Split text into spans
+      let typeSplit = new SplitType("[text-split]", {
+        types: "words, chars",
+        tagName: "span",
       });
 
-      ////////////////////////////////////////////////////////////
-      // Cursor
-      $(document).on("mousemove", function () {
-        $(".cursor_dot").removeClass("hide");
-      });
-      $(".swiper.is-team")
-        .on("mouseenter", function () {
-          $(".cursor_dot").addClass("show");
-        })
-        .on("mouseleave", function () {
-          $(".cursor_dot").removeClass("show");
+      // Link timelines to scroll position
+      function createScrollTrigger(triggerElement, timeline) {
+        // Reset tl when scroll out of view past bottom of screen
+        ScrollTrigger.create({
+          trigger: triggerElement,
+          start: "top bottom",
+          onLeaveBack: () => {
+            timeline.progress(0);
+            timeline.pause();
+          },
         });
-      $(".team_link")
-        .on("mouseenter", function () {
-          $(".cursor_dot").addClass("small");
-        })
-        .on("mouseleave", function () {
-          $(".cursor_dot").removeClass("small");
+        // Play tl when scrolled into view (60% from top of screen)
+        ScrollTrigger.create({
+          trigger: triggerElement,
+          start: "top 75%",
+          onEnter: () => timeline.play(),
         });
-
-      ////////////////////////////////////////////////////////////
-      // POPUP CODE HERE
-      // get the relative size & position values to apply to an image
-      function getDifference(cardImg, popupImg) {
-        let cardWidth = cardImg.innerWidth();
-        let cardHeight = cardImg.innerHeight();
-        let offsetLeft = cardImg.offset().left - popupImg.offset().left;
-        let offsetTop = cardImg.offset().top - popupImg.offset().top;
-        // return transformValue
-        return [offsetLeft, offsetTop, cardWidth, cardHeight];
       }
 
-      // OPEN POPUP
-      $(".team_link").on("click", function () {
-        $("html, body").css("overflow", "hidden");
-        // get images to animate to & from
-        let myIndex = $(this).parent().index();
-        let cardImg = $(this).find(".image");
-        let popupImg = $(".popup_item").eq(myIndex).find(".image");
-
-        // set initial display states
-        $(".popup_item").removeClass("active");
-        $(".popup_item").eq(myIndex).addClass("active");
-        $(".popup").css("display", "block");
-        cardImg.css("opacity", "0");
-        $("body").addClass("no-scroll");
-        $("body").addClass("popup-open");
-
-        let transformValue = getDifference(cardImg, popupImg);
-
-        // animations
-        gsap.fromTo(
-          popupImg,
-          {
-            x: transformValue[0],
-            y: transformValue[1],
-            width: transformValue[2],
-            height: transformValue[3],
-          },
-          {
-            x: 0,
-            y: 0,
-            width: "100%",
-            height: "100%",
-            duration: 0.6,
-            ease: "power2.inOut",
-          },
-        );
-        gsap.to(".popup_bg, .popup_close", {
-          opacity: 1,
-          duration: 0.3,
-          delay: 0.3,
-          ease: "power2.inOut",
-        });
-        gsap.to(".popup_content", {
-          opacity: 1,
-          duration: 0.3,
-          delay: 0.3,
-          ease: "power2.inOut",
-        });
-      });
-
-      // CLOSE POPUP
-      $(".popup_close").on("click", function () {
-        // get images to animate to & from
-        let myIndex = $(".popup_item.active").index();
-        let popupImg = $(".popup_item.active .image");
-        let cardImg = $(".team_link").eq(myIndex).find(".image");
-
-        let transformValue = getDifference(cardImg, popupImg);
-        $("body").removeClass("popup-open");
-
-        function closePopup() {
-          $("html, body").css("overflow", "visible");
-          cardImg.css("opacity", "1");
-          $(".popup").css("display", "none");
-          popupImg.removeAttr("style");
-          $("body").removeClass("no-scroll");
-        }
-
-        // animations
-        gsap.fromTo(
-          popupImg,
-          {
-            x: 0,
-            y: 0,
-            width: "100%",
-            height: "100%",
-          },
-          {
-            x: transformValue[0],
-            y: transformValue[1],
-            width: transformValue[2],
-            height: transformValue[3],
-            onComplete: closePopup,
-            duration: 0.6,
-            ease: "power3.inOut",
-          },
-        );
-        gsap.to(".popup_bg, .popup_content, .popup_close", {
+      $("[words-slide-up]").each(function (index) {
+        let tl = gsap.timeline({ paused: true });
+        tl.from($(this).find(".word"), {
           opacity: 0,
+          yPercent: 100,
+          duration: 0.5,
+          ease: "back.out(2)",
+          stagger: { amount: 0.5 },
+        });
+        createScrollTrigger($(this), tl);
+      });
+
+      $("[words-rotate-in]").each(function (index) {
+        let tl = gsap.timeline({ paused: true });
+        tl.set($(this).find(".word"), { transformPerspective: 1000 });
+        tl.from($(this).find(".word"), {
+          rotationX: -90,
+          duration: 0.6,
+          ease: "power2.out",
+          stagger: { amount: 0.6 },
+        });
+        createScrollTrigger($(this), tl);
+      });
+
+      $("[words-slide-from-right]").each(function (index) {
+        let tl = gsap.timeline({ paused: true });
+        tl.from($(this).find(".word"), {
+          opacity: 0,
+          x: "1em",
+          duration: 0.6,
+          ease: "power2.out",
+          stagger: { amount: 0.2 },
+        });
+        createScrollTrigger($(this), tl);
+      });
+
+      $("[letters-slide-up]").each(function (index) {
+        let tl = gsap.timeline({ paused: true });
+        tl.from($(this).find(".char"), {
+          yPercent: 100,
+          duration: 0.2,
+          ease: "power1.out",
+          stagger: { amount: 0.6 },
+        });
+        createScrollTrigger($(this), tl);
+      });
+
+      $("[letters-slide-down]").each(function (index) {
+        let tl = gsap.timeline({ paused: true });
+        tl.from($(this).find(".char"), {
+          yPercent: -120,
           duration: 0.3,
-          ease: "power3.inOut",
+          ease: "power1.out",
+          stagger: { amount: 0.7 },
+        });
+        createScrollTrigger($(this), tl);
+      });
+
+      $("[letters-fade-in]").each(function (index) {
+        let tl = gsap.timeline({ paused: true });
+        tl.from($(this).find(".char"), {
+          opacity: 0,
+          duration: 0.2,
+          ease: "power1.out",
+          stagger: { amount: 0.8 },
+        });
+        createScrollTrigger($(this), tl);
+      });
+
+      $("[letters-fade-in-random]").each(function (index) {
+        let tl = gsap.timeline({ paused: true });
+        tl.from($(this).find(".char"), {
+          opacity: 0,
+          duration: 0.05,
+          ease: "power1.out",
+          stagger: { amount: 0.4, from: "random" },
+        });
+        createScrollTrigger($(this), tl);
+      });
+
+      $("[scrub-each-word]").each(function (index) {
+        let tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: $(this),
+            start: "top 90%",
+            end: "top center",
+            scrub: true,
+          },
+        });
+        tl.from($(this).find(".word"), {
+          opacity: 0.2,
+          duration: 0.2,
+          ease: "power1.out",
+          stagger: { each: 0.4 },
         });
       });
-    </script>
-    <script
-      defer
-      src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516"
-      integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg=="
-      data-cf-beacon='{"version":"2024.11.0","token":"62b39089df424b0998c64f4a84ffe7c1","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
-      crossorigin="anonymous"
-    ></script>
-  </body>
+
+      // Avoid flash of unstyled content
+      gsap.set("[text-split]", { opacity: 1 });
+    });
+  </script>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      gsap.registerPlugin(ScrollTrigger);
+
+      const createHorizontalScroll = () => {
+        ScrollTrigger.getAll().forEach((trigger) => {
+          if (trigger.vars && trigger.vars.id === "about-horizontal-scroll") {
+            trigger.kill();
+          }
+        });
+
+        document.querySelectorAll(".section-height").forEach((section) => {
+          const track = section.querySelector(".track");
+          const stickyElement = section.querySelector(".sticky-element");
+
+          if (!track || !stickyElement) return;
+
+          const maxScroll = Math.max(0, track.scrollWidth - window.innerWidth);
+          gsap.set(track, { x: 0 });
+
+          if (maxScroll <= 0) return;
+
+          gsap.to(track, {
+            x: -maxScroll,
+            ease: "none",
+            scrollTrigger: {
+              id: "about-horizontal-scroll",
+              trigger: section,
+              start: "top top",
+              end: () => `+=${maxScroll}`,
+              scrub: 1,
+              pin: stickyElement,
+              invalidateOnRefresh: true,
+            },
+          });
+        });
+
+        ScrollTrigger.refresh();
+      };
+
+      createHorizontalScroll();
+      window.addEventListener("resize", createHorizontalScroll);
+    });
+  </script>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      gsap.registerPlugin(ScrollTrigger);
+
+      const createStackedBlocks = () => {
+        ScrollTrigger.getAll().forEach((trigger) => {
+          if (trigger.vars && trigger.vars.id === "about-iso-stack") {
+            trigger.kill();
+          }
+        });
+
+        document.querySelectorAll(".block-wrapper").forEach((wrapper) => {
+          const blocks = Array.from(wrapper.querySelectorAll(".block"));
+          if (blocks.length < 2) return;
+          const section = wrapper.closest(".equipo_component") || wrapper;
+
+          gsap.set(blocks, { clearProps: "transform" });
+          blocks.forEach((block, index) => {
+            gsap.set(block, { zIndex: index + 1 });
+          });
+
+          const baseOffset = blocks[0].offsetTop;
+          const tl = gsap.timeline({
+            scrollTrigger: {
+              id: "about-iso-stack",
+              trigger: section,
+              start: "top top",
+              end: () => `+=${(blocks.length - 1) * 540}`,
+              scrub: 1.8,
+              pin: section,
+              pinSpacing: false,
+              anticipatePin: 1,
+              invalidateOnRefresh: true,
+            },
+          });
+
+          blocks.slice(1).forEach((block, index) => {
+            tl.to(
+              block,
+              {
+                y: -(block.offsetTop - baseOffset),
+                ease: "power1.inOut",
+                duration: 1,
+              },
+              index * 0.5,
+            );
+          });
+        });
+
+        ScrollTrigger.refresh();
+      };
+
+      createStackedBlocks();
+      window.addEventListener("resize", createStackedBlocks);
+    });
+  </script>
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/CustomEase.min.js"></script>
+
+  <script>
+    ////////////////////////////////////////////////////////////
+    // Team Slider
+    const teamSwiper = new Swiper(".swiper.is-team", {
+      // Optional parameters
+      slidesPerView: "auto",
+      keyboard: true,
+      direction: "horizontal",
+      loop: false,
+      speed: 800,
+      mousewheel: {
+        forceToAxis: true,
+      },
+      touchEventsTarget: "container",
+      freeMode: true,
+    });
+    let myTimeout;
+    teamSwiper.on("progress", function (e) {
+      clearTimeout(myTimeout);
+      $(".team_photo-height").addClass("scaled");
+      $(".cursor_dot").addClass("hide");
+      myTimeout = setTimeout(function () {
+        // $(".cursor_dot").removeClass("hide");
+        $(".team_photo-height").removeClass("scaled");
+      }, 100);
+    });
+
+    ////////////////////////////////////////////////////////////
+    // Cursor
+    $(document).on("mousemove", function () {
+      $(".cursor_dot").removeClass("hide");
+    });
+    $(".swiper.is-team")
+      .on("mouseenter", function () {
+        $(".cursor_dot").addClass("show");
+      })
+      .on("mouseleave", function () {
+        $(".cursor_dot").removeClass("show");
+      });
+    $(".team_link")
+      .on("mouseenter", function () {
+        $(".cursor_dot").addClass("small");
+      })
+      .on("mouseleave", function () {
+        $(".cursor_dot").removeClass("small");
+      });
+
+    ////////////////////////////////////////////////////////////
+    // POPUP CODE HERE
+    // get the relative size & position values to apply to an image
+    function getDifference(cardImg, popupImg) {
+      let cardWidth = cardImg.innerWidth();
+      let cardHeight = cardImg.innerHeight();
+      let offsetLeft = cardImg.offset().left - popupImg.offset().left;
+      let offsetTop = cardImg.offset().top - popupImg.offset().top;
+      // return transformValue
+      return [offsetLeft, offsetTop, cardWidth, cardHeight];
+    }
+
+    // OPEN POPUP
+    $(".team_link").on("click", function () {
+      $("html, body").css("overflow", "hidden");
+      // get images to animate to & from
+      let myIndex = $(this).parent().index();
+      let cardImg = $(this).find(".image");
+      let popupImg = $(".popup_item").eq(myIndex).find(".image");
+
+      // set initial display states
+      $(".popup_item").removeClass("active");
+      $(".popup_item").eq(myIndex).addClass("active");
+      $(".popup").css("display", "block");
+      cardImg.css("opacity", "0");
+      $("body").addClass("no-scroll");
+      $("body").addClass("popup-open");
+
+      let transformValue = getDifference(cardImg, popupImg);
+
+      // animations
+      gsap.fromTo(
+        popupImg,
+        {
+          x: transformValue[0],
+          y: transformValue[1],
+          width: transformValue[2],
+          height: transformValue[3],
+        },
+        {
+          x: 0,
+          y: 0,
+          width: "100%",
+          height: "100%",
+          duration: 0.6,
+          ease: "power2.inOut",
+        },
+      );
+      gsap.to(".popup_bg, .popup_close", {
+        opacity: 1,
+        duration: 0.3,
+        delay: 0.3,
+        ease: "power2.inOut",
+      });
+      gsap.to(".popup_content", {
+        opacity: 1,
+        duration: 0.3,
+        delay: 0.3,
+        ease: "power2.inOut",
+      });
+    });
+
+    // CLOSE POPUP
+    $(".popup_close").on("click", function () {
+      // get images to animate to & from
+      let myIndex = $(".popup_item.active").index();
+      let popupImg = $(".popup_item.active .image");
+      let cardImg = $(".team_link").eq(myIndex).find(".image");
+
+      let transformValue = getDifference(cardImg, popupImg);
+      $("body").removeClass("popup-open");
+
+      function closePopup() {
+        $("html, body").css("overflow", "visible");
+        cardImg.css("opacity", "1");
+        $(".popup").css("display", "none");
+        popupImg.removeAttr("style");
+        $("body").removeClass("no-scroll");
+      }
+
+      // animations
+      gsap.fromTo(
+        popupImg,
+        {
+          x: 0,
+          y: 0,
+          width: "100%",
+          height: "100%",
+        },
+        {
+          x: transformValue[0],
+          y: transformValue[1],
+          width: transformValue[2],
+          height: transformValue[3],
+          onComplete: closePopup,
+          duration: 0.6,
+          ease: "power3.inOut",
+        },
+      );
+      gsap.to(".popup_bg, .popup_content, .popup_close", {
+        opacity: 0,
+        duration: 0.3,
+        ease: "power3.inOut",
+      });
+    });
+  </script>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516"
+    integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg=="
+    data-cf-beacon='{"version":"2024.11.0","token":"62b39089df424b0998c64f4a84ffe7c1","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
+    crossorigin="anonymous"></script>
+</body>
+
 </html>

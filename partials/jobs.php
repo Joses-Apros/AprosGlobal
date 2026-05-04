@@ -252,33 +252,38 @@ $status = get_field('status');
                     <div class="position_filter-select">
                       <select id="Job-Employment-type" name="Job-Employment-type" class="position_select w-select">
                         <option value="">Employment type</option>
-                        <?php if(!empty($employment_types)): foreach($employment_types as $item): ?>
-                          <option value="<?php echo esc_attr($item['name']); ?>" <?php selected($_GET['Job-Employment-type'] ?? '', $item['name']); ?>><?php echo esc_html($item['name']); ?></option>
-                        <?php endforeach; endif; ?>
+                        <?php if (!empty($employment_types)):
+                          foreach ($employment_types as $item): ?>
+                            <option value="<?php echo esc_attr($item['name']); ?>" <?php selected($_GET['Job-Employment-type'] ?? '', $item['name']); ?>>
+                              <?php echo esc_html($item['name']); ?></option>
+                          <?php endforeach; endif; ?>
                       </select>
                     </div>
                     <div class="position_filter-select">
                       <select id="Job-Departments" name="Job-Departments" class="position_select w-select">
                         <option value="">Departments</option>
-                        <?php if(!empty($departments)): foreach($departments as $item): ?>
-                          <option value="<?php echo esc_attr($item['name']); ?>" <?php selected($_GET['Job-Departments'] ?? '', $item['name']); ?>><?php echo esc_html($item['name']); ?></option>
-                        <?php endforeach; endif; ?>
+                        <?php if (!empty($departments)):
+                          foreach ($departments as $item): ?>
+                            <option value="<?php echo esc_attr($item['name']); ?>" <?php selected($_GET['Job-Departments'] ?? '', $item['name']); ?>><?php echo esc_html($item['name']); ?></option>
+                          <?php endforeach; endif; ?>
                       </select>
                     </div>
                     <div class="position_filter-select">
                       <select id="Job-Level" name="Job-Level" class="position_select w-select">
                         <option value="">Level</option>
-                        <?php if(!empty($levels)): foreach($levels as $item): ?>
-                          <option value="<?php echo esc_attr($item['name']); ?>" <?php selected($_GET['Job-Level'] ?? '', $item['name']); ?>><?php echo esc_html($item['name']); ?></option>
-                        <?php endforeach; endif; ?>
+                        <?php if (!empty($levels)):
+                          foreach ($levels as $item): ?>
+                            <option value="<?php echo esc_attr($item['name']); ?>" <?php selected($_GET['Job-Level'] ?? '', $item['name']); ?>><?php echo esc_html($item['name']); ?></option>
+                          <?php endforeach; endif; ?>
                       </select>
                     </div>
                     <div class="position_filter-select">
                       <select id="Status" name="Status" class="position_select w-select">
                         <option value="">Status</option>
-                        <?php if(!empty($status)): foreach($status as $item): ?>
-                          <option value="<?php echo esc_attr($item['name']); ?>" <?php selected($_GET['Status'] ?? '', $item['name']); ?>><?php echo esc_html($item['name']); ?></option>
-                        <?php endforeach; endif; ?>
+                        <?php if (!empty($status)):
+                          foreach ($status as $item): ?>
+                            <option value="<?php echo esc_attr($item['name']); ?>" <?php selected($_GET['Status'] ?? '', $item['name']); ?>><?php echo esc_html($item['name']); ?></option>
+                          <?php endforeach; endif; ?>
                       </select>
                     </div>
                   </div>
@@ -321,7 +326,7 @@ $status = get_field('status');
                     };
 
                     filterForm.querySelectorAll('select').forEach(select => {
-                      select.addEventListener('change', function() {
+                      select.addEventListener('change', function () {
                         const formData = new FormData(filterForm);
                         const params = new URLSearchParams(formData).toString();
                         const targetUrl = window.location.pathname + '?' + params;
@@ -333,9 +338,9 @@ $status = get_field('status');
                 <div class="position_acordeon-wrapper">
                   <div class="w-dyn-list">
                     <div role="list" class="w-dyn-items">
-                      <?php 
-                      $jobs = get_field('jobs'); 
-                      
+                      <?php
+                      $jobs = get_field('jobs');
+
                       // Filtrado en el servidor
                       $sel_time = $_GET['Job-Employment-type'] ?? '';
                       $sel_dept = $_GET['Job-Departments'] ?? '';
@@ -343,19 +348,23 @@ $status = get_field('status');
                       $sel_status = $_GET['Status'] ?? '';
 
                       if (!empty($jobs) && is_array($jobs)) {
-                          if ($sel_time || $sel_dept || $sel_level || $sel_status) {
-                              $jobs = array_filter($jobs, function($job) use ($sel_time, $sel_dept, $sel_level, $sel_status) {
-                                  if ($sel_time && ($job['time'] ?? '') !== $sel_time) return false;
-                                  if ($sel_dept && ($job['location'] ?? '') !== $sel_dept) return false;
-                                  if ($sel_level && ($job['level'] ?? '') !== $sel_level) return false;
-                                  if ($sel_status && ($job['country'] ?? '') !== $sel_status) return false;
-                                  return true;
-                              });
-                          }
+                        if ($sel_time || $sel_dept || $sel_level || $sel_status) {
+                          $jobs = array_filter($jobs, function ($job) use ($sel_time, $sel_dept, $sel_level, $sel_status) {
+                            if ($sel_time && ($job['time'] ?? '') !== $sel_time)
+                              return false;
+                            if ($sel_dept && ($job['location'] ?? '') !== $sel_dept)
+                              return false;
+                            if ($sel_level && ($job['level'] ?? '') !== $sel_level)
+                              return false;
+                            if ($sel_status && ($job['country'] ?? '') !== $sel_status)
+                              return false;
+                            return true;
+                          });
+                        }
                       }
                       ?>
-                      <?php if (!empty($jobs)) : ?>
-                        <?php foreach ($jobs as $job) : ?>
+                      <?php if (!empty($jobs)): ?>
+                        <?php foreach ($jobs as $job): ?>
                           <div role="listitem" class="w-dyn-item">
                             <div class="position_acordeon-item">
                               <div data-w-id="74e09dd0-7b7e-7c1c-0ea6-315a3d17173b" class="position_acordeon-trigger">
@@ -409,9 +418,9 @@ $status = get_field('status');
                                   <div class="jobs_richt-text w-richtext">
                                     <?php echo wp_kses_post($job['description'] ?? ''); ?>
                                   </div>
-                                  <?php if (!empty($job['link_linkedin'])) : ?>
-                                    <a href="<?php echo esc_url($job['link_linkedin']); ?>"
-                                      target="_blank" class="button is-dark w-inline-block">
+                                  <?php if (!empty($job['link_linkedin'])): ?>
+                                    <a href="<?php echo esc_url($job['link_linkedin']); ?>" target="_blank"
+                                      class="button is-dark w-inline-block">
                                       <div class="text-size-small">
                                         Apply
                                       </div>
@@ -543,10 +552,9 @@ $status = get_field('status');
                 </p>
               </div>
             </div>
-            <a href="/cdn-cgi/l/email-protection#bfcbded3dad1cbffdecfcdd0cc91d8d3d0ddded380cccaddd5dadccb82f5d0dd9a8d8fdecfcfd3d6dcdecbd6d0d19a8d8f929a8d8ffecfcdd0cc9a8d8ff8d3d0ddded3"
-              class="button is-secondary w-button">
+            <a href="mailto:hello@apros.pe?subject=Start%20a%20conversation" class="button is-secondary w-button">
               <span class="__cf_email__" data-cfemail="780c19141d160c3819080a170b561f14171a1914">
-                [email&#160;protected]
+                hello@apros.pe
               </span>
             </a>
           </div>
