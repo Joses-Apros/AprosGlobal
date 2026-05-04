@@ -1,6 +1,6 @@
 @font-face {
   font-family: GalanoGrotesque;
-  src: url('../fonts/GalanoGrotesqueBold.otf') format("opentype");
+  src: url('../assets/cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/634ed2aeeea2b523b20925d1_GalanoGrotesqueBold.otf') format("opentype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: GalanoGrotesque;
-  src: url('../fonts/GalanoGrotesqueExtraBold.otf') format("opentype");
+  src: url('../assets/cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/634ed2aeb197468073644942_GalanoGrotesqueExtraBold.otf') format("opentype");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: GalanoGrotesque;
-  src: url('../fonts/GalanoGrotesqueRegular.otf') format("opentype");
+  src: url('../assets/cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/634ed2aeb19746359c644943_GalanoGrotesqueRegular.otf') format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -24,7 +24,7 @@
 
 @font-face {
   font-family: GalanoGrotesque;
-  src: url('../fonts/GalanoGrotesqueLight.otf') format("opentype");
+  src: url('../assets/cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/634ed2ae77ff3fa4f3341fb6_GalanoGrotesqueLight.otf') format("opentype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -32,7 +32,7 @@
 
 @font-face {
   font-family: GalanoGrotesque;
-  src: url('../fonts/GalanoGrotesqueMedium.otf') format("opentype");
+  src: url('../assets/cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/634ed2ae321eef13b1f24043_GalanoGrotesqueMedium.otf') format("opentype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -40,7 +40,7 @@
 
 @font-face {
   font-family: GalanoGrotesque;
-  src: url('../fonts/GalanoGrotesqueSemiBold.otf') format("opentype");
+  src: url('../assets/cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/634ed2ae77ff3f2b36341fb7_GalanoGrotesqueSemiBold.otf') format("opentype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -8197,42 +8197,42 @@ figcaption {
 
 @font-face {
   font-family: 'GalanoGrotesque';
-  src: url('../fonts/GalanoGrotesqueBold.otf') format('opentype');
+  src: url('../assets/cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/634ed2aeeea2b523b20925d1_GalanoGrotesqueBold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'GalanoGrotesque';
-  src: url('../fonts/GalanoGrotesqueExtraBold.otf') format('opentype');
+  src: url('../assets/cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/634ed2aeb197468073644942_GalanoGrotesqueExtraBold.otf') format('opentype');
   font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'GalanoGrotesque';
-  src: url('../fonts/GalanoGrotesqueRegular.otf') format('opentype');
+  src: url('../assets/cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/634ed2aeb19746359c644943_GalanoGrotesqueRegular.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'GalanoGrotesque';
-  src: url('../fonts/GalanoGrotesqueLight.otf') format('opentype');
+  src: url('../assets/cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/634ed2ae77ff3fa4f3341fb6_GalanoGrotesqueLight.otf') format('opentype');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'GalanoGrotesque';
-  src: url('../fonts/GalanoGrotesqueMedium.otf') format('opentype');
+  src: url('../assets/cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/634ed2ae321eef13b1f24043_GalanoGrotesqueMedium.otf') format('opentype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'GalanoGrotesque';
-  src: url('../fonts/GalanoGrotesqueSemiBold.otf') format('opentype');
+  src: url('../assets/cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/634ed2ae77ff3f2b36341fb7_GalanoGrotesqueSemiBold.otf') format('opentype');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
