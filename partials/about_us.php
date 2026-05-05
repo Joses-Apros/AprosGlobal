@@ -1139,7 +1139,7 @@ $iso_content = get_field('iso_content');
                   </a><a
                     href="https://api.whatsapp.com/send/?phone=51906459245&text=Hola%2C+tengo+una+consulta+sobre+los+servicios+que+ofrecen.&type=phone_number&app_absent=0"
                     target="_blank" class="button is-secondary is-large w-inline-block">
-                    <div class="text-size-medium">Whatsapp</div>
+                    <div class="text-size-medium">WhatsApp</div>
                     <img
                       src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/634edabd05e56b610501f907_icon-btn.svg"
                       loading="lazy" alt="" class="icon-1x1-small" />

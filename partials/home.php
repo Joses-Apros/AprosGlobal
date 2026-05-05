@@ -1129,7 +1129,7 @@ Change the color of the text here, instead of on Webflow for this to work */
               </a>
               <a href="https://api.whatsapp.com/send/?phone=51906459245&text=Hola%2C+tengo+una+consulta+sobre+los+servicios+que+ofrecen.&type=phone_number&app_absent=0"
                 target="_blank" class="button is-secondary is-large w-inline-block">
-                <div class="text-size-medium">Whatsapp</div><img src="images/icon-btn.svg" loading="lazy" alt=""
+                <div class="text-size-medium">WhatsApp</div><img src="images/icon-btn.svg" loading="lazy" alt=""
                   class="icon-1x1-small">
               </a>
             </div>
