@@ -99,25 +99,6 @@ if (is_page_template('templates/home.php')) {
           margin-left: auto !important;
         }
 
-        /* 
-Make the following elements inherit typography styles from the parent and not have hardcoded values. 
-Important: You will not be able to style for example "All Links" in Designer with this CSS applied.
-Uncomment this CSS to use it in the project. Leave this message for future hand-off.
-*/
-        /*
-a,
-.w-input,
-.w-select,
-.w-tab-link,
-.w-nav-link,
-.w-dropdown-btn,
-.w-dropdown-toggle,
-.w-dropdown-link {
-  color: inherit;
-  text-decoration: inherit;
-  font-size: inherit;
-}
-*/
         /* Apply "..." after 3 lines of text */
         .text-style-3lines {
           display: -webkit-box;
@@ -341,9 +322,11 @@ a,
                 </div>
               </div>
               <div class="nav_menu">
-                <div class="nav_menu-links-wrapper"><a href="<?php echo home_url(); ?>/#we-do" class="nav_menu-link">What we do</a><a
-                    href="<?php echo home_url(); ?>/about-us" class="nav_menu-link">About us</a><a href="<?php echo home_url(); ?>/insights"
-                    class="nav_menu-link">Insights</a><a href="<?php echo home_url(); ?>/jobs" class="nav_menu-link">Jobs</a></div>
+                <div class="nav_menu-links-wrapper"><a href="<?php echo home_url(); ?>/#we-do"
+                    class="nav_menu-link">What we do</a><a href="<?php echo home_url(); ?>/about-us"
+                    class="nav_menu-link">About us</a><a href="<?php echo home_url(); ?>/insights"
+                    class="nav_menu-link">Insights</a><a href="<?php echo home_url(); ?>/jobs"
+                    class="nav_menu-link">Jobs</a></div>
                 <div class="w-embed"><a href="<?php echo home_url(); ?>/book-a-call"
                     onclick="dataLayer.push({'event': 'start_a_project_menu'});"
                     class="button is-secondary is-nav w-inline-block">
