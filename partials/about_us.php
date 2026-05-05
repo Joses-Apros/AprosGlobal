@@ -1,3 +1,10 @@
+<?php
+$banner = get_field('banner');
+$why_us_content = get_field('why_us_content');
+$equipos_content = get_field('equipos_content');
+$iso_content = get_field('iso_content');
+?>
+
 <!DOCTYPE html>
 <!-- Last Published: Fri May 02 2025 16:13:51 GMT+0000 (Coordinated Universal Time) -->
 <html data-wf-domain="apros.webflow.io" data-wf-page="65b4453c9e0f05c6674b732d" data-wf-site="634ecebdb4ffd446e52e6f19">
@@ -400,39 +407,34 @@
   <div class="page-wrapper overflow-visible">
     <div class="main-wrapper">
       <div class="title-page_component">
-        <div class="padding-global">
-          <div class="container-large">
-            <div class="padding-section-medium">
-              <div class="title-page_wrapper">
-                <div class="title-page_title">
-                  <h1 class="heading-style-h1-big">
-                    About <span class="text-color-degrade-light">us</span>
-                  </h1>
-                  <div class="circle-chek_component">
-                    <img
-                      src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/6356c11143d2fe247c1f8719_text-circle-vf.svg"
-                      loading="lazy" alt="" class="circle-chek_text-circle-img" /><img
-                      src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/634ed0dafc477ada004efe8e_check-circle%20(3).svg"
-                      loading="lazy" alt="" class="circle-chek_img-check" />
+        <?php if ($banner): ?>
+          <div class="padding-global">
+            <div class="container-large">
+              <div class="padding-section-medium">
+                <div class="title-page_wrapper">
+                  <div class="title-page_title">
+                    <h1 class="heading-style-h1-big">
+                      <?php echo $banner['title_part_1']; ?> <span
+                        class="text-color-degrade-light"><?php echo $banner['title_part_2']; ?></span>
+                    </h1>
+                    <div class="circle-chek_component">
+                      <img
+                        src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/6356c11143d2fe247c1f8719_text-circle-vf.svg"
+                        loading="lazy" alt="" class="circle-chek_text-circle-img" /><img
+                        src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/634ed0dafc477ada004efe8e_check-circle%20(3).svg"
+                        loading="lazy" alt="" class="circle-chek_img-check" />
+                    </div>
                   </div>
-                </div>
-                <div class="title-page_info is-large">
-                  <p text-split="words-slide-from-right">
-                    At Apros Global, we bring over a decade of experience
-                    helping businesses thrive in the digital space. Since
-                    2011, we have partnered with industries across Latin
-                    America and the United States, driven by a mission to
-                    transform users into loyal customers. Our expertise lies
-                    in developing innovative software solutions designed to
-                    deliver impactful results, creating memorable digital
-                    experiences, and fostering stronger connections through
-                    technology.<br />
-                  </p>
+                  <div class="title-page_info is-large">
+                    <p text-split="words-slide-from-right">
+                      <?php echo $banner['description']; ?><br />
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        <?php endif; ?>
         <div class="title-page_bg">
           <img
             src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/6352c981fd0a0301dc9c6abc_bg-star-project-grid.webp"
@@ -443,31 +445,31 @@
               " alt="" class="title-page_bg-img" />
         </div>
       </div>
-      <div class="about_interna-header">
-        <div class="padding-global">
-          <div class="container-large">
-            <div class="padding-section-medium">
-              <div class="about_wrapper">
-                <div class="about_top">
-                  <h2 words-slide-from-right="" text-split="" class="heading-style-h3">
-                    We love developing digital solutions that drive growth.
-                    From optimizing conversion to creating tailored
-                    experiences, we transform ideas into innovative tools to
-                    help your business thrive.
-                  </h2>
+      <?php if ($banner['paragraph']): ?>
+        <div class="about_interna-header">
+          <div class="padding-global">
+            <div class="container-large">
+              <div class="padding-section-medium">
+                <div class="about_wrapper">
+                  <div class="about_top">
+                    <h2 words-slide-from-right="" text-split="" class="heading-style-h3">
+                      <?php echo $banner['paragraph']; ?>
+                    </h2>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      <?php endif; ?>
       <div class="about_title">
         <div class="padding-global">
           <div class="padding-section-large">
-            <div class="container-large">
-              <div class="title-section_component is-start-project">
-                <div class="title-section_content">
-                  <h2 data-w-id="6b542c45-7b87-0faa-05a0-a0c1076867f4" style="
+            <?php if ($why_us_content): ?>
+              <div class="container-large">
+                <div class="title-section_component is-start-project">
+                  <div class="title-section_content">
+                    <h2 data-w-id="6b542c45-7b87-0faa-05a0-a0c1076867f4" style="
                         -webkit-transform: translate3d(3rem, 0, 0)
                           scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0)
                           skew(0, 0);
@@ -479,16 +481,19 @@
                           rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
                         opacity: 0;
                       ">
-                    Why <span class="text-color-degrade-light">Us</span>
-                  </h2>
+                      <?php echo $why_us_content['title_part_1'] ?> <span class="text-color-degrade-light">
+                        <?php echo $why_us_content['title_part_2'] ?>
+                      </span>
+                    </h2>
+                  </div>
+                </div>
+                <div class="max-width-large align-center">
+                  <p text-split="" words-slide-from-right="" class="text-size-medium">
+                    <?php echo $why_us_content['description']; ?>
+                  </p>
                 </div>
               </div>
-              <div class="max-width-large align-center">
-                <p text-split="" words-slide-from-right="" class="text-size-medium">
-                  What you should expect from us
-                </p>
-              </div>
-            </div>
+            <?php endif; ?>
           </div>
         </div>
       </div>
@@ -602,35 +607,35 @@
             </div>
           </div>
         </div>
-        <div class="padding-global">
+        <div class="padding-global md:pt-60">
           <div class="container-large">
             <div class="padding-section-medium">
               <div class="our-tem_wrapper">
-                <div class="our-tem_header">
-                  <div class="title-section_component">
-                    <div class="title-section_content">
-                      <h2>
-                        Our <span class="text-color-degrade-light">team</span>
-                      </h2>
+                <?php if ($equipos_content): ?>
+                  <div class="our-tem_header">
+                    <div class="title-section_component">
+                      <div class="title-section_content">
+                        <h2>
+                          <?php echo $equipos_content['title_part_1']; ?> <span class="text-color-degrade-light">
+                            <?php echo $equipos_content['title_part_2']; ?>
+                          </span>
+                        </h2>
+                      </div>
+                      <div class="circle-chek_component">
+                        <img
+                          src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/6356c11143d2fe247c1f8719_text-circle-vf.svg"
+                          loading="lazy" alt="" class="circle-chek_text-circle-img" /><img
+                          src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/634ed0dafc477ada004efe8e_check-circle%20(3).svg"
+                          loading="lazy" alt="" class="circle-chek_img-check" />
+                      </div>
                     </div>
-                    <div class="circle-chek_component">
-                      <img
-                        src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/6356c11143d2fe247c1f8719_text-circle-vf.svg"
-                        loading="lazy" alt="" class="circle-chek_text-circle-img" /><img
-                        src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/634ed0dafc477ada004efe8e_check-circle%20(3).svg"
-                        loading="lazy" alt="" class="circle-chek_img-check" />
+                    <div class="max-width-xlarge">
+                      <p words-slide-from-right="" text-split="" class="text-size-medium">
+                        <?php echo $equipos_content['description']; ?>
+                      </p>
                     </div>
                   </div>
-                  <div class="max-width-xlarge">
-                    <p words-slide-from-right="" text-split="" class="text-size-medium">
-                      Great products are built by great teams. Ours is made up
-                      of extremely talented developers, product managers,
-                      designers and marketers. Work with one of us and you’ll
-                      work with all of us. Meet some of the folks here at
-                      Apros.
-                    </p>
-                  </div>
-                </div>
+                <?php endif; ?>
                 <div class="swiper is-team w-dyn-list">
                   <div role="list" class="swiper-wrapper is-team w-dyn-items">
                     <?php
@@ -753,30 +758,30 @@
             <div class="container cc-flex-h !px-0">
               <div class="col-left">
                 <div class="learn_wrapper">
-                  <div class="partners_title">
-                    <div class="title-section_component">
-                      <div class="title-section_content">
-                        <h2>
-                          ISO 9001
-                          <span class="text-color-degrade-light">Certification</span>
-                        </h2>
+                  <?php if (!empty($iso_content)): ?>
+                    <div class="partners_title">
+                      <div class="title-section_component">
+                        <div class="title-section_content">
+                          <h2>
+                            <?php echo $iso_content['title_part_1']; ?>
+                            <span class="text-color-degrade-light"><?php echo $iso_content['title_part_2']; ?></span>
+                          </h2>
+                        </div>
+                        <div class="circle-chek_component">
+                          <img
+                            src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/6356c11143d2fe247c1f8719_text-circle-vf.svg"
+                            loading="lazy" alt="" class="circle-chek_text-circle-img" /><img
+                            src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/634ed0dafc477ada004efe8e_check-circle%20(3).svg"
+                            loading="lazy" alt="" class="circle-chek_img-check" />
+                        </div>
                       </div>
-                      <div class="circle-chek_component">
-                        <img
-                          src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/6356c11143d2fe247c1f8719_text-circle-vf.svg"
-                          loading="lazy" alt="" class="circle-chek_text-circle-img" /><img
-                          src="https://cdn.prod.website-files.com/634ecebdb4ffd446e52e6f19/634ed0dafc477ada004efe8e_check-circle%20(3).svg"
-                          loading="lazy" alt="" class="circle-chek_img-check" />
+                      <div class="max-width-xlarge">
+                        <p words-slide-from-right="" text-split="" class="text-size-medium">
+                          <?php echo $iso_content['description']; ?>
+                        </p>
                       </div>
                     </div>
-                    <div class="max-width-xlarge">
-                      <p words-slide-from-right="" text-split="" class="text-size-medium">
-                        APROS operates under ISO-certified processes, ensuring
-                        compliance with internationally recognized standards
-                        for quality, efficiency, and continuous improvement.
-                      </p>
-                    </div>
-                  </div>
+                  <?php endif; ?>
                 </div>
               </div>
               <div class="col-right">
